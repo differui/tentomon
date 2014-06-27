@@ -1,0 +1,36 @@
+// Link Button
+//
+// Button with link skin.
+// Just add class `.btn-link` **without** `.btn`.
+// 
+// Markup:
+// <a href="#" class="btn-link {$modifiers}">a.btn-link</a>
+// <button class="btn-link {$modifiers}">button.btn-link</button>
+// <input type="button" class="btn-link {$modifiers}" value="input.btn-link">
+//
+// :hover      - **hover** style of `.btn-link`
+// :active     - **active** style of `.btn-link`
+// :focus      - **focus** style of `.btn-link`
+// :disabled   - **disabled** style of `.btn-link`
+//
+// Styleguide 2.2
+.btn-link
+  color $black
+
+  // override
+  font-weight normal
+  border-color transparent
+  background-color transparent
+  background-image none
+
+  // interactive
+  &:visited
+    color $black
+
+  &:hover
+  &:active
+  &:focus
+    color $info-brand
+  &:disabled
+    cursor default
+    color $grey

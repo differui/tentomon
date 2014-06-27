@@ -1,0 +1,23 @@
+// $$button-outline($brand-color)
+//
+// Generate button without backgorund by designated color
+//
+// + `$brand-color` `rgba` Deisgnate main tone for button
+//
+// Styleguide 1.3.2
+$$button-outline($brand-color)
+  $fore-color                = $brand-color
+  $hover-bg-color            = $brand-color
+  $border-color              = $grey
+  $hover-border-color        = $$darker($brand-color)
+
+  color $brand-color
+  border-color $border-color
+
+  &:hover
+  &.selected
+    color $white
+    border-color $hover-border-color
+    background-color $hover-bg-color
+
+  

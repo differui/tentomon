@@ -1,0 +1,28 @@
+{
+  "name": "Py",
+  "version": "0.0.0",
+  "authors": [
+    "Bin-Rui Guan <differui@gmail.com>"
+  ],
+  "description": "PYOA front end rebuild",
+  "keywords": [
+    "OA",
+    "rebuild"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "kss-node-template": "https://github.com/htanjo/kss-node-template.git#~0.1.5",
+    "open-iconic": "https://github.com/iconic/open-iconic.git#~1.1.0"
+  },
+  "devDependencies": {
+    "github-markdown-css": "https://github.com/sindresorhus/github-markdown-css.git#~0.2.0"
+  }
+}

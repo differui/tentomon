@@ -1,0 +1,66 @@
+// $$translucent($color, $alpha)
+//
+// Add alpha channel into rgb color.
+// The origin alpha channel will be override by new value.
+//
+// + `$color` `rgba`
+// + `$alpha` `unit` The new value for alpha channel
+//
+// Styleguide 1.1.1
+$$translucent($color, $alpha) {
+  ensure($color, 'rgba')
+
+  $red = red($color)
+  $green = green($color)
+  $blue = blue($color)
+
+  return rgba($red, $green, $blue, unit($alpha, '%'))
+}
+
+// $$light($color)
+//
+// Lighten color with default deg(`$light-deg`)
+//
+// + `$color` `rgba`
+//
+// Styleguide 1.1.2
+$$light($color)
+  ensure($color)
+
+  return lighten($color, $light-deg)
+
+// $$dark($color)
+//
+// Darken color with default deg(`$dark-deg`)
+//
+// + `$color` `rgba`
+//
+// Styleguide 1.1.3
+$$dark($color)
+  ensure($color)
+
+  return darken($color, $dark-deg)
+
+// $$lighter($color)
+//
+// Lighten color with default deg(`$lighter-deg`)
+//
+// + `$color` `rgba`
+//
+// Styleguide 1.1.4
+$$lighter($color)
+  ensure($color)
+
+  return lighten($color, $lighter-deg)
+
+// $$darker($color)
+//
+// Darken color with default deg(`$darker-deg`)
+//
+// + `$color` `rgba`
+//
+// Styleguide 1.1.5
+$$darker($color)
+  ensure($color)
+
+  return darken($color, $darker-deg)
