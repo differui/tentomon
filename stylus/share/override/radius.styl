@@ -1,0 +1,50 @@
+// Radius
+//
+// **Global Modifiers:**
+//
+// + `chop-left`   Chop off **left** border radius.
+// + `chop-right`  Chop off **right** border radius.
+// + `chop-top`    Chop off **top** border radius.
+// + `chop-bottom` Chop off **bottom** border radius.
+// + `square`      **Right angle** corner.
+// + `round`       **Rounded** corner.
+// + `circle`      **Circle** corner.
+// + `pill`        **Pill** shape.
+//
+// Markup:
+// <dl class="form">
+//   <dd>
+//     <p>
+//       <input type="button" class="btn basis chop-left" value="按钮">
+//     </p>
+//   </dd>
+// </dl>
+//
+// Styleguide 3.4.3
+.chop-left
+  border-top-left-radius 0 !important
+  border-bottom-left-radius 0 !important
+
+.chop-right
+  border-top-right-radius 0 !important
+  border-bottom-right-radius 0 !important
+
+.chop-top
+  border-top-left-radius 0 !important
+  border-top-right-radius 0 !important
+
+.chop-bottom
+  border-bottom-left-radius 0 !important
+  border-bottom-right-radius 0 !important
+
+.square
+  border-radius 0 !important
+
+.round
+  border-radius $border-radius !important
+
+.circle
+  border-radius 50% !important
+
+.pill
+  border-radius $py * 50 !important

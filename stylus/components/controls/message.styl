@@ -1,0 +1,30 @@
+// Message
+//
+// **@extend:**
+//
+// `$BOX`
+//
+// Markup:
+// <dl class="form">
+//   <dd style="display: inline-block" class="message basis-static chop-top seamless-top">
+//     <span class="message-icon oi icon naked" data-glyph="double-quote-serif-left"></span>
+//     <span class="message-text">这里放置一条信息。</span>
+//   </dd>
+// </dl>
+//
+// Styleguide 4.18
+.message
+  @extend $BOX
+
+  line-height 1
+  position relative
+
+  // left margin will override by form > dd
+  left 2%
+
+  // same width with textfield by default
+  max-width 78%
+
+  &.full
+    left 0
+    max-width 100%

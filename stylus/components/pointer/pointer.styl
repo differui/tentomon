@@ -1,0 +1,382 @@
+// Pointer
+//
+// **Direction Modifiers:**
+//
+// + `direction-30`
+// + `direction-60`
+// + `direction-90`
+// + `direction-120`
+// + `direction-150`
+// + `direction-180`
+// + `direction-210`
+// + `direction-240`
+// + `direction-270`
+// + `direction-300`
+// + `direction-330`
+// + `direction-360`
+//
+//
+// **Surround Modifiers:**
+//
+// + `around-30`
+// + `around-30`
+// + `around-60`
+// + `around-90`
+// + `around-120`
+// + `around-150`
+// + `around-180`
+// + `around-210`
+// + `around-240`
+// + `around-270`
+// + `around-300`
+// + `around-330`
+// + `around-360`
+//
+//
+// **Shape Modifiers:**
+//
+// + `round`
+//
+//
+// Markup:
+// <div class="box kss-box">
+//   <div class="board basis-static pointer direction-180 around-360">
+//     <div class="row">
+//       <div class="col">
+//         <div class="board-item first">
+//           <span class="btn">收藏</span>
+//         </div>
+//       </div>
+//       <div class="col">
+//         <div class="board-item">
+//           <span class="btn">分享</span>
+//         </div>
+//       </div>
+//       <div class="col">
+//         <div class="board-item last">
+//           <span class="btn">点赞</span>
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 4.24
+
+// Get an even number for width.
+$pointer-width               = $py-half + 1
+$pointer-spare-margin        = $pointer-width + 1
+$pointer-offset              = round($pointer-width / 2 + 1) * -1
+$pointer-swim-case           = 15%
+
+// Get float number (This number optimize for default Box height).
+$pointer-color-case          = 0.3
+
+// Color span
+$brand-main-span             = $brand-main - $brand-main-end
+$brand-info-span             = $brand-info - $brand-info-end
+$brand-safe-span             = $brand-safe - $brand-safe-end
+$brand-danger-span           = $brand-danger - $brand-danger-end
+$brand-warn-span             = $brand-warn - $brand-warn-end
+
+.pointer
+  min-width 50%
+
+  &:after
+    content ""
+    width $pointer-width
+    height @width
+    border solid $border-width
+    border-color inherit
+    border-radius 1px
+    transform rotate(-45deg)
+
+
+    position absolute
+
+  // Position total component.
+  &.around-30
+  &.around-330
+  &.around-360
+    top $pointer-offset - 2
+
+  &.around-60
+  &.around-90
+  &.around-120
+    right $pointer-offset - 2
+
+  &.around-150
+  &.around-180
+  &.around-210
+    bottom $pointer-offset - 2
+
+  &.around-240
+  &.around-270
+  &.around-300
+    left $pointer-offset - 2
+
+  // Draw the pointer border and position it out of parent box.
+  &.direction-30
+  &.direction-330
+  &.direction-360
+    &:after
+      border-left-style none
+      border-bottom-style none
+      
+      top 0
+      margin-top $pointer-offset
+
+  &.direction-60
+  &.direction-90
+  &.direction-120
+    &:after
+      border-left-style none
+      border-top-style none
+      
+      right 0
+      margin-right $pointer-offset
+
+  &.direction-150
+  &.direction-180
+  &.direction-210
+    &:after
+      border-right-style none
+      border-top-style none
+      
+      bottom 0
+      margin-bottom $pointer-offset
+
+  &.direction-240
+  &.direction-270
+  &.direction-300
+    &:after
+      border-right-style none
+      border-bottom-style none
+      
+      left 0
+      margin-left $pointer-offset
+
+  // Position pointer relative to parent box.
+  &.direction-210
+  &.direction-330
+    &:after
+      left $pointer-swim-case
+
+  &.direction-180
+  &.direction-360
+    &:after
+      left 50%
+      margin-left round($pointer-width / -2)
+
+  &.direction-30
+  &.direction-150
+    &:after
+      right $pointer-swim-case
+
+  &.direction-60
+  &.direction-300
+    &:after
+      top $pointer-swim-case
+
+  &.direction-90
+  &.direction-270
+    &:after
+      top 50%
+      margin-top round($pointer-width / -2)
+
+  &.direction-120
+  &.direction-240
+    &:after
+      bottom $pointer-swim-case
+
+  // Spare space for pointer.
+  &.direction-30
+  &.direction-330
+  &.direction-360
+    margin-top $pointer-spare-margin
+
+  &.direction-60
+  &.direction-90
+  &.direction-120
+    margin-right $pointer-spare-margin
+
+  &.direction-150
+  &.direction-180
+  &.direction-210
+    margin-bottom $pointer-spare-margin
+
+  &.direction-240
+  &.direction-270
+  &.direction-300
+    margin-left $pointer-spare-margin
+
+  // Gradient background.
+  &.direction-30
+  &.direction-330
+  &.direction-360
+    &.basis-static:after
+      background-color $brand-main
+
+    &.info-static:after
+      background-color $brand-info
+
+    &.safe-static:after
+      background-color $brand-safe
+
+    &.danger-static:after
+      background-color $brand-danger
+
+    &.warn-static:after
+      background-color $brand-warn
+
+  &.direction-150
+  &.direction-180
+  &.direction-210
+    &.basis-static:after
+      background-color $brand-main-end
+
+    &.info-static:after
+      background-color $brand-info-end
+
+    &.safe-static:after
+      background-color $brand-safe-end
+
+    &.danger-static:after
+      background-color $brand-danger-end
+
+    &.warn-static:after
+      background-color $brand-warn-end
+
+  &.direction-60
+  &.direction-300
+    &.basis-static:after
+      background-color $brand-main - $brand-main-span * $pointer-color-case
+
+    &.info-static:after
+      background-color $brand-info - $brand-info-span * $pointer-color-case
+
+    &.safe-static:after
+      background-color $brand-safe - $brand-safe-span * $pointer-color-case
+
+    &.danger-static:after
+      background-color $brand-danger - $brand-danger-span * $pointer-color-case
+
+    &.warn-static:after
+      background-color $brand-warn - $brand-warn-span * $pointer-color-case
+
+  &.direction-90
+  &.direction-270
+    &.basis-static:after
+      background-color $brand-main - $brand-main-span * 0.5
+
+    &.info-static:after
+      background-color $brand-info - $brand-info-span * 0.5
+
+    &.safe-static:after
+      background-color $brand-safe - $brand-safe-span * 0.5
+
+    &.danger-static:after
+      background-color $brand-danger - $brand-danger-span * 0.5
+
+    &.warn-static:after
+      background-color $brand-warn - $brand-warn-span * 0.5
+
+  &.direction-120
+  &.direction-240
+    &.basis-static:after
+      background-color $brand-main-end + $brand-main-span * $pointer-color-case
+
+    &.info-static:after
+      background-color $brand-info-end + $brand-info-span * $pointer-color-case
+
+    &.safe-static:after
+      background-color $brand-safe-end + $brand-safe-span * $pointer-color-case
+
+    &.danger-static:after
+      background-color $brand-danger-end + $brand-danger-span * $pointer-color-case
+
+    &.warn-static:after
+      background-color $brand-warn-end + $brand-warn-span * $pointer-color-case
+
+  // Pure background.
+  &.pure
+    &.basis-static:after
+      background-color $border-basis
+
+    &.info-static:after
+      background-color $border-info
+
+    &.safe-static:after
+      background-color $border-safe
+
+    &.danger-static:after
+      background-color $border-danger
+
+    &.warn-static:after
+      background-color $border-warn
+
+  // Rounded angle.
+  &.round
+    &:after
+      border-radius 50%
+
+  // Seamless border.
+  &.seamless
+    &:after
+      border-color transparent
+
+    &.direction-30
+    &.direction-330
+    &.direction-360
+      &:after
+        margin-top $pointer-offset + 1
+
+    &.direction-60
+    &.direction-90
+    &.direction-120
+      &:after
+        margin-right $pointer-offset + 1
+
+    &.direction-150
+    &.direction-180
+    &.direction-210
+      &:after
+        margin-bottom $pointer-offset + 1
+
+    &.direction-240
+    &.direction-270
+    &.direction-300
+      &:after
+        margin-left $pointer-offset + 1
+
+  &.seamless-top
+    &.direction-30
+    &.direction-330
+    &.direction-360
+      &:after
+        border-color transparent
+        margin-top $pointer-offset + 1
+
+  &.seamless-right
+    &.direction-60
+    &.direction-90
+    &.direction-120
+      &:after
+        border-color transparent
+        margin-right $pointer-offset + 1
+
+  &.seamless-bottom
+    &.direction-150
+    &.direction-180
+    &.direction-210
+      &:after
+        border-color transparent
+        margin-bottom $pointer-offset + 1
+
+  &.seamless-left
+    &.direction-240
+    &.direction-270
+    &.direction-300
+      &:after
+        border-color transparent
+        margin-left $pointer-offset + 1

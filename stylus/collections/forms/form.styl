@@ -1,0 +1,28 @@
+.form
+  margin $py 0
+
+  // Hidden or shadow message.
+  > .message
+    display none
+
+  &.is-message
+    > .message
+      display inline-block
+
+  // Blockng textfield and controling the box height.
+  .textfield
+  .textarea
+    display block
+
+  // Set width for bubble label.
+  .bubble:not(.paste)
+    min-width 20%
+
+.form-title
+  margin-bottom $gap-vertical
+
+.form-content
+  overflow hidden
+
+  z-index 1
+  position relative

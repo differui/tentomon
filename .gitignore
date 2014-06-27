@@ -1,7 +1,12 @@
 /node_modules
 /bower_components
 /build
-/py_mobile
-
+/stylus/plugins
+/documnet
+/readme
+/styleguide
+/tentomon-*
 *.swp
 *.log
+*.sublime-project
+*.sublime-workspace

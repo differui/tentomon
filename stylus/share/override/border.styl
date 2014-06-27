@@ -1,0 +1,81 @@
+// Border
+//
+// **Global Modifiers:**
+//
+// + `seamless`        Remove all borders.
+// + `seamless-left`   Remove **left** border.
+// + `seamless-right`  Remove **right** border.
+// + `seamless-top`    Remove **top** border.
+// + `seamless-bottom` Remove **bottom** border.
+// + `seam-left`       Remove all borders and keep **left** border.
+// + `seam-right`      Remove all borders and keep **right** border.
+// + `seam-top`        Remove all borders and keep **top** border.
+// + `seam-bottom`     Remove all borders and keep **bottom** border.
+// + `border-info`     Borders color in **$brand-info**.
+// + `border-safe`     Borders color in **$brand-safe**.
+// + `border-danger`   Borders color in **$brand-danger**.
+// + `border-warn`     Borders color in **$brand-warn**.
+// + `border-light`    Borders color in **$border-light**.
+// + `border-heavy`    Borders color in **$border-heavy**.
+// + `border-bold`     Borders with **double** border width.
+// + `border-dotted`   Borders with **dotted** style.
+// + `border-dashed`   Borders with **dashed** style.
+//
+// Markup:
+// <div class="kss-box seamless">
+// </div>
+//
+// Styleguide 3.4.1
+.seamless
+  border-style none !important
+
+.seamless-left
+  border-left-style none !important
+
+.seamless-right
+  border-right-style none !important
+
+.seamless-top
+  border-top-style none !important
+
+.seamless-bottom
+  border-bottom-style none !important
+
+.seam-left
+.seam-right
+.seam-top
+.seam-bottom
+  border-style none !important
+
+.seam-left
+  border-left-style solid !important
+
+.seam-right
+  border-right-style solid !important
+
+.seam-top
+  border-top-style solid !important
+
+.seam-bottom
+  border-bottom-style solid !important
+
+.border-info
+  border-color $$darker($brand-info) !important
+
+.border-warn
+  border-color $$darker($brand-warn) !important
+
+.border-safe
+  border-color $$darker($brand-safe) !important
+
+.border-danger
+  border-color $$darker($brand-danger) !important
+
+.border-light
+  border-color $border-light !important
+
+.border-heavy
+  border-color $border-heavy !important
+
+.border-bold
+  border-width $border-width * 2 !important

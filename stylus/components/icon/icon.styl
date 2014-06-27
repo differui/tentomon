@@ -1,0 +1,76 @@
+// Icon
+//
+// **@extend:**
+//
+// `$BOX`
+//
+// **Ordinary Modifiers:**
+//
+// + `sup`  Icon as **supscript** text.
+// + `sub`  Icon as **subscript** text.
+// + `sink` Icon **sink** 1px.
+// + `rise` Icon **rise** 1px.
+//
+//
+// **Shape Modifiers:**
+//
+// + `square` Box width equal to its height.
+// + `circle` Box width equal to its height.
+// + `round` Box width equal to its height.
+//
+//
+// Markup:
+// <span class="oi icon seamless sup" data-glyph="star"></span>一个图标。
+//
+// Styleguide 4.1
+.icon
+  @extend $BOX
+
+  // normal size
+  text-align center
+
+  // override the default openiconic glyph style
+  &.oi[data-glyph]
+    &
+    &:before
+      line-height $textfield-height
+      vertical-align middle
+
+    &:before
+      top -1px
+
+    &.sub:before
+      top 0.5em
+
+    &.sup:before
+      top -0.5em
+
+    &.sink
+      top 1px
+
+    &.rise
+      top -1px
+
+  // Icon width equal to its height.
+  &.square
+  &.circle
+  &.round
+    text-align center
+
+    padding-left 0
+    padding-right 0
+
+    &
+      width $height-normal
+
+    &.mini
+      width $height-mini
+
+    &.pygmy
+      width $height-pygmy
+
+    &.huge
+      width $height-huge
+
+    &.marssive
+      width $height-marssive

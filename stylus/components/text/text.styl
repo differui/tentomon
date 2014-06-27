@@ -1,0 +1,83 @@
+// Text
+//
+// **Color Modifiers:**
+//
+// + `text-info`       Information text.
+// + `text-safe`       Safty text.
+// + `text-danger`     Danger text.
+// + `text-warn`       Warning text.
+// + `text-light`      Light grey text.
+// + `text-heavy`      Heavy grey text.
+//
+//
+// **Size Modifiers:**
+//
+// + `small`     Smaller size text.
+// + `large`  Larger size text.
+//
+//
+// **Style Modifiers:**
+//
+// + `thin`       Normal font weight.
+// + `bold`       Bold font weight.
+// + `underline`  Text with underline.
+// + `del`        Deleted text with line through.
+// + `break`      Break long word in text.
+// + `nowrap`     Prevent wrapping text.
+// + `truncate`   Truncate long text.
+//
+//
+// Markup:
+// <p class="truncate">这是一条文本，而且内容可以非常的长。</p>
+//
+// Styleguide 4.3
+.text-motion
+  color $motion-color
+
+.text-info
+  color $brand-info
+
+.text-safe
+  color $brand-safe
+
+.text-danger
+  color $brand-danger
+
+.text-warn
+  color $brand-warn
+
+.text-heavy
+  color $grey-heavy
+
+.small
+  font-size $py-small
+
+.large
+  font-size $py-large
+
+.smaller
+  font-size $py-smaller
+
+.larger
+  font-size $py-larger
+
+.break
+  word-wrap break-word
+
+.nowrap
+  white-space nowrap
+
+.thin
+  font-weight normal
+
+.bold
+  font-weight bold
+
+.underline
+  text-decoration underline
+
+.truncate
+  $truncate-text$()
+
+.del
+  text-decoration line-through

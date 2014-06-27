@@ -1,0 +1,70 @@
+// Vertical
+//
+// **Ordinary Modifiers:**
+//
+// + `solid`  Item spearate by **solid** border.
+// + `notch`  Item spearate by border with **hightlight**.
+// + `sunken` Item spearate by border which **sunken** one side.
+// + `tight`  Item spearate with **small** gap
+// + `loose`  Item spearate with **big** gap.
+//
+//
+// **List Style Modifiers:**
+//
+// + `disc`    Solid circle.
+// + `dot`     Hollow circle.
+// + `decimal` Number.
+//
+//
+// Markup:
+// <ul class="list vertical sunken">
+//   <li class="first"><span class="link">香蕉</span></li>
+//   <li><span class="link">草莓</span></li>
+//   <li><span class="link">奇异果</span></li>
+//   <li class="last"><span class="link">榴莲</span></li>
+// </ul>
+//
+// Styleguide 4.23.1
+.list.vertical
+  &
+    @extend $LIST
+
+  &.round
+    @extend $ITEM-VERTICAL-ROUND
+
+  &.solid > li
+    @extend $ITEM-VERTICAL-SOLID
+
+  &.notch > li
+    @extend $ITEM-VERTICAL-NOTCH
+
+  &.sunken > li
+    @extend $ITEM-VERTICAL-SUNKEN
+
+  &.tight > li
+    @extend $ITEM-VERTICAL-TIGHT
+
+  &.loose > li
+    @extend $ITEM-VERTICAL-LOOSE
+
+  &.sunken.tight > li
+    @extend $ITEM-VERTICAL-SUNKEN-TIGHT
+
+  &.sunken.loose > li
+    @extend $ITEM-VERTICAL-SUNKEN-LOOSE
+
+  // List style type modifiers
+  &.disc
+  &.dot
+  &.decimal
+    overflow visible
+    list-style-position inside
+
+  &.disc
+    list-style-type disc
+
+  &.dot
+    list-style-type circle
+
+  &.decimal
+    list-style-type decimal

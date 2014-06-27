@@ -1,0 +1,26 @@
+// UI
+//
+// Abstract UI common style.
+//
+// **Relative class:**
+//
+// + `UI-FOCUS`
+// + `UI-ACTIVE`
+// + `UI-DISABLE`
+//
+// Styleguide 3.3.1
+$UI
+  $$text-shadow()
+  $$top-inner-shadow(1, 0, $highlight-light)
+
+  color $white
+  border-radius $border-radius
+
+$UI-FOCUS
+  null
+
+$UI-ACTIVE
+  $$top-inner-shadow()
+
+$UI-DISABLE
+  $$top-inner-shadow(1, 0, $highlight-light)

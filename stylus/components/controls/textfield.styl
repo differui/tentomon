@@ -1,0 +1,51 @@
+// Textfield
+//
+// **@extend:**
+//
+// `$BOX`
+//
+// **Ordinary Modifiers:**
+//
+// + `indent-left`  Indent **left** with one column.
+// + `indent-right` Indent **right** with one column.
+//
+// Markup:
+// <dl class="form">
+//   <dd class="form-content">
+//     <input type="text" class="textfield basis" placeholder="请输入">
+//   </dd>
+// </dl>
+//
+// Styleguide 4.8
+.textfield
+  @extend $BOX
+
+  color $black
+  background-image none
+  background-color $background-light
+  $$text-highlight(transparent)
+  $$top-inner-shadow(, 2, $$translucent($translucent-black, 7))
+  width 100%
+  max-height none
+
+  &:focus
+    background-color $white
+
+  &:disabled
+  &.is-disabled
+    background-color $background-light
+
+  &.indent-left
+    padding-left 20%
+
+  &.indent-right
+    padding-right 20%
+
+  &.naked
+    background-image none
+    background-color transparent
+    $$top-inner-shadow(0, 0, transparent)
+
+  &.huge
+  &.marssive
+    line-height $py-large + 3px

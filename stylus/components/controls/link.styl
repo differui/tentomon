@@ -1,0 +1,48 @@
+// Link
+//
+// **@extend:**
+//
+// `.btn`
+//
+// Markup:
+// <a href="#" class="link">
+//   <span class="link-icon oi icon naked" data-glyph="star"></span>
+//   <span class="link-text">链接</span>
+// </a>
+//
+// Styleguide 4.6
+.link
+  @extend .btn
+
+  color $motion-color
+  font-weight normal
+  border-color transparent
+  text-decoration underline
+
+  &:visited
+    color $motion-color
+
+  &:active
+  &.is-active
+    color $motion-color
+
+  &:disabled
+  &.is-disabled
+    $basis-disabled$()
+
+  // change link style in different context
+  &.feel
+    color inherit
+    font-size inherit
+    font-weight inherit
+    line-height inherit
+
+    &:visited
+      color inherit
+
+    &:active
+    &.is-active
+      color inherit
+
+  &.naked
+    text-decoration none

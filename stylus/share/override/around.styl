@@ -1,0 +1,78 @@
+// Around
+//
+// **Global Modifiers:**
+//
+// + `around-30`    Component position outer of parent in **30deg**
+// + `around-60`    Component position outer of parent in **60deg**
+// + `around-90`    Component position outer of parent in **90deg**
+// + `around-120`   Component position outer of parent in **120deg**
+// + `around-150`   Component position outer of parent in **150deg**
+// + `around-180`   Component position outer of parent in **180deg**
+// + `around-210`   Component position outer of parent in **210deg**
+// + `around-240`   Component position outer of parent in **240deg**
+// + `around-270`   Component position outer of parent in **270deg**
+// + `around-300`   Component position outer of parent in **300deg**
+// + `around-330`   Component position outer of parent in **330deg**
+// + `around-360`   Component position outer of parent in **360deg**
+// + `around-embed` Component not cover outer border of parent.
+//
+//
+// Markup:
+// <div class="kss-box box basis-static">
+//   <span class="btn basis around-180">外部下方</span>
+// </div>
+//
+// Styleguide 3.4.15
+.around-30
+  @extend $AROUND-30
+
+.around-60
+  @extend $AROUND-60
+
+.around-90
+  @extend $AROUND-90
+
+.around-120
+  @extend $AROUND-120
+
+.around-150
+  @extend $AROUND-150
+
+.around-180
+  @extend $AROUND-180
+
+.around-210
+  @extend $AROUND-210
+
+.around-240
+  @extend $AROUND-240
+
+.around-270
+  @extend $AROUND-270
+
+.around-300
+  @extend $AROUND-300
+
+.around-330
+  @extend $AROUND-330
+
+.around-360
+  @extend $AROUND-360
+
+.around-embed
+  &.around-30
+  &.around-150
+    @extend $AROUND-EMBED-RIGHT
+
+  &.around-60
+  &.around-300
+    @extend $AROUND-EMBED-TOP
+
+  &.around-120
+  &.around-240
+    @extend $AROUND-EMBED-BOTTOM
+
+  &.around-210
+  &.around-330
+    @extend $AROUND-EMBED-LEFT
+

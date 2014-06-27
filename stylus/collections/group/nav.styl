@@ -1,0 +1,70 @@
+// Nav
+//
+// **@extend:**
+//
+// `$GROUP` & `$GROUP-ITEM`
+//
+// Markup:
+// <section class="kss-entry">
+//   <div class="nav basis-static">
+//     <div class="row">
+//       <div class="col">
+//         <span class="nav-item first is-active">
+//           <span class="btn full">Left</span>
+//         </span>
+//       </div>
+//       <div class="col">
+//         <span class="nav-item is-disabled">
+//           <span class="btn full">Middle</span>
+//         </span>
+//       </div>
+//       <div class="col">
+//         <span class="nav-item">
+//           <span class="btn full">Middle</span>
+//         </span>
+//       </div>
+//       <div class="col">
+//         <span class="nav-item last">
+//           <span class="btn full">Right</span>
+//         </span>
+//       </div>
+//     </div>
+//   </div>
+// </section>
+//
+// Styleguide 5.2.3
+.nav
+  @extend $GROUP
+
+  border-style solid none
+  border-width $border-width
+  border-radius 0
+
+.nav-item
+  @extend $GROUP-ITEM
+
+  .btn
+    border-style none
+    border-radius 0
+  
+  &.first
+    box-shadow inset 0 1px 0 $highlight-light
+
+  &:active
+    $$top-inner-shadow()
+
+.nav
+  &.basis-static .nav-item
+    @extend $GROUP-ITEM-BASIS
+
+  &.info-static .nav-item
+    @extend $GROUP-ITEM-INFO
+
+  &.safe-static .nav-item
+    @extend $GROUP-ITEM-SAFE
+
+  &.danger-static .nav-item
+    @extend $GROUP-ITEM-DANGER
+
+  &.warn-static .nav-item
+    @extend $GROUP-ITEM-WARN

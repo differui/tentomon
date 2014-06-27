@@ -1,0 +1,30 @@
+// Wrapper & Scroller
+//
+// **Ordinary Modifiers:**
+//
+// + `vertical`     Hidden **vertical** overflow.
+// + `horizontal`   Hidden **horizontal** overflow.
+//
+// Markup:
+// <div class="wrapper vertical">
+//   <div class="scroller">
+//     <p>一双鞋，或者说奢侈品的鞋，要卖得那么贵，至少要满足几个条件：皮质好，耐穿，工艺好，穿着舒适。至于款型如何，那倒是仁者见仁，智者见智。买一双几千块钱的鞋，穿着不舒服，只能贡着，有什么意思呢？我也见过身边诸多女友买打完折还1000多的莱尔斯丹百丽一类，最多也就是一年就报销了。所以，我对皮鞋的基础要求就是，质量好。所以，很多时尚大牌的鞋我是不会去买的，比如GUCCILV之类，无非卖个价格高，外型炫而已。</p>
+//     <p>简单来说，严格的固特异鞋应当有七层，皮鞋，鞋面、内底、垫层作为一个整体，中间还有软木浆层，再通过沿边条与大底固定，各主要部件相互独立，更换简单。为什么我们以前看英国电影，很多人都说，我的鞋坏了要去换个掌，就是指这种鞋，因为鞋底是一双鞋最容易磨损的地方，而固特异鞋是的底是可以轻松更换的，所以英国很多老牌鞋真的是可以穿十年——正规的老牌鞋店，都提供换底服务</p>
+//     <p>OK，看了这张图，不用说，你也会知道这样的鞋穿起来会很舒服，缓冲大，弹性足，透气，更重要的是不怕脱胶。除非你去走山路，能把一双固特异鞋穿脱胶的可能性很小。因为工艺复杂，所以，人家卖你一千多一双，并不算没良心。</p>
+//   </div>
+// </div>
+//
+// Styleguide 4.30
+.wrapper
+  height 100%
+  overflow scroll
+  -webkit-overflow-scrolling touch
+
+  &.vertical
+    overflow-x hidden
+
+  &.horizontal
+    overflow-y hidden
+
+.scroller
+  min-height 100%

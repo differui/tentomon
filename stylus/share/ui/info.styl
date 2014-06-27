@@ -1,0 +1,30 @@
+// Information UI
+//
+// **Global Modifiers:**
+//
+// + `info`          Information UI with all state UI.
+// + `info-static`   Information UI without state UI.
+//
+//
+// **Motion Modifiers:**
+//
+// + `is-active`
+// + `is-disabled`
+//
+// Markup:
+// <button class="btn info">按钮</button>
+//
+// Styleguide 3.1.2
+.info
+  $info$()
+
+.info-static
+  $info$()
+
+.info:active
+.info.is-active
+  $info-active$()
+
+.info:disabled
+.info.is-disabled
+  $info-disabled$()

@@ -1,0 +1,57 @@
+// Select
+//
+// **@extend:**
+//
+// `$CONTROL`
+//
+// Markup:
+// <div class="select basis">
+//   <select class="select-tag">
+//     <option>这是第一条选项。</option>
+//     <option>这是第二条选项。</option>
+//     <option>这是第三条选项。</option>
+//   </select>
+//   <div class="select-mock">
+//     <div class="row">
+//       <div class="col col--4of5">
+//         <span class="select-text">请选择<span>
+//       </div>
+//       <div class="col col--1of5">
+//         <span class="select-indicator">
+//           <span class="oi" data-glyph="chevron-bottom"></span>
+//         </span>
+//       </div>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 4.17
+.select
+  @extend $CONTROL
+
+  $reset-appearance$()
+
+  width 100%
+  border-style solid
+
+  position relative
+
+.select-tag
+.select-mock
+  width 100%
+
+.select-tag
+  @extend $CONTROL-TAG
+
+  opacity 0
+
+  z-index 1
+
+.select-text
+.select-indicator
+  text-align left
+
+  display block
+
+.select-indicator
+  text-align right

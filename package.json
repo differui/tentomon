@@ -6,27 +6,35 @@
     "grunt-contrib-watch": "~0.5.3",
     "grunt-contrib-concat": "~0.3.0",
     "grunt-contrib-uglify": "~0.2.7",
-    "grunt-autoprefixer": "^0.7.4",
+    "grunt-autoprefixer": "^0.8.1",
     "grunt": "^0.4.5",
     "grunt-styleguide": "^0.2.15",
     "grunt-contrib-copy": "^0.5.0",
     "grunt-text-replace": "^0.3.12",
-    "grunt-markdown": "^0.6.1"
+    "grunt-markdown": "^0.6.1",
+    "dateformat": "^1.0.8-1.2.3",
+    "node-htmlencode": "0.0.1",
+    "grunt-version": "^0.3.0",
+    "grunt-contrib-stylus": "^0.18.0",
+    "lodash": "^2.4.1",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-webfont": "^0.4.7"
   },
-  "name": "PYOA",
-  "version": "0.0.1",
-  "description": "PYOA front-end rebuild.",
+  "name": "tentomon",
+  "version": "0.15.0",
+  "description": "Pure css framework for mobile.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/differui/PYOA"
+    "url": "https://github.com/differui/tentomon"
   },
   "keywords": [
-    "rebuild"
+    "css",
+    "framework"
   ],
   "author": "Bin-Rui Guan <differui@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/differui/PYOA/issues"
+    "url": "https://github.com/differui/tentomon/issues"
   },
-  "homepage": "https://github.com/differui/PYOA"
+  "homepage": "https://github.com/differui/tentomon"
 }

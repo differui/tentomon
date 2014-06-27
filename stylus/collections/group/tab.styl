@@ -1,0 +1,59 @@
+// Tab
+//
+// **@extend:**
+//
+// `$LIST` & `$LIST-ITEM`
+//
+// Markup:
+// <div class="tab {$modifiers}">
+//   <div class="row">
+//     <div class="col">
+//       <span class="tab-item first">
+//         <span class="btn full is-active">Left</span>
+//       </span>
+//     </div>
+//     <div class="col">
+//       <span class="tab-item">
+//         <span class="btn full">Middle</span>
+//       </span>
+//     </div>
+//     <div class="col">
+//       <span class="tab-item last">
+//         <span class="btn full">Right</span>
+//       </span>
+//     </div>
+//   </div>
+// </div>
+//
+// .head                     - indicator **above** tab.
+// .foot                     - indicator **below** tab.
+//
+// Styleguide 5.2.2
+.tab
+  @extend $LIST
+
+  border-style none
+
+  &.head
+    .btn
+    .link
+      border-top-width $border-width * 3
+
+  &.foot
+    .btn
+    .link
+      border-bottom-width $border-width * 3
+
+.tab-item
+  @extend $LIST-ITEM
+
+  margin-left $py-quarter
+  margin-right $py-quarter
+
+  .btn
+  .link
+    border solid 0 transparent
+
+  .btn.is-active
+  .link.is-active
+    border-color $motion-color

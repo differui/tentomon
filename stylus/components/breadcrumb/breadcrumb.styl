@@ -1,0 +1,54 @@
+// Breadcrumb
+//
+// **Details:**
+//
+// + `breadcrumb-section` extend form `$BOX`.
+//
+//
+// **Ordinary Modifiers:**
+//
+// + `loose` Section arraign with **big** gap.
+// + `tight` Section arraign with **small** gap.
+//
+// Markup:
+// <div class="breadcrumb loose">
+//   <a class="breadcrumb-section link seamless">食物</a>
+//   <div class="breadcrumb-slash"> / </div>
+//   <a class="breadcrumb-section link seamless">水果</a>
+//   <div class="breadcrumb-slash"> / </div>
+//   <div class="breadcrumb-section link seamless is-active">苹果</div>
+// </div>
+//
+// Styleguide 4.22
+.breadcrumb
+
+  &
+    .breadcrumb-section
+      padding-left $py-half
+      padding-right @padding-left
+
+  &.loose
+    .breadcrumb-section
+      padding-left $gap-horizontal
+      padding-right @padding-left
+
+  &.tight
+    .breadcrumb-section
+      padding-left 0
+      padding-right @padding-left
+
+.breadcrumb-section
+  @extend $BOX
+
+  &.is-active
+    color $black
+    cursor default
+    font-weight bold
+    text-decoration none
+
+.breadcrumb-slash
+  color $color-heavy
+
+.breadcrumb-section
+.breadcrumb-slash
+  display inline-block

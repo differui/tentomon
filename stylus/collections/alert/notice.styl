@@ -1,0 +1,40 @@
+// Notice
+//
+// **@extend:**
+//
+// `$ALERT`
+//
+// Markup:
+// <div class="notice basis-static {$modifiers}">
+//   <div class="row">
+//     <div class="col col--4of5">
+//       <h3 class="notice-title headline seamless">程序员A</h3>
+//       <p class="notice-content small truncate">这是一条通知。周末的活动暂定在下午 5点整开始。</p>
+//     </div>
+//     <div class="col col--middle col--1of5">
+//       <div class="notice-control">
+//         <span class="btn mini full basis">查看</span>
+//       </div>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 5.3.2
+.notice
+  @extend $ALERT
+
+  border-style solid none
+  border-radius 0
+
+.notice-title
+  @extend $ALERT-TITLE
+
+.notice-content
+  @extend $ALERT-CONTENT
+
+.notice-control
+  @extend $ALERT-CONTROL
+
+  .btn
+    margin-left $py-half
+    margin-right $py-half

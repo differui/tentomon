@@ -1,0 +1,84 @@
+// CONTROL
+//
+// **Super class:**
+//
+// `$BOX`
+//
+// **Relative class:**
+//
+// + `$CONTORL-TAG` Native form control tag.
+// + `$CONTROL-LABEL` Label for control tag.
+// + `$CONTORL-LABEL-PYGMY`
+// + `$CONTORL-LABEL-MINI`
+// + `$CONTORL-LABEL-HUGE`
+// + `$CONTORL-LABEL-MARSSIVE`
+// + `$CONTROL-MOCK` CSS moked form control.
+// + `$CONTORL-MOCK-PYGMY`
+// + `$CONTORL-MOCK-MINI`
+// + `$CONTORL-MOCK-HUGE`
+// + `$CONTORL-MOCK-MARSSIVE`
+// + `$CONTROL-INDICATOR` Form control state indicator.
+//
+// Styleguide 3.3.4
+
+// e.g.
+// mini control width = $height-mini * $control-width-radio
+$control-width-radio         = 0.5
+
+$CONTROL
+  @extend $BOX
+
+// hidden native form control tag
+$CONTROL-TAG
+  opacity 0
+  outline 0
+  $reset-appearance$()
+  $center$()
+
+// indent control label
+$CONTROL-LABEL
+  padding-left $gap-horizontal + $control-width-radio * $height-normal
+
+$CONTROL-LABEL-PYGMY
+  padding-left $gap-horizontal + $control-width-radio * $height-pygmy
+ 
+$CONTROL-LABEL-MINI
+  padding-left $gap-horizontal + $control-width-radio * $height-mini
+ 
+$CONTROL-LABEL-HUGE
+  padding-left $gap-horizontal + $control-width-radio * $height-huge
+
+$CONTROL-LABEL-MARSSIVE
+  padding-left $gap-horizontal + $control-width-radio * $height-marssive
+
+// use html tags simulate control
+$CONTROL-MOCK
+  $center-left$()
+
+  border-style solid
+  border-width $border-width
+
+$CONTROL-MOCK
+  width round($height-normal * $control-width-radio)
+  height @width
+
+$CONTROL-MOCK-PYGMY
+  width round($height-pygmy * $control-width-radio)
+  height @width
+ 
+$CONTROL-MOCK-MINI
+  width round($height-mini * $control-width-radio)
+  height @width
+ 
+$CONTROL-MOCK-HUGE
+  width round($height-huge * $control-width-radio)
+  height @width
+
+$CONTROL-MOCK-MARSSIVE
+  width round($height-marssive * $control-width-radio)
+  height @width
+
+// indicate control state
+$CONTROL-INDICATOR
+  opacity 0
+  color $motion-color

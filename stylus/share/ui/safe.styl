@@ -1,0 +1,30 @@
+// Safety UI
+//
+// **Global Modifiers:**
+//
+// + `safe`          Safety UI with all state UI.
+// + `safe-static`   Safety UI without state UI.
+//
+//
+// **Motion Modifiers:**
+//
+// + `is-active`
+// + `is-disabled`
+//
+// Markup:
+// <button class="btn safe">按钮</button>
+//
+// Styleguide 3.1.3
+.safe
+  $safe$()
+
+.safe-static
+  $safe$()
+
+.safe-active
+.safe:active
+  $safe-active$()
+
+.safe:disabled
+.safe.is-disabled
+  $safe-disabled$()

@@ -1,0 +1,79 @@
+// Pagination
+//
+// **@extend:**
+//
+// `$GROUP` & `$GROUP-ITEM`
+//
+// Markup:
+// <section class="kss-entry">
+//   <div class="pagination basis-static">
+//     <div class="row">
+//       <div class="col">
+//         <span class="pagination-item first is-disabled">
+//           <span class="btn full basis is-disabled oi" data-glyph="caret-left"></span>
+//         </span>
+//       </div>
+//       <div class="col">
+//         <span class="pagination-item is-active">
+//           <span class="btn full basis">1</span>
+//         </span>
+//       </div>
+//       <div class="col">
+//         <span class="pagination-item">
+//           <span class="btn full">2</span>
+//         </span>
+//       </div>
+//       <div class="col">
+//         <span class="pagination-item">
+//           <span class="btn full">3</span>
+//         </span>
+//       </div>
+//       <div class="col">
+//         <span class="pagination-item pagination-gap">
+//           <span class="btn full">…</span>
+//         </span>
+//       </div>
+//       <div class="col">
+//         <span class="pagination-item">
+//           <span class="btn full">11</span>
+//         </span>
+//       </div>
+//       <div class="col">
+//         <span class="pagination-item last">
+//           <span class="btn full oi" data-glyph="caret-right"></span>
+//         </span>
+//       </div>
+//     </div>
+//   </div>
+// </section>
+//
+// Styleguide 5.2.4
+.pagination
+  @extend $GROUP
+
+  border-style solid none
+  border-width $border-width
+  border-radius 0
+
+.pagination-item
+  @extend $GROUP-ITEM
+
+  .btn
+    border-style none
+    border-radius 0
+
+.pagination
+  &.basis-static .pagination-item
+    @extend $GROUP-ITEM-BASIS
+
+  &.info-static .pagination-item
+    @extend $GROUP-ITEM-INFO
+
+  &.safe-static .pagination-item
+    @extend $GROUP-ITEM-SAFE
+
+  &.danger-static .pagination-item
+    @extend $GROUP-ITEM-DANGER
+
+  &.warn-static .pagination-item
+    @extend $GROUP-ITEM-WARN

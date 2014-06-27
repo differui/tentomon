@@ -1,0 +1,138 @@
+// ============================================================================
+//  Define base UI component for py-light-ui.
+//
+//  author: Bin-Rui Guan<differui@gmail.com>
+//  repository: https://github.com/differui/PYOA
+// ============================================================================
+
+// Majority ui
+// ============================================================================
+$basis$()
+  @extend $UI
+
+  $basis-start               = $brand-main
+  $basis-end                 = $brand-main-end
+
+  color $black
+  border-color $border-basis
+  background-color darken($brand-main, 3%)
+
+  $$linear-gradient($basis-start, $basis-end)
+  $$text-highlight()
+
+$info$()
+  @extend $UI
+
+  $info-start                = $brand-info
+  $info-end                  = $brand-info-end
+
+  border-color $border-info
+  background-color $brand-info
+
+  $$linear-gradient($info-start, $info-end)
+
+$warn$()
+  @extend $UI
+
+  $warn-start                = $brand-warn
+  $warn-end                  = $brand-warn-end
+
+  border-color $border-warn
+  background-color $brand-warn
+
+  $$linear-gradient($warn-start, $warn-end)
+
+$safe$()
+  @extend $UI
+
+  $safe-start                = $brand-safe
+  $safe-end                  = $brand-safe-end
+
+  border-color $border-safe
+  background-color $brand-safe
+
+  $$linear-gradient($safe-start, $safe-end)
+
+$danger$()
+  @extend $UI
+
+  $danger-start              = $brand-danger
+  $danger-end                = $brand-danger-end
+
+  border-color $border-danger
+  background-color $brand-danger
+
+  $$linear-gradient($danger-start, $danger-end)
+
+// focused ui
+// ============================================================================
+$basis-focused$()
+  @extend $UI-FOCUS
+
+$info-focused$()
+  @extend $UI-FOCUS
+
+$warn-focused$()
+  @extend $UI-FOCUS
+
+$safe-focused$()
+  @extend $UI-FOCUS
+
+$danger-focused$()
+  @extend $UI-FOCUS
+
+// active ui
+// ============================================================================
+$basis-active$()
+  @extend $UI-ACTIVE
+
+$info-active$()
+  @extend $UI-ACTIVE
+
+$warn-active$()
+  @extend $UI-ACTIVE
+
+$safe-active$()
+  @extend $UI-ACTIVE
+
+$danger-active$()
+  @extend $UI-ACTIVE
+
+// disabled ui
+// ============================================================================
+$basis-disabled$()
+  @extend $UI-DISABLE
+
+  color $grey-light
+
+$info-disabled$()
+  @extend $UI-DISABLE
+
+  $info-disabled-start       = lighten($brand-info, $lighter-deg * 2)
+  $info-disabled-end         = lighten($brand-info, $lighter-deg * 2 - 2%)
+
+  $$linear-gradient($info-disabled-start, $info-disabled-end)
+
+$warn-disabled$()
+  @extend $UI-DISABLE
+
+  $warn-disabled-start       = lighten($brand-warn, $lighter-deg * 2)
+  $warn-disabled-end         = lighten($brand-warn, $lighter-deg * 2 - 2%)
+
+  $$linear-gradient($warn-disabled-start, $warn-disabled-end)
+
+$safe-disabled$()
+  @extend $UI-DISABLE
+
+  $safe-disabled-start       = lighten($brand-safe, $lighter-deg * 2)
+  $safe-disabled-end         = lighten($brand-safe, $lighter-deg * 2 - 2%)
+
+  $$linear-gradient($safe-disabled-start, $safe-disabled-end)
+
+$danger-disabled$()
+  @extend $UI-DISABLE
+
+  $danger-disabled-start     = lighten($brand-danger, $lighter-deg * 2)
+  $danger-disabled-end       = lighten($brand-danger, $lighter-deg * 2 - 2%)
+
+  $$linear-gradient($danger-disabled-start, $danger-disabled-end)

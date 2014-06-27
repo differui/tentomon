@@ -1,0 +1,58 @@
+// Brand
+//
+// **@extend:**
+//
+// `.label`
+//
+// **Position Modifiers:**
+//
+// + `position-90`
+// + `position-270`
+//
+// Markup:
+// <dl class="form">
+//   <dd class="form-content row">
+//     <p class="col col--1of5">
+//       <label class="brand seamless" for="t-4-1-2-1">
+//         <span class="oi" data-glyph="star"></span>
+//       </label>
+//     </p>
+//     <p class="col col--4of5">
+//       <input id="t-4-1-2-1" type="text" class="textfield basis">
+//     </p>
+//   </dd>
+// </dl>
+// <dl class="form">
+//   <dd class="form-content row">
+//     <label class="brand position-270 seamless" for="t-4-1-2-2">
+//       <span class="oi" data-glyph="star"></span>
+//     </label>
+//     <input id="t-4-1-2-2" type="text" class="textfield basis indent-left">
+//   </dd>
+// </dl>
+// <dl class="form">
+//   <dd class="form-content row">
+//     <p class="col col--1of5">
+//       <label class="brand basis-static full chop-right pointer-90" for="t-4-1-4-1">
+//         <span class="oi" data-glyph="star"></span>
+//       </label>
+//     </p>
+//     <p class="col col--4of5">
+//       <input id="t-4-1-4-1" type="text" class="textfield basis chop-left seamless-left">
+//     </p>
+//   </dd>
+// </dl>
+//
+// Styleguide 4.10
+.brand
+  @extend $LABEL
+
+  display block
+  z-index 1
+
+  &.position-90
+  &.position-270
+    min-width 20%
+
+  &.square
+    min-width 0

@@ -1,0 +1,33 @@
+// Flash
+//
+// Inherit form `$ALERT`.
+//
+// Markup:
+// <div class="flash basis-static">
+//   <div class="row">
+//     <div class="col col--4of5">
+//       <h3 class="flash-title headline seamless">通知</h3>
+//       <p class="flash-content small truncate">这是一条通知。周末的活动暂定在下午 5点整开始。</p>
+//     </div>
+//     <div class="col col--middle col--1of5">
+//       <div class="flash-control">
+//         <span class="oi" data-glyph="x"></span>
+//       </div>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 5.3.1
+.flash
+  @extend $ALERT
+
+  border-style solid
+
+.flash-title
+  @extend $ALERT-TITLE
+
+.flash-content
+  @extend $ALERT-CONTENT
+    
+.flash-control
+  @extend $ALERT-CONTROL

@@ -1,0 +1,251 @@
+// Separator
+//
+// **Ordinary Modifiers:**
+//
+// + `vertical`   **Vertical** separator.
+// + `horizontal` **Horizontal** separator.
+// + `solid`      Separator with **solid** border.
+// + `notch`      Separator border with **hightlight**.
+// + `sunken`     Separator border **sunken** in one side.
+// + `join`       Remove separator icon and text and **join** borders together.
+//
+// Markup:
+// <div class="separator vertical sunken">
+//   <div class="separator-inner">
+//     <span class="oi icon separator-icon circle" data-glyph="star"></span>
+//   </div>
+// </div>
+// <div class="separator horizontal sunken">
+//   <div class="separator-inner">
+//     <span class="separator-text icon naked">中国</span>
+//   </div>
+// </div>
+//
+// Styleguide 4.20
+$offset-normal               = ($height-normal / 2 + $gap-horizontal) * -1
+$offset-marssive             = ($height-marssive / 2 + $gap-horizontal) * -1
+
+.separator
+  overflow hidden
+
+.separator-text
+.separator-icon
+.separator-inner:after
+.separator-inner:before
+  $center$() 
+
+.separator-text
+.separator-icon
+  color $color-heavy
+
+  z-index 2
+
+.separator-inner
+
+  // let separator wound not clip shadow of .separator-inner
+  margin-top 1px
+  margin-bottom 1px
+  position relative
+
+  &:before
+  &:after
+    content ""
+    border-width $border-width
+
+    z-index 1
+
+.separator-text
+  text-align center
+
+// layout separator lines
+// ============================================================================
+.horizontal > .separator-inner
+  width 100%
+
+  &:after
+  &:before
+    width 50%
+    height 0
+    border-style solid none
+
+  &:after
+    left auto
+
+  &:before
+    right auto
+
+.vertical > .separator-inner
+  height 100%
+
+  &:after
+  &:before
+    width 0
+    height 50%
+    border-style none solid
+
+  &:after
+    top auto
+
+  &:before
+    bottom auto
+
+// separator size modifiers (different offset and separator width/height)
+// ============================================================================
+.separator-text
+  line-height $height-normal
+
+.horizontal .separator-inner
+  min-height $height-normal
+
+  &:after
+    margin-right $offset-normal
+
+  &:before
+    margin-left $offset-normal
+
+.vertical .separator-inner
+  min-width $height-normal
+
+  &:after
+    margin-bottom $offset-normal
+
+  &:before
+    margin-top $offset-normal
+
+.huge
+.marssive
+  .separator-text
+    line-height $height-marssive
+
+  &.horizontal .separator-inner
+    min-height $height-marssive
+
+    &:after
+      margin-right $offset-marssive
+
+    &:before
+      margin-left $offset-marssive
+
+  &.vertical .separator-inner
+    min-width $height-marssive
+
+    &:after
+      margin-bottom $offset-marssive
+
+    &:before
+      margin-top $offset-marssive
+  
+
+// separator skin modifiers
+// ============================================================================
+.solid
+.dashed
+.dotted
+  &.vertical > .separator-inner:before
+  &.vertical > .separator-inner:after
+    border-left-color $border-heavy
+    border-right-style none
+
+  &.horizontal > .separator-inner:before
+  &.horizontal > .separator-inner:after
+    border-top-color $border-heavy
+    border-bottom-style none
+
+.dashed
+  &.vertical > .separator-inner
+    &:after
+    &:before
+      border-left-style dashed
+
+  &.horizontal > .separator-inner
+    &:after
+    &:before
+      border-top-style dashed
+
+.dotted
+  &.vertical > .separator-inner
+    &:after
+    &:before
+      border-left-style dotted
+
+  &.horizontal > .separator-inner
+    &:after
+    &:before
+      border-top-style dotted
+
+.notch
+  &.vertical > .separator-inner:before
+  &.vertical > .separator-inner:after
+    border-left-color $border-heavy
+    border-right-color $highlight-light
+
+  &.horizontal > .separator-inner:before
+  &.horizontal > .separator-inner:after
+    border-top-color $border-heavy
+    border-bottom-color $highlight-light
+
+  .separator-text
+  .separator-icon:before
+    $$text-highlight()
+
+  .separator-icon
+    $$top-outer-shadow(1, 0, $highlight-light)
+
+.sunken
+  &.vertical > .separator-inner:before
+  &.vertical > .separator-inner:after
+    width 1px
+    border-style none
+
+  &.vertical > .separator-inner:before
+    background-image radial-gradient(farthest-side at center bottom, $border-heavy, $$translucent($border-heavy, 0))
+
+  &.vertical > .separator-inner:after
+    background-image radial-gradient(farthest-side at center top, $border-heavy, $$translucent($border-heavy, 0))
+
+  &.horizontal > .separator-inner:before
+  &.horizontal > .separator-inner:after
+    height 1px
+    border-style none
+
+  &.horizontal > .separator-inner:before
+    background-image radial-gradient(farthest-side at right center, $border-heavy, $$translucent($border-heavy, 0))
+
+  &.horizontal > .separator-inner:after
+    background-image radial-gradient(farthest-side at left center, $border-heavy, $$translucent($border-heavy, 0))
+
+.join
+  .separator-icon
+  .separator-text
+    display none
+
+  &.vertical > .separator-inner
+    min-width 3px
+
+  &.vertical > .separator-inner:before
+    margin-top auto
+
+  &.vertical > .separator-inner:after
+    margin-bottom auto
+
+  &.horizontal > .separator-inner
+    min-height 3px
+
+  &.horizontal > .separator-inner:before
+    margin-left auto
+
+  &.horizontal > .separator-inner:after
+    margin-right auto
+
+.join
+  &.dashed
+  &.dotted
+    &.vertical > .separator-inner:before
+      height 100%
+
+    &.horizontal > .separator-inner:before
+      width 100%
+
+    &.vertical > .separator-inner:after
+    &.horizontal > .separator-inner:after
+      display none

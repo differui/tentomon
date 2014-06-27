@@ -1,0 +1,27 @@
+// LIST
+//
+// **Relative class:**
+//
+// + `$LIST-ITEM`
+// + `$ITEM-VERTICAL-SOLID`
+// + `$ITEM-VERTICAL-NOTCH`
+// + `$ITEM-VERTICAL-SUNKEN`
+// + `$ITEM-VERTICAL-ROUND`
+// + `$ITEM-HORIZONTAL-SOLID`
+// + `$ITEM-HORIZONTAL-NOTCH`
+// + `$ITEM-HORIZONTAL-SUNKEN`
+// + `$ITEM-HORIZONTAL-ROUND`
+//
+// Styleguide 3.3.6
+$LIST
+  $reset-gap$()
+  $reset-list$()
+
+  overflow hidden
+
+  &.relative > li
+    position relative
+
+
+  &.bfc > li
+    overflow hidden

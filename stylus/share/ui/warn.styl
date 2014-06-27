@@ -1,0 +1,30 @@
+// Warning UI
+//
+// **Global Modifiers:**
+//
+// + `warn`          Warning UI with all state UI.
+// + `warn-static`   Warning UI without state UI.
+//
+//
+// **Motion Modifiers:**
+//
+// + `is-active`
+// + `is-disabled`
+//
+// Markup:
+// <button class="btn warn">按钮</button>
+//
+// Styleguide 3.1.5
+.warn
+  $warn$()
+
+.warn-static
+  $warn$()
+
+.warn:active
+.warn.is-active
+  $warn-active$()
+
+.warn:disabled
+.warn.is-disabled
+  $warn-disabled$()

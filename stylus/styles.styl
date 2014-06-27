@@ -1,83 +1,397 @@
-@import "globals/variable"
-
-// Plugins
-@import "plugins/open-iconic"
-
-// Templates
-
-// Global basis Style
-@import "globals/text"
-
-// Mixin
-// 
-// Mixins shared across the project.
-// 
-// Styleguide 1.
-
-// Util
+// This file unity every variables, helpers, components files.
 //
-// Util mixin just like simple helper function.
-// Receive some arguments, play with the arguments and return the result.
+// Author: differui@gmail.com
+// License: MIT
+
+// Section 1: Foundation
+// ============================================================================
+
+// Foundation
+//
+// Helpers, Variables, Templates, Mixins foundation of project.
+//
+// Styleguide 1
+
+// Color Helpers
 //
 // Styleguide 1.1
 @import "utils/colors"
 
-// Blend Mixin
-//
-// Blend modes by CSS3 features.
+// Blend Mode Helpers
 //
 // Styleguide 1.2
 @import "utils/blends"
 
-// Component Mixin
+// Templates
+//
+// Templates build on stylus mixin and with `$` as prefix and suffix.
 //
 // Styleguide 1.3
-@import "mixins/button"
-@import "mixins/button-outline"
+@import "templates/reset"
+@import "templates/text"
+@import "templates/center"
+@import "templates/flex"
+@import "templates/state"
 
-// Buttons
-// 
-// A majority of buttons in the project are built from the same base class.
-// Use class `.btn` set default button skin for HTML element.
-// Check out the demonstrate HTML code under every child chapter
-// before you use the hooks described in this document.
-// 
-// 1. intruduce `user-select`:
+// Mixins
 //
-//   + mdn: https://developer.mozilla.org/en-US/docs/Web/CSS/user-select?redirectlocale=en-US&redirectslug=CSS%2Fuser-select
-//   + caniuse: http://caniuse.com/#feat=user-select-none
+// Styleguide 1.4
+
+// Plugins
 //
-// 2. intruduce `white-space`:
+// + **normalize.css** https://github.com/necolas/normalize.css/
+// + **elastic** https://github.com/differui/elastic-grid.css
 //
-//   + white-space: http://css-tricks.com/examples/White-space/
-//   + sgml entities: http://www.w3.org/TR/html4/sgml/entities.html
-//   + html entities: http://www.oratory.com/tools/entities.html
-// 
-// Styleguide 2.
+// Styleguide 1.5
+@import "plugins/normalize"
+@import "plugins/elastic/elastic"
 
-// Common Buttons
-// 
-// Common buttons use `.btn` set default button skin.
-// Use modifiers change default button appearance. 
-// 
-// Styleguide 2.1
-@import "components/buttons/button"
-@import "components/buttons/button-ok"
-@import "components/buttons/button-danger"
-@import "components/buttons/button-info"
-@import "components/buttons/button-mini"
-@import "components/buttons/button-large"
-@import "components/buttons/button-block"
+// Skin unrelated variables
+@import "globals/variables"
 
-// Advance Buttons
-@import "components/buttons/button-link"
-@import "components/buttons/button-outline"
-@import "components/buttons/button-glyph"
-@import "components/buttons/button-group"
+// Skin related variable
+@import "skins/" + $name + "/" + $name + "-variables"
+@import "skins/" + $name + "/" + $name + "-class"
+@import "skins/" + $name + "/" + $name + "-templates"
 
-// Forms
-// 
-// Default style for text box.
-// 
-// Styleguide 3.
-// @import "components/form"
+// Global Basis Style
+@import "globals/tentomon"
+@import "globals/kss" if $kss is true
+
+// Colors
+//
+// Default variables: `globals/variables.styl`
+//
+// Skin variables: `skins/[skin name]/[skin name]-variables.styl`
+//
+// Styleguide 1.6
+@import "globals/color" if $kss is true
+
+// Section 2: Base
+// ============================================================================
+
+// Base
+//
+// Base HTML styles share across project.
+//
+// Styleguide 2
+
+// Anchor
+//
+// 2.1
+@import "base/anchor"
+
+// Section 3: Share
+// ============================================================================
+
+// Share
+//
+// Component unrelated styles share across project.
+//
+// Styleguide 3
+
+// UI
+//
+// Default component is **stateless**.
+// UI hooks will paint UI skin and reaction style for component.
+// If you do not want UI reaction use `.type-modifier` get UI skin under specified state.
+// Let's lookup a demo about adding states and reaction style for button by UI hooks.
+//
+// Styleguide 3.1
+@import "share/ui/basis"
+@import "share/ui/info"
+@import "share/ui/warn"
+@import "share/ui/safe"
+@import "share/ui/danger"
+
+// State
+//
+// Styleguide 3.2
+@import "share/state/active"
+
+// Class
+//
+// Abstract classes share across project.
+//
+// Styleguide 3.3
+@import "share/class/box"
+@import "share/class/control"
+@import "share/class/label"
+@import "share/class/list"
+@import "share/class/list-item"
+@import "share/class/group"
+@import "share/class/group-item"
+@import "share/class/alert"
+@import "share/class/around"
+@import "share/class/amid"
+@import "share/class/triangle"
+
+// Override
+//
+// Override basis style by specify CSS class hooks.
+//
+// Styleguide 3.4
+@import "share/override/border"
+@import "share/override/background"
+@import "share/override/radius"
+@import "share/override/width"
+@import "share/override/align"
+@import "share/override/rotate"
+@import "share/override/indent"
+@import "share/override/collapse"
+@import "share/override/hang"
+@import "share/override/fold"
+@import "share/override/push"
+@import "share/override/display"
+@import "share/override/pointer"
+@import "share/override/amid"
+@import "share/override/around"
+@import "share/override/position"
+@import "share/override/index"
+@import "share/override/bfc"
+
+// Section 4: Components
+// ============================================================================
+
+// Components
+//
+// Styleguide 4
+
+// Root
+//
+// 0
+@import "components/root/root"
+
+// Icon
+//
+// 4.1
+@import "components/icon/icon"
+
+// Image
+//
+// 4.2
+@import "components/image/image"
+
+// Text
+//
+// 4.3
+@import "components/text/text"
+
+// Headline
+//
+// 4.4
+@import "components/headline/headline"
+
+// Button
+//
+// 4.5
+@import "components/controls/button"
+
+// Link
+//
+// 4.6
+@import "components/controls/link"
+
+// Expander
+//
+// 4.7
+@import "components/controls/expander"
+
+// Textfield
+//
+// 4.8
+@import "components/controls/textfield"
+
+// Textarea
+//
+// 4.9
+@import "components/controls/textarea"
+
+// Brand
+//
+// 4.10
+@import "components/controls/brand"
+
+// Ribbon
+//
+// 4.11
+@import "components/controls/ribbon"
+
+// Magnet
+//
+// 4.12
+@import "components/controls/magnet"
+
+// Bubble
+//
+// 4.13
+@import "components/controls/bubble"
+
+// Checkbox
+//
+// 4.14
+@import "components/controls/checkbox"
+
+// Radio
+//
+// 4.15
+@import "components/controls/radio"
+
+// Toggle
+//
+// 4.16
+@import "components/controls/toggle"
+
+// Select
+//
+// 4.17
+@import "components/controls/select"
+
+// Message
+//
+// 4.18
+@import "components/controls/message"
+
+// Progress
+//
+// 4.19
+@import "components/controls/progress"
+
+// Separator
+//
+// 4.20
+@import "components/separator/separator"
+
+// Mask
+//
+// 4.21
+@import "components/mask/mask"
+
+// Breadcrumb
+//
+// 4.22
+@import "components/breadcrumb/breadcrumb"
+
+// List
+//
+// Styleguide 4.23
+@import "components/list/list-vertical"
+@import "components/list/list-horizontal"
+
+// Pointer
+//
+// 4.24
+@import "components/pointer/pointer"
+
+// Tip
+//
+// 4.25
+@import "components/tip/tip"
+
+// Arrow
+//
+// 4.26
+@import "components/arrow/arrow"
+
+// Plaid
+//
+// 4.27
+@import "components/plaid/plaid"
+
+// Bar
+//
+// 4.28
+@import "components/bar/bar"
+
+// Timeline
+//
+// 4.29
+@import "components/timeline/timeline"
+
+// Wrapper & Scroller
+//
+// 4.30
+@import "components/wrapper/wrapper"
+
+// Article
+//
+// Styleguide 4.31
+@import "components/article/code"
+@import "components/article/list"
+@import "components/article/paragraph"
+@import "components/article/quote"
+@import "components/article/table"
+
+// Section 5: Collections
+// ============================================================================
+
+// Collections
+//
+// Styleguide 5
+
+// Fieldset
+//
+// Styleguide 5.1
+@import "collections/forms/form"
+@import "collections/forms/fieldset"
+@import "collections/forms/fieldset-global-error"
+@import "collections/forms/fieldset-textfield-error"
+
+// Group
+//
+// Styleguide 5.2
+@import "collections/group/board"
+@import "collections/group/tab"
+@import "collections/group/nav"
+@import "collections/group/pagination"
+
+// Alert
+//
+// Show information on the page.
+//
+// Styleguide 5.3
+@import "collections/alert/flash"
+@import "collections/alert/notice"
+
+// Popup
+//
+// 5.4
+@import "collections/popup/popup"
+
+// Headroom
+//
+// 5.5
+@import "collections/headroom/headroom"
+
+// Box
+//
+// 5.6
+@import "collections/box/box"
+
+// panel
+//
+// 5.7
+@import "collections/panel/panel"
+
+// View
+//
+// 5.8
+@import "collections/view/view"
+
+// Section 6: Layout
+// ============================================================================
+
+// Layout
+@import "layout/root"
+@import "layout/content"
+@import "layout/suspend"
+@import "layout/main"
+@import "layout/header"
+@import "layout/footer"
+
+// Section 7: Sections
+// ============================================================================
+
+@import "sections/login"
+@import "sections/detail"
+@import "sections/home"

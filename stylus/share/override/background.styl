@@ -1,0 +1,19 @@
+// Background
+//
+// **Global Modifiers:**
+//
+// + `pure` Remove  `background-image` and `box-shadow`.
+// + `clear` Remove `background-color` more than `pure`.
+//
+// Markup:
+// <div class="kss-box basis pure">
+// </div>
+//
+// Styleguide 3.4.2
+.pure
+.clear
+  background-image none !important
+  box-shadow 0 0 0 transparent !important
+
+.clear
+  background-color transparent !important

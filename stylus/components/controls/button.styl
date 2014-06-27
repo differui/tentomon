@@ -1,0 +1,26 @@
+// Button
+//
+// **@extent:**
+//
+// `$BOX`
+//
+// Markup:
+// <button class="btn basis">
+//   <span class="btn-icon oi icon naked" data-glyph="star"></span>
+//   <span class="btn-text">按钮</span>
+// </button>
+//
+// Styleguide 4.5
+
+// 1. intruduce `white-space`:
+//
+//   + white-space: http://css-tricks.com/examples/White-space/
+//   + sgml entities: http://www.w3.org/TR/html4/sgml/entities.html
+//   + html entities: http://www.oratory.com/tools/entities.html
+.btn
+  @extend $BOX
+
+  text-align center
+  font-weight bold
+  white-space nowrap // 1
+  text-decoration none

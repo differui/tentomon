@@ -1,0 +1,50 @@
+// Mask
+//
+// **Motion Modifers:**
+//
+// + `is-active` Show the mask.
+// + `is-inactive` Hidden the mask.
+//
+//
+// **Ordinary Modifiers:**
+//
+// + `white` Mask with **translucent white** background.
+// + `black` Mask with **translucent black** background.
+//
+// Markup:
+// <div class="kss-box border-heavy round">
+//   <div class="mask is-active black">
+//     <div class="mask-inner">
+//       <p class="row row--center row--bottom" style="height:40%">
+//         <strong class="col col--full h2 center">中国</strong>
+//       </p>
+//       <p class="row row--center">
+//         <span class="oi" data-glyph="star"></span>
+//         <span class="oi" data-glyph="star"></span>
+//         <span class="oi" data-glyph="star"></span>
+//         <span class="oi" data-glyph="star"></span>
+//         <span class="oi" data-glyph="star"></span>
+//       </p>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 4.21
+.mask
+.mask-inner
+  $center$()
+
+.mask
+  z-index -1
+
+  &.is-active
+    z-index 1
+
+  &.is-inactive
+    z-index -1
+
+  &.black
+    background-color $translucent-black
+
+  &.white
+    background-color $translucent-white

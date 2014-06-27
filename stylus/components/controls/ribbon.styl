@@ -1,0 +1,208 @@
+// Ribbon
+//
+// **@extend:**
+//
+// `.label`
+//
+// **Position Modifiers:**
+//
+// + `position-45`
+// + `position-135`
+// + `position-225`
+// + `position-315`
+//
+// Markup:
+// <dl class="form">
+//   <dd class="form-content">
+//     <input type="text" class="textfield basis indent-right mini">
+//     <label class="ribbon embed basis-static position-45 seamless">
+//       <span class="ribbon-inner">
+//         <span class="oi ribbon-icon" data-glyph="star"></span>
+//       </span>
+//     </label>
+//   </dd>
+// </dl>
+// <dl class="form">
+//   <dd class="form-content">
+//     <input type="text" class="textfield basis indent-right">
+//     <label class="ribbon embed basis-static position-45 seamless">
+//       <span class="ribbon-inner">
+//         <span class="ribbon-text">中</span>
+//       </span>
+//     </label>
+//   </dd>
+// </dl>
+//
+// Styleguide 4.11
+$ribbon-height               = $height-normal - $border-width * 2
+$ribbon-icon-margin          = $py-quarter - 2
+$ribbon-text-margin          = $py-quarter - 2
+
+.ribbon
+  @extend $LABEL
+
+  height $ribbon-height
+  width @height
+  overflow hidden
+  border-color inherit
+  border-radius $border-radius - 2
+  background-image none
+  background-color transparent
+
+.ribbon-inner:after
+  content ""
+  border-style solid
+  border-width 0
+  border-color transparent
+
+  position absolute
+
+.position-45 .ribbon-inner:after
+  border-left-width $ribbon-height
+  border-top-width $ribbon-height
+  border-top-color inherit
+
+  top 0
+  right 0
+
+.position-135 .ribbon-inner:after
+  border-left-width $ribbon-height
+  border-bottom-width $ribbon-height
+  border-bottom-color inherit
+
+  bottom 0
+  right 0
+
+.position-225 .ribbon-inner:after
+  border-right-width $ribbon-height
+  border-bottom-width $ribbon-height
+  border-bottom-color inherit
+
+  bottom 0
+  left 0
+
+.position-315 .ribbon-inner:after
+  border-right-width $ribbon-height
+  border-top-width $ribbon-height
+  border-top-color inherit
+
+  top 0
+  left 0
+
+.ribbon-icon
+.ribbon-text
+  text-shadow none
+
+  z-index 2
+  position absolute
+
+.ribbon-icon
+  display inline-block
+  margin-left $py-half
+  margin-right $py-half
+
+// layout ribbon text and icon
+// ============================================================================
+.position-225
+.position-315
+  .ribbon-icon
+  .ribbon-text
+    left 0
+
+  .ribbon-icon
+    margin-left $ribbon-icon-margin
+
+.position-45
+.position-135
+  .ribbon-icon
+  .ribbon-text
+    right 0
+
+  .ribbon-icon
+    margin-right $ribbon-icon-margin
+
+.position-45
+.position-315
+  .ribbon-icon
+  .ribbon-text
+    top 0
+
+  .ribbon-icon
+    margin-top $ribbon-icon-margin
+
+.position-135
+.position-225
+  .ribbon-icon
+  .ribbon-text
+    bottom 0
+
+  .ribbon-icon
+    margin-bottom $ribbon-icon-margin
+
+.position-45
+  .ribbon-text
+    right $ribbon-text-margin
+    top $ribbon-text-margin
+
+.position-135
+  .ribbon-text
+    right $ribbon-text-margin
+    bottom $ribbon-text-margin
+
+.position-225
+  .ribbon-text
+    left $ribbon-text-margin
+    bottom $ribbon-text-margin
+
+.position-315
+  .ribbon-text
+    left $ribbon-text-margin
+    top $ribbon-text-margin
+
+.position-135
+.position-315
+  .ribbon-text
+    transform rotate(-45deg)
+
+.position-45
+.position-225
+  .ribbon-text
+    transform rotate(45deg)
+
+// change ribbon color
+// ============================================================================
+.ribbon
+  &.basis-static
+    color $border-heavy
+
+    .ribbon-icon
+    .ribbon-text
+      color $brand-main
+
+  &.info-static
+    color $border-info
+
+    .ribbon-icon
+    .ribbon-text
+      color $$lighter($brand-info)
+
+  &.safe-static
+    color $border-safe
+
+    .ribbon-icon
+    .ribbon-text
+      color $$lighter($brand-safe)
+
+  &.danger-static
+    color $border-danger
+
+    .ribbon-icon
+    .ribbon-text
+      color $$lighter($brand-danger)
+
+  &.warn-static
+    color $border-warn
+
+    .ribbon-icon
+    .ribbon-text
+      color $$lighter($brand-warn)

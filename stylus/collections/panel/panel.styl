@@ -1,0 +1,48 @@
+// Panel
+//
+// Markup:
+// <div class="panel basis-static">
+//   <div class="panel-header basis-static">
+//     <strong class="panel-title headline seamless">标题</strong>
+//   </div>
+//   <div class="panel-content">
+//     <span>这是一段内容。</span>
+//   </div>
+//   <div class="panel-footer pure basis-static">
+//     <strong class="panel-notice headline pygmy seamless align-right">
+//       <span class="headline-icon oi icon naked" data-glyph="map-marker"></span>
+//       <span class="headline-text">这是一条脚注</span>
+//     </strong>
+//   </div>
+// </div>
+//
+// Styleguide 5.7
+.panel
+  border-width $border-width
+  border-style solid
+  background-color transparent
+  background-image none
+
+.panel-header
+.panel-footer
+  border-radius $border-radius - 1
+
+.panel-header
+.panel-footer
+  border-style none
+  border-width $border-width
+
+.panel-header
+  border-bottom-style solid
+  border-bottom-left-radius 0
+  border-bottom-right-radius 0
+
+.panel-footer
+  border-top-style solid
+  border-top-left-radius 0
+  border-top-right-radius 0
+
+.panel-content
+  color $black
+
+  $$text-highlight(transparent)

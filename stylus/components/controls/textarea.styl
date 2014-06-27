@@ -1,0 +1,91 @@
+// Textarea
+//
+// **@extent:**
+//
+// `.textfield`
+//
+// **Ordinary Modifiers:**
+//
+// + `half`    Textarea in **two** rows.
+// + `line`    Textarea in **one** row.
+// + `immerse` Textarea covered total parent container.
+//
+// Markup:
+// <dl class="form">
+//   <dd class="form-content">
+//     <textarea class="textarea basis" placeholder="请输入"></textarea>
+//   </dd>
+// </dl>
+//
+// Styleguide 4.9
+.textarea
+  @extend .textfield
+
+  min-width 100%
+  max-width 100%
+
+  // Default textarea with 4 rows.
+  &
+    height $height-normal   * 4
+  
+  &.marssive
+    height $height-marssive * 4
+  
+  &.huge
+    height $height-huge     * 4
+  
+  &.mini
+    height $height-mini     * 4
+  
+  &.pygmy
+    height $height-pygmy    * 4
+
+  // Half textarea with 2 rows.
+  &.half
+    width 100%
+
+    &
+      height $height-normal   * 2
+
+    &.marssive
+      height $height-marssive * 2
+    
+    &.huge
+      height $height-huge     * 2
+    
+    &.mini
+      height $height-mini     * 2
+    
+    &.pygmy
+      height $height-pygmy    * 2
+
+  // Edit in immerse mode.
+  &.immerse
+    line-height $py-line
+    height 100%
+
+    padding $gap-vertical $gap-horizontal
+
+  // One row textarea.
+  &.line
+    &
+      height $height-normal
+
+    &.marssive
+      height $height-marssive
+    
+    &.huge
+      height $height-huge
+    
+    &.mini
+      height $height-mini
+    
+    &.pygmy
+      height $height-pygmy
+
+  &:not(.line)
+  &.pygmy:not(.line)
+  &.mini:not(.line)
+  &.huge:not(.line)
+  &.marssive:not(.line)
+    max-height none
