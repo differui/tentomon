@@ -15,7 +15,7 @@ $basis$()
 
   color $black
   border-color $border-basis
-  background-color darken($brand-main, 3%)
+  background-color $background-basis
 
   $$linear-gradient($basis-start, $basis-end)
   $$text-highlight()
@@ -27,7 +27,7 @@ $info$()
   $info-end                  = $brand-info-end
 
   border-color $border-info
-  background-color $brand-info
+  background-color $background-info
 
   $$linear-gradient($info-start, $info-end)
 
@@ -38,7 +38,7 @@ $warn$()
   $warn-end                  = $brand-warn-end
 
   border-color $border-warn
-  background-color $brand-warn
+  background-color $background-warn
 
   $$linear-gradient($warn-start, $warn-end)
 
@@ -49,7 +49,7 @@ $safe$()
   $safe-end                  = $brand-safe-end
 
   border-color $border-safe
-  background-color $brand-safe
+  background-color $background-safe
 
   $$linear-gradient($safe-start, $safe-end)
 
@@ -60,9 +60,17 @@ $danger$()
   $danger-end                = $brand-danger-end
 
   border-color $border-danger
-  background-color $brand-danger
+  background-color $background-danger
 
   $$linear-gradient($danger-start, $danger-end)
+
+$dark$()
+  @extend $UI
+
+  border-color $black
+  background-color $black
+
+  $$top-inner-shadow(0, 0, transparent)
 
 // focused ui
 // ============================================================================
@@ -81,6 +89,9 @@ $safe-focused$()
 $danger-focused$()
   @extend $UI-FOCUS
 
+$dark-focused$()
+  null
+
 // active ui
 // ============================================================================
 $basis-active$()
@@ -97,6 +108,9 @@ $safe-active$()
 
 $danger-active$()
   @extend $UI-ACTIVE
+
+$dark-active$()
+  null
 
 // disabled ui
 // ============================================================================
@@ -136,3 +150,8 @@ $danger-disabled$()
   $danger-disabled-end       = lighten($brand-danger, $lighter-deg * 2 - 2%)
 
   $$linear-gradient($danger-disabled-start, $danger-disabled-end)
+
+$dark-disabled$()
+  @extend $UI-DISABLE
+
+  color $grey-light

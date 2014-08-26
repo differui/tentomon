@@ -1,0 +1,107 @@
+// Around
+//
+// **Global Modifiers:**
+//
+// + `around-x` Position outer of parent (x ∈ { x | x = 30, n ∈ N:n <= 12 } ).
+// + `around-embed` Cover parent border.
+//
+//
+// Markup:
+// <div class="kss-box box basis-static">
+//   <span class="btn basis around-180">外部下方</span>
+// </div>
+//
+// Styleguide 3.3.2
+.around-30
+.around-60
+.around-90
+.around-120
+.around-150
+.around-180
+.around-210
+.around-240
+.around-270
+.around-300
+.around-330
+.around-360
+  position absolute
+
+.around-30
+.around-330
+.around-360
+  top $border-width * -1
+  transform translateY(-100%)
+
+.around-60
+.around-90
+.around-120
+  right $border-width * -1
+  transform translateX(100%)
+
+.around-150
+.around-180
+.around-210
+  bottom $border-width * -1
+  transform translateY(100%)
+
+.around-240
+.around-270
+.around-300
+  left $border-width * -1
+  transform translateX(-100%)
+
+.around-30
+.around-150
+  right 0
+
+.around-60
+.around-300
+  top 0
+
+.around-90
+.around-270
+  top 50%
+
+.around-120
+.around-240
+  bottom 0
+
+.around-180
+.around-360
+  left 50%
+
+.around-210
+.around-330
+  left 0
+
+.around-90
+  transform translate(100%, -50%)
+
+.around-180
+  transform translate(-50%, 100%)
+
+.around-270
+  transform translate(-100%, -50%)
+
+.around-360
+  transform translate(-50%, -100%)
+
+// Cover parent border by negative margin.
+.around-embed
+  &.around-30
+  &.around-150
+    margin-right $border-width * -1
+
+  &.around-60
+  &.around-300
+    margin-top $border-width * -1
+
+  &.around-120
+  &.around-240
+    margin-bottom $border-width * -1
+
+  &.around-210
+  &.around-330
+    margin-left $border-width * -1
+    
+    

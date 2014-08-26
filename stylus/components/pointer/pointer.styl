@@ -16,23 +16,6 @@
 // + `direction-360`
 //
 //
-// **Surround Modifiers:**
-//
-// + `around-30`
-// + `around-30`
-// + `around-60`
-// + `around-90`
-// + `around-120`
-// + `around-150`
-// + `around-180`
-// + `around-210`
-// + `around-240`
-// + `around-270`
-// + `around-300`
-// + `around-330`
-// + `around-360`
-//
-//
 // **Shape Modifiers:**
 //
 // + `round`
@@ -61,11 +44,10 @@
 //   </div>
 // </div>
 //
-// Styleguide 4.24
+// Styleguide 5.24
 
 // Get an even number for width.
 $pointer-width               = $py-half + 1
-$pointer-spare-margin        = $pointer-width + 1
 $pointer-offset              = round($pointer-width / 2 + 1) * -1
 $pointer-swim-case           = 15%
 
@@ -189,27 +171,6 @@ $brand-warn-span             = $brand-warn - $brand-warn-end
     &:after
       bottom $pointer-swim-case
 
-  // Spare space for pointer.
-  &.direction-30
-  &.direction-330
-  &.direction-360
-    margin-top $pointer-spare-margin
-
-  &.direction-60
-  &.direction-90
-  &.direction-120
-    margin-right $pointer-spare-margin
-
-  &.direction-150
-  &.direction-180
-  &.direction-210
-    margin-bottom $pointer-spare-margin
-
-  &.direction-240
-  &.direction-270
-  &.direction-300
-    margin-left $pointer-spare-margin
-
   // Gradient background.
   &.direction-30
   &.direction-330
@@ -301,19 +262,19 @@ $brand-warn-span             = $brand-warn - $brand-warn-end
   // Pure background.
   &.pure
     &.basis-static:after
-      background-color $border-basis
+      background-color $background-basis
 
     &.info-static:after
-      background-color $border-info
+      background-color $background-info
 
     &.safe-static:after
-      background-color $border-safe
+      background-color $background-safe
 
     &.danger-static:after
-      background-color $border-danger
+      background-color $background-danger
 
     &.warn-static:after
-      background-color $border-warn
+      background-color $background-warn
 
   // Rounded angle.
   &.round

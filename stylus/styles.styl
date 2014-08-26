@@ -84,9 +84,9 @@
 // Section 3: Share
 // ============================================================================
 
-// Share
+// Modifiers
 //
-// Component unrelated styles share across project.
+// Public modifiers shared across all components and collections.
 //
 // Styleguide 3
 
@@ -98,22 +98,54 @@
 // Let's lookup a demo about adding states and reaction style for button by UI hooks.
 //
 // Styleguide 3.1
-@import "share/ui/basis"
-@import "share/ui/info"
-@import "share/ui/warn"
-@import "share/ui/safe"
-@import "share/ui/danger"
+@import "share/modifiers/ui/basis"
+@import "share/modifiers/ui/info"
+@import "share/modifiers/ui/warn"
+@import "share/modifiers/ui/safe"
+@import "share/modifiers/ui/danger"
+@import "share/modifiers/ui/dark"
 
 // State
 //
 // Styleguide 3.2
-@import "share/state/active"
+@import "share/modifiers/state/active"
+
+// Layout
+//
+// Styleguide 3.3
+@import "share/modifiers/layout/amid"
+@import "share/modifiers/layout/around"
+
+// Override
+//
+// Override basis style by specify CSS class hooks.
+//
+// Styleguide 3.4
+@import "share/modifiers/override/border"
+@import "share/modifiers/override/background"
+@import "share/modifiers/override/radius"
+@import "share/modifiers/override/width"
+@import "share/modifiers/override/align"
+@import "share/modifiers/override/rotate"
+@import "share/modifiers/override/indent"
+@import "share/modifiers/override/collapse"
+@import "share/modifiers/override/hang"
+@import "share/modifiers/override/fold"
+@import "share/modifiers/override/push"
+@import "share/modifiers/override/display"
+@import "share/modifiers/override/pointer"
+@import "share/modifiers/override/position"
+@import "share/modifiers/override/index"
+@import "share/modifiers/override/bfc"
+
+// Section 4: Classes
+// ============================================================================
 
 // Class
 //
 // Abstract classes share across project.
 //
-// Styleguide 3.3
+// Styleguide 4
 @import "share/class/box"
 @import "share/class/control"
 @import "share/class/label"
@@ -122,216 +154,187 @@
 @import "share/class/group"
 @import "share/class/group-item"
 @import "share/class/alert"
-@import "share/class/around"
-@import "share/class/amid"
 @import "share/class/triangle"
 
-// Override
-//
-// Override basis style by specify CSS class hooks.
-//
-// Styleguide 3.4
-@import "share/override/border"
-@import "share/override/background"
-@import "share/override/radius"
-@import "share/override/width"
-@import "share/override/align"
-@import "share/override/rotate"
-@import "share/override/indent"
-@import "share/override/collapse"
-@import "share/override/hang"
-@import "share/override/fold"
-@import "share/override/push"
-@import "share/override/display"
-@import "share/override/pointer"
-@import "share/override/amid"
-@import "share/override/around"
-@import "share/override/position"
-@import "share/override/index"
-@import "share/override/bfc"
-
-// Section 4: Components
+// Section 5: Components
 // ============================================================================
 
 // Components
 //
-// Styleguide 4
+// Styleguide 5
 
-// Root
-//
-// 0
 @import "components/root/root"
 
 // Icon
 //
-// 4.1
+// 5.1
 @import "components/icon/icon"
 
 // Image
 //
-// 4.2
+// 5.2
 @import "components/image/image"
 
 // Text
 //
-// 4.3
+// 5.3
 @import "components/text/text"
 
 // Headline
 //
-// 4.4
+// 5.4
 @import "components/headline/headline"
 
 // Button
 //
-// 4.5
+// 5.5
 @import "components/controls/button"
 
 // Link
 //
-// 4.6
+// 5.6
 @import "components/controls/link"
 
 // Expander
 //
-// 4.7
+// 5.7
 @import "components/controls/expander"
 
 // Textfield
 //
-// 4.8
+// 5.8
 @import "components/controls/textfield"
 
 // Textarea
 //
-// 4.9
+// 5.9
 @import "components/controls/textarea"
 
 // Brand
 //
-// 4.10
+// 5.10
 @import "components/controls/brand"
 
 // Ribbon
 //
-// 4.11
+// 5.11
 @import "components/controls/ribbon"
 
 // Magnet
 //
-// 4.12
+// 5.12
 @import "components/controls/magnet"
 
 // Bubble
 //
-// 4.13
+// 5.13
 @import "components/controls/bubble"
 
 // Checkbox
 //
-// 4.14
+// 5.14
 @import "components/controls/checkbox"
 
 // Radio
 //
-// 4.15
+// 5.15
 @import "components/controls/radio"
 
 // Toggle
 //
-// 4.16
+// 5.16
 @import "components/controls/toggle"
 
 // Select
 //
-// 4.17
+// 5.17
 @import "components/controls/select"
 
 // Message
 //
-// 4.18
+// 5.18
 @import "components/controls/message"
 
 // Progress
 //
-// 4.19
+// 5.19
 @import "components/controls/progress"
 
 // Separator
 //
-// 4.20
+// 5.20
 @import "components/separator/separator"
 
 // Mask
 //
-// 4.21
+// 5.21
 @import "components/mask/mask"
 
 // Breadcrumb
 //
-// 4.22
+// 5.22
 @import "components/breadcrumb/breadcrumb"
 
 // List
 //
-// Styleguide 4.23
+// Styleguide 5.23
 @import "components/list/list-vertical"
 @import "components/list/list-horizontal"
 
 // Pointer
 //
-// 4.24
+// 5.24
 @import "components/pointer/pointer"
 
 // Tip
 //
-// 4.25
+// 5.25
 @import "components/tip/tip"
 
 // Arrow
 //
-// 4.26
+// 5.26
 @import "components/arrow/arrow"
 
 // Plaid
 //
-// 4.27
+// 5.27
 @import "components/plaid/plaid"
 
 // Bar
 //
-// 4.28
+// 5.28
 @import "components/bar/bar"
 
 // Timeline
 //
-// 4.29
+// 5.29
 @import "components/timeline/timeline"
 
 // Wrapper & Scroller
 //
-// 4.30
+// 5.30
 @import "components/wrapper/wrapper"
 
 // Article
 //
-// Styleguide 4.31
+// Styleguide 5.31
 @import "components/article/code"
 @import "components/article/list"
 @import "components/article/paragraph"
 @import "components/article/quote"
 @import "components/article/table"
 
-// Section 5: Collections
+// Section 6: Collections
 // ============================================================================
 
 // Collections
 //
-// Styleguide 5
+// Styleguide 6
 
 // Fieldset
 //
-// Styleguide 5.1
+// Styleguide 6.1
 @import "collections/forms/form"
 @import "collections/forms/fieldset"
 @import "collections/forms/fieldset-global-error"
@@ -339,7 +342,7 @@
 
 // Group
 //
-// Styleguide 5.2
+// Styleguide 6.2
 @import "collections/group/board"
 @import "collections/group/tab"
 @import "collections/group/nav"
@@ -349,7 +352,7 @@
 //
 // Show information on the page.
 //
-// Styleguide 5.3
+// Styleguide 6.3
 @import "collections/alert/flash"
 @import "collections/alert/notice"
 

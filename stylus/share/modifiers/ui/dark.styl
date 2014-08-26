@@ -1,0 +1,30 @@
+// Dark UI
+//
+// **Global Modifiers:**
+//
+// + `dark`          Basis UI with all state style.
+// + `dark-static`   Basis UI without state style.
+//
+//
+// **Motion Modifiers:**
+//
+// + `is-active`
+// + `is-disabled`
+//
+// Markup:
+// <button class="btn dark">按钮</button>
+//
+// Styleguide 3.1.6
+.dark
+  $dark$()
+
+.dark-static
+  $dark$()
+
+.dark:active
+.dark.is-active
+  $dark-active$()
+
+.dark:disabled
+.dark.is-disabled
+  $dark-disabled$()
