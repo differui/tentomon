@@ -1,0 +1,26 @@
+// Font
+//
+// Change font style when component state changed.
+//
+// + `state-thin`
+// + `state-bold`
+// + `state-regular`
+// + `state-oblique`
+//
+//
+// Markup:
+// <button class="btn basis-static pure a-thin">按钮</button>
+//
+// Styleguide 3.2.6
+{$$state-selector('thin')}
+  font-weight normal
+
+{$$state-selector('bold')}
+  font-weight bold
+
+{$$state-selector('regular')}
+  font-weight normal
+  font-style normal
+
+{$$state-selector('oblique')}
+  font-style oblique
