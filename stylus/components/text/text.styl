@@ -2,29 +2,31 @@
 //
 // **Color Modifiers:**
 //
-// + `text-info`       Information text.
-// + `text-safe`       Safty text.
-// + `text-danger`     Danger text.
-// + `text-warn`       Warning text.
-// + `text-light`      Light grey text.
-// + `text-heavy`      Heavy grey text.
+// + `text-info`    Information text.
+// + `text-safe`    Safty text.
+// + `text-danger`  Danger text.
+// + `text-warn`    Warning text.
+// + `text-light`   Light grey text.
+// + `text-heavy`   Heavy grey text.
 //
 //
 // **Size Modifiers:**
 //
-// + `small`     Smaller size text.
-// + `large`  Larger size text.
+// + `small`        Smaller size text.
+// + `large`        Larger size text.
+// + `smaller`      Extra small size text.
+// + `larger`       Extra large size text.
 //
 //
 // **Style Modifiers:**
 //
-// + `thin`       Normal font weight.
-// + `bold`       Bold font weight.
-// + `underline`  Text with underline.
-// + `del`        Deleted text with line through.
-// + `break`      Break long word in text.
-// + `nowrap`     Prevent wrapping text.
-// + `truncate`   Truncate long text.
+// + `thin`         Normal font weight.
+// + `bold`         Bold font weight.
+// + `underline`    Text with underline.
+// + `del`          Deleted text with line through.
+// + `break`        Break long word in text.
+// + `nowrap`       Prevent wrapping text.
+// + `truncate`     Truncate long text.
 //
 //
 // Markup:
@@ -77,7 +79,9 @@
   text-decoration underline
 
 .truncate
-  $truncate-text$()
+  white-space nowrap
+  overflow hidden
+  text-overflow ellipsis
 
 .del
   text-decoration line-through

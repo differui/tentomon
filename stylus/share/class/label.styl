@@ -4,22 +4,6 @@
 //
 // `$BOX`
 //
-// **Position Modifiers:**
-//
-// + `position-45`
-// + `position-90`
-// + `position-135`
-// + `position-180`
-// + `position-225`
-// + `position-270`
-// + `position-315`
-// + `position-360`
-//
-//
-// **Unique Modifers:**
-//
-// + `embed`
-//
 // Styleguide 4.5
 $LABEL
   @extend $BOX
@@ -29,65 +13,12 @@ $LABEL
 
   // layout label in various direction
   // ==========================================================================
-  &.position-45
-  &.position-90
-  &.position-135
-  &.position-180
-  &.position-225
-  &.position-270
-  &.position-315
-  &.position-360
-    z-index 1
-
-  &.position-45
-  &.position-135
-  &.position-225
-  &.position-315
-    position absolute
-
-  &.position-90
-    $center-right$()
-
-  &.position-180
-    $center-bottom$()
-
-  &.position-270
-    $center-left$()
-
-  &.position-360
-    $center-top$()
-
-  &.position-225
-  &.position-315
-    left 0
-
-  &.position-45
-  &.position-135
-    right 0
-
-  &.position-45
-  &.position-315
-    top 0
-
-  &.position-135
-  &.position-225
-    bottom 0
-
-  // label embed outer box
-  // ==========================================================================
-  &.embed
-    &.position-225
-    &.position-315
-      left 1px
-
-    &.position-45
-    &.position-135
-      right 1px
-
-    &.position-45
-    &.position-315
-      top 1px
-
-    &.position-135
-    &.position-225
-      bottom 1px
+  &.amid-45
+  &.amid-90
+  &.amid-135
+  &.amid-180
+  &.amid-225
+  &.amid-270
+  &.amid-315
+  &.amid-360
+    z-index $top-index

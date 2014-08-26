@@ -49,10 +49,10 @@ $border-warn                 = $$darker($brand-warn)
 // Background Color
 // ============================================================================
 $background-basis            = darken($brand-main, 3%)
-$background-info             = $brand-info
-$background-safe             = $brand-safe
-$background-danger           = $brand-danger
-$background-warn             = $brand-warn
+$background-info             = $$translucent($brand-info, 10)
+$background-safe             = $$translucent($brand-safe, 10)
+$background-danger           = $$translucent($brand-danger, 10)
+$background-warn             = $$translucent($brand-warn, 10)
 
 // Others
 // ============================================================================
@@ -125,6 +125,6 @@ $height-pygmy     = $textfield-height + ($border-width + $padding-pygmy)    * 2
 
 // Vertical layer index.
 // ============================================================================
-$layer-top-index             = 3000
-$layer-middle-index          = 2000
-$layer-bottom-index          = 1000
+$top-index                   = 3000
+$middle-index                = 2000
+$bottom-index                = 1000

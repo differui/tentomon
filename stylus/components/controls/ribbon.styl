@@ -4,28 +4,11 @@
 //
 // `.label`
 //
-// **Position Modifiers:**
-//
-// + `position-45`
-// + `position-135`
-// + `position-225`
-// + `position-315`
-//
 // Markup:
 // <dl class="form">
 //   <dd class="form-content">
-//     <input type="text" class="textfield basis indent-right mini">
-//     <label class="ribbon embed basis-static position-45 seamless">
-//       <span class="ribbon-inner">
-//         <span class="oi ribbon-icon" data-glyph="star"></span>
-//       </span>
-//     </label>
-//   </dd>
-// </dl>
-// <dl class="form">
-//   <dd class="form-content">
 //     <input type="text" class="textfield basis indent-right">
-//     <label class="ribbon embed basis-static position-45 seamless">
+//     <label class="ribbon basis-static amid-45 embed seamless">
 //       <span class="ribbon-inner">
 //         <span class="ribbon-text">中</span>
 //       </span>
@@ -57,7 +40,7 @@ $ribbon-text-margin          = $py-quarter - 2
 
   position absolute
 
-.position-45 .ribbon-inner:after
+.amid-45 .ribbon-inner:after
   border-left-width $ribbon-height
   border-top-width $ribbon-height
   border-top-color inherit
@@ -65,7 +48,7 @@ $ribbon-text-margin          = $py-quarter - 2
   top 0
   right 0
 
-.position-135 .ribbon-inner:after
+.amid-135 .ribbon-inner:after
   border-left-width $ribbon-height
   border-bottom-width $ribbon-height
   border-bottom-color inherit
@@ -73,7 +56,7 @@ $ribbon-text-margin          = $py-quarter - 2
   bottom 0
   right 0
 
-.position-225 .ribbon-inner:after
+.amid-225 .ribbon-inner:after
   border-right-width $ribbon-height
   border-bottom-width $ribbon-height
   border-bottom-color inherit
@@ -81,7 +64,7 @@ $ribbon-text-margin          = $py-quarter - 2
   bottom 0
   left 0
 
-.position-315 .ribbon-inner:after
+.amid-315 .ribbon-inner:after
   border-right-width $ribbon-height
   border-top-width $ribbon-height
   border-top-color inherit
@@ -103,8 +86,8 @@ $ribbon-text-margin          = $py-quarter - 2
 
 // layout ribbon text and icon
 // ============================================================================
-.position-225
-.position-315
+.amid-225
+.amid-315
   .ribbon-icon
   .ribbon-text
     left 0
@@ -112,8 +95,8 @@ $ribbon-text-margin          = $py-quarter - 2
   .ribbon-icon
     margin-left $ribbon-icon-margin
 
-.position-45
-.position-135
+.amid-45
+.amid-135
   .ribbon-icon
   .ribbon-text
     right 0
@@ -121,8 +104,8 @@ $ribbon-text-margin          = $py-quarter - 2
   .ribbon-icon
     margin-right $ribbon-icon-margin
 
-.position-45
-.position-315
+.amid-45
+.amid-315
   .ribbon-icon
   .ribbon-text
     top 0
@@ -130,8 +113,8 @@ $ribbon-text-margin          = $py-quarter - 2
   .ribbon-icon
     margin-top $ribbon-icon-margin
 
-.position-135
-.position-225
+.amid-135
+.amid-225
   .ribbon-icon
   .ribbon-text
     bottom 0
@@ -139,33 +122,33 @@ $ribbon-text-margin          = $py-quarter - 2
   .ribbon-icon
     margin-bottom $ribbon-icon-margin
 
-.position-45
+.amid-45
   .ribbon-text
     right $ribbon-text-margin
     top $ribbon-text-margin
 
-.position-135
+.amid-135
   .ribbon-text
     right $ribbon-text-margin
     bottom $ribbon-text-margin
 
-.position-225
+.amid-225
   .ribbon-text
     left $ribbon-text-margin
     bottom $ribbon-text-margin
 
-.position-315
+.amid-315
   .ribbon-text
     left $ribbon-text-margin
     top $ribbon-text-margin
 
-.position-135
-.position-315
+.amid-135
+.amid-315
   .ribbon-text
     transform rotate(-45deg)
 
-.position-45
-.position-225
+.amid-45
+.amid-225
   .ribbon-text
     transform rotate(45deg)
 

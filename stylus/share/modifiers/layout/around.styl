@@ -3,11 +3,11 @@
 // **Global Modifiers:**
 //
 // + `around-x` Position outer of parent (x ∈ { x | x = 30, n ∈ N:n <= 12 } ).
-// + `around-embed` Cover parent border.
+// + `align`    Align component with container border.
 //
 //
 // Markup:
-// <div class="kss-box box basis-static">
+// <div class="kss-box box">
 //   <span class="btn basis around-180">外部下方</span>
 // </div>
 //
@@ -87,7 +87,7 @@
   transform translate(-50%, -100%)
 
 // Cover parent border by negative margin.
-.around-embed
+.align
   &.around-30
   &.around-150
     margin-right $border-width * -1
@@ -103,5 +103,3 @@
   &.around-210
   &.around-330
     margin-left $border-width * -1
-    
-    

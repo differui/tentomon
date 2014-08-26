@@ -4,26 +4,11 @@
 //
 // `.label`
 //
-// **Position Modifiers:**
-//
-// + `position-45`
-// + `position-135`
-// + `position-225`
-// + `position-315`
-//
 // Markup:
 // <dl class="form">
 //   <dd class="form-content">
-//     <input type="text" class="textfield basis mini">
-//     <label class="magnet embed basis-static position-315 mini">
-//       <span class="oi magnet-icon" data-glyph="star"></span>
-//     </label>
-//   </dd>
-// </dl>
-// <dl class="form">
-//   <dd class="form-content">
 //     <input type="text" class="textfield basis">
-//     <label class="magnet embed basis-static position-315">
+//     <label class="magnet basis-static amid-315 embed">
 //       <span class="magnet-text">用户名</span>
 //     </label>
 //   </dd>
@@ -36,25 +21,25 @@
   border-radius 0
   border-style none
 
-  &.position-45
+  &.amid-45
     border-top-right-radius $border-radius
     border-bottom-left-radius $border-radius
     border-bottom-style solid
     border-left-style solid
 
-  &.position-135
+  &.amid-135
     border-bottom-right-radius $border-radius
     border-top-left-radius $border-radius
     border-top-style solid
     border-left-style solid
 
-  &.position-225
+  &.amid-225
     border-bottom-left-radius $border-radius
     border-top-right-radius $border-radius
     border-top-style solid
     border-right-style solid
 
-  &.position-315
+  &.amid-315
     border-top-left-radius $border-radius
     border-bottom-right-radius $border-radius
     border-right-style solid
@@ -64,50 +49,50 @@
 // ============================================================================
 .magnet
   $blank-radio               = 0.1
-  
+
   // normal
-  &.position-45
-  &.position-315
+  &.amid-45
+  &.amid-315
     padding-bottom round($height-normal * $blank-radio)
 
-  &.position-135
-  &.position-225
+  &.amid-135
+  &.amid-225
     padding-top round($height-normal * $blank-radio)
 
   &.mini
-    &.position-45
-    &.position-315
+    &.amid-45
+    &.amid-315
       padding-bottom round($height-mini * $blank-radio)
 
-    &.position-135
-    &.position-225
+    &.amid-135
+    &.amid-225
       padding-top round($height-mini * $blank-radio)
 
   &.pygmy
-    &.position-45
-    &.position-315
+    &.amid-45
+    &.amid-315
       padding-bottom round($height-pygmy * $blank-radio)
 
-    &.position-135
-    &.position-225
+    &.amid-135
+    &.amid-225
       padding-top round($height-pygmy * $blank-radio)
 
   &.huge
-    &.position-45
-    &.position-315
+    &.amid-45
+    &.amid-315
       padding-bottom round($height-huge * $blank-radio)
 
-    &.position-135
-    &.position-225
+    &.amid-135
+    &.amid-225
       padding-top round($height-huge * $blank-radio)
 
   &.marssive
-    &.position-45
-    &.position-315
+    &.amid-45
+    &.amid-315
       padding-bottom round($height-marssive * $blank-radio)
 
-    &.position-135
-    &.position-225
+    &.amid-135
+    &.amid-225
       padding-top round($height-marssive * $blank-radio)
 
 

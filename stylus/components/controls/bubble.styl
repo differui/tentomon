@@ -4,18 +4,6 @@
 //
 // `.label`
 //
-// **Position Modifiers:**
-//
-// + `position-45`
-// + `position-90`
-// + `position-135`
-// + `position-180`
-// + `position-225`
-// + `position-270`
-// + `position-315`
-// + `position-360`
-//
-//
 // **Ordinary Modifiers:**
 //
 // + **paste** Paste bubble label **out of** its container.
@@ -23,16 +11,8 @@
 // Markup:
 // <dl class="form">
 //   <dd class="form-content">
-//     <input type="text" class="textfield basis indent-right mini">
-//     <label class="bubble position-90 naked pygmy">
-//       <span class="bubble-icon oi danger-static icon circle pygmy" data-glyph="star"></span>
-//     </label>
-//   </dd>
-// </dl>
-// <dl class="form">
-//   <dd class="form-content">
 //     <input type="text" class="textfield basis indent-right">
-//     <label class="bubble position-90 naked mini">
+//     <label class="bubble amid-90 naked mini">
 //       <span class="bubble-text danger-static icon circle mini">中</span>
 //     </label>
 //   </dd>
@@ -49,98 +29,98 @@
   @extend $LABEL
 
   &.paste
-    &.position-45
-    &.position-135
-    &.position-225
-    &.position-315
+    &.amid-45
+    &.amid-135
+    &.amid-225
+    &.amid-315
       margin 0
       min-width 0
 
     // normal size
-    &.position-45
+    &.amid-45
       top $offset-normal
       right @top
 
-    &.position-135
+    &.amid-135
       bottom $offset-normal
       right @bottom
 
-    &.position-225
+    &.amid-225
       bottom $offset-normal
       left @bottom
 
-    &.position-315
+    &.amid-315
       top $offset-normal
       left @top
 
     // pygmy size
     &.pygmy
-      &.position-45
+      &.amid-45
         top $offset-pygmy
         right @top
 
-      &.position-135
+      &.amid-135
         bottom $offset-pygmy
         right @bottom
 
-      &.position-225
+      &.amid-225
         bottom $offset-pygmy
         left @bottom
 
-      &.position-315
+      &.amid-315
         top $offset-pygmy
         left @top
 
     // mini size
     &.mini
-      &.position-45
+      &.amid-45
         top $offset-mini
         right @top
 
-      &.position-135
+      &.amid-135
         bottom $offset-mini
         right @bottom
 
-      &.position-225
+      &.amid-225
         bottom $offset-mini
         left @bottom
 
-      &.position-315
+      &.amid-315
         top $offset-mini
         left @top
 
     // huge size
     &.huge
-      &.position-45
+      &.amid-45
         top $offset-huge
         right @top
 
-      &.position-135
+      &.amid-135
         bottom $offset-huge
         right @bottom
 
-      &.position-225
+      &.amid-225
         bottom $offset-huge
         left @bottom
 
-      &.position-315
+      &.amid-315
         top $offset-huge
         left @top
 
     // marssive size
     &.marssive
-      &.position-45
+      &.amid-45
         top $offset-marssive
         right @top
 
-      &.position-135
+      &.amid-135
         bottom $offset-marssive
         right @bottom
 
-      &.position-225
+      &.amid-225
         bottom $offset-marssive
         left @bottom
 
-      &.position-315
+      &.amid-315
         top $offset-marssive
         left @top
