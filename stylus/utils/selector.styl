@@ -1,0 +1,15 @@
+// $$state-selector($name)
+//
+// + `$name` Feature name in selector.
+//
+// Styleguide 1.3.1
+$$state-selector($name)
+  $selectors = ()
+
+  for $state-name in $states
+    $alias = $state-name[0]
+    $full  = $state-name[1]
+
+    push($selectors, '.' + $alias + '-' + $name + $full)
+
+  return join(',', $selectors)
