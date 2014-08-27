@@ -144,29 +144,22 @@
 
 // UI
 //
-// Default component is **stateless**.
-// UI hooks will paint UI skin and reaction style for component.
-// If you do not want UI reaction use `.type-modifier` get UI skin under specified state.
-// Let's lookup a demo about adding states and reaction style for button by UI hooks.
-//
 // Styleguide 5
-@import "share/ui/basis"
-@import "share/ui/info"
-@import "share/ui/warn"
-@import "share/ui/safe"
-@import "share/ui/danger"
-@import "share/ui/dark"
 
 
+@import "share/ui/box/class"
+@import "share/ui/box/mixin"
+@import "share/ui/box/ui"
 
-// Section 5: Classes
+
+// Section 6: Classes
 // ============================================================================
 
 // Class
 //
 // Abstract classes share across project.
 //
-// Styleguide 5
+// Styleguide 6
 @import "share/class/box"
 @import "share/class/control"
 @import "share/class/label"
@@ -178,12 +171,12 @@
 @import "share/class/triangle"
 
 
-// Section 6: Components
+// Section 7: Components
 // ============================================================================
 
 // Components
 //
-// Styleguide 6
+// Styleguide 7
 @import "components/root/root"
 @import "components/image/image"
 @import "components/headline/headline"
@@ -207,7 +200,7 @@
 
 // List
 //
-// Styleguide 6.21
+// Styleguide 7.21
 @import "components/list/list-vertical"
 @import "components/list/list-horizontal"
 
@@ -221,23 +214,23 @@
 
 // Article
 //
-// Styleguide 6.29
+// Styleguide 7.29
 @import "components/article/code"
 @import "components/article/list"
 @import "components/article/paragraph"
 @import "components/article/quote"
 @import "components/article/table"
 
-// Section 7: Collections
+// Section 8: Collections
 // ============================================================================
 
 // Collections
 //
-// Styleguide 7
+// Styleguide 8
 
 // Fieldset
 //
-// Styleguide 7.1
+// Styleguide 8.1
 @import "collections/forms/form"
 @import "collections/forms/fieldset"
 @import "collections/forms/fieldset-global-error"
@@ -245,7 +238,7 @@
 
 // Group
 //
-// Styleguide 7.2
+// Styleguide 8.2
 @import "collections/group/board"
 @import "collections/group/tab"
 @import "collections/group/nav"
@@ -255,33 +248,13 @@
 //
 // Show information on the page.
 //
-// Styleguide 7.3
+// Styleguide 8.3
 @import "collections/alert/flash"
 @import "collections/alert/notice"
-
-// Popup
-//
-// 7.4
 @import "collections/popup/popup"
-
-// Headroom
-//
-// 7.5
 @import "collections/headroom/headroom"
-
-// Box
-//
-// 7.6
 @import "collections/box/box"
-
-// panel
-//
-// 7.7
 @import "collections/panel/panel"
-
-// View
-//
-// 7.8
 @import "collections/view/view"
 
 // Section 8: Layout
