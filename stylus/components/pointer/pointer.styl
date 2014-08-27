@@ -55,7 +55,7 @@ $pointer-swim-case           = 15%
 $pointer-color-case          = 0.3
 
 // Color span
-$brand-main-span             = $brand-main - $brand-main-end
+$brand-basis-span             = $brand-basis - $brand-basis-end
 $brand-info-span             = $brand-info - $brand-info-end
 $brand-safe-span             = $brand-safe - $brand-safe-end
 $brand-danger-span           = $brand-danger - $brand-danger-end
@@ -176,7 +176,7 @@ $brand-warn-span             = $brand-warn - $brand-warn-end
   &.direction-330
   &.direction-360
     &.basis-static:after
-      background-color $brand-main
+      background-color $brand-basis
 
     &.info-static:after
       background-color $brand-info
@@ -194,7 +194,7 @@ $brand-warn-span             = $brand-warn - $brand-warn-end
   &.direction-180
   &.direction-210
     &.basis-static:after
-      background-color $brand-main-end
+      background-color $brand-basis-end
 
     &.info-static:after
       background-color $brand-info-end
@@ -211,7 +211,7 @@ $brand-warn-span             = $brand-warn - $brand-warn-end
   &.direction-60
   &.direction-300
     &.basis-static:after
-      background-color $brand-main - $brand-main-span * $pointer-color-case
+      background-color $brand-basis - $brand-basis-span * $pointer-color-case
 
     &.info-static:after
       background-color $brand-info - $brand-info-span * $pointer-color-case
@@ -228,7 +228,7 @@ $brand-warn-span             = $brand-warn - $brand-warn-end
   &.direction-90
   &.direction-270
     &.basis-static:after
-      background-color $brand-main - $brand-main-span * 0.5
+      background-color $brand-basis - $brand-basis-span * 0.5
 
     &.info-static:after
       background-color $brand-info - $brand-info-span * 0.5
@@ -245,7 +245,7 @@ $brand-warn-span             = $brand-warn - $brand-warn-end
   &.direction-120
   &.direction-240
     &.basis-static:after
-      background-color $brand-main-end + $brand-main-span * $pointer-color-case
+      background-color $brand-basis-end + $brand-basis-span * $pointer-color-case
 
     &.info-static:after
       background-color $brand-info-end + $brand-info-span * $pointer-color-case

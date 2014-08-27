@@ -4,12 +4,17 @@
 //
 // Styleguide 1.3.1
 $$state-selector($name)
-  $selectors = ()
+  $selector-list = ()
 
   for $state-name in $states
     $alias = $state-name[0]
-    $full  = $state-name[1]
+    $state  = $state-name[1]
 
-    push($selectors, '.' + $alias + '-' + $name + $full)
+    if $alias
+      $selector = '.' + $alias + '-' + $name + $state
+    else
+      $selector = '.' + $name + $state
 
-  return join(',', $selectors)
+    push($selector-list, $selector)
+
+  return join(',', $selector-list)

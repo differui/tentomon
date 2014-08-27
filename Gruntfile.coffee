@@ -137,6 +137,20 @@ module.exports = (grunt) ->
         files:
           '<%= dirs.build %>tentomon-min.css': 'stylus/tentomon.styl'
 
+      ###
+      tentomon_ui_debug:
+        options:
+          compress: false
+        files:
+          '<%= dirs.build %>tentomon-ui-debug.css': 'stylus/ui.styl'
+
+      tentomon_ui_min:
+        options:
+          compress: true
+        files:
+          '<%= dirs.build %>tentomon-ui-min.css': 'stylus/ui.styl'
+      ###
+
       kss_debug:
         options:
           compress: false
@@ -168,6 +182,20 @@ module.exports = (grunt) ->
         src: '<%= dirs.build %>tentomon-min.css'
         dest: '<%= dirs.dist %>'
 
+      ###
+      tentomon_ui_debug:
+        expand: true
+        flatten: true
+        src: '<%= dirs.build %>tentomon-ui-debug.css'
+        dest: '<%= dirs.dist %>'
+
+      tentomon_ui_min:
+        expand: true
+        flatten: true
+        src: '<%= dirs.build %>tentomon-ui-min.css'
+        dest: '<%= dirs.dist %>'
+      ###
+
       kss_debug:
         expand: true
         flatten: true
@@ -195,7 +223,7 @@ module.exports = (grunt) ->
         files:
           '<%= dirs.styleguide %>': 'stylus/kss.styl'
 
-    gitlog:
+    git_log:
 
       # default options
       options:
@@ -209,7 +237,7 @@ module.exports = (grunt) ->
           result = String result
 
           # public result data
-          grunt.config 'gitlog.versioning', htmlencode.htmlEncode result
+          grunt.config 'git_log.versioning', htmlencode.htmlEncode result
 
     markdown:
       options:
@@ -225,7 +253,7 @@ module.exports = (grunt) ->
           result = match_doc_name.exec src
 
           context.doc_name = result[1]
-          context.versioning = grunt.config 'gitlog.versioning'
+          context.versioning = grunt.config 'git_log.versioning'
 
           return src
 
@@ -283,7 +311,7 @@ module.exports = (grunt) ->
 
   # load custom tasks
   # ---------------------------------------------------------------------------
-  grunt.loadTasks 'tasks/'
+  grunt.loadTasks build_config.dirs.tasks
 
   # register tasks
   # ---------------------------------------------------------------------------
@@ -292,6 +320,16 @@ module.exports = (grunt) ->
   grunt.registerTask 'copy_style_plugins', [
     'copy:normalize'
     'copy:elastic'
+  ]
+
+
+  # compile ui
+  grunt.registerTask 'ui', [
+    'copy_style_plugins'
+    'stylus:tentomon_ui_debug'
+    'stylus:tentomon_ui_min'
+    'autoprefixer:tentomon_ui_debug'
+    'autoprefixer:tentomon_ui_min'
   ]
 
   # compile project stylesheet
@@ -332,7 +370,7 @@ module.exports = (grunt) ->
   ]
 
   grunt.registerTask 'generate_doc', [
-    'gitlog:build'
+    'git_log:build'
     'markdown:document'
     'copy:markdown_style'
   ]

@@ -22,7 +22,7 @@
 // Styleguide 1.2
 @import "utils/blends"
 
-// Gerenate State Selectors
+// Selectors Helpers
 //
 // Styleguide 1.3
 @import "utils/selector"
@@ -31,14 +31,10 @@
 //
 // Templates build on stylus mixin and with `$` as prefix and suffix.
 //
-// Styleguide 1.3
+// Styleguide 1.4
 @import "templates/reset"
 @import "templates/center"
 @import "templates/flex"
-
-// Mixins
-//
-// Styleguide 1.4
 
 // Plugins
 //
@@ -50,25 +46,24 @@
 @import "plugins/elastic/elastic"
 
 // Skin unrelated variables
-@import "globals/variables"
+// Default variables: `variables.styl`
+@import "variables"
 
 // Skin related variable
-@import "skins/" + $name + "/" + $name + "-variables"
-@import "skins/" + $name + "/" + $name + "-class"
-@import "skins/" + $name + "/" + $name + "-templates"
-
-// Global Basis Style
-@import "globals/tentomon"
-@import "globals/kss" if $kss is true
+// Skin variables: `skins/[skin name]/[skin name]-variables.styl`
+@import "skins/" + $ui-name + "/" + $ui-name + "-variables"
+@import "skins/" + $ui-name + "/" + $ui-name + "-class"
+@import "skins/" + $ui-name + "/" + $ui-name + "-templates"
 
 // Colors
 //
-// Default variables: `globals/variables.styl`
-//
-// Skin variables: `skins/[skin name]/[skin name]-variables.styl`
-//
 // Styleguide 1.6
-@import "globals/color" if $kss is true
+@import "kss/brand" if $kss is true
+@import "kss/grey" if $kss is true
+@import "kss/border" if $kss is true
+@import "kss/highlight" if $kss is true
+@import "kss/shadow" if $kss is true
+@import "kss/translucent" if $kss is true
 
 // Section 2: Base
 // ============================================================================
@@ -78,11 +73,11 @@
 // Base HTML styles share across project.
 //
 // Styleguide 2
-
-// Anchor
-//
-// 2.1
+@import "base/all"
 @import "base/anchor"
+@import "base/define"
+@import "base/root"
+@import "base/control"
 
 // Section 3: Share
 // ============================================================================
@@ -92,21 +87,6 @@
 // Public modifiers shared across all components and collections.
 //
 // Styleguide 3
-
-// UI
-//
-// Default component is **stateless**.
-// UI hooks will paint UI skin and reaction style for component.
-// If you do not want UI reaction use `.type-modifier` get UI skin under specified state.
-// Let's lookup a demo about adding states and reaction style for button by UI hooks.
-//
-// Styleguide 3.1
-@import "share/modifiers/ui/basis"
-@import "share/modifiers/ui/info"
-@import "share/modifiers/ui/warn"
-@import "share/modifiers/ui/safe"
-@import "share/modifiers/ui/danger"
-@import "share/modifiers/ui/dark"
 
 // State
 //
@@ -132,6 +112,8 @@
 @import "share/modifiers/text/color"
 @import "share/modifiers/text/size"
 @import "share/modifiers/text/style"
+@import "share/modifiers/text/vertical"
+@import "share/modifiers/text/horizontal"
 
 // Section 4: Override
 // ============================================================================
@@ -145,7 +127,6 @@
 @import "share/override/background"
 @import "share/override/radius"
 @import "share/override/width"
-@import "share/override/align"
 @import "share/override/rotate"
 @import "share/override/indent"
 @import "share/override/collapse"
@@ -157,6 +138,26 @@
 @import "share/override/position"
 @import "share/override/index"
 @import "share/override/bfc"
+
+// Section 5: UI
+// ============================================================================
+
+// UI
+//
+// Default component is **stateless**.
+// UI hooks will paint UI skin and reaction style for component.
+// If you do not want UI reaction use `.type-modifier` get UI skin under specified state.
+// Let's lookup a demo about adding states and reaction style for button by UI hooks.
+//
+// Styleguide 5
+@import "share/ui/basis"
+@import "share/ui/info"
+@import "share/ui/warn"
+@import "share/ui/safe"
+@import "share/ui/danger"
+@import "share/ui/dark"
+
+
 
 // Section 5: Classes
 // ============================================================================
@@ -176,6 +177,7 @@
 @import "share/class/alert"
 @import "share/class/triangle"
 
+
 // Section 6: Components
 // ============================================================================
 
@@ -183,105 +185,24 @@
 //
 // Styleguide 6
 @import "components/root/root"
-
-// Icon
-//
-// 6.1
-@import "components/icon/icon"
-
-// Image
-//
-// 6.2
 @import "components/image/image"
-
-// Headline
-//
-// 6.3
 @import "components/headline/headline"
-
-// Button
-//
-// 6.4
 @import "components/controls/button"
-
-// Link
-//
-// 6.5
 @import "components/controls/link"
-
-// Textfield
-//
-// 6.6
 @import "components/controls/textfield"
-
-// Textarea
-//
-// 6.7
 @import "components/controls/textarea"
-
-// Brand
-//
-// 6.8
 @import "components/controls/brand"
-
-// Ribbon
-//
-// 6.9
 @import "components/controls/ribbon"
-
-// Magnet
-//
-// 6.10
 @import "components/controls/magnet"
-
-// Bubble
-//
-// 6.11
 @import "components/controls/bubble"
-
-// Checkbox
-//
-// 6.12
 @import "components/controls/checkbox"
-
-// Radio
-//
-// 6.13
 @import "components/controls/radio"
-
-// Toggle
-//
-// 6.14
 @import "components/controls/toggle"
-
-// Select
-//
-// 6.15
 @import "components/controls/select"
-
-// Message
-//
-// 6.16
 @import "components/controls/message"
-
-// Progress
-//
-// 6.17
 @import "components/controls/progress"
-
-// Separator
-//
-// 6.18
 @import "components/separator/separator"
-
-// Mask
-//
-// 6.19
 @import "components/mask/mask"
-
-// Breadcrumb
-//
-// 6.20
 @import "components/breadcrumb/breadcrumb"
 
 // List
@@ -290,39 +211,12 @@
 @import "components/list/list-vertical"
 @import "components/list/list-horizontal"
 
-// Pointer
-//
-// 6.22
 @import "components/pointer/pointer"
-
-// Tip
-//
-// 6.23
 @import "components/tip/tip"
-
-// Arrow
-//
-// 6.24
 @import "components/arrow/arrow"
-
-// Plaid
-//
-// 6.25
 @import "components/plaid/plaid"
-
-// Bar
-//
-// 6.26
 @import "components/bar/bar"
-
-// Timeline
-//
-// 6.27
 @import "components/timeline/timeline"
-
-// Wrapper & Scroller
-//
-// 6.28
 @import "components/wrapper/wrapper"
 
 // Article

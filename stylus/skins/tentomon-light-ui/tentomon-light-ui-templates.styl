@@ -10,8 +10,8 @@
 $basis$()
   @extend $UI
 
-  $basis-start               = $brand-main
-  $basis-end                 = $brand-main-end
+  $basis-start               = $brand-basis
+  $basis-end                 = $brand-basis-end
 
   color $black
   border-color $border-basis
@@ -90,7 +90,7 @@ $danger-focused$()
   @extend $UI-FOCUS
 
 $dark-focused$()
-  null
+  @extend $UI-FOCUS
 
 // active ui
 // ============================================================================

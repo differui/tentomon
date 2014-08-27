@@ -1,0 +1,20 @@
+// Highlight
+//
+// Markup:
+// <div class="kss-info-brand">
+//   <p class="sg-color kss-highlight-light">$highlight-light</p>
+// </div>
+// <div class="kss-info-brand">
+//   <p class="sg-color kss-highlight-heavy">$highlight-heavy</p>
+// </div>
+//
+// Styleguide 1.6.4
+.kss-highlight-light
+.kss-highlight-heavy
+  border-radius $border-radius
+
+.kss-highlight-light
+  $$top-inner-shadow(3, 0, $highlight-light)
+
+.kss-highlight-heavy
+  $$top-inner-shadow(3, 0, $highlight-heavy)

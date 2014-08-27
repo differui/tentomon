@@ -7,21 +7,18 @@
 
 // Majority color
 // ============================================================================
-$brand-main                  = #f7f7f7
+$brand-basis                 = #f7f7f7
 $brand-info                  = #508cc7
 $brand-safe                  = #60b044
 $brand-danger                = #d1443d
 $brand-warn                  = #e9cf14
+$brand-motion                = $brand-safe
 
 $grey                        = #dcdcdc
 $grey-light                  = #e1e1e1
 $grey-heavy                  = #d5d5d5
 $white                       = #ffffff
 $black                       = #323232
-
-// Interactive color
-// ============================================================================
-$motion-color                = $brand-safe
 
 // Degrees
 // ============================================================================
@@ -32,7 +29,7 @@ $lighter-deg                 = 13%
 
 // Stops
 // ============================================================================
-$brand-main-end              = $$dark($brand-main)
+$brand-basis-end              = $$dark($brand-basis)
 $brand-info-end              = darken($brand-info, $darker-deg * 1.5)
 $brand-safe-end              = darken($brand-safe, $darker-deg * 1.5)
 $brand-danger-end            = darken($brand-danger, $darker-deg * 1.5)
@@ -48,7 +45,7 @@ $border-warn                 = $$darker($brand-warn)
 
 // Background Color
 // ============================================================================
-$background-basis            = darken($brand-main, 3%)
+$background-basis            = darken($brand-basis, 3%)
 $background-info             = $$translucent($brand-info, 10)
 $background-safe             = $$translucent($brand-safe, 10)
 $background-danger           = $$translucent($brand-danger, 10)
@@ -74,63 +71,3 @@ $shadow-heavy                = $$translucent($black, 50%)
 
 $highlight-light             = $$translucent($white, 10%)
 $highlight-heavy             = $$translucent($white, 50%)
-
-// Majority size
-// ============================================================================
-$py                          = 14px
-$py-half                     = round($py * 0.5)
-$py-quarter                  = round($py * 0.25)
-$py-small                    = round($py * 0.857)
-$py-smaller                  = round($py * 0.714)
-$py-large                    = round($py * 1.1)
-$py-larger                   = round($py * 1.29)
-
-// Line height
-// ============================================================================
-$py-line                     = 1.714
-$py-line-headline            = 1.429
-$py-line-computed            = round($py * $py-line)
-$py-line-half-diff           = ($py-line-computed - $py) / 2
-
-// Component apperance
-// ============================================================================
-$border-radius               = 3px
-$border-width                = 1px
-
-$gap-vertical                = $py-quarter
-$gap-horizontal              = $py-small
-
-$gap-half                    = round($gap-horizontal / 2)
-$gap-double                  = $gap-horizontal * 2
-$gap-triple                  = $gap-horizontal * 3
-$column-single               = 20%
-$column-double               = $column-single * 2
-
-// Component padding and height
-// ============================================================================
-$textfield-height            = 16px
-$content-height              = max($py-line-computed, $textfield-height)
-
-// Default component padding make up component inner height.
-$content-padding-diff        = $content-height - $textfield-height
-$content-padding-diff-half   = round($content-padding-diff / 2)
-
-// Component vertical padding in different size.
-$padding-normal              = $content-padding-diff-half + $gap-vertical
-$padding-marssive            = $padding-normal + $gap-vertical * 2
-$padding-huge                = $padding-normal + $gap-vertical * 1
-$padding-mini                = $padding-normal + $gap-vertical * -1 + 2
-$padding-pygmy               = $padding-normal + $gap-vertical * -2 + 3
-
-// Component height in different size.
-$height-normal    = $textfield-height + ($border-width + $padding-normal)   * 2
-$height-marssive  = $textfield-height + ($border-width + $padding-marssive) * 2
-$height-huge      = $textfield-height + ($border-width + $padding-huge)     * 2
-$height-mini      = $textfield-height + ($border-width + $padding-mini)     * 2
-$height-pygmy     = $textfield-height + ($border-width + $padding-pygmy)    * 2
-
-// Vertical layer index.
-// ============================================================================
-$top-index                   = 3000
-$middle-index                = 2000
-$bottom-index                = 1000

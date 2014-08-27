@@ -5,8 +5,8 @@ module.exports = (grunt) ->
   lodash = require 'lodash'
   dateformat = require 'dateformat'
 
-  grunt.registerMultiTask 'gitlog', 'Get git commit msg.', (options) ->
-    this.requiresConfig 'gitlog'
+  grunt.registerMultiTask 'git_log', 'Get git commit msg.', (options) ->
+    this.requiresConfig 'git_log'
 
     options = options || {}
     done = this.async()
@@ -20,7 +20,7 @@ module.exports = (grunt) ->
 
     # user specified options
     # =========================================================================
-    default_options = grunt.config 'gitlog.options'
+    default_options = grunt.config 'git_log.options'
     task_options = lodash.defaults options, @data, default_options
 
     dest = task_options.dets || ''
