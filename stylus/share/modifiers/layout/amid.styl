@@ -1,10 +1,8 @@
 // Amid
 //
-// **Global Modifiers:**
-//
-// + `amid-x`  Position inside (x ∈ { x | x = 45n, n ∈ N:n <= 8 } ).
-// + `embed`   Move inside one border width length.
-// + `cover`   Move outside one border width length.
+// + `amid-x`      Position inside (x ∈ { x | x = 45n, n ∈ N:n <= 8 } ).
+// + `centripetal` Move inside one border width length.
+// + `centrifugal` Move outside one border width length.
 //
 //
 // Markup:
@@ -60,7 +58,7 @@
   top 0
   bottom 0
 
-.embed
+.centripetal
   &.amid-45
   &.amid-315
   &.amid-360
@@ -81,7 +79,7 @@
   &.amid-315
     margin-left $border-width
 
-.cover
+.centrifugal
   &.amid-45
   &.amid-315
   &.amid-360

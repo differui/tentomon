@@ -1,15 +1,20 @@
 // Radius
 //
-// **Global Modifiers:**
+// **Chop:**
 //
+// + `chop`        Chop off **all** border radius.
 // + `chop-left`   Chop off **left** border radius.
 // + `chop-right`  Chop off **right** border radius.
 // + `chop-top`    Chop off **top** border radius.
 // + `chop-bottom` Chop off **bottom** border radius.
-// + `square`      **Right angle** corner.
-// + `round`       **Rounded** corner.
-// + `circle`      **Circle** corner.
-// + `pill`        **Pill** shape.
+//
+//
+// **Shape:**
+//
+// + `square`
+// + `round`
+// + `circle`
+// + `pill`
 //
 // Markup:
 // <dl class="form">
@@ -20,7 +25,10 @@
 //   </dd>
 // </dl>
 //
-// Styleguide 3.4.3
+// Styleguide 4.3
+.chop
+  border-radius 0 !important
+
 .chop-left
   border-top-left-radius 0 !important
   border-bottom-left-radius 0 !important

@@ -126,36 +126,46 @@
 @import "share/modifiers/layout/amid"
 @import "share/modifiers/layout/around"
 
+// Text
+//
+// Styleguide 3.4
+@import "share/modifiers/text/color"
+@import "share/modifiers/text/size"
+@import "share/modifiers/text/style"
+
+// Section 4: Override
+// ============================================================================
+
 // Override
 //
 // Override basis style by specify CSS class hooks.
 //
-// Styleguide 3.4
-@import "share/modifiers/override/border"
-@import "share/modifiers/override/background"
-@import "share/modifiers/override/radius"
-@import "share/modifiers/override/width"
-@import "share/modifiers/override/align"
-@import "share/modifiers/override/rotate"
-@import "share/modifiers/override/indent"
-@import "share/modifiers/override/collapse"
-@import "share/modifiers/override/hang"
-@import "share/modifiers/override/fold"
-@import "share/modifiers/override/push"
-@import "share/modifiers/override/display"
-@import "share/modifiers/override/pointer"
-@import "share/modifiers/override/position"
-@import "share/modifiers/override/index"
-@import "share/modifiers/override/bfc"
+// Styleguide 4
+@import "share/override/border"
+@import "share/override/background"
+@import "share/override/radius"
+@import "share/override/width"
+@import "share/override/align"
+@import "share/override/rotate"
+@import "share/override/indent"
+@import "share/override/collapse"
+@import "share/override/hang"
+@import "share/override/fold"
+@import "share/override/push"
+@import "share/override/display"
+@import "share/override/pointer"
+@import "share/override/position"
+@import "share/override/index"
+@import "share/override/bfc"
 
-// Section 4: Classes
+// Section 5: Classes
 // ============================================================================
 
 // Class
 //
 // Abstract classes share across project.
 //
-// Styleguide 4
+// Styleguide 5
 @import "share/class/box"
 @import "share/class/control"
 @import "share/class/label"
@@ -166,180 +176,174 @@
 @import "share/class/alert"
 @import "share/class/triangle"
 
-// Section 5: Components
+// Section 6: Components
 // ============================================================================
 
 // Components
 //
-// Styleguide 5
-
+// Styleguide 6
 @import "components/root/root"
 
 // Icon
 //
-// 5.1
+// 6.1
 @import "components/icon/icon"
 
 // Image
 //
-// 5.2
+// 6.2
 @import "components/image/image"
-
-// Text
-//
-// 5.3
-@import "components/text/text"
 
 // Headline
 //
-// 5.4
+// 6.3
 @import "components/headline/headline"
 
 // Button
 //
-// 5.5
+// 6.4
 @import "components/controls/button"
 
 // Link
 //
-// 5.6
+// 6.5
 @import "components/controls/link"
 
 // Textfield
 //
-// 5.8
+// 6.6
 @import "components/controls/textfield"
 
 // Textarea
 //
-// 5.9
+// 6.7
 @import "components/controls/textarea"
 
 // Brand
 //
-// 5.10
+// 6.8
 @import "components/controls/brand"
 
 // Ribbon
 //
-// 5.11
+// 6.9
 @import "components/controls/ribbon"
 
 // Magnet
 //
-// 5.12
+// 6.10
 @import "components/controls/magnet"
 
 // Bubble
 //
-// 5.13
+// 6.11
 @import "components/controls/bubble"
 
 // Checkbox
 //
-// 5.14
+// 6.12
 @import "components/controls/checkbox"
 
 // Radio
 //
-// 5.15
+// 6.13
 @import "components/controls/radio"
 
 // Toggle
 //
-// 5.16
+// 6.14
 @import "components/controls/toggle"
 
 // Select
 //
-// 5.17
+// 6.15
 @import "components/controls/select"
 
 // Message
 //
-// 5.18
+// 6.16
 @import "components/controls/message"
 
 // Progress
 //
-// 5.19
+// 6.17
 @import "components/controls/progress"
 
 // Separator
 //
-// 5.20
+// 6.18
 @import "components/separator/separator"
 
 // Mask
 //
-// 5.21
+// 6.19
 @import "components/mask/mask"
 
 // Breadcrumb
 //
-// 5.22
+// 6.20
 @import "components/breadcrumb/breadcrumb"
 
 // List
 //
-// Styleguide 5.23
+// Styleguide 6.21
 @import "components/list/list-vertical"
 @import "components/list/list-horizontal"
 
 // Pointer
 //
-// 5.24
+// 6.22
 @import "components/pointer/pointer"
 
 // Tip
 //
-// 5.25
+// 6.23
 @import "components/tip/tip"
 
 // Arrow
 //
-// 5.26
+// 6.24
 @import "components/arrow/arrow"
 
 // Plaid
 //
-// 5.27
+// 6.25
 @import "components/plaid/plaid"
 
 // Bar
 //
-// 5.28
+// 6.26
 @import "components/bar/bar"
 
 // Timeline
 //
-// 5.29
+// 6.27
 @import "components/timeline/timeline"
 
 // Wrapper & Scroller
 //
-// 5.30
+// 6.28
 @import "components/wrapper/wrapper"
 
 // Article
 //
-// Styleguide 5.31
+// Styleguide 6.29
 @import "components/article/code"
 @import "components/article/list"
 @import "components/article/paragraph"
 @import "components/article/quote"
 @import "components/article/table"
 
-// Section 6: Collections
+// Section 7: Collections
 // ============================================================================
 
 // Collections
 //
-// Styleguide 6
+// Styleguide 7
 
 // Fieldset
 //
-// Styleguide 6.1
+// Styleguide 7.1
 @import "collections/forms/form"
 @import "collections/forms/fieldset"
 @import "collections/forms/fieldset-global-error"
@@ -347,7 +351,7 @@
 
 // Group
 //
-// Styleguide 6.2
+// Styleguide 7.2
 @import "collections/group/board"
 @import "collections/group/tab"
 @import "collections/group/nav"
@@ -357,36 +361,36 @@
 //
 // Show information on the page.
 //
-// Styleguide 6.3
+// Styleguide 7.3
 @import "collections/alert/flash"
 @import "collections/alert/notice"
 
 // Popup
 //
-// 5.4
+// 7.4
 @import "collections/popup/popup"
 
 // Headroom
 //
-// 5.5
+// 7.5
 @import "collections/headroom/headroom"
 
 // Box
 //
-// 5.6
+// 7.6
 @import "collections/box/box"
 
 // panel
 //
-// 5.7
+// 7.7
 @import "collections/panel/panel"
 
 // View
 //
-// 5.8
+// 7.8
 @import "collections/view/view"
 
-// Section 6: Layout
+// Section 8: Layout
 // ============================================================================
 
 // Layout
@@ -396,10 +400,3 @@
 @import "layout/main"
 @import "layout/header"
 @import "layout/footer"
-
-// Section 7: Sections
-// ============================================================================
-
-@import "sections/login"
-@import "sections/detail"
-@import "sections/home"
