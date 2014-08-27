@@ -2,7 +2,7 @@
 //
 // **Detail:**
 //
-// Native textfield can not constraint height with too small relative to textfield font size(font size 14px constraint height at least 16px in Chrome 36.0.1985.125 m), since if textfield min height(`$textarea-min-height`) should increase with base font size(`$py`) and the first one always larger than the later one.
+// Native textfield can not constraint height with too small relative to textfield font size(font size 14px constraint height at least 16px in Chrome 36.0.1985.125 m), since if textfield min height(`$textarea-min-height`) should increase with base font size(`$te`) and the first one always larger than the later one.
 //
 // **State:**
 //
@@ -21,29 +21,16 @@
 //
 // + `full` Full width box.
 // + `naked` Remove box inner padding and borders.
-// + `feel` Inherit context font style.
 //
 // Styleguide 6.2
 $BOX
-  outline 0 none
-  -webkit-appearance none
-
-  font-size $py
-  border-style solid
-  border-width $border-width
-  line-height $textfield-height
-
   display inline-block
   padding-left $gap-horizontal
   padding-right @padding-left
 
-  &.is-hidden
-    display none
-
   // Using vertical padding control component height.
   &
     max-height $height-normal
-
     padding-top $padding-normal
     padding-bottom @padding-top
 
@@ -93,23 +80,14 @@ $BOX
       padding-top $padding-marssive + $border-width
       padding-bottom @padding-top
 
-  // Inherit context font styles.
-  &.feel
-    color inherit
-    font-style inherit
-    font-weight inherit
+  &.is-hidden
+    display none
 
   // Remove component inner padding.
   &.naked
   &.square.naked
   &.seamless.naked
     padding 0
-    border-style none
-
-  // Remove component horizontal padding.
-  &.full
-    padding-left 0
-    padding-right 0
 
   // Release constrainted height.
   &.wrap

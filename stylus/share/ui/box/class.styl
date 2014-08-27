@@ -1,14 +1,19 @@
 $BOX-UI
+  color $white
+  font-size $te
+  border-style solid
+  border-width $border-width
+  line-height $textfield-height
+
   $$text-shadow()
   $$top-inner-shadow(1, 0, $highlight-light)
-
-  color $white
 
 $BOX-UI-FOCUS
   null
 
 $BOX-UI-ACTIVE
-  $$top-inner-shadow()
+  null
 
 $BOX-UI-DISABLED
-  $$top-inner-shadow(1, 0, $highlight-light)
+  background-image none
+  $$top-inner-shadow(0, 0, transparent)

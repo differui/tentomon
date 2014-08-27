@@ -35,28 +35,28 @@ $states                      = ('' '') ('a' ':active') ('isa' '.is-active') ('d'
 
 // Majority size
 // ============================================================================
-$py                          = 14px
-$py-half                     = round($py * 0.5)
-$py-quarter                  = round($py * 0.25)
-$py-small                    = round($py * 0.857)
-$py-smaller                  = round($py * 0.714)
-$py-large                    = round($py * 1.1)
-$py-larger                   = round($py * 1.29)
+$te                          = 14px
+$te-half                     = round($te * 0.5)
+$te-quarter                  = round($te * 0.25)
+$te-small                    = round($te * 0.857)
+$te-smaller                  = round($te * 0.714)
+$te-large                    = round($te * 1.1)
+$te-larger                   = round($te * 1.29)
 
 // Line height
 // ============================================================================
-$py-line                     = 1.714
-$py-line-headline            = 1.429
-$py-line-computed            = round($py * $py-line)
-$py-line-half-diff           = ($py-line-computed - $py) / 2
+$te-line                     = 1.714
+$te-line-headline            = 1.429
+$te-line-computed            = round($te * $te-line)
+$te-line-half-diff           = ($te-line-computed - $te) / 2
 
 // Component apperance
 // ============================================================================
 $border-radius               = 3px
 $border-width                = 1px
 
-$gap-vertical                = $py-quarter
-$gap-horizontal              = $py-small
+$gap-vertical                = $te-quarter
+$gap-horizontal              = $te-small
 
 $gap-half                    = round($gap-horizontal / 2)
 $gap-double                  = $gap-horizontal * 2
@@ -67,7 +67,7 @@ $column-double               = $column-single * 2
 // Component padding and height
 // ============================================================================
 $textfield-height            = 16px
-$content-height              = max($py-line-computed, $textfield-height)
+$content-height              = max($te-line-computed, $textfield-height)
 
 // Default component padding make up component inner height.
 $content-padding-diff        = $content-height - $textfield-height

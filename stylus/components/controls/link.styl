@@ -2,7 +2,7 @@
 //
 // **@extend:**
 //
-// `.btn`
+// `$BOX`
 //
 // Markup:
 // <a href="#" class="link">
@@ -11,38 +11,7 @@
 //
 // Styleguide 7.6
 .link
-  @extend .btn
-
-  /*color $brand-motion*/
-  font-weight normal
-  /*border-color transparent*/
-  text-decoration underline
-
-  /*  
-  &:visited
-    color $brand-motion
-
-  &:active
-  &.is-active
-    color $brand-motion*/
-
-  &:disabled
-  &.is-disabled
-    $basis-disabled$()
-
-  // change link style in different context
-  &.feel
-    color inherit
-    font-size inherit
-    font-weight inherit
-    line-height inherit
-
-    &:visited
-      color inherit
-
-    &:active
-    &.is-active
-      color inherit
+  @extend $BOX
 
   &.naked
     text-decoration none

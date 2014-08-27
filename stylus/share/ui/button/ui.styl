@@ -2,28 +2,50 @@
 //
 // **UI Type:**
 //
-// + `basis`
-// + `info`
-// + `safe`
-// + `danger`
-// + `warn`
-//
-//
-// **State:**
-//
-// + `is-active`
-// + `is-disabled`
+// + `btn-embed`
+// + `btn-glyph`
+// + `btn-link`
 //
 // Markup:
-// <button class="btn box-basis button-basis">按钮</button>
+// <button class="btn box-basis btn-embed">按钮</button>
 //
 // Styleguide 5.2
-$$Button-UI('basis')
+.btn-embed
+  @extend $BTN-UI
 
-$$Button-UI('info')
+  border-radius $border-radius
 
-$$Button-UI('safe')
+  &:active
+  &.is-active
+    $$top-inner-shadow()
 
-$$Button-UI('dange')
+.btn-glyph
+  @extend $BTN-UI
 
-$$Button-UI('warn')
+  border-color transparent
+  background-color transparent
+  background-image none
+
+  &:active
+  &.is-active
+    opacity .5
+
+  &:disabled
+  &.is-disabled
+    color $grey-light
+
+.btn-link
+  @extend $BTN-UI
+
+  text-decoration underline
+  border-color transparent
+  background-color transparent
+  background-image none
+
+  &:active
+  &.is-active
+    text-decoration none
+
+  &:disabled
+  &.is-disabled
+    color $grey-light

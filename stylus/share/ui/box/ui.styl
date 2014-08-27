@@ -2,28 +2,96 @@
 //
 // **UI Type:**
 //
-// + `basis`
-// + `info`
-// + `safe`
-// + `danger`
-// + `warn`
-//
-//
-// **State:**
-//
-// + `is-active`
-// + `is-disabled`
+// + `box-basis`
+// + `box-info`
+// + `box-safe`
+// + `box-danger`
+// + `box-warn`
+// + `box-dark`
 //
 // Markup:
 // <button class="btn box-basis">按钮</button>
 //
 // Styleguide 5.1
-$$Box-UI('basis', $brand-basis, $brand-basis-end, $border-basis, $background-basis, $brand-basis-disabled)
+.box-basis
+  @extend $BOX-UI
 
-$$Box-UI('info', $brand-info, $brand-info-end, $border-info, $background-info, $brand-info-disabled)
+  color $black
+  border-color $border-basis
+  background-color $background-basis
 
-$$Box-UI('safe', $brand-safe, $brand-safe-end, $border-safe, $background-safe, $brand-safe-disabled)
+  $$text-highlight()
+  $$linear-gradient($brand-basis, $brand-basis-end)
 
-$$Box-UI('danger', $brand-danger, $brand-danger-end, $border-danger, $background-danger, $brand-danger-disabled)
+  &:disabled
+  &.is-disabled
+    @extend $BOX-UI-DISABLED
 
-$$Box-UI('warn', $brand-warn, $brand-warn-end, $border-warn, $background-warn, $brand-warn-disabled)
+    color $grey-light
+    background-color $brand-basis-disabled
+
+.box-info
+  @extend $BOX-UI
+
+  border-color $border-info
+  background-color $background-info
+
+  $$text-highlight()
+  $$linear-gradient($brand-info, $brand-info-end)
+
+  &:disabled
+  &.is-disabled
+    @extend $BOX-UI-DISABLED
+
+    background-color $brand-info-disabled
+
+.box-safe
+  @extend $BOX-UI
+
+  border-color $border-safe
+  background-color $background-safe
+
+  $$text-highlight()
+  $$linear-gradient($brand-safe, $brand-safe-end)
+
+  &:disabled
+  &.is-disabled
+    @extend $BOX-UI-DISABLED
+
+    background-color $brand-safe-disabled
+
+.box-danger
+  @extend $BOX-UI
+
+  border-color $border-danger
+  background-color $background-danger
+
+  $$text-highlight()
+  $$linear-gradient($brand-danger, $brand-danger-end)
+
+  &:disabled
+  &.is-disabled
+    @extend $BOX-UI-DISABLED
+
+    background-color $brand-danger-disabled
+
+.box-warn
+  @extend $BOX-UI
+
+  border-color $border-warn
+  background-color $background-warn
+
+  $$text-highlight()
+  $$linear-gradient($brand-warn, $brand-warn-end)
+
+  &:disabled
+  &.is-disabled
+    @extend $BOX-UI-DISABLED
+
+    background-color $brand-warn-disabled
+
+.box-dark
+  @extend $BOX-UI
+
+  border-color $black
+  background-color $black

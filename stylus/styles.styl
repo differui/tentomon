@@ -58,12 +58,13 @@
 // Colors
 //
 // Styleguide 1.6
-@import "kss/brand" if $kss is true
-@import "kss/grey" if $kss is true
-@import "kss/border" if $kss is true
-@import "kss/highlight" if $kss is true
-@import "kss/shadow" if $kss is true
-@import "kss/translucent" if $kss is true
+if $kss is true
+  @import "kss/brand"
+  @import "kss/grey"
+  @import "kss/border"
+  @import "kss/highlight"
+  @import "kss/shadow"
+  @import "kss/translucent"
 
 // Section 2: Base
 // ============================================================================
@@ -147,13 +148,10 @@
 // Styleguide 5
 
 @import "share/ui/box/class"
-@import "share/ui/box/mixin"
 @import "share/ui/box/ui"
 
 @import "share/ui/button/class"
-@import "share/ui/button/mixin"
 @import "share/ui/button/ui"
-
 
 // Section 6: Classes
 // ============================================================================
