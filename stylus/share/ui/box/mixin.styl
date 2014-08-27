@@ -1,4 +1,4 @@
-$$Box-UI($ui-type, $brand-color, $brand-color-end, $border-color, $background-color, $background-disabled-color = null)
+$$Box-UI($ui-type, $brand-color, $brand-color-end, $border-color, $background-color, $background-disabled-color)
   .box-{$ui-type}
   .box-{$ui-type}-static
     @extend $BOX-UI
@@ -21,9 +21,7 @@ $$Box-UI($ui-type, $brand-color, $brand-color-end, $border-color, $background-co
       @extend $BOX-UI-DISABLED
 
       background-image none
+      background-color $background-disabled-color
     
       if $ui-type is 'basis'
         color $grey-light
-
-      if $background-disabled-color
-        background-color $background-disabled-color

@@ -1,0 +1,12 @@
+$$Button-UI($ui-type)
+  .button-{$ui-type}
+  .button-{$ui-type}-static
+    @extend $BUTTON-UI
+
+    &:active
+    &.is-active
+      @extend $BUTTON-UI-ACTIVE
+
+    &:disabled
+    &.is-disabled
+      @extend $BUTTON-UI-DISABLED
