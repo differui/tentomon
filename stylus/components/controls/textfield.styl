@@ -15,25 +15,8 @@
 .textfield
   @extend $BOX
 
-  color $black
-  background-image none
-  background-color $background-light
-  $$text-highlight(transparent)
-  $$top-inner-shadow(, 2, $$translucent($translucent-black, 7))
   width 100%
   max-height none
-
-  &:focus
-    background-color $white
-
-  &:disabled
-  &.is-disabled
-    background-color $background-light
-
-  &.naked
-    background-image none
-    background-color transparent
-    $$top-inner-shadow(0, 0, transparent)
 
   &.huge
   &.marssive

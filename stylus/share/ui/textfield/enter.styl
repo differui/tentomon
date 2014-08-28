@@ -1,0 +1,29 @@
+// Enter Box
+//
+// Markup:
+// <input class="textfield box-basis textfield-enter">
+//
+// Styleguide 5.4.1
+.textfield-enter
+  @extend $TEXT
+  @extend $SHAPE-ROUND
+  @extend $INNER-SHADOW
+
+  color $black
+  background-image none
+  background-color $background-light
+  $$text-shadow(0, 0, transparent)
+
+  &:focus
+    @extend $INNER-SHADOW-TRANSPARENT
+
+    background-color $white
+
+  &:disabled
+    color $grey-light
+
+  &.naked
+    @extend $INNER-SHADOW-TRANSPARENT
+
+    background-image none
+    background-color transparent

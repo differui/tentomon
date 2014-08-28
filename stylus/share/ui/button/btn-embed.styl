@@ -1,0 +1,16 @@
+// Embed UI
+//
+// Markup:
+// <button class="btn box-basis btn-embed">按钮</button>
+//
+// Styleguide 5.2.1
+.btn-embed
+  @extend $TEXT-MAIN
+  @extend $SHAPE-ROUND
+
+  white-space nowrap
+  text-decoration none
+
+  &:active
+  &.is-active
+    @extend $INNER-SHADOW

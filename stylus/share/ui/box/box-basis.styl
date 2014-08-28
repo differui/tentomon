@@ -1,0 +1,16 @@
+// Basis UI
+//
+// Markup:
+// <button class="btn box-basis">按钮</button>
+//
+// Styleguide 5.1.1
+.box-basis
+  @extend $BORDER-BASIS
+  @extend $GRADIENT-BASIS
+  @extend $BOX-HIGHLIGHT
+  @extend $LINE-CONTROL
+
+  &:disabled
+    @extend $COLOR-LIGHT
+    @extend $PLAIN-BASIS
+    @extend $BOX-HIGHLIGHT-CLEAR

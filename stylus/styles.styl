@@ -89,32 +89,40 @@ if $kss is true
 //
 // Styleguide 3
 
-// State
+// Style
 //
-// Styleguide 3.2
-@import "share/modifiers/state/opacity"
-@import "share/modifiers/state/underline"
-@import "share/modifiers/state/background"
-@import "share/modifiers/state/border"
-@import "share/modifiers/state/color"
-@import "share/modifiers/state/font"
-@import "share/modifiers/state/shadow"
-@import "share/modifiers/state/wrap"
+// Styleguide 3.1
+@import "share/modifiers/style/color"
+@import "share/modifiers/style/font"
+@import "share/modifiers/style/border"
+@import "share/modifiers/style/shape"
+@import "share/modifiers/style/opacity"
+@import "share/modifiers/style/underline"
+@import "share/modifiers/style/background"
+@import "share/modifiers/style/plain"
+@import "share/modifiers/style/gradient"
+
 
 // Layout
 //
-// Styleguide 3.3
+// Styleguide 3.2
 @import "share/modifiers/layout/amid"
 @import "share/modifiers/layout/around"
 
-// Text
+// Typesetting
+//
+// Styleguide 3.3
+@import "share/modifiers/typesetting/size"
+@import "share/modifiers/typesetting/vertical"
+@import "share/modifiers/typesetting/horizontal"
+@import "share/modifiers/typesetting/string"
+@import "share/modifiers/typesetting/line"
+
+// Effect
 //
 // Styleguide 3.4
-@import "share/modifiers/text/color"
-@import "share/modifiers/text/size"
-@import "share/modifiers/text/style"
-@import "share/modifiers/text/vertical"
-@import "share/modifiers/text/horizontal"
+@import "share/modifiers/effect/shadow"
+@import "share/modifiers/effect/highlight"
 
 // Section 4: Override
 // ============================================================================
@@ -147,11 +155,33 @@ if $kss is true
 //
 // Styleguide 5
 
-@import "share/ui/box/class"
-@import "share/ui/box/ui"
+// Box UI
+//
+// Styleguide 5.1
+@import "share/ui/box/box-basis"
+// @import "share/ui/box/box-safe"
+// @import "share/ui/box/box-danger"
+// @import "share/ui/box/box-info"
+// @import "share/ui/box/box-warn"
+// @import "share/ui/box/box-dark"
 
-@import "share/ui/button/class"
-@import "share/ui/button/ui"
+// Button UI
+//
+// Styleguide 5.2
+// @import "share/ui/button/btn-embed"
+// @import "share/ui/button/btn-glyph"
+// @import "share/ui/button/btn-link"
+
+// Headline UI
+//
+// Styleguide 5.3
+// @import "share/ui/headline/headline-top"
+
+// Textfield UI
+//
+// Styleguide 5.4
+// @import "share/ui/textfield/enter"
+
 
 // Section 6: Classes
 // ============================================================================
@@ -182,7 +212,6 @@ if $kss is true
 @import "components/image/image"
 @import "components/headline/headline"
 @import "components/controls/button"
-@import "components/controls/link"
 @import "components/controls/textfield"
 @import "components/controls/textarea"
 @import "components/controls/brand"

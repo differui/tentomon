@@ -1,0 +1,16 @@
+// Dangerous UI
+//
+// Markup:
+// <button class="btn box-danger">按钮</button>
+//
+// Styleguide 5.1.3
+.box-danger
+  @extend $SHAPE-RECT
+  @extend $GRADIENT-DANGER
+  @extend $INNER-HIGHLIGHT
+
+  border-color $border-danger
+
+  &:disabled
+    @extend $PLAIN-DANGER
+    @extend $INNER-SHADOW-TRANSPARENT

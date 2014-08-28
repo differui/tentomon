@@ -1,0 +1,27 @@
+// Shadow
+//
+// + `box-shadow`
+// + `box-shadow-clear`
+// + `text-shadow`
+// + `text-shadow-clear`
+//
+//
+// Markup:
+// <button class="btn box-shadow">按钮</button>
+//
+// Styleguide 3.4.1
+$BOX-SHADOW
+.box-shadow
+  $$top-inner-shadow()
+
+$BOX-SHADOW-CLEAR
+.box-shadow-clear
+  $$top-inner-shadow(0, 0, transparent)
+
+$TEXT-SHADOW
+.text-shadow
+  $$text-shadow()
+
+$TEXT-SHADOW-CLEAR
+.text-shadow-clear
+  $$text-shadow(0, 0, transparent)

@@ -1,0 +1,21 @@
+// Link UI
+//
+// Markup:
+// <a class="btn btn-link">按钮</a>
+//
+// Styleguide 5.2.3
+.btn-link
+  @extend $TEXT-MAIN
+  @extend $SHAPE-ROUND
+
+  white-space nowrap
+  text-decoration underline
+  border-color transparent
+  background-color transparent
+
+  &:active
+  &.is-active
+    text-decoration none
+
+  &:disabled
+    color $grey-light

@@ -5,6 +5,13 @@
 //  repository: https://github.com/differui/PYOA
 // ============================================================================
 
+// Degrees
+// ============================================================================
+$dark-deg                    = 8%
+$darker-deg                  = 13%
+$light-deg                   = 8%
+$lighter-deg                 = 13%
+
 // Majority color
 // ============================================================================
 $brand-basis                 = #f7f7f7
@@ -12,7 +19,6 @@ $brand-info                  = #508cc7
 $brand-safe                  = #60b044
 $brand-danger                = #d1443d
 $brand-warn                  = #e9cf14
-$brand-motion                = $brand-safe
 
 $grey                        = #dcdcdc
 $grey-light                  = #e1e1e1
@@ -20,12 +26,9 @@ $grey-heavy                  = #d5d5d5
 $white                       = #ffffff
 $black                       = #323232
 
-// Degrees
-// ============================================================================
-$dark-deg                    = 8%
-$darker-deg                  = 13%
-$light-deg                   = 8%
-$lighter-deg                 = 13%
+$color-light                 = $grey-light
+$color-normal                = $black
+$color-heavy                 = $grey-heavy
 
 // Ends
 // ============================================================================
@@ -36,6 +39,7 @@ $brand-danger-end            = darken($brand-danger, $darker-deg * 1.5)
 $brand-warn-end              = darken($brand-warn, $darker-deg * 1.5)
 
 // Disabled
+// ============================================================================
 $brand-basis-disabled        = $brand-basis
 $brand-info-disabled         = lighten($brand-info, $lighter-deg * 2)
 $brand-safe-disabled         = lighten($brand-safe, $lighter-deg * 2)
@@ -44,6 +48,8 @@ $brand-warn-disabled         = lighten($brand-warn, $lighter-deg * 2)
 
 // Border
 // ============================================================================
+$border-light                = $grey-light
+$border-heavy                = $grey-heavy
 $border-basis                = $border-heavy
 $border-info                 = $$darker($brand-info)
 $border-safe                 = $$darker($brand-safe)
@@ -52,6 +58,8 @@ $border-warn                 = $$darker($brand-warn)
 
 // Background Color
 // ============================================================================
+$background-light            = lighten($grey-light, 80%)
+$background-heavy            = lighten($grey-heavy, 50%)
 $background-basis            = darken($brand-basis, 3%)
 $background-info             = $$translucent($brand-info, 10)
 $background-safe             = $$translucent($brand-safe, 10)
@@ -60,16 +68,6 @@ $background-warn             = $$translucent($brand-warn, 10)
 
 // Others
 // ============================================================================
-$color-light                 = $grey-light
-$color-normal                = $black
-$color-heavy                 = $grey-heavy
-
-$border-light                = $grey-light
-$border-heavy                = $grey-heavy
-
-$background-light            = lighten($grey-light, 80%)
-$background-heavy            = lighten($grey-heavy, 50%)
-
 $translucent-white           = $$translucent($white, 90%)
 $translucent-black           = $$translucent($black, 40%)
 

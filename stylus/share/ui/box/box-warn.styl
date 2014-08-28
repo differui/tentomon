@@ -1,0 +1,17 @@
+// Warnning UI
+//
+// Markup:
+// <button class="btn box-warn">按钮</button>
+//
+// Styleguide 5.1.5
+.box-warn
+  @extend $SHAPE-RECT
+  @extend $GRADIENT-WARN
+  @extend $INNER-HIGHLIGHT
+
+  border-color $border-warn
+
+  &:disabled
+    @extend $PLAIN-WARN
+    @extend $INNER-SHADOW-TRANSPARENT
+

@@ -1,0 +1,17 @@
+// Information UI
+//
+// Markup:
+// <button class="btn box-info">按钮</button>
+//
+// Styleguide 5.1.4
+.box-info
+  @extend $SHAPE-RECT
+  @extend $GRADIENT-INFO
+  @extend $INNER-HIGHLIGHT
+
+  border-color $border-info
+
+  &:disabled
+    @extend $PLAIN-INFO
+    @extend $INNER-SHADOW-TRANSPARENT
+

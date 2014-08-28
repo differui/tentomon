@@ -1,0 +1,27 @@
+// Highlight
+//
+// + `box-highlight`
+// + `box-highlight-clear`
+// + `text-highlight`
+// + `text-highlight-clear`
+//
+//
+// Markup:
+// <button class="btn box-highlight">按钮</button>
+//
+// Styleguide 3.4.2
+$BOX-HIGHLIGHT
+.box-highlight
+  $$top-inner-shadow(1, 0, $highlight-light)
+
+$BOX-HIGHLIGHT-CLEAR
+.box-highlight-clear
+  $$top-inner-highlight(0, 0, transparent)
+
+$TEXT-HIGHLIGHT
+.text-highlight
+  $$text-highlight()
+
+$TEXT-HIGHLIGHT-CLEAR
+.text-highlight-clear
+  $$text-highlight(0, 0, transparent)

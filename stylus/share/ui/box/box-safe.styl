@@ -1,0 +1,16 @@
+// Safty UI
+//
+// Markup:
+// <button class="btn box-safe">按钮</button>
+//
+// Styleguide 5.1.2
+.box-safe
+  @extend $SHAPE-RECT
+  @extend $GRADIENT-SAFE
+  @extend $INNER-HIGHLIGHT
+
+  border-color $border-safe
+
+  &:disabled
+    @extend $PLAIN-SAFE
+    @extend $INNER-SHADOW-TRANSPARENT
