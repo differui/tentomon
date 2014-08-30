@@ -38,11 +38,11 @@ $end-warn                    = darken($te-warn, $deg-darker * 1.5)
 
 // Disabled Color
 // ============================================================================
-$te-basis-disabled           = $te-basis
-$te-info-disabled            = lighten($te-info, $deg-lighter * 2)
-$te-safe-disabled            = lighten($te-safe, $deg-lighter * 2)
-$te-danger-disabled          = lighten($te-danger, $deg-lighter * 2)
-$te-warn-disabled            = lighten($te-warn, $deg-lighter * 2)
+$dis-basis                   = $te-basis
+$dis-info                    = lighten($te-info, $deg-lighter * 2)
+$dis-safe                    = lighten($te-safe, $deg-lighter * 2)
+$dis-danger                  = lighten($te-danger, $deg-lighter * 2)
+$dis-warn                    = lighten($te-warn, $deg-lighter * 2)
 
 // Border Color
 // ============================================================================
@@ -64,13 +64,17 @@ $bg-safe                     = $$translucent($te-safe, 10)
 $bg-danger                   = $$translucent($te-danger, 10)
 $bg-warn                     = $$translucent($te-warn, 10)
 
-// Others
+// Translucent Color
 // ============================================================================
 $translucent-white           = $$translucent($white, 90%)
 $translucent-black           = $$translucent($black, 40%)
 
+// Shadow Color
+// ============================================================================
 $shadow-light                = $$translucent($black, 20%)
 $shadow-heavy                = $$translucent($black, 50%)
 
+// Highlight Color
+// ============================================================================
 $highlight-light             = $$translucent($white, 10%)
 $highlight-heavy             = $$translucent($white, 50%)

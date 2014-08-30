@@ -22,19 +22,12 @@
 // Styleguide 1.2
 @import "utils/blends"
 
-// Selectors Helpers
-//
-// Styleguide 1.3
-@import "utils/selector"
-
 // Templates
 //
 // Templates build on stylus mixin and with `$` as prefix and suffix.
 //
 // Styleguide 1.4
 @import "templates/reset"
-@import "templates/center"
-@import "templates/flex"
 
 // Plugins
 //
@@ -55,16 +48,19 @@
 @import "skins/" + $ui-name + "/" + $ui-name + "-class"
 @import "skins/" + $ui-name + "/" + $ui-name + "-templates"
 
-// Colors
+// Color Plate
 //
 // Styleguide 1.6
 if $kss is true
   @import "kss/brand"
   @import "kss/grey"
+  @import "kss/end"
+  @import "kss/disable"
   @import "kss/border"
-  @import "kss/highlight"
-  @import "kss/shadow"
+  @import "kss/background"
   @import "kss/translucent"
+  @import "kss/shadow"
+  @import "kss/highlight"
 
 // Section 2: Base
 // ============================================================================
