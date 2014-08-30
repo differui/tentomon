@@ -1,0 +1,40 @@
+// Core
+//
+// Styleguide 5.4.1
+.radio
+  position relative
+
+  &.pygmy
+    @extend $l-pygmy-seamless
+
+  &.mini
+    @extend $l-mini-seamless
+
+  &.normal
+    @extend $l-normal-seamless
+
+  &.huge
+    @extend $l-huge-seamless
+
+  &.massive
+    @extend $l-massive-seamless
+
+.radio-tag
+  opacity 0
+
+.radio-mock
+  @extend $l-center-left
+
+  width $te-larger
+  height @width
+
+.radio-text
+  margin-left $gap-horizontal
+
+.radio-indicator
+  @extend $l-center
+
+  width $te-smaller - 2
+  height @width
+  opacity 0
+  display block
