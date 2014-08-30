@@ -1,0 +1,32 @@
+// UI
+//
+// + `.ui-basis`
+// + `.ui-info`
+// + `.ui-safe`
+// + `.ui-danger`
+// + `.ui-warn`
+//
+// Styleguide 5.7.2
+.select
+  line-height $tf-height
+  border-width $bd-width
+  border-style solid
+  border-radius $bd-radius
+
+  &.ui-basis
+    @extend $ui-basis-static
+
+  &.ui-info
+    @extend $ui-info-static
+
+  &.ui-safe
+    @extend $ui-safe-static
+
+  &.ui-danger
+    @extend $ui-danger-static
+
+  &.ui-warn
+    @extend $ui-warn-static
+
+.select-tag
+  outline 0
