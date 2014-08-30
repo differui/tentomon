@@ -1,0 +1,28 @@
+// Core
+//
+// + `.pygmy`
+// + `.mini`
+// + `.normal`
+// + `.huge`
+// + `.massive`
+//
+// Styleguide 5.1.1
+.btn
+  width 100%
+  $reset-gap$()
+  $reset-appearance$()
+
+  &.pygmy
+    @extend $l-pygmy-seam
+
+  &.mini
+    @extend $l-mini-seam
+
+  &.normal
+    @extend $l-normal-seam
+
+  &.huge
+    @extend $l-huge-seam
+
+  &.massive
+    @extend $l-massive-seam

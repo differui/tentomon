@@ -1,0 +1,44 @@
+// UI
+//
+// + `.ui-text`
+// + `.ui-link`
+// + `.ui-basis`
+// + `.ui-info`
+// + `.ui-safe`
+// + `.ui-danger`
+// + `.ui-warn`
+//
+// Styleguide 5.1.2
+.btn
+  outline 0
+  font-size $te
+  line-height $tf-height
+  border-radius $bd-radius
+  border solid $bd-width
+
+  &.ui-text
+    border-color transparent
+    background-color transparent
+    background-image none
+
+  &.ui-link
+    color $te-safe
+    text-decoration underline
+    border-color transparent
+    background-color transparent
+    background-image none
+
+  &.ui-basis
+    @extend $ui-basis-static
+
+  &.ui-info
+    @extend $ui-info-static
+
+  &.ui-safe
+    @extend $ui-safe-static
+
+  &.ui-danger
+    @extend $ui-danger-static
+
+  &.ui-warn
+    @extend $ui-warn-static

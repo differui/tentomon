@@ -1,0 +1,76 @@
+// State
+//
+// + `:active`
+// + `.is-active`
+// + `:disabled`
+// + `.is-disabled`
+//
+// Markup:
+// <button class="btn normal ui-basis">按钮</button>
+//
+// Styleguide 5.1.3
+.btn
+  &:active
+  &.is-active
+    &.ui-text
+      opacity .5
+
+    &.ui-link
+      text-decoration none
+
+    &.ui-basis
+    &.ui-info
+    &.ui-safe
+    &.ui-danger
+    &.ui-warn
+      $$top-inner-shadow()
+
+    &.ui-basis
+      @extend $ui-basis-active
+
+    &.ui-info
+      @extend $ui-info-active
+
+    &.ui-safe
+      @extend $ui-safe-active
+
+    &.ui-danger
+      @extend $ui-danger-active
+
+    &.ui-warn
+      @extend $ui-warn-active
+
+  &:disabled
+  &.is-disabled
+
+    &.ui-text
+    &.ui-link
+      color $grey-heavy
+
+    &.ui-text
+      opacity 1
+
+    &.ui-link
+      text-decoration underline
+
+    &.ui-basis
+    &.ui-info
+    &.ui-safe
+    &.ui-danger
+    &.ui-warn
+      $$top-inner-shadow(0, 0, transparent)
+
+    &.ui-basis
+      @extend $ui-basis-disabled
+
+    &.ui-info
+      @extend $ui-info-disabled
+
+    &.ui-safe
+      @extend $ui-safe-disabled
+
+    &.ui-danger
+      @extend $ui-danger-disabled
+
+    &.ui-warn
+      @extend $ui-warn-disabled
