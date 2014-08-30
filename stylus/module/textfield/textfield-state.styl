@@ -1,0 +1,21 @@
+// State
+//
+// + `:disabled`
+// + `.is-disabled`
+//
+// Markup:
+// <input type="text" class="textfield normal ui-basis">
+// <textarea class="textfield ui-basis ui-area" rows="5"></textarea>
+//
+// Styleguide 5.2.3
+.textfield
+  &:disabled
+  &.is-disabled
+    &.ui-basis
+    &.ui-info
+    &.ui-safe
+    &.ui-danger
+    &.ui-warn
+      $$top-inner-shadow(0, 0, transparent)
+      color $grey-heavy
+      background-color $bg-light

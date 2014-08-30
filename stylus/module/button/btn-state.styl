@@ -12,19 +12,6 @@
 .btn
   &:active
   &.is-active
-    &.ui-text
-      opacity .5
-
-    &.ui-link
-      text-decoration none
-
-    &.ui-basis
-    &.ui-info
-    &.ui-safe
-    &.ui-danger
-    &.ui-warn
-      $$top-inner-shadow()
-
     &.ui-basis
       @extend $ui-basis-active
 
@@ -40,18 +27,21 @@
     &.ui-warn
       @extend $ui-warn-active
 
+    &.ui-text
+      opacity .5
+
+    &.ui-link
+      text-decoration none
+
+    &.ui-basis
+    &.ui-info
+    &.ui-safe
+    &.ui-danger
+    &.ui-warn
+      $$top-inner-shadow()
+
   &:disabled
   &.is-disabled
-
-    &.ui-text
-    &.ui-link
-      color $grey-heavy
-
-    &.ui-text
-      opacity 1
-
-    &.ui-link
-      text-decoration underline
 
     &.ui-basis
     &.ui-info
@@ -74,3 +64,13 @@
 
     &.ui-warn
       @extend $ui-warn-disabled
+
+    &.ui-text
+    &.ui-link
+      color $grey-heavy
+
+    &.ui-text
+      opacity 1
+
+    &.ui-link
+      text-decoration underline

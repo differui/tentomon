@@ -1,17 +1,23 @@
 // Core
 //
+// + `.full`
 // + `.pygmy`
 // + `.mini`
 // + `.normal`
 // + `.huge`
 // + `.massive`
 //
-// Styleguide 5.1.1
-.btn
+// Styleguide 5.2.1
+.textfield
   $reset-gap$()
   $reset-appearance$()
 
   width 100%
+  padding $gap-vertical $gap-horizontal
+
+  &.full
+    height 100%
+    min-height 100%
 
   &.pygmy
     @extend $l-pygmy-seam
