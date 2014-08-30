@@ -11,9 +11,11 @@ Tentomon
 
 ## Base
 
+## Layout
+
 ## Placeholder
 
-Placeholder is public skin or layout snippet.Module change extend those snippets.
+Placeholder is public skin or layout snippet.Module will extend those snippets.
 
     // stylus/placeholder/ui.styl
     $ui-primary
