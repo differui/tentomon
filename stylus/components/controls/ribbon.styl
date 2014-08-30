@@ -17,7 +17,7 @@
 // </dl>
 //
 // Styleguide 7.11
-$ribbon-height               = $height-normal - $border-width * 2
+$ribbon-height               = $ht-normal - $bd-width * 2
 $ribbon-icon-margin          = $te-quarter - 2
 $ribbon-text-margin          = $te-quarter - 2
 
@@ -28,7 +28,7 @@ $ribbon-text-margin          = $te-quarter - 2
   width @height
   overflow hidden
   border-color inherit
-  border-radius $border-radius - 2
+  border-radius $bd-radius - 2
   background-image none
   background-color transparent
 
@@ -156,36 +156,36 @@ $ribbon-text-margin          = $te-quarter - 2
 // ============================================================================
 .ribbon
   &.basis-static
-    color $border-heavy
+    color $bd-heavy
 
     .ribbon-icon
     .ribbon-text
-      color $brand-basis
+      color $te-basis
 
   &.info-static
-    color $border-info
+    color $bd-info
 
     .ribbon-icon
     .ribbon-text
-      color $$lighter($brand-info)
+      // color $$lighter($te-info)
 
   &.safe-static
-    color $border-safe
+    color $bd-safe
 
     .ribbon-icon
     .ribbon-text
-      color $$lighter($brand-safe)
+      // color $$lighter($te-safe)
 
   &.danger-static
-    color $border-danger
+    color $bd-danger
 
     .ribbon-icon
     .ribbon-text
-      color $$lighter($brand-danger)
+      // color $$lighter($te-danger)
 
   &.warn-static
-    color $border-warn
+    color $bd-warn
 
     .ribbon-icon
     .ribbon-text
-      color $$lighter($brand-warn)
+      // color $$lighter($te-warn)

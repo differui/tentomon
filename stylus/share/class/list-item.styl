@@ -1,6 +1,6 @@
 $LIST-ITEM
   border-style none
-  border-width $border-width
+  border-width $bd-width
 
   display block
 
@@ -14,7 +14,7 @@ $ITEM-VERTICAL-NOTCH
   @extend $LIST-ITEM
 
   border-bottom-style solid
-  border-bottom-color $border-light
+  border-bottom-color $bd-light
 
 $ITEM-VERTICAL-NOTCH
   $$top-inner-shadow(1, 0, $highlight-light)
@@ -24,7 +24,7 @@ $ITEM-VERTICAL-SUNKEN
     content ""
     width 100%
     height 1px
-    background-image radial-gradient(farthest-side at left center, $border-heavy, $$translucent($border-heavy, 0))
+    background-image radial-gradient(farthest-side at left center, $bd-heavy, $$translucent($bd-heavy, 0))
 
     display block
 
@@ -32,7 +32,7 @@ $ITEM-VERTICAL-SUNKEN
     display none
 
 $ITEM-VERTICAL-ROUND
-  $item-radius             = $border-radius - 1
+  $item-radius             = $bd-radius - 1
 
   &.first
     border-top-left-radius $item-radius
@@ -92,7 +92,7 @@ $ITEM-HORIZONTAL-NOTCH
   @extend $LIST-ITEM
 
   border-right-style solid
-  border-right-color $border-light
+  border-right-color $bd-light
 
 $ITEM-HORIZONTAL-NOTCH
   $$left-inner-shadow(1, 0, $highlight-light)
@@ -105,7 +105,7 @@ $ITEM-HORIZONTAL-SUNKEN
     content ""
     width 1px
     height 100%
-    background-image radial-gradient(farthest-side at center top, $border-heavy, $$translucent($border-heavy, 0))
+    background-image radial-gradient(farthest-side at center top, $bd-heavy, $$translucent($bd-heavy, 0))
 
     display block
     $center-right$()
@@ -114,7 +114,7 @@ $ITEM-HORIZONTAL-SUNKEN
     display none
 
 $ITEM-HORIZONTAL-ROUND
-  $item-radius             = $border-radius - 1
+  $item-radius             = $bd-radius - 1
 
   border-radius 0
 

@@ -19,7 +19,7 @@ $$translucent($color, $alpha) {
 
 // $$light($color)
 //
-// Lighten color with `$light-deg`.
+// Lighten color with `$deg-light`.
 //
 // + `$color` `rgba`
 //
@@ -27,11 +27,11 @@ $$translucent($color, $alpha) {
 $$light($color)
   ensure($color)
 
-  return lighten($color, $light-deg)
+  return lighten($color, $deg-light)
 
 // $$dark($color)
 //
-// Darken color with `$dark-deg`.
+// Darken color with `$deg-dark`.
 //
 // + `$color` `rgba`
 //
@@ -39,11 +39,11 @@ $$light($color)
 $$dark($color)
   ensure($color)
 
-  return darken($color, $dark-deg)
+  return darken($color, $deg-dark)
 
 // $$lighter($color)
 //
-// Lighten color with `$lighter-deg`.
+// Lighten color with `$deg-lighter`.
 //
 // + `$color` `rgba`
 //
@@ -51,11 +51,11 @@ $$dark($color)
 $$lighter($color)
   ensure($color)
 
-  return lighten($color, $lighter-deg)
+  return lighten($color, $deg-lighter)
 
 // $$darker($color)
 //
-// Darken color with `$darker-deg`.
+// Darken color with `$deg-darker`.
 //
 // + `$color` `rgba`
 //
@@ -63,4 +63,4 @@ $$lighter($color)
 $$darker($color)
   ensure($color)
 
-  return darken($color, $darker-deg)
+  return darken($color, $deg-darker)

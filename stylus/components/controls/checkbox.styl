@@ -35,7 +35,7 @@ $checkbox-indicator-width-radio   = 0.25
 .checkbox-mock
   @extend $CONTROL-MOCK
 
-  border-radius $border-radius
+  border-radius $bd-radius
 
 // simulate control indicator
 .checkbox-indicator
@@ -61,7 +61,7 @@ $checkbox-indicator-width-radio   = 0.25
   @extend $CONTROL-LABEL
 
 .checkbox-indicator
-  width round($height-normal * $checkbox-indicator-width-radio)
+  width round($ht-normal * $checkbox-indicator-width-radio)
   height round(@width / 2)
 
 .pygmy
@@ -72,7 +72,7 @@ $checkbox-indicator-width-radio   = 0.25
     @extend $CONTROL-LABEL-PYGMY
 
   .checkbox-indicator
-    width round($height-pygmy * $checkbox-indicator-width-radio)
+    width round($ht-pygmy * $checkbox-indicator-width-radio)
     height round(@width / 2)
 
     border-width $checkbox-indicator-border - 2
@@ -85,7 +85,7 @@ $checkbox-indicator-width-radio   = 0.25
     @extend $CONTROL-LABEL-MINI
 
   .checkbox-indicator
-    width round($height-mini * $checkbox-indicator-width-radio)
+    width round($ht-mini * $checkbox-indicator-width-radio)
     height round(@width / 2)
 
     border-width $checkbox-indicator-border - 1
@@ -98,7 +98,7 @@ $checkbox-indicator-width-radio   = 0.25
     @extend $CONTROL-LABEL-HUGE
 
   .checkbox-indicator
-    width round($height-huge * $checkbox-indicator-width-radio)
+    width round($ht-huge * $checkbox-indicator-width-radio)
     height round(@width / 2)
 
     border-width $checkbox-indicator-border
@@ -111,7 +111,7 @@ $checkbox-indicator-width-radio   = 0.25
     @extend $CONTROL-LABEL-MARSSIVE
 
   .checkbox-indicator
-    width round($height-marssive * 0.25)
+    width round($ht-marssive * 0.25)
     height round(@width / 2)
 
     border-width $checkbox-indicator-border + 1

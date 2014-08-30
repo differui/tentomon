@@ -7,64 +7,62 @@
 
 // Degrees
 // ============================================================================
-$dark-deg                    = 8%
-$darker-deg                  = 13%
-$light-deg                   = 8%
-$lighter-deg                 = 13%
+$deg-dark                    = 8%
+$deg-darker                  = 13%
+$deg-light                   = 8%
+$deg-lighter                 = 13%
 
-// Majority color
+// Majority Color
 // ============================================================================
-$brand-basis                 = #f7f7f7
-$brand-info                  = #508cc7
-$brand-safe                  = #60b044
-$brand-danger                = #d1443d
-$brand-warn                  = #e9cf14
+$te-basis                    = #f7f7f7
+$te-info                     = #508cc7
+$te-safe                     = #60b044
+$te-danger                   = #d1443d
+$te-warn                     = #e9cf14
 
+// Grey Color
+// ============================================================================
+$white                       = #ffffff
+$black                       = #323232
 $grey                        = #dcdcdc
 $grey-light                  = #e1e1e1
 $grey-heavy                  = #d5d5d5
-$white                       = #ffffff
-$black                       = #323232
 
-$color-light                 = $grey-light
-$color-normal                = $black
-$color-heavy                 = $grey-heavy
-
-// Ends
+// Ends Color
 // ============================================================================
-$brand-basis-end             = $$dark($brand-basis)
-$brand-info-end              = darken($brand-info, $darker-deg * 1.5)
-$brand-safe-end              = darken($brand-safe, $darker-deg * 1.5)
-$brand-danger-end            = darken($brand-danger, $darker-deg * 1.5)
-$brand-warn-end              = darken($brand-warn, $darker-deg * 1.5)
+$end-basis                   = darken($te-basis, $deg-dark)
+$end-info                    = darken($te-info, $deg-darker * 1.5)
+$end-safe                    = darken($te-safe, $deg-darker * 1.5)
+$end-danger                  = darken($te-danger, $deg-darker * 1.5)
+$end-warn                    = darken($te-warn, $deg-darker * 1.5)
 
-// Disabled
+// Disabled Color
 // ============================================================================
-$brand-basis-disabled        = $brand-basis
-$brand-info-disabled         = lighten($brand-info, $lighter-deg * 2)
-$brand-safe-disabled         = lighten($brand-safe, $lighter-deg * 2)
-$brand-danger-disabled       = lighten($brand-danger, $lighter-deg * 2)
-$brand-warn-disabled         = lighten($brand-warn, $lighter-deg * 2)
+$te-basis-disabled           = $te-basis
+$te-info-disabled            = lighten($te-info, $deg-lighter * 2)
+$te-safe-disabled            = lighten($te-safe, $deg-lighter * 2)
+$te-danger-disabled          = lighten($te-danger, $deg-lighter * 2)
+$te-warn-disabled            = lighten($te-warn, $deg-lighter * 2)
 
-// Border
+// Border Color
 // ============================================================================
-$border-light                = $grey-light
-$border-heavy                = $grey-heavy
-$border-basis                = $border-heavy
-$border-info                 = $$darker($brand-info)
-$border-safe                 = $$darker($brand-safe)
-$border-danger               = $$darker($brand-danger)
-$border-warn                 = $$darker($brand-warn)
+$bd-light                    = $grey-light
+$bd-heavy                    = $grey-heavy
+$bd-basis                    = $bd-heavy
+$bd-info                     = darken($te-info, $deg-dark)
+$bd-safe                     = darken($te-safe, $deg-dark)
+$bd-danger                   = darken($te-danger, $deg-dark)
+$bd-warn                     = darken($te-warn, $deg-dark)
 
 // Background Color
 // ============================================================================
-$background-light            = lighten($grey-light, 80%)
-$background-heavy            = lighten($grey-heavy, 50%)
-$background-basis            = darken($brand-basis, 3%)
-$background-info             = $$translucent($brand-info, 10)
-$background-safe             = $$translucent($brand-safe, 10)
-$background-danger           = $$translucent($brand-danger, 10)
-$background-warn             = $$translucent($brand-warn, 10)
+$bg-light                    = lighten($grey-light, 80%)
+$bg-heavy                    = lighten($grey-heavy, 50%)
+$bg-basis                    = darken($te-basis, 3%)
+$bg-info                     = $$translucent($te-info, 10)
+$bg-safe                     = $$translucent($te-safe, 10)
+$bg-danger                   = $$translucent($te-danger, 10)
+$bg-warn                     = $$translucent($te-warn, 10)
 
 // Others
 // ============================================================================

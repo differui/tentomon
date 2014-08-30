@@ -10,12 +10,12 @@
 $basis$()
   @extend $UI
 
-  $basis-start               = $brand-basis
-  $basis-end                 = $brand-basis-end
+  $basis-start               = $te-basis
+  $basis-end                 = $end-basis
 
   color $black
-  border-color $border-basis
-  background-color $background-basis
+  border-color $bd-basis
+  background-color $bg-basis
 
   $$linear-gradient($basis-start, $basis-end)
   $$text-highlight()
@@ -23,44 +23,44 @@ $basis$()
 $info$()
   @extend $UI
 
-  $info-start                = $brand-info
-  $info-end                  = $brand-info-end
+  $info-start                = $te-info
+  $info-end                  = $end-info
 
-  border-color $border-info
-  background-color $background-info
+  border-color $bd-info
+  background-color $bg-info
 
   $$linear-gradient($info-start, $info-end)
 
 $warn$()
   @extend $UI
 
-  $warn-start                = $brand-warn
-  $warn-end                  = $brand-warn-end
+  $warn-start                = $te-warn
+  $warn-end                  = $end-warn
 
-  border-color $border-warn
-  background-color $background-warn
+  border-color $bd-warn
+  background-color $bg-warn
 
   $$linear-gradient($warn-start, $warn-end)
 
 $safe$()
   @extend $UI
 
-  $safe-start                = $brand-safe
-  $safe-end                  = $brand-safe-end
+  $safe-start                = $te-safe
+  $safe-end                  = $end-safe
 
-  border-color $border-safe
-  background-color $background-safe
+  border-color $bd-safe
+  background-color $bg-safe
 
   $$linear-gradient($safe-start, $safe-end)
 
 $danger$()
   @extend $UI
 
-  $danger-start              = $brand-danger
-  $danger-end                = $brand-danger-end
+  $danger-start              = $te-danger
+  $danger-end                = $end-danger
 
-  border-color $border-danger
-  background-color $background-danger
+  border-color $bd-danger
+  background-color $bg-danger
 
   $$linear-gradient($danger-start, $danger-end)
 
@@ -122,32 +122,32 @@ $basis-disabled$()
 $info-disabled$()
   @extend $UI-DISABLE
 
-  $info-disabled-start       = lighten($brand-info, $lighter-deg * 2)
-  $info-disabled-end         = lighten($brand-info, $lighter-deg * 2 - 2%)
+  $info-disabled-start       = lighten($te-info, $deg-lighter * 2)
+  $info-disabled-end         = lighten($te-info, $deg-lighter * 2 - 2%)
 
   $$linear-gradient($info-disabled-start, $info-disabled-end)
 
 $warn-disabled$()
   @extend $UI-DISABLE
 
-  $warn-disabled-start       = lighten($brand-warn, $lighter-deg * 2)
-  $warn-disabled-end         = lighten($brand-warn, $lighter-deg * 2 - 2%)
+  $warn-disabled-start       = lighten($te-warn, $deg-lighter * 2)
+  $warn-disabled-end         = lighten($te-warn, $deg-lighter * 2 - 2%)
 
   $$linear-gradient($warn-disabled-start, $warn-disabled-end)
 
 $safe-disabled$()
   @extend $UI-DISABLE
 
-  $safe-disabled-start       = lighten($brand-safe, $lighter-deg * 2)
-  $safe-disabled-end         = lighten($brand-safe, $lighter-deg * 2 - 2%)
+  $safe-disabled-start       = lighten($te-safe, $deg-lighter * 2)
+  $safe-disabled-end         = lighten($te-safe, $deg-lighter * 2 - 2%)
 
   $$linear-gradient($safe-disabled-start, $safe-disabled-end)
 
 $danger-disabled$()
   @extend $UI-DISABLE
 
-  $danger-disabled-start     = lighten($brand-danger, $lighter-deg * 2)
-  $danger-disabled-end       = lighten($brand-danger, $lighter-deg * 2 - 2%)
+  $danger-disabled-start     = lighten($te-danger, $deg-lighter * 2)
+  $danger-disabled-end       = lighten($te-danger, $deg-lighter * 2 - 2%)
 
   $$linear-gradient($danger-disabled-start, $danger-disabled-end)
 

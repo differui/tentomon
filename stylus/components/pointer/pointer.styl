@@ -55,11 +55,11 @@ $pointer-swim-case           = 15%
 $pointer-color-case          = 0.3
 
 // Color span
-$brand-basis-span             = $brand-basis - $brand-basis-end
-$brand-info-span             = $brand-info - $brand-info-end
-$brand-safe-span             = $brand-safe - $brand-safe-end
-$brand-danger-span           = $brand-danger - $brand-danger-end
-$brand-warn-span             = $brand-warn - $brand-warn-end
+$te-basis-span             = $te-basis - $end-basis
+$te-info-span             = $te-info - $end-info
+$te-safe-span             = $te-safe - $end-safe
+$te-danger-span           = $te-danger - $end-danger
+$te-warn-span             = $te-warn - $end-warn
 
 .pointer
   min-width 50%
@@ -68,7 +68,7 @@ $brand-warn-span             = $brand-warn - $brand-warn-end
     content ""
     width $pointer-width
     height @width
-    border solid $border-width
+    border solid $bd-width
     border-color inherit
     border-radius 1px
     transform rotate(-45deg)
@@ -176,105 +176,105 @@ $brand-warn-span             = $brand-warn - $brand-warn-end
   &.direction-330
   &.direction-360
     &.basis-static:after
-      background-color $brand-basis
+      background-color $te-basis
 
     &.info-static:after
-      background-color $brand-info
+      background-color $te-info
 
     &.safe-static:after
-      background-color $brand-safe
+      background-color $te-safe
 
     &.danger-static:after
-      background-color $brand-danger
+      background-color $te-danger
 
     &.warn-static:after
-      background-color $brand-warn
+      background-color $te-warn
 
   &.direction-150
   &.direction-180
   &.direction-210
     &.basis-static:after
-      background-color $brand-basis-end
+      background-color $end-basis
 
     &.info-static:after
-      background-color $brand-info-end
+      background-color $end-info
 
     &.safe-static:after
-      background-color $brand-safe-end
+      background-color $end-safe
 
     &.danger-static:after
-      background-color $brand-danger-end
+      background-color $end-danger
 
     &.warn-static:after
-      background-color $brand-warn-end
+      background-color $end-warn
 
   &.direction-60
   &.direction-300
     &.basis-static:after
-      background-color $brand-basis - $brand-basis-span * $pointer-color-case
+      background-color $te-basis - $te-basis-span * $pointer-color-case
 
     &.info-static:after
-      background-color $brand-info - $brand-info-span * $pointer-color-case
+      background-color $te-info - $te-info-span * $pointer-color-case
 
     &.safe-static:after
-      background-color $brand-safe - $brand-safe-span * $pointer-color-case
+      background-color $te-safe - $te-safe-span * $pointer-color-case
 
     &.danger-static:after
-      background-color $brand-danger - $brand-danger-span * $pointer-color-case
+      background-color $te-danger - $te-danger-span * $pointer-color-case
 
     &.warn-static:after
-      background-color $brand-warn - $brand-warn-span * $pointer-color-case
+      background-color $te-warn - $te-warn-span * $pointer-color-case
 
   &.direction-90
   &.direction-270
     &.basis-static:after
-      background-color $brand-basis - $brand-basis-span * 0.5
+      background-color $te-basis - $te-basis-span * 0.5
 
     &.info-static:after
-      background-color $brand-info - $brand-info-span * 0.5
+      background-color $te-info - $te-info-span * 0.5
 
     &.safe-static:after
-      background-color $brand-safe - $brand-safe-span * 0.5
+      background-color $te-safe - $te-safe-span * 0.5
 
     &.danger-static:after
-      background-color $brand-danger - $brand-danger-span * 0.5
+      background-color $te-danger - $te-danger-span * 0.5
 
     &.warn-static:after
-      background-color $brand-warn - $brand-warn-span * 0.5
+      background-color $te-warn - $te-warn-span * 0.5
 
   &.direction-120
   &.direction-240
     &.basis-static:after
-      background-color $brand-basis-end + $brand-basis-span * $pointer-color-case
+      background-color $end-basis + $te-basis-span * $pointer-color-case
 
     &.info-static:after
-      background-color $brand-info-end + $brand-info-span * $pointer-color-case
+      background-color $end-info + $te-info-span * $pointer-color-case
 
     &.safe-static:after
-      background-color $brand-safe-end + $brand-safe-span * $pointer-color-case
+      background-color $end-safe + $te-safe-span * $pointer-color-case
 
     &.danger-static:after
-      background-color $brand-danger-end + $brand-danger-span * $pointer-color-case
+      background-color $end-danger + $te-danger-span * $pointer-color-case
 
     &.warn-static:after
-      background-color $brand-warn-end + $brand-warn-span * $pointer-color-case
+      background-color $end-warn + $te-warn-span * $pointer-color-case
 
   // Pure background.
   &.pure
     &.basis-static:after
-      background-color $background-basis
+      background-color $bg-basis
 
     &.info-static:after
-      background-color $background-info
+      background-color $bg-info
 
     &.safe-static:after
-      background-color $background-safe
+      background-color $bg-safe
 
     &.danger-static:after
-      background-color $background-danger
+      background-color $bg-danger
 
     &.warn-static:after
-      background-color $background-warn
+      background-color $bg-warn
 
   // Rounded angle.
   &.round

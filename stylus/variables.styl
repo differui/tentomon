@@ -29,10 +29,6 @@
 // ============================================================================
 $ui-name                     = "tentomon-light-ui"
 
-// State map - alias map state name
-// ============================================================================
-$states                      = ('' '') ('a' ':active') ('isa' '.is-active') ('d' ':disabled') ('isd' '.is-disabled')
-
 // Majority size
 // ============================================================================
 $te                          = 14px
@@ -47,12 +43,13 @@ $te-larger                   = round($te * 1.29)
 // ============================================================================
 $te-line                     = 1.714
 $te-line-computed            = round($te * $te-line)
-$te-line-half-diff           = ($te-line-computed - $te) / 2
 
 // Component apperance
 // ============================================================================
-$border-radius               = 3px
-$border-width                = 1px
+$bd-radius                   = 3px
+
+$bd-width                    = 1px
+$bd-width-bold               = $bd-width * 2
 
 $gap-vertical                = $te-quarter
 $gap-horizontal              = $te-small
@@ -60,34 +57,38 @@ $gap-horizontal              = $te-small
 $gap-half                    = round($gap-horizontal / 2)
 $gap-double                  = $gap-horizontal * 2
 $gap-triple                  = $gap-horizontal * 3
+
 $column-single               = 20%
 $column-double               = $column-single * 2
 
 // Component padding and height
 // ============================================================================
-$textfield-height            = 16px
-$content-height              = max($te-line-computed, $textfield-height)
+$tf-height                   = 16px
+$content-height              = max($te-line-computed, $tf-height)
 
 // Default component padding make up component inner height.
-$content-padding-diff        = $content-height - $textfield-height
-$content-padding-diff-half   = round($content-padding-diff / 2)
+// ============================================================================
+$content-pd-diff             = $content-height - $tf-height
+$content-pd-diff-half        = round($content-pd-diff / 2)
 
 // Component vertical padding in different size.
-$padding-normal              = $content-padding-diff-half + $gap-vertical
-$padding-marssive            = $padding-normal + $gap-vertical * 2
-$padding-huge                = $padding-normal + $gap-vertical * 1
-$padding-mini                = $padding-normal + $gap-vertical * -1 + 2
-$padding-pygmy               = $padding-normal + $gap-vertical * -2 + 3
+// ============================================================================
+$pd-normal                   = $content-pd-diff-half + $gap-vertical
+$pd-marssive                 = $pd-normal + $gap-vertical * 2
+$pd-huge                     = $pd-normal + $gap-vertical * 1
+$pd-mini                     = $pd-normal + $gap-vertical * -1 + 2
+$pd-pygmy                    = $pd-normal + $gap-vertical * -2 + 3
 
 // Component height in different size.
-$height-normal    = $textfield-height + ($border-width + $padding-normal)   * 2
-$height-marssive  = $textfield-height + ($border-width + $padding-marssive) * 2
-$height-huge      = $textfield-height + ($border-width + $padding-huge)     * 2
-$height-mini      = $textfield-height + ($border-width + $padding-mini)     * 2
-$height-pygmy     = $textfield-height + ($border-width + $padding-pygmy)    * 2
+// ============================================================================
+$ht-normal                   = $tf-height + ($bd-width + $pd-normal)   * 2
+$ht-marssive                 = $tf-height + ($bd-width + $pd-marssive) * 2
+$ht-huge                     = $tf-height + ($bd-width + $pd-huge)     * 2
+$ht-mini                     = $tf-height + ($bd-width + $pd-mini)     * 2
+$ht-pygmy                    = $tf-height + ($bd-width + $pd-pygmy)    * 2
 
 // Vertical layer index.
 // ============================================================================
-$top-index                   = 3000
-$middle-index                = 2000
-$bottom-index                = 1000
+$idx-top                     = 3000
+$idx-middle                  = 2000
+$idx-bottom                  = 1000

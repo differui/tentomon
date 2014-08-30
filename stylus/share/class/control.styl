@@ -22,7 +22,7 @@
 // Styleguide 6.4
 
 // e.g.
-// mini control width = $height-mini * $control-width-radio
+// mini control width = $ht-mini * $control-width-radio
 $control-width-radio         = 0.5
 
 $CONTROL
@@ -37,48 +37,48 @@ $CONTROL-TAG
 
 // indent control label
 $CONTROL-LABEL
-  padding-left $gap-horizontal + $control-width-radio * $height-normal
+  padding-left $gap-horizontal + $control-width-radio * $ht-normal
 
 $CONTROL-LABEL-PYGMY
-  padding-left $gap-horizontal + $control-width-radio * $height-pygmy
+  padding-left $gap-horizontal + $control-width-radio * $ht-pygmy
  
 $CONTROL-LABEL-MINI
-  padding-left $gap-horizontal + $control-width-radio * $height-mini
+  padding-left $gap-horizontal + $control-width-radio * $ht-mini
  
 $CONTROL-LABEL-HUGE
-  padding-left $gap-horizontal + $control-width-radio * $height-huge
+  padding-left $gap-horizontal + $control-width-radio * $ht-huge
 
 $CONTROL-LABEL-MARSSIVE
-  padding-left $gap-horizontal + $control-width-radio * $height-marssive
+  padding-left $gap-horizontal + $control-width-radio * $ht-marssive
 
 // use html tags simulate control
 $CONTROL-MOCK
   $center-left$()
 
   border-style solid
-  border-width $border-width
+  border-width $bd-width
 
 $CONTROL-MOCK
-  width round($height-normal * $control-width-radio)
+  width round($ht-normal * $control-width-radio)
   height @width
 
 $CONTROL-MOCK-PYGMY
-  width round($height-pygmy * $control-width-radio)
+  width round($ht-pygmy * $control-width-radio)
   height @width
  
 $CONTROL-MOCK-MINI
-  width round($height-mini * $control-width-radio)
+  width round($ht-mini * $control-width-radio)
   height @width
  
 $CONTROL-MOCK-HUGE
-  width round($height-huge * $control-width-radio)
+  width round($ht-huge * $control-width-radio)
   height @width
 
 $CONTROL-MOCK-MARSSIVE
-  width round($height-marssive * $control-width-radio)
+  width round($ht-marssive * $control-width-radio)
   height @width
 
 // indicate control state
 $CONTROL-INDICATOR
   opacity 0
-  color $brand-motion
+  color $te-motion

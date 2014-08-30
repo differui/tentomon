@@ -33,7 +33,7 @@
 // + `descend`
 //
 // Styleguide 7.29
-$timeline-border-width = $border-width * 2
+$timeline-border-width = $bd-width * 2
 $edge-point-width      = $te-quarter
 $edge-point-offset     = round($edge-point-width / 2 + $timeline-border-width) * -1
 
@@ -45,7 +45,7 @@ $edge-point-offset     = round($edge-point-width / 2 + $timeline-border-width) *
   padding-bottom $gap-vertical
 
   > li
-    border-left solid $timeline-border-width $border-heavy
+    border-left solid $timeline-border-width $bd-heavy
 
     padding $te 0
 
@@ -55,8 +55,8 @@ $edge-point-offset     = round($edge-point-width / 2 + $timeline-border-width) *
     width $edge-point-width + $timeline-border-width
     height @width
     border-radius 50%
-    border solid $timeline-border-width $border-heavy
-    background-color $background-heavy
+    border solid $timeline-border-width $bd-heavy
+    background-color $bg-heavy
 
     $center-left$()
 

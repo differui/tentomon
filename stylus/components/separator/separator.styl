@@ -22,8 +22,8 @@
 // </div>
 //
 // Styleguide 7.20
-$offset-normal               = ($height-normal / 2 + $gap-horizontal) * -1
-$offset-marssive             = ($height-marssive / 2 + $gap-horizontal) * -1
+$offset-normal               = ($ht-normal / 2 + $gap-horizontal) * -1
+$offset-marssive             = ($ht-marssive / 2 + $gap-horizontal) * -1
 
 .separator
   overflow hidden
@@ -36,7 +36,7 @@ $offset-marssive             = ($height-marssive / 2 + $gap-horizontal) * -1
 
 .separator-text
 .separator-icon
-  color $color-heavy
+  color $grey-heavy
 
   z-index 2
 
@@ -50,7 +50,7 @@ $offset-marssive             = ($height-marssive / 2 + $gap-horizontal) * -1
   &:before
   &:after
     content ""
-    border-width $border-width
+    border-width $bd-width
 
     z-index 1
 
@@ -92,10 +92,10 @@ $offset-marssive             = ($height-marssive / 2 + $gap-horizontal) * -1
 // separator size modifiers (different offset and separator width/height)
 // ============================================================================
 .separator-text
-  line-height $height-normal
+  line-height $ht-normal
 
 .horizontal .separator-inner
-  min-height $height-normal
+  min-height $ht-normal
 
   &:after
     margin-right $offset-normal
@@ -104,7 +104,7 @@ $offset-marssive             = ($height-marssive / 2 + $gap-horizontal) * -1
     margin-left $offset-normal
 
 .vertical .separator-inner
-  min-width $height-normal
+  min-width $ht-normal
 
   &:after
     margin-bottom $offset-normal
@@ -115,10 +115,10 @@ $offset-marssive             = ($height-marssive / 2 + $gap-horizontal) * -1
 .huge
 .marssive
   .separator-text
-    line-height $height-marssive
+    line-height $ht-marssive
 
   &.horizontal .separator-inner
-    min-height $height-marssive
+    min-height $ht-marssive
 
     &:after
       margin-right $offset-marssive
@@ -127,7 +127,7 @@ $offset-marssive             = ($height-marssive / 2 + $gap-horizontal) * -1
       margin-left $offset-marssive
 
   &.vertical .separator-inner
-    min-width $height-marssive
+    min-width $ht-marssive
 
     &:after
       margin-bottom $offset-marssive
@@ -143,12 +143,12 @@ $offset-marssive             = ($height-marssive / 2 + $gap-horizontal) * -1
 .dotted
   &.vertical > .separator-inner:before
   &.vertical > .separator-inner:after
-    border-left-color $border-heavy
+    border-left-color $bd-heavy
     border-right-style none
 
   &.horizontal > .separator-inner:before
   &.horizontal > .separator-inner:after
-    border-top-color $border-heavy
+    border-top-color $bd-heavy
     border-bottom-style none
 
 .dashed
@@ -176,12 +176,12 @@ $offset-marssive             = ($height-marssive / 2 + $gap-horizontal) * -1
 .notch
   &.vertical > .separator-inner:before
   &.vertical > .separator-inner:after
-    border-left-color $border-heavy
+    border-left-color $bd-heavy
     border-right-color $highlight-light
 
   &.horizontal > .separator-inner:before
   &.horizontal > .separator-inner:after
-    border-top-color $border-heavy
+    border-top-color $bd-heavy
     border-bottom-color $highlight-light
 
   .separator-text
@@ -198,10 +198,10 @@ $offset-marssive             = ($height-marssive / 2 + $gap-horizontal) * -1
     border-style none
 
   &.vertical > .separator-inner:before
-    background-image radial-gradient(farthest-side at center bottom, $border-heavy, $$translucent($border-heavy, 0))
+    background-image radial-gradient(farthest-side at center bottom, $bd-heavy, $$translucent($bd-heavy, 0))
 
   &.vertical > .separator-inner:after
-    background-image radial-gradient(farthest-side at center top, $border-heavy, $$translucent($border-heavy, 0))
+    background-image radial-gradient(farthest-side at center top, $bd-heavy, $$translucent($bd-heavy, 0))
 
   &.horizontal > .separator-inner:before
   &.horizontal > .separator-inner:after
@@ -209,10 +209,10 @@ $offset-marssive             = ($height-marssive / 2 + $gap-horizontal) * -1
     border-style none
 
   &.horizontal > .separator-inner:before
-    background-image radial-gradient(farthest-side at right center, $border-heavy, $$translucent($border-heavy, 0))
+    background-image radial-gradient(farthest-side at right center, $bd-heavy, $$translucent($bd-heavy, 0))
 
   &.horizontal > .separator-inner:after
-    background-image radial-gradient(farthest-side at left center, $border-heavy, $$translucent($border-heavy, 0))
+    background-image radial-gradient(farthest-side at left center, $bd-heavy, $$translucent($bd-heavy, 0))
 
 .join
   .separator-icon
