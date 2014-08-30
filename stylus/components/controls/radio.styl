@@ -108,16 +108,16 @@ $radio-indicator-width-radio = 0.2
     width even($indicator-width) is even($mock-width) ? $indicator-width : $indicator-width + 1
     height @width
 
-.marssive
+.massive
   .radio-label
-    @extend $CONTROL-LABEL-MARSSIVE
+    @extend $CONTROL-LABEL-massive
 
   .radio-mock
-    @extend $CONTROL-MOCK-MARSSIVE
+    @extend $CONTROL-MOCK-massive
 
   .radio-indicator
-    $indicator-width   = round($ht-marssive * $radio-indicator-width-radio)
-    $mock-width        = round($ht-marssive * $control-width-radio)
+    $indicator-width   = round($ht-massive * $radio-indicator-width-radio)
+    $mock-width        = round($ht-massive * $control-width-radio)
     
     width even($indicator-width) is even($mock-width) ? $indicator-width : $indicator-width + 1
     height @width

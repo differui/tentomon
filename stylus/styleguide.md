@@ -190,7 +190,7 @@ The height of component with mini size equal to **Normal Size** height *minus* t
 The height of component with extra small size equal to **Mini Size** height *minus* top and bottom `$gap-vertical`.
 
 + **Huge Size**
-+ **Marssive Size**
++ **massive Size**
 
 ## Component Factory
 

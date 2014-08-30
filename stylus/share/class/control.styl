@@ -11,12 +11,12 @@
 // + `$CONTORL-LABEL-PYGMY`
 // + `$CONTORL-LABEL-MINI`
 // + `$CONTORL-LABEL-HUGE`
-// + `$CONTORL-LABEL-MARSSIVE`
+// + `$CONTORL-LABEL-massive`
 // + `$CONTROL-MOCK` CSS moked form control.
 // + `$CONTORL-MOCK-PYGMY`
 // + `$CONTORL-MOCK-MINI`
 // + `$CONTORL-MOCK-HUGE`
-// + `$CONTORL-MOCK-MARSSIVE`
+// + `$CONTORL-MOCK-massive`
 // + `$CONTROL-INDICATOR` Form control state indicator.
 //
 // Styleguide 6.4
@@ -48,8 +48,8 @@ $CONTROL-LABEL-MINI
 $CONTROL-LABEL-HUGE
   padding-left $gap-horizontal + $control-width-radio * $ht-huge
 
-$CONTROL-LABEL-MARSSIVE
-  padding-left $gap-horizontal + $control-width-radio * $ht-marssive
+$CONTROL-LABEL-massive
+  padding-left $gap-horizontal + $control-width-radio * $ht-massive
 
 // use html tags simulate control
 $CONTROL-MOCK
@@ -74,8 +74,8 @@ $CONTROL-MOCK-HUGE
   width round($ht-huge * $control-width-radio)
   height @width
 
-$CONTROL-MOCK-MARSSIVE
-  width round($ht-marssive * $control-width-radio)
+$CONTROL-MOCK-massive
+  width round($ht-massive * $control-width-radio)
   height @width
 
 // indicate control state

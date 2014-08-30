@@ -66,8 +66,8 @@ $toggle-height-mini     = round($toggle-height-radio * $ht-mini)
 $toggle-width-mini      = round($toggle-aspect-radio * $toggle-height-mini)
 $toggle-height-huge     = round($toggle-height-radio * $ht-huge)
 $toggle-width-huge      = round($toggle-aspect-radio * $toggle-height-huge)
-$toggle-height-marssive = round($toggle-height-radio * $ht-marssive)
-$toggle-width-marssive  = round($toggle-aspect-radio * $toggle-height-marssive)
+$toggle-height-massive = round($toggle-height-radio * $ht-massive)
+$toggle-width-massive  = round($toggle-aspect-radio * $toggle-height-massive)
 
 .toggle-mock
   width $toggle-width-normal
@@ -116,14 +116,14 @@ $toggle-width-marssive  = round($toggle-aspect-radio * $toggle-height-marssive)
     height $toggle-height-huge - $toggle-indicator-offset
     width @height
 
-.marssive
+.massive
   .toggle-mock
-    width $toggle-width-marssive
-    height $toggle-height-marssive
+    width $toggle-width-massive
+    height $toggle-height-massive
 
   .toggle-label
-    padding-left $toggle-width-marssive  + $gap-horizontal
+    padding-left $toggle-width-massive  + $gap-horizontal
 
   .toggle-indicator
-    height $toggle-height-marssive - $toggle-indicator-offset
+    height $toggle-height-massive - $toggle-indicator-offset
     width @height

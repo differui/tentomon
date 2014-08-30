@@ -1,0 +1,27 @@
+// Layer
+//
+// The topest content container.There are two main layer:
+//
+// + `content`
+// + `suspend`
+//
+// Markup:
+// <div class="kss-box">
+//   <div id="content" class="layer"></div>
+//   <div id="suspend" class="layer"></div>
+// </div>
+//
+// Styleguide 3.1
+.layer
+  position absolute
+  margin auto
+  top 0
+  right 0
+  bottom 0
+  left 0
+
+#content
+  z-index $idx-middle
+
+#suspend
+  z-index $idx-top
