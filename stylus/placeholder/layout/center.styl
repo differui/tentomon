@@ -1,0 +1,38 @@
+// Center
+//
+// Center vertically and horizontally in parent container.
+//
+// + `$l-center`
+// + `$l-center-top`
+// + `$l-center-right`
+// + `$l-center-bottom`
+// + `$l-center-left`
+//
+// Styleguide 3.2.1
+$l-center
+  position absolute
+  margin auto
+  top 0
+  right 0
+  bottom 0
+  left 0
+
+$l-center-top
+  @extend $l-center
+
+  bottom auto
+
+$l-center-right
+  @extend $l-center
+
+  left auto
+
+$l-center-bottom
+  @extend $l-center
+
+  top auto
+
+$l-center-left
+  @extend $l-center
+
+  right auto

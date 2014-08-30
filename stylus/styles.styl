@@ -78,26 +78,34 @@ if $kss is true
 @import "base/control"
 @import "base/hidden"
 
-// Section 3: Layout
-// ============================================================================
-
-// Layout
-//
-// Styleguide 3
-@import "layout/layer"
-@import "layout/section"
-
-// Section 4: Placeholder
+// Section 3: Placeholder
 // ============================================================================
 
 // Placeholder
 //
-// Styleguide 4
+// Styleguide 3
+
+// UI Placeholder
+//
+// Styleguide 3.1
 @import "placeholder/ui/primary-static.styl"
 @import "placeholder/ui/primary-active.styl"
 @import "placeholder/ui/primary-disabled.styl"
 
-@import "placeholder/layout/layout.styl"
+// Layout Placeholder
+//
+// Styleguide 3.2
+@import "placeholder/layout/center.styl"
+
+
+// Section 4: Layout
+// ============================================================================
+
+// Layout
+//
+// Styleguide 4
+@import "layout/layer"
+@import "layout/section"
 
 /*
 // Section 3: Share
@@ -107,11 +115,11 @@ if $kss is true
 //
 // Public modifiers shared across all components and collections.
 //
-// Styleguide 3
+// Styleguide 4
 
 // Style
 //
-// Styleguide 3.1
+// Styleguide 4.1
 @import "share/modifiers/style/color"
 @import "share/modifiers/style/font"
 @import "share/modifiers/style/border"
@@ -125,13 +133,13 @@ if $kss is true
 
 // Layout
 //
-// Styleguide 3.2
+// Styleguide 4.2
 @import "share/modifiers/layout/amid"
 @import "share/modifiers/layout/around"
 
 // Typesetting
 //
-// Styleguide 3.3
+// Styleguide 4.3
 @import "share/modifiers/typesetting/size"
 @import "share/modifiers/typesetting/vertical"
 @import "share/modifiers/typesetting/horizontal"
@@ -140,7 +148,7 @@ if $kss is true
 
 // Effect
 //
-// Styleguide 3.4
+// Styleguide 4.4
 @import "share/modifiers/effect/shadow"
 @import "share/modifiers/effect/highlight"
 
