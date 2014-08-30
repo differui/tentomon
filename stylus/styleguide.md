@@ -183,11 +183,11 @@ The height of component with normal size equal to `$component-outer-height`.
 
 + **Mini Size**
 
-The height of component with mini size equal to **Normal Size** height *minus* top and bottom `$gap-vertical`.
+The height of component with mini size equal to **Normal Size** height *minus* top and bottom `$gap-v`.
 
 + **Pygmy Size**
 
-The height of component with extra small size equal to **Mini Size** height *minus* top and bottom `$gap-vertical`.
+The height of component with extra small size equal to **Mini Size** height *minus* top and bottom `$gap-v`.
 
 + **Huge Size**
 + **massive Size**

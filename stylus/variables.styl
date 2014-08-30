@@ -51,12 +51,16 @@ $bd-radius                   = 3px
 $bd-width                    = 1px
 $bd-width-bold               = $bd-width * 2
 
-$gap-vertical                = $te-quarter
-$gap-horizontal              = $te-small
+$gap-v                       = $te-quarter
+$gap-h                       = $te-small
 
-$gap-half                    = round($gap-horizontal / 2)
-$gap-double                  = $gap-horizontal * 2
-$gap-triple                  = $gap-horizontal * 3
+$gap-h-half                  = round($gap-h / 2)
+$gap-h-double                = round($gap-h * 2)
+$gap-h-triple                = round($gap-h * 3)
+
+$gap-v-half                  = round($gap-v / 2)
+$gap-v-double                = round($gap-v * 2)
+$gap-v-triple                = round($gap-v * 3)
 
 $column-single               = 20%
 $column-double               = $column-single * 2
@@ -73,11 +77,11 @@ $content-pd-diff-half        = round($content-pd-diff / 2)
 
 // Component vertical padding in different size.
 // ============================================================================
-$pd-normal                   = $content-pd-diff-half + $gap-vertical
-$pd-massive                  = $pd-normal + $gap-vertical * 2
-$pd-huge                     = $pd-normal + $gap-vertical * 1
-$pd-mini                     = $pd-normal + $gap-vertical * -1 + 2
-$pd-pygmy                    = $pd-normal + $gap-vertical * -2 + 3
+$pd-normal                   = $content-pd-diff-half + $gap-v
+$pd-massive                  = $pd-normal + $gap-v * 2
+$pd-huge                     = $pd-normal + $gap-v * 1
+$pd-mini                     = $pd-normal + $gap-v * -1 + 2
+$pd-pygmy                    = $pd-normal + $gap-v * -2 + 3
 
 // Component height in different size.
 // ============================================================================
