@@ -1,0 +1,46 @@
+// Core
+//
+// + `.pygmy`
+// + `.mini`
+// + `.normal`
+// + `.huge`
+// + `.massive`
+//
+// Styleguide 5.8.1
+.progress
+  width 100%
+  position relative
+
+  &.pygmy
+    @extend $l-pygmy-seamless
+
+  &.mini
+    @extend $l-mini-seamless
+
+  &.normal
+    @extend $l-normal-seamless
+
+  &.huge
+    @extend $l-huge-seamless
+
+  &.massive
+    @extend $l-massive-seamless
+
+.progress-indicator
+  @extend $l-center-left
+
+  z-index $idx-top
+  overflow hidden
+
+.progress-text
+  width 100%
+  display inline-block
+  z-index $idx-bottom
+  position relative
+
+.progress-text-reverse
+  @extend $l-center
+
+  width 100%
+  display inline-block
+  height $tf-height

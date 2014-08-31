@@ -1,0 +1,23 @@
+// State
+//
+// + `.is-done`
+// + `.is-wait`
+//
+// Markup:
+// <div class="progress normal">
+//   <span class="progress-indicator" style="width: 50%">
+//     <span class="progress-text-reverse">提示</span>
+//   </span>
+//   <span class="progress-text">提示</span>
+// </div>
+//
+// Styleguide 5.8.3
+.progress
+  &.is-done
+    .progress-indicator
+      width 100%
+
+  &.is-wait
+    background-size 30px 30px
+    background-color $bd-heavy
+    background-image linear-gradient(135deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)

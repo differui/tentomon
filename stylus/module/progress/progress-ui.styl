@@ -1,0 +1,36 @@
+// UI
+//
+// + `.ui-clean`
+// + `.ui-band`
+//
+// Styleguide 5.8.2
+.progress
+  @extend $ui-basis-static
+
+  line-height $tf-height
+  border-radius $bd-radius
+
+  &.ui-clean
+    .progress-text
+      visibility hidden
+
+  &.ui-band
+    &
+    .progress-indicator
+      border-radius 0
+
+    .progress-text
+      display none
+
+
+.progress-indicator
+  @extend $ui-safe-static
+
+  border-radius $bd-radius - 1
+
+.progress-text
+.progress-text-reverse
+  text-align center
+
+.progress-text-reverse
+  color $white
