@@ -5,14 +5,12 @@
 // + `.ui-safe`
 // + `.ui-danger`
 // + `.ui-warn`
+// + `.ui-round`
 //
 // Styleguide 5.9.2
 .ribbon
   text-align center
   line-height $tf-height
-
-  &.ui-round
-    border-radius $bd-radius
 
   &.ui-basis
     &.amid-45
@@ -68,6 +66,9 @@
     &.amid-225
       .ribbon-corner
         border-bottom-color $bd-warn
+
+  &.ui-round
+    border-radius $bd-radius
 
 .ribbon-corner
   border-style solid

@@ -1,0 +1,76 @@
+// Core
+//
+// + `.pygmy`
+// + `.mini`
+// + `.normal`
+// + `.huge`
+// + `.massive`
+// + `.amid-45`
+// + `.amid-135`
+// + `.amid-225`
+// + `.amid-315`
+//
+// Styleguide 5.10.1
+.magnet
+
+  &.pygmy
+    @extend $l-pygmy-seam
+
+  &.mini
+    @extend $l-mini-seam
+
+  &.normal
+    @extend $l-normal-seam
+
+  &.huge
+    @extend $l-huge-seam
+
+  &.massive
+    @extend $l-massive-seam
+
+  &.pygmy
+  &.mini
+  &.normal
+  &.huge
+  &.massive
+    padding-left $gap-h
+    padding-right @padding-left
+
+  &.amid-45
+    @extend $l-center-top-right
+
+  &.amid-135
+    @extend $l-center-bottom-right
+
+  &.amid-225
+    @extend $l-center-bottom-left
+
+  &.amid-315
+    @extend $l-center-top-left
+
+.magnet
+  &.amid-45
+  &.amid-315
+    &.pygmy
+    &.mini
+      padding-bottom 0
+
+    &.normal
+    &.huge
+      padding-bottom $gap-v
+
+    &.massive
+      padding-bottom $gap-v * 2
+
+  &.amid-135
+  &.amid-225
+    &.pygmy
+    &.mini
+      padding-top 0
+
+    &.normal
+    &.huge
+      padding-top $gap-v
+
+    &.massive
+      padding-top $gap-v * 2

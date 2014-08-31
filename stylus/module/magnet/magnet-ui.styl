@@ -1,0 +1,54 @@
+// UI
+//
+// + `.ui-basis`
+// + `.ui-info`
+// + `.ui-safe`
+// + `.ui-danger`
+// + `.ui-warn`
+// + `.ui-round`
+//
+// Styleguide 5.10.2
+.magnet
+  line-height $tf-height
+  border-style solid
+  border-width $bd-width
+
+  &.ui-basis
+    @extend $ui-basis-static
+
+  &.ui-safe
+    @extend $ui-safe-static
+
+  &.ui-danger
+    @extend $ui-danger-static
+
+  &.ui-info
+    @extend $ui-info-static
+
+  &.ui-warn
+    @extend $ui-warn-static
+
+  &.ui-round
+    &.amid-45
+      border-top-right-radius $bd-radius
+
+    &.amid-135
+      border-bottom-right-radius $bd-radius
+
+    &.amid-225
+      border-bottom-left-radius $bd-radius
+
+    &.amid-315
+      border-top-left-radius $bd-radius
+
+  &.amid-45
+    border-bottom-left-radius $bd-radius
+
+  &.amid-135
+    border-top-left-radius $bd-radius
+
+  &.amid-225
+    border-top-right-radius $bd-radius
+
+  &.amid-315
+    border-bottom-right-radius $bd-radius
