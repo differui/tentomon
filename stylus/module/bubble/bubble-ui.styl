@@ -1,0 +1,31 @@
+// UI
+//
+// + `.ui-basis`
+// + `.ui-info`
+// + `.ui-safe`
+// + `.ui-danger`
+// + `.ui-warn`
+// + `.ui-round`
+//
+// Styleguide 5.11.2
+.bubble
+  line-height $tf-height
+  border-radius 50%
+
+  &.ui-basis
+    @extend $ui-basis-static
+
+  &.ui-info
+    @extend $ui-info-static
+
+  &.ui-safe
+    @extend $ui-safe-static
+
+  &.ui-danger
+    @extend $ui-danger-static
+
+  &.ui-warn
+    @extend $ui-warn-static
+
+.bubble-text
+  text-align center
