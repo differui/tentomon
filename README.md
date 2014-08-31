@@ -21,14 +21,14 @@ Placeholder is public skin or layout snippet.Module will extend those snippets.
     $ui-primary
         // public primary ui
 
-    &ui-safty
+    $ui-safty
         // public safety ui
 
-    // stylus/placeholder/layout.styl
-    &l-pygmy
+    // stylus/placeholder/measure.styl
+    $l-pygmy
         // public pygmy size layout
 
-    &l-massive
+    $l-massive
         // public massive size layout
 
     // stylus/modules/btn/btn.styl
