@@ -1,0 +1,176 @@
+// Core
+//
+// + `.pygmy`
+// + `.mini`
+// + `.normal`
+// + `.huge`
+// + `.massive`
+//
+// Styleguide 5.17.1
+$sp-offset-pygmy             = round(($ht-pygmy   / 2) * -1)
+$sp-offset-mini              = round(($ht-mini    / 2) * -1)
+$sp-offset-normal            = round(($ht-normal  / 2) * -1)
+$sp-offset-huge              = round(($ht-huge    / 2) * -1)
+$sp-offset-massive           = round(($ht-massive / 2) * -1)
+
+.sp-v
+.sp-h
+  overflow hidden
+
+.sp-text
+.sp-inner:after
+.sp-inner:before
+  @extend $l-center 
+
+.sp-text
+  height $tf-height
+  z-index $idx-top
+
+.sp-inner
+  margin-top 1px
+  margin-bottom 1px
+  position relative
+
+  &:before
+  &:after
+    content ""
+
+// layout separator lines
+// ============================================================================
+.sp-h > .sp-inner
+  width 100%
+
+  &:after
+  &:before
+    width 50%
+    height 0
+
+  &:after
+    left auto
+
+  &:before
+    right auto
+
+.sp-v > .sp-inner
+  height 100%
+
+  &:after
+  &:before
+    width 0
+    height 50%
+
+  &:after
+    top auto
+
+  &:before
+    bottom auto
+
+// separator size modifiers (different offset and separator width/height)
+// ============================================================================
+.sp-h
+  &.pygmy .sp-inner
+    padding-top $sp-offset-pygmy * -1
+    padding-bottom @padding-top
+
+    &:after
+      margin-right $sp-offset-pygmy
+
+    &:before
+      margin-left $sp-offset-pygmy
+
+  &.mini .sp-inner
+    padding-top $sp-offset-mini * -1
+    padding-bottom @padding-top
+
+    &:after
+      margin-right $sp-offset-mini
+
+    &:before
+      margin-left $sp-offset-mini
+
+  &.normal .sp-inner
+    padding-top $sp-offset-normal * -1
+    padding-bottom @padding-top
+
+    &:after
+      margin-right $sp-offset-normal
+
+    &:before
+      margin-left $sp-offset-normal
+
+  &.huge .sp-inner
+    padding-top $sp-offset-huge * -1
+    padding-bottom @padding-top
+
+    &:after
+      margin-right $sp-offset-huge
+
+    &:before
+      margin-left $sp-offset-huge
+
+  &.massive .sp-inner
+    padding-top $sp-offset-massive * -1
+    padding-bottom @padding-top
+
+    &:after
+      margin-right $sp-offset-massive
+
+    &:before
+      margin-left $sp-offset-massive
+
+.sp-v
+  &.pygmy .sp-inner
+    &:after
+      margin-bottom $sp-offset-pygmy
+
+    &:before
+      margin-top $sp-offset-pygmy
+
+  &.mini .sp-inner
+    &:after
+      margin-bottom $sp-offset-mini
+
+    &:before
+      margin-top $sp-offset-mini
+
+  &.normal .sp-inner
+    &:after
+      margin-bottom $sp-offset-normal
+
+    &:before
+      margin-top $sp-offset-normal
+
+  &.huge .sp-inner
+    &:after
+      margin-bottom $sp-offset-huge
+
+    &:before
+      margin-top $sp-offset-huge
+
+  &.massive .sp-inner
+    &:after
+      margin-bottom $sp-offset-massive
+
+    &:before
+      margin-top $sp-offset-massive
+
+.sp-v.join
+.sp-h.join
+  .sp-text
+    display none
+
+  .sp-inner
+    &:after
+      display none
+
+.sp-v.join
+  .sp-inner
+    &:before
+      height 100%
+      margin-top auto
+
+.sp-h.join
+  .sp-inner
+    &:before
+      width 100%
+      margin-left auto
