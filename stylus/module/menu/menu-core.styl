@@ -1,0 +1,51 @@
+// Core
+//
+// + `.bfc`
+// + `.relative`
+//
+// Styleguide 5.15.1
+.menu
+  $reset-gap$()
+  $reset-list$()
+
+  &.bfc
+    > li
+      overflow hidden
+
+  &.ui-dot
+  &.ui-sunken
+  &.relative
+    > li
+      position relative
+
+  &.ui-disc
+  &.ui-circle
+  &.ui-decimal
+    > li
+      padding-left $gap-h-half
+
+  &.ui-dot
+    > li
+      &:after
+        @extend $l-center-right
+
+        content "•"
+        height $te
+        width $te
+        line-height $te
+        margin-right $te-half * -1
+
+      &.last:after
+        content ""
+
+  &.ui-sunken
+    > li:after
+      @extend $l-center-right
+
+      content ""
+      width 1px
+      height 100%
+      display block
+
+    > li.last:after
+      display none

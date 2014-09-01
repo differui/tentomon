@@ -14,6 +14,7 @@
 // + `.ui-dotted`
 // + `.ui-notch`
 // + `.ui-sunken`
+// + `.ui-dot`
 //
 // Item Separator Color:
 //
@@ -23,8 +24,8 @@
 // + `.ui-danger`
 // + `.ui-warn`
 //
-// Styleguide 5.14.2
-.list
+// Styleguide 5.15.2
+.menu
   > li
     border-width $bd-width
 
@@ -67,37 +68,62 @@
   &.ui-dashed
   &.ui-dotted
     > li.last
-      border-bottom-style none
+      border-right-style none
 
   &.ui-solid
   &.ui-notch
     > li
-      border-bottom-style solid
+      border-right-style solid
 
   &.ui-dashed
     > li
-      border-bottom-style dashed
+      border-right-style dashed
 
   &.ui-dotted
     > li
-      border-bottom-style dotted
+      border-right-style dotted
 
   &.ui-notch
     > li
-      $$top-inner-shadow(1, 0, $highlight-light)
+      $$left-inner-shadow(1, 0, $highlight-light)
 
   &.ui-sunken
     &.ui-basis > li:after
-      background-image radial-gradient(farthest-side at left center, $bd-basis, transparent)
+      background-image radial-gradient(farthest-side at center top, $bd-basis, transparent)
       
     &.ui-info > li:after
-      background-image radial-gradient(farthest-side at left center, $bd-info, transparent)
+      background-image radial-gradient(farthest-side at center top, $bd-info, transparent)
       
     &.ui-safe > li:after
-      background-image radial-gradient(farthest-side at left center, $bd-safe, transparent)
+      background-image radial-gradient(farthest-side at center top, $bd-safe, transparent)
       
     &.ui-danger > li:after
-      background-image radial-gradient(farthest-side at left center, $bd-danger, transparent)
+      background-image radial-gradient(farthest-side at center top, $bd-danger, transparent)
       
     &.ui-warn > li:after
-      background-image radial-gradient(farthest-side at left center, $bd-warn, transparent)
+      background-image radial-gradient(farthest-side at center top, $bd-warn, transparent)
+
+  &.ui-dot
+    > li:after
+      text-align center
+
+  &.ui-dot
+    &.ui-basis
+      > li:after
+        color $bd-basis
+
+    &.ui-info
+      > li:after
+        color $bd-info
+
+    &.ui-safe
+      > li:after
+        color $bd-safe
+
+    &.ui-danger
+      > li:after
+        color $bd-danger
+
+    &.ui-warn
+      > li:after
+        color $bd-danger

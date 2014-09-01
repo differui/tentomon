@@ -27,3 +27,19 @@
     > li
       padding-top $gap-v
       padding-bottom @padding-top
+
+  &.ui-disc
+  &.ui-circle
+  &.ui-decimal
+    > li
+      padding-left $gap-h
+
+  &.ui-sunken
+    > li:after
+      content ""
+      width 100%
+      height 1px
+      display block
+
+    > li.last:after
+      display none
