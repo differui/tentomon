@@ -1,0 +1,17 @@
+// State
+//
+// + `.is-showtip`
+//
+// Markup:
+// <button class="btn normal ui-basis tooltip around-180 is-showtip" data-tooltip="点击可加载更多内容。" style="position: relative;">加载更多</button>
+//
+// Styleguide 5.13.3
+.tooltip
+  &:after
+  &:before
+    visibility hidden
+
+  &.is-showtip
+    &:after
+    &:before
+      visibility visible

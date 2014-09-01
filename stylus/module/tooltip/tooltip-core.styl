@@ -6,50 +6,33 @@
 // + `.huge`
 // + `.massive`
 // + `.around-30`
-// + `.around-60`
 // + `.around-90`
-// + `.around-120`
 // + `.around-150`
 // + `.around-180`
 // + `.around-210`
-// + `.around-240`
 // + `.around-270`
-// + `.around-300`
 // + `.around-330`
 // + `.around-360`
 //
-// Styleguide 5.12.1
-.pointer
-  &:after
+// Styleguide 5.13.1
+.tooltip
+  &:before
     content ""
     border-style solid
+    border-width $$be_even($ht-normal * 0.2)
 
-  &.pygmy
-  &.mini
-  &.normal
-    &:after
-      border-width $$be_even($ht-normal * 0.2)
-
-  &.huge
-  &.massive
-    &:after
-      border-width $$be_even($ht-huge * 0.2)
+  &:after
+    min-width 50%
+    content attr(data-tooltip)
+    padding $gap-v $gap-h-half
 
   &.around-30
     &:after
       @extend $l-around-30
 
-  &.around-60
-    &:after
-      @extend $l-around-60
-
   &.around-90
     &:after
       @extend $l-around-90
-
-  &.around-120
-    &:after
-      @extend $l-around-120
 
   &.around-150
     &:after
@@ -63,17 +46,9 @@
     &:after
       @extend $l-around-210
 
-  &.around-240
-    &:after
-      @extend $l-around-240
-
   &.around-270
     &:after
       @extend $l-around-270
-
-  &.around-300
-    &:after
-      @extend $l-around-300
 
   &.around-330
     &:after
@@ -84,21 +59,33 @@
       @extend $l-around-360
 
   &.around-30
-  &.around-150
-    &:after
-      right $bd-width * 3
-
-  &.around-60
-  &.around-300
-    &:after
-      top $bd-width * 3
-
-  &.around-120
-  &.around-240
-    &:after
-      bottom $bd-width * 3
-
-  &.around-210
   &.around-330
+  &.around-360
+    &:before
+      @extend $l-around-360
+
     &:after
-      left $bd-width * 3
+      top $$be_even($ht-normal * 0.2) * -2
+
+  &.around-90
+    &:before
+      @extend $l-around-90
+
+    &:after
+      right $$be_even($ht-normal * 0.2) * -2
+
+  &.around-150
+  &.around-180
+  &.around-210
+    &:before
+      @extend $l-around-180
+
+    &:after
+      bottom $$be_even($ht-normal * 0.2) * -2
+
+  &.around-270
+    &:before
+      @extend $l-around-270
+
+    &:after
+      left $$be_even($ht-normal * 0.2) * -2
