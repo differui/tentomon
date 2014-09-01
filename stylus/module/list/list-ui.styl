@@ -1,0 +1,119 @@
+// UI
+//
+// List Style Type:
+//
+// + `.ui-disc`
+// + `.ui-dot`
+// + `.ui-decimal`
+//
+// Item Border Style:
+//
+// + `.ui-solid`
+// + `.ui-notch`
+// + `.ui-dashed`
+// + `.ui-dotted`
+// + `.ui-notch`
+// + `.ui-sunken`
+//
+// Item Border Color:
+//
+// + `.ui-basis`
+// + `.ui-info`
+// + `.ui-safe`
+// + `.ui-danger`
+// + `.ui-warn`
+//
+// Styleguide 5.14.2
+.list
+  > li
+    border-width $bd-width
+
+  &.ui-basis
+    > li
+      border-color $bd-basis
+
+  &.ui-info
+    > li
+      border-color $bd-info
+
+  &.ui-safe
+    > li
+      border-color $bd-safe
+
+  &.ui-danger
+    > li
+      border-color $bd-danger
+
+  &.ui-warn
+    > li
+      border-color $bd-warn
+
+  &.ui-disc
+  &.ui-dot
+  &.ui-decimal
+    list-style-position inside
+
+  &.ui-disc
+    list-style-type disc
+
+  &.ui-dot
+    list-style-type circle
+
+  &.ui-decimal
+    list-style-type decimal
+
+  &.ui-disc
+  &.ui-dot
+  &.ui-decimal
+    > li
+      padding-left $gap-h
+
+  &.ui-solid
+  &.ui-notch
+  &.ui-dashed
+  &.ui-dotted
+    > li.last
+      border-bottom-style none
+
+  &.ui-solid
+  &.ui-notch
+    > li
+      border-bottom-style solid
+
+  &.ui-dashed
+    > li
+      border-bottom-style dashed
+
+  &.ui-dotted
+    > li
+      border-bottom-style dotted
+
+  &.ui-notch
+    > li
+      $$top-inner-shadow(1, 0, $highlight-light)
+
+  &.ui-sunken
+    > li:after
+      content ""
+      width 100%
+      height 1px
+      display block
+
+    > li.last:after
+      display none
+
+  &.ui-sunken
+    &.ui-basis > li:after
+      background-image radial-gradient(farthest-side at left center, $bd-basis, transparent)
+      
+    &.ui-info > li:after
+      background-image radial-gradient(farthest-side at left center, $bd-info, transparent)
+      
+    &.ui-safe > li:after
+      background-image radial-gradient(farthest-side at left center, $bd-safe, transparent)
+      
+    &.ui-danger > li:after
+      background-image radial-gradient(farthest-side at left center, $bd-danger, transparent)
+      
+    &.ui-warn > li:after
+      background-image radial-gradient(farthest-side at left center, $bd-warn, transparent)

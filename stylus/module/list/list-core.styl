@@ -1,0 +1,29 @@
+// Core
+//
+// + `.bfc`
+// + `.relative`
+// + `.tight`
+// + `.loose`
+//
+// Styleguide 5.14.1
+.list
+  $reset-gap$()
+  $reset-list$()
+
+  &.bfc
+    > li
+      overflow hidden
+
+  &.relative
+    > li
+      position relative
+
+  &.tight
+    > li
+      padding-top $gap-v-half
+      padding-bottom @padding-top
+
+  &.loose
+    > li
+      padding-top $gap-v
+      padding-bottom @padding-top
