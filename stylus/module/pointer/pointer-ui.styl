@@ -1,0 +1,69 @@
+// UI
+//
+// + `.ui-basis`
+// + `.ui-info`
+// + `.ui-safe`
+// + `.ui-danger`
+// + `.ui-warn`
+//
+// Styleguide 5.12.2
+.pointer
+  &:after
+    border-style solid
+    border-color transparent
+
+  &.ui-basis
+    &:after
+      border-color $bd-basis
+
+  &.ui-info
+    &:after
+      border-color $bd-info
+
+  &.ui-safe
+    &:after
+      border-color $bd-safe
+
+  &.ui-danger
+    &:after
+      border-color $bd-danger
+
+  &.ui-warn
+    &:after
+      border-color $bd-warn
+
+  &.ui-black
+    &:after
+      border-color $black
+
+  &.around-30
+  &.around-330
+  &.around-360
+    &:after
+      border-top-color transparent
+      border-left-color transparent
+      border-right-color transparent
+
+  &.around-60
+  &.around-90
+  &.around-120
+    &:after
+      border-top-color transparent
+      border-bottom-color transparent
+      border-right-color transparent
+
+  &.around-150
+  &.around-180
+  &.around-210
+    &:after
+      border-bottom-color transparent
+      border-left-color transparent
+      border-right-color transparent
+
+  &.around-240
+  &.around-270
+  &.around-300
+    &:after
+      border-top-color transparent
+      border-bottom-color transparent
+      border-left-color transparent

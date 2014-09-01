@@ -2,6 +2,7 @@
 //
 // + `.ui-text`
 // + `.ui-link`
+// + `.ui-black`
 // + `.ui-basis`
 // + `.ui-info`
 // + `.ui-safe`
@@ -16,6 +17,9 @@
   border-radius $bd-radius
   border solid $bd-width
   text-align center
+
+  &.ui-black
+    @extend $ui-black-static
 
   &.ui-basis
     @extend $ui-basis-static
