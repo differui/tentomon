@@ -1,0 +1,26 @@
+// Core
+//
+// + `.tight`
+// + `.loose`
+//
+// Styleguide 5.16.1
+.breadcrumb
+
+  &
+    .breadcrumb-section
+      padding-left $gap-h-half
+      padding-right @padding-left
+
+  &.tight
+    .breadcrumb-section
+      padding-left 0
+      padding-right @padding-left
+
+  &.loose
+    .breadcrumb-section
+      padding-left $gap-h
+      padding-right @padding-left
+
+.breadcrumb-section
+.breadcrumb-slash
+  display inline-block
