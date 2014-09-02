@@ -1,17 +1,23 @@
 // State
 //
+// **Pseudo Class:**
+//
 // + `:active`
-// + `.is-active`
 // + `:disabled`
-// + `.is-disabled`
+//
+//
+// **State:**
+//
+// + `active`
+// + `disabled`
 //
 // Markup:
-// <button class="btn normal ui-basis">按钮</button>
+// <button class="btn normal ui-basis" data-state="">按钮</button>
 //
 // Styleguide 5.1.3
 .btn
   &:active
-  &.is-active
+  &[data-state='active']
     &.ui-basis
       @extend $ui-basis-active
 
@@ -41,7 +47,7 @@
       $$top-inner-shadow()
 
   &:disabled
-  &.is-disabled
+  &[data-state='disabled']
 
     &.ui-basis
     &.ui-info

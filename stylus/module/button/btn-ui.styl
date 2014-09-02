@@ -1,13 +1,19 @@
 // UI
 //
-// + `.ui-text`
-// + `.ui-link`
+// **Primary:**
+//
 // + `.ui-black`
 // + `.ui-basis`
 // + `.ui-info`
 // + `.ui-safe`
 // + `.ui-danger`
 // + `.ui-warn`
+//
+//
+// **Stylize:**
+//
+// + `.ui-text` Button as ordinary text.
+// + `.ui-link` Button as link.
 //
 // Styleguide 5.1.2
 .btn
@@ -46,6 +52,7 @@
     @extend $ui-warn-static
 
   &.ui-text
+  &.ui-link
     border-color transparent
     background-color transparent
     background-image none
@@ -53,6 +60,3 @@
   &.ui-link
     color $te-safe
     text-decoration underline
-    border-color transparent
-    background-color transparent
-    background-image none
