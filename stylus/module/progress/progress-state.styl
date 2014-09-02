@@ -1,11 +1,13 @@
 // State
 //
-// + `.is-done`
-// + `.is-wait`
+// **State:**
+//
+// + `done`
+// + `waiting`
 //
 // Markup:
-// <div class="progress normal">
-//   <span class="progress-indicator" style="width: 50%">
+// <div class="progress normal" data-state="waiting">
+//   <span class="progress-indicator">
 //     <span class="progress-text-reverse">提示</span>
 //   </span>
 //   <span class="progress-text">提示</span>
@@ -13,11 +15,11 @@
 //
 // Styleguide 5.8.3
 .progress
-  &.is-done
+  &[data-state~='done']
     .progress-indicator
       width 100%
 
-  &.is-wait
-    background-size 30px 30px
+  &[data-state~='waiting']
+    @extend $stripes-diagonal
+
     background-color $bd-heavy
-    background-image linear-gradient(135deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)

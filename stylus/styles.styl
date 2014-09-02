@@ -44,11 +44,11 @@
 @import "plugins/elastic/elastic"
 
 // Skin unrelated variables
-// Default variables: `variables.styl`
+// Default variables: `variables`
 @import "variables"
 
 // Skin related variable
-// Skin variables: `skins/[skin name]/[skin name]-variables.styl`
+// Skin variables: `skins/[skin name]/[skin name]-variables`
 @import "skins/" + $ui-name + "/" + $ui-name + "-variables"
 @import "skins/" + $ui-name + "/" + $ui-name + "-class"
 @import "skins/" + $ui-name + "/" + $ui-name + "-templates"
@@ -93,18 +93,23 @@ if $kss is true
 // UI Placeholder
 //
 // Styleguide 3.1
-@import "placeholder/ui/primary-static.styl"
-@import "placeholder/ui/primary-active.styl"
-@import "placeholder/ui/primary-disabled.styl"
+@import "placeholder/ui/primary-static"
+@import "placeholder/ui/primary-active"
+@import "placeholder/ui/primary-disabled"
 
 // Layout Placeholder
 //
 // Styleguide 3.2
-@import "placeholder/layout/center.styl"
-@import "placeholder/layout/amid.styl"
-@import "placeholder/layout/around.styl"
-@import "placeholder/layout/measure-seam.styl"
-@import "placeholder/layout/measure-seamless.styl"
+@import "placeholder/layout/center"
+@import "placeholder/layout/amid"
+@import "placeholder/layout/around"
+@import "placeholder/layout/measure-seam"
+@import "placeholder/layout/measure-seamless"
+
+// Pattern Placeholder
+//
+// Styleguide 3.3
+@import "placeholder/pattern/stripes"
 
 // Section 4: Layout
 // ============================================================================
@@ -125,167 +130,167 @@ if $kss is true
 // Button
 //
 // Styleguide 5.1
-@import "module/button/btn-core.styl"
-@import "module/button/btn-ui.styl"
-@import "module/button/btn-state.styl"
+@import "module/button/btn-core"
+@import "module/button/btn-ui"
+@import "module/button/btn-state"
 
 // Textfield
 //
 // Styleguide 5.2
-@import "module/textfield/textfield-core.styl"
-@import "module/textfield/textfield-ui.styl"
-@import "module/textfield/textfield-state.styl"
+@import "module/textfield/textfield-core"
+@import "module/textfield/textfield-ui"
+@import "module/textfield/textfield-state"
 
 // Label
 //
 // Styleguide 5.3
-@import "module/label/label-core.styl"
-@import "module/label/label-ui.styl"
-@import "module/label/label-state.styl"
+@import "module/label/label-core"
+@import "module/label/label-ui"
+@import "module/label/label-state"
 
 // Checkbox
 //
 // Styleguide 5.4
-@import "module/option/option-core.styl"
-@import "module/option/option-ui.styl"
-@import "module/option/option-state.styl"
+@import "module/option/option-core"
+@import "module/option/option-ui"
+@import "module/option/option-state"
 
 // Toggle
 //
 // Styleguide 5.5
-@import "module/toggle/toggle-core.styl"
-@import "module/toggle/toggle-ui.styl"
-@import "module/toggle/toggle-state.styl"
+@import "module/toggle/toggle-core"
+@import "module/toggle/toggle-ui"
+@import "module/toggle/toggle-state"
 
 // Slider
 //
 // Styleguide 5.6
-@import "module/slider/slider-core.styl"
-@import "module/slider/slider-ui.styl"
-@import "module/slider/slider-state.styl"
+@import "module/slider/slider-core"
+@import "module/slider/slider-ui"
+@import "module/slider/slider-state"
 
 // Select
 //
 // Styleguide 5.7
-@import "module/select/select-core.styl"
-@import "module/select/select-ui.styl"
-@import "module/select/select-state.styl"
+@import "module/select/select-core"
+@import "module/select/select-ui"
+@import "module/select/select-state"
 
 // Progress
 //
 // Styleguide 5.8
-@import "module/progress/progress-core.styl"
-@import "module/progress/progress-ui.styl"
-@import "module/progress/progress-state.styl"
+@import "module/progress/progress-core"
+@import "module/progress/progress-ui"
+@import "module/progress/progress-state"
 
 // Ribbon
 //
 // Styleguide 5.9
-@import "module/ribbon/ribbon-core.styl"
-@import "module/ribbon/ribbon-ui.styl"
-@import "module/ribbon/ribbon-state.styl"
+@import "module/ribbon/ribbon-core"
+@import "module/ribbon/ribbon-ui"
+@import "module/ribbon/ribbon-state"
 
 // Magnet
 //
 // Styleguide 5.10
-@import "module/magnet/magnet-core.styl"
-@import "module/magnet/magnet-ui.styl"
-@import "module/magnet/magnet-state.styl"
+@import "module/magnet/magnet-core"
+@import "module/magnet/magnet-ui"
+@import "module/magnet/magnet-state"
 
 // Bubble
 //
 // Styleguide 5.11
-@import "module/bubble/bubble-core.styl"
-@import "module/bubble/bubble-ui.styl"
-@import "module/bubble/bubble-state.styl"
+@import "module/bubble/bubble-core"
+@import "module/bubble/bubble-ui"
+@import "module/bubble/bubble-state"
 
 // Pointer
 //
 // Styleguide 5.12
-@import "module/pointer/pointer-core.styl"
-@import "module/pointer/pointer-ui.styl"
-@import "module/pointer/pointer-state.styl"
+@import "module/pointer/pointer-core"
+@import "module/pointer/pointer-ui"
+@import "module/pointer/pointer-state"
 
 // Tooltip
 //
 // Styleguide 5.13
-@import "module/tooltip/tooltip-core.styl"
-@import "module/tooltip/tooltip-ui.styl"
-@import "module/tooltip/tooltip-state.styl"
+@import "module/tooltip/tooltip-core"
+@import "module/tooltip/tooltip-ui"
+@import "module/tooltip/tooltip-state"
 
 // List
 //
 // Items arrange vertically.
 //
 // Styleguide 5.14
-@import "module/list/list-core.styl"
-@import "module/list/list-ui.styl"
-@import "module/list/list-state.styl"
+@import "module/list/list-core"
+@import "module/list/list-ui"
+@import "module/list/list-state"
 
 // Menu
 //
 // Items arrange horizontally.
 //
 // Styleguide 5.15
-@import "module/menu/menu-core.styl"
-@import "module/menu/menu-ui.styl"
-@import "module/menu/menu-state.styl"
+@import "module/menu/menu-core"
+@import "module/menu/menu-ui"
+@import "module/menu/menu-state"
 
 // Breadcrumb
 //
 // Styleguide 5.16
-@import "module/breadcrumb/breadcrumb-core.styl"
-@import "module/breadcrumb/breadcrumb-ui.styl"
-@import "module/breadcrumb/breadcrumb-state.styl"
+@import "module/breadcrumb/breadcrumb-core"
+@import "module/breadcrumb/breadcrumb-ui"
+@import "module/breadcrumb/breadcrumb-state"
 
 // Separator
 //
 // Styleguide 5.17
-@import "module/separator/separator-core.styl"
-@import "module/separator/separator-ui.styl"
-@import "module/separator/separator-state.styl"
+@import "module/separator/separator-core"
+@import "module/separator/separator-ui"
+@import "module/separator/separator-state"
 
 // Msg
 //
 // Styleguide 5.18
-@import "module/msg/msg-core.styl"
-@import "module/msg/msg-ui.styl"
-@import "module/msg/msg-state.styl"
+@import "module/msg/msg-core"
+@import "module/msg/msg-ui"
+@import "module/msg/msg-state"
 
 // Headline
 //
 // Styleguide 5.19
-@import "module/headline/headline-core.styl"
-@import "module/headline/headline-ui.styl"
-@import "module/headline/headline-state.styl"
+@import "module/headline/headline-core"
+@import "module/headline/headline-ui"
+@import "module/headline/headline-state"
 
 // Popup
 //
 // Styleguide 5.20
-@import "module/popup/popup-core.styl"
-@import "module/popup/popup-ui.styl"
-@import "module/popup/popup-state.styl"
+@import "module/popup/popup-core"
+@import "module/popup/popup-ui"
+@import "module/popup/popup-state"
 
 // Board
 //
 // Styleguide 5.21
-@import "module/board/board-core.styl"
-@import "module/board/board-ui.styl"
-@import "module/board/board-state.styl"
+@import "module/board/board-core"
+@import "module/board/board-ui"
+@import "module/board/board-state"
 
 // Tap
 //
 // Styleguide 5.22
-@import "module/tab/tab-core.styl"
-@import "module/tab/tab-ui.styl"
-@import "module/tab/tab-state.styl"
+@import "module/tab/tab-core"
+@import "module/tab/tab-ui"
+@import "module/tab/tab-state"
 
 // Panel
 //
 // Styleguide 5.23
-@import "module/panel/panel-core.styl"
-@import "module/panel/panel-ui.styl"
-@import "module/panel/panel-state.styl"
+@import "module/panel/panel-core"
+@import "module/panel/panel-ui"
+@import "module/panel/panel-state"
 
 
 /*
