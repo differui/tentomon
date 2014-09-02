@@ -1,0 +1,88 @@
+// UI
+//
+// Style:
+//
+// + `.ui-round`
+// + `.ui-basis`
+// + `.ui-info`
+// + `.ui-safe`
+// + `.ui-danger`
+// + `.ui-warn`
+//
+// Styleguide 5.23.2
+.panel
+  
+  border-style solid
+  border-width $bd-width
+
+  &.ui-round
+    border-radius $bd-radius
+
+    .panel-header
+      border-top-left-radius $bd-radius - 1
+      border-top-right-radius $bd-radius - 1
+
+    .panel-footer
+      border-bottom-left-radius $bd-radius - 1
+      border-bottom-right-radius $bd-radius - 1
+
+  &.ui-basis
+    border-color $bd-basis
+
+    .panel-header
+    .panel-footer
+      @extend $ui-basis-static
+
+    .panel-content
+      border-color $bd-basis
+
+  &.ui-safe
+    border-color $bd-safe
+
+    .panel-header
+    .panel-footer
+      @extend $ui-safe-static
+
+    .panel-content
+      border-color $bd-safe
+
+  &.ui-danger
+    border-color $bd-danger
+
+    .panel-header
+    .panel-footer
+      @extend $ui-danger-static
+
+    .panel-content
+      border-color $bd-danger
+
+  &.ui-info
+    border-color $bd-info
+
+    .panel-header
+    .panel-footer
+      @extend $ui-info-static
+
+    .panel-content
+      border-color $bd-info
+
+  &.ui-warn
+    border-color $bd-warn
+
+    .panel-header
+    .panel-footer
+      @extend $ui-warn-static
+
+    .panel-content
+      border-color $bd-warn
+
+.panel-header
+  text-align center
+
+.panel-content
+  border-style solid none
+  border-width $bd-width
+
+.panel-footer
+  font-size $te-small
+  text-align right
