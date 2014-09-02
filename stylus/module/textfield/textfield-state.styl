@@ -1,16 +1,23 @@
 // State
 //
+// **Pseudo Class:**
+//
 // + `:disabled`
-// + `.is-disabled`
+//
+//
+// **State:**
+//
+// + `full`
+// + `disabled`
 //
 // Markup:
 // <input type="text" class="textfield normal ui-basis">
-// <textarea class="textfield ui-basis ui-area" rows="5"></textarea>
+// <textarea class="textfield ui-basis ui-lines" rows="5" data-state></textarea>
 //
 // Styleguide 5.2.3
 .textfield
   &:disabled
-  &.is-disabled
+  &[data-state='disabled']
     &.ui-basis
     &.ui-info
     &.ui-safe
@@ -19,3 +26,9 @@
       $$top-inner-shadow(0, 0, transparent)
       color $grey-heavy
       background-color $bg-light
+
+  &[data-state='full']
+    height 100%
+    min-height 100%
+    border-radius 0
+    border-style none
