@@ -2,12 +2,13 @@
 //
 // **Stylize:**
 //
-// + `.ui-radio`    Radio option.
-// + `.ui-checkbox` Checkbox option
+// + `.ui-radio`
+// + `.ui-checkbox`
 //
-// Styleguide 5.3.2
+// Styleguide 5.4.2
 .option
   line-height $tf-height
+  vertical-align middle
 
 .option-tag
   outline 0
@@ -24,7 +25,7 @@
       border-radius 50%
 
     .option-indicator
-      width $te-smaller - 2
+      width $te-smaller - 4
       height @width
 
       border-radius 100%
@@ -36,11 +37,11 @@
       border-radius $bd-radius
 
     .option-indicator
-      width $te-smaller + 1
-      height $te-half - 1
+      width $te-smaller - 2
+      height $te-half - 3
       top -2px
       transform rotate(-45deg)
 
       border-color $te-safe
-      border-width 3px
+      border-width 2px
       border-style none none solid solid

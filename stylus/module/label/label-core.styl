@@ -8,10 +8,10 @@
 // + `.huge`
 // + `.massive`
 //
-// Styleguide 5.4.1
-.option
+// Styleguide 5.3.1
+.label
   display inline-block
-  position relative
+  vertical-align middle
 
   &.pygmy
     @extend $l-pygmy-seamless
@@ -27,19 +27,3 @@
 
   &.massive
     @extend $l-massive-seamless
-
-.option-tag
-  opacity 0
-  position absolute
-
-.option-mock
-  width $te
-  height @width
-  display block
-  position relative
-
-.option-indicator
-  @extend $l-center
-
-  opacity 0
-  display block
