@@ -1,0 +1,46 @@
+// UI
+//
+// **Stylize:**
+//
+// + `.ui-radio`    Radio option.
+// + `.ui-checkbox` Checkbox option
+//
+// Styleguide 5.3.2
+.option
+  line-height $tf-height
+
+.option-tag
+  outline 0
+
+.option-mock
+  @extend $ui-basis-static
+
+  border-style solid
+  border-width $bd-width
+
+.option
+  &.ui-radio
+    .option-mock
+      border-radius 50%
+
+    .option-indicator
+      width $te-smaller - 2
+      height @width
+
+      border-radius 100%
+      border-style none
+      background-color $te-safe
+
+  &.ui-checkbox
+    .option-mock
+      border-radius $bd-radius
+
+    .option-indicator
+      width $te-smaller + 1
+      height $te-half - 1
+      top -2px
+      transform rotate(-45deg)
+
+      border-color $te-safe
+      border-width 3px
+      border-style none none solid solid
