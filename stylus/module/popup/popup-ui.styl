@@ -1,0 +1,34 @@
+// UI
+//
+// + `.ui-basis`
+// + `.ui-info`
+// + `.ui-safe`
+// + `.ui-danger`
+// + `.ui-warn`
+//
+// Styleguide 5.20.2
+.popup
+  font-size $te
+  line-height $tf-height
+  border-style solid none none none
+  border-width $bd-width
+
+  &.ui-basis
+    @extend $ui-basis-static
+
+  &.ui-info
+    @extend $ui-info-static
+
+  &.ui-safe
+    @extend $ui-safe-static
+
+  &.ui-danger
+    @extend $ui-danger-static
+
+  &.ui-warn
+    @extend $ui-warn-static
+
+.popup-headline
+  text-align center
+  font-size $te-larger
+  font-weight bold
