@@ -12,11 +12,12 @@
 // **Shape:**
 //
 // + `.ui-round`
+// + `.ui-pill`
+// + `.ui-circle`
 //
 // Styleguide 5.11.2
 .bubble
   line-height $tf-height
-  border-radius 50%
 
   &.ui-basis
     @extend $ui-basis-static
@@ -32,6 +33,15 @@
 
   &.ui-warn
     @extend $ui-warn-static
+
+  &.ui-round
+    border-radius $bd-radius
+
+  &.ui-circle
+    border-radius 50%
+
+  &.ui-pill
+    border-radius 500px
 
 .bubble-text
   text-align center
