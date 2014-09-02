@@ -1,0 +1,38 @@
+// State
+//
+// Markup:
+// <div class="board ui-basis ui-isolate">
+//   <div class="row">
+//     <div class="col">
+//       <div class="board-item first is-active">
+//         <span class="btn normal ui-text">阅读</span>
+//       </div>
+//     </div>
+//     <div class="col">
+//       <div class="board-item is-disabled">
+//         <span class="btn normal ui-text">下载</span>
+//       </div>
+//     </div>
+//     <div class="col">
+//       <div class="board-item">
+//         <span class="btn normal ui-text">删除</span>
+//       </div>
+//     </div>
+//     <div class="col">
+//       <div class="board-item last">
+//         <span class="btn normal ui-text">取消</span>
+//       </div>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 5.21.3
+.board-item
+  &:active
+  &.is-active
+    $$top-inner-shadow()
+
+  &:disabled
+  &.is-disabled
+    .btn
+      opacity 0.7

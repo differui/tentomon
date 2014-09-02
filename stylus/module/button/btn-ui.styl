@@ -15,9 +15,17 @@
   font-size $te
   font-weight bold
   line-height $tf-height
-  border-radius $bd-radius
   border solid $bd-width
   text-align center
+
+  &.ui-black
+  &.ui-basis
+  &.ui-safe
+  &.ui-danger
+  &.ui-info
+  &.ui-warn
+  &.ui-link
+    border-radius $bd-radius
 
   &.ui-black
     @extend $ui-black-static

@@ -2,19 +2,18 @@
 //
 // Scope
 //
-// + `.ui-local`
-// + `.ui-global`
+// + `.ui-isolate`
+// + `.ui-mixin`
 //
 // Styleguide 5.18.2
 .msg
-  border-style solid
   border-width $bd-width
 
-  &.ui-local
+  &.ui-isolate
     border-style solid
     border-radius $bd-radius
 
-  &.ui-global
+  &.ui-mixin
     border-style solid none
 
   &.ui-info

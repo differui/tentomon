@@ -1,0 +1,77 @@
+// UI
+//
+// Primary UI:
+//
+// + `.ui-basis`
+// + `.ui-info`
+// + `.ui-safe`
+// + `.ui-danger`
+// + `.ui-warn`
+//
+// Style:
+//
+// + `.ui-isolate`
+// + `.ui-mixin`
+//
+// Shape: 
+//
+// + `.ui-round`
+//
+// Styleguide 5.21.2
+.board
+  border-width $bd-width
+
+  &.ui-isolate
+    border-style solid
+
+  &.ui-mixin
+    border-style solid none
+
+  &.ui-basis
+    @extend $ui-basis-static
+
+    .board-item
+      border-color $bd-basis
+
+  &.ui-info
+    @extend $ui-info-static
+
+    .board-item
+      border-color $bd-info
+
+  &.ui-safe
+    @extend $ui-safe-static
+
+    .board-item
+      border-color $bd-safe
+
+  &.ui-danger
+    @extend $ui-danger-static
+
+    .board-item
+      border-color $bd-danger
+
+  &.ui-warn
+    @extend $ui-warn-static
+
+    .board-item
+      border-color $bd-warn
+
+  &.ui-round
+    border-radius $bd-radius
+
+    &.first
+      border-top-left-radius $bd-radius
+      border-bottom-left-radius $bd-radius
+
+    &.last
+      border-top-right-radius $bd-radius
+      border-bottom-right-radius $bd-radius
+
+.board-item
+  border-width $bd-width
+  border-right-style solid
+  box-shadow inset 1px 1px 0 $highlight-light
+
+  &.last
+    border-right-style none
