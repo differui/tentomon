@@ -1,10 +1,35 @@
 // Core
 //
+// **Size:**
+//
+// + `.pygmy`
+// + `.mini`
+// + `.normal`
+// + `.huge`
+// + `.massive`
+//
+//
+// **Gap:**
+//
 // + `.tight`
 // + `.loose`
 //
 // Styleguide 5.16.1
 .breadcrumb
+  &.pygmy
+    @extend $l-pygmy-seam
+
+  &.mini
+    @extend $l-mini-seam
+
+  &.normal
+    @extend $l-normal-seam
+
+  &.huge
+    @extend $l-huge-seam
+
+  &.massive
+    @extend $l-massive-seam
 
   &
     .breadcrumb-section
