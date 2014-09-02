@@ -1,10 +1,16 @@
 // UI
 //
+// **Primary:**
+//
 // + `.ui-basis`
 // + `.ui-info`
 // + `.ui-safe`
 // + `.ui-danger`
 // + `.ui-warn`
+//
+//
+// **Shape:**
+//
 // + `.ui-round`
 //
 // Styleguide 5.10.2
@@ -28,6 +34,18 @@
   &.ui-warn
     @extend $ui-warn-static
 
+  &.amid-45
+    border-bottom-left-radius $bd-radius
+
+  &.amid-135
+    border-top-left-radius $bd-radius
+
+  &.amid-225
+    border-top-right-radius $bd-radius
+
+  &.amid-315
+    border-bottom-right-radius $bd-radius
+
   &.ui-round
     &.amid-45
       border-top-right-radius $bd-radius
@@ -40,15 +58,3 @@
 
     &.amid-315
       border-top-left-radius $bd-radius
-
-  &.amid-45
-    border-bottom-left-radius $bd-radius
-
-  &.amid-135
-    border-top-left-radius $bd-radius
-
-  &.amid-225
-    border-top-right-radius $bd-radius
-
-  &.amid-315
-    border-bottom-right-radius $bd-radius

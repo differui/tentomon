@@ -1,10 +1,16 @@
 // Core
 //
+// **Size:**
+//
 // + `.pygmy`
 // + `.mini`
 // + `.normal`
 // + `.huge`
 // + `.massive`
+//
+//
+// **Position:**
+//
 // + `.amid-45`
 // + `.amid-135`
 // + `.amid-225`
@@ -15,18 +21,17 @@
   overflow hidden
   position relative
 
-  &.amid-45
-    @extend $l-amid-45
+.ribbon-corner
+  position absolute
+  top 0
+  left 0
 
-  &.amid-135
-    @extend $l-amid-135
+.ribbon-text
+  @extend $l-center
 
-  &.amid-225
-    @extend $l-amid-225
+  height $tf-height
 
-  &.amid-315
-    @extend $l-amid-315
-
+.ribbon
   &.pygmy
     width $ht-pygmy
     height @width
@@ -46,6 +51,18 @@
   &.massive
     width $ht-massive
     height @width
+
+  &.amid-45
+    @extend $l-amid-45
+
+  &.amid-135
+    @extend $l-amid-135
+
+  &.amid-225
+    @extend $l-amid-225
+
+  &.amid-315
+    @extend $l-amid-315
 
 .ribbon
   &.pygmy .ribbon-corner
@@ -91,13 +108,3 @@
 
   &.amid-315 .ribbon-text
     transform translate(-25%, -25%)
-
-.ribbon-corner
-  position absolute
-  top 0
-  left 0
-
-.ribbon-text
-  @extend $l-center
-
-  height $tf-height
