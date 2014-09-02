@@ -1,5 +1,7 @@
 // Core
 //
+// **Size:**
+//
 // + `.pygmy`
 // + `.mini`
 // + `.normal`
@@ -8,7 +10,7 @@
 //
 // Styleguide 5.5.1
 .toggle
-  position relative
+  display inline-block
 
   &.pygmy
     @extend $l-pygmy-seamless
@@ -30,13 +32,10 @@
   position absolute
 
 .toggle-mock
-  @extend $l-center-left
-
   width $te-larger * 2.2
   height $te-larger * 1.5
-
-.toggle-text
-  margin-left $te-larger * 2.2 + $gap-h
+  position relative
+  margin-top round((@height - $tf-height) / 2 * -1)
 
 .toggle-indicator
   @extend $l-center-left

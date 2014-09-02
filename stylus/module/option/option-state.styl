@@ -6,7 +6,7 @@
 // + `disabled`
 //
 // Markup:
-// <div class="option normal ui-checkbox" data-state="checked">
+// <div class="option normal ui-checkbox" data-state="checked disabled">
 //   <input class="option-tag" type="checkbox" id="cb-demo">
 //   <span class="option-mock">
 //     <span class="option-indicator"></span>
@@ -16,10 +16,10 @@
 //
 // Styleguide 5.4.3
 .option
-  &[data-state='checked']
+  &[data-state~='checked']
     .option-indicator
       opacity 1
 
-  &[data-state='disabled']
+  &[data-state~='disabled']
     opacity .5
 
