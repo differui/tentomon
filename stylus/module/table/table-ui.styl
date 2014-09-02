@@ -1,0 +1,114 @@
+// UI
+//
+// **Color:**
+//
+// + `.ui-black`
+// + `.ui-basis`
+// + `.ui-info`
+// + `.ui-safe`
+// + `.ui-danger`
+// + `.ui-warn`
+//
+//
+// **Stylize:**
+//
+// + `.ui-v-border`
+// + `.ui-h-border`
+// + `.ui-stripe`
+//
+// Styleguide 5.24.2
+.table
+  font-size $te
+  border-spacing 0
+  border-collapse collapse
+  empty-cells show
+
+  td
+  th
+    border solid $bd-width $bd-basis
+
+  thead
+  tfoot
+  caption
+    text-align center
+
+  thead
+  tfoot
+    font-weight bold
+
+  tbody
+    color grey
+
+.table
+  &.ui-black
+    thead
+    tfoot
+      @extend $ui-black-static
+    &
+    td
+    th
+      border-color $bd-black
+
+  &.ui-basis
+    thead
+    tfoot
+      @extend $ui-basis-static
+    &
+    td
+    th
+      border-color $bd-basis
+
+  &.ui-info
+    thead
+    tfoot
+      @extend $ui-info-static
+    &
+    td
+    th
+      border-color $bd-info
+
+  &.ui-safe
+    thead
+    tfoot
+      @extend $ui-safe-static
+    &
+    td
+    th
+      border-color $bd-safe
+
+  &.ui-danger
+    thead
+    tfoot
+      @extend $ui-danger-static
+    &
+    td
+    th
+      border-color $bd-danger
+
+  &.ui-warn
+    thead
+    tfoot
+      @extend $ui-warn-static
+    &
+    td
+    th
+      border-color $bd-warn
+
+.table
+  &.ui-h-border
+  &.ui-v-border
+    border-width $bd-width
+    border-style solid
+
+  &.ui-h-border
+    td
+    th
+      border-style solid none
+
+  &.ui-v-border
+    td
+    th
+      border-style none solid
+
+  &.ui-stripe tbody tr:nth-child(even)
+    background-color $grey-light
