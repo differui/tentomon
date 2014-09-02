@@ -1,65 +1,69 @@
 // Core
 //
+// Size:
+//
 // + `.pygmy`
 // + `.mini`
 // + `.normal`
 // + `.huge`
 // + `.massive`
-// + `.around-30`
+//
+// Position:
+//
 // + `.around-90`
-// + `.around-150`
 // + `.around-180`
-// + `.around-210`
 // + `.around-270`
-// + `.around-330`
 // + `.around-360`
 //
 // Styleguide 5.13.1
 .tooltip
+  &:before
+  &:after
+    pointer-events none
+
   &:before
     content ""
     border-style solid
     border-width $$be_even($ht-normal * 0.2)
 
   &:after
-    min-width 50%
     content attr(data-tooltip)
     padding $gap-v $gap-h-half
 
-  &.around-30
-    &:after
-      @extend $l-around-30
+  // &.around-30
+  //   &:after
+  //     @extend $l-around-30
 
   &.around-90
     &:after
       @extend $l-around-90
 
-  &.around-150
-    &:after
-      @extend $l-around-150
+  // &.around-150
+  //   &:after
+  //     @extend $l-around-150
 
   &.around-180
     &:after
       @extend $l-around-180
 
-  &.around-210
-    &:after
-      @extend $l-around-210
+  // &.around-210
+  //   &:after
+  //     @extend $l-around-210
 
   &.around-270
     &:after
       @extend $l-around-270
 
-  &.around-330
-    &:after
-      @extend $l-around-330
+  // &.around-330
+  //   &:after
+  //     @extend $l-around-330
 
   &.around-360
     &:after
       @extend $l-around-360
 
-  &.around-30
-  &.around-330
+  // &.around-30
+  // &.around-330
   &.around-360
     &:before
       @extend $l-around-360
@@ -74,9 +78,9 @@
     &:after
       right $$be_even($ht-normal * 0.2) * -2
 
-  &.around-150
+  // &.around-150
+  // &.around-210
   &.around-180
-  &.around-210
     &:before
       @extend $l-around-180
 
