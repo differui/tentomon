@@ -4,7 +4,7 @@
 // <div class="tab ui-head">
 //   <div class="row">
 //     <div class="col">
-//       <div class="tab-item first is-active">
+//       <div class="tab-item first" data-state="active">
 //         <span class="btn normal ui-text">首页</span>
 //       </div>
 //     </div>
@@ -23,5 +23,6 @@
 //
 // Styleguide 5.22.3
 .tab-item
-  &.is-active
+  &[data-state~='active']
+    color $te-safe
     border-color $bd-safe

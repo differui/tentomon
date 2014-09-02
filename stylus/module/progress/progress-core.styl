@@ -35,8 +35,15 @@
   overflow hidden
 
 .progress-text
+.progress-text-reverse
+  @extend $t-over-ellipsis
+
+  display block
+
+.progress-text
+
+
   width 100%
-  display inline-block
   z-index $idx-bottom
   position relative
 
@@ -44,5 +51,4 @@
   @extend $l-center
 
   width 100%
-  display inline-block
   height $tf-height

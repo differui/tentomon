@@ -8,8 +8,16 @@
 // + `.huge`
 // + `.massive`
 //
+//
+// **Typeset:**
+//
+// + `.wrap`
+// + `.break`
+//
 // Styleguide 5.19.1
 .headline
+  @extend $t-over-ellipsis
+
   $reset-gap$()
 
   width 100%
@@ -29,3 +37,9 @@
 
   &.massive
     @extend $l-massive-seam
+
+  &.wrap
+    max-height none
+
+  &.break
+    @extend $t-break
