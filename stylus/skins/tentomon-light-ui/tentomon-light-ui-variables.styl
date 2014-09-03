@@ -26,7 +26,9 @@ $te-white                    = #ffffff
 $te-black                    = #323232
 $grey                        = #dcdcdc
 $grey-light                  = #e1e1e1
-$grey-heavy                  = #d5d5d5
+$grey-lighter                = #f1f1f1
+$grey-dark                   = #d5d5d5
+$grey-darker                 = #c5c5c5
 
 // Link Color
 // ============================================================================
@@ -51,11 +53,11 @@ $dis-warn                    = lighten($te-warn, $deg-lighter * 2)
 
 // Border Color
 // ============================================================================
-$bd-light                    = $grey-light
-$bd-heavy                    = $grey-heavy
 $bd-white                    = $te-white
 $bd-black                    = $te-black
-$bd-basis                    = $bd-heavy
+$bd-light                    = $grey-light
+$bd-dark                     = $grey-dark
+$bd-basis                    = $bd-dark
 $bd-info                     = darken($te-info, $deg-dark)
 $bd-safe                     = darken($te-safe, $deg-dark)
 $bd-danger                   = darken($te-danger, $deg-dark)
@@ -63,10 +65,10 @@ $bd-warn                     = darken($te-warn, $deg-dark)
 
 // Background Color
 // ============================================================================
-$bg-light                    = lighten($grey-light, 80%)
-$bg-heavy                    = lighten($grey-heavy, 50%)
 $bg-white                    = $te-white
 $bg-black                    = $te-black
+$bg-light                    = lighten($grey-light, 80%)
+$bg-dark                     = lighten($grey-dark, 50%)
 $bg-basis                    = darken($te-basis, 3%)
 $bg-info                     = $$translucent($te-info, 10)
 $bg-safe                     = $$translucent($te-safe, 10)
@@ -81,9 +83,9 @@ $translucent-black           = $$translucent($te-black, 40%)
 // Shadow Color
 // ============================================================================
 $shadow-light                = $$translucent($te-black, 20%)
-$shadow-heavy                = $$translucent($te-black, 50%)
+$shadow-dark                 = $$translucent($te-black, 50%)
 
 // Highlight Color
 // ============================================================================
 $highlight-light             = $$translucent($te-white, 10%)
-$highlight-heavy             = $$translucent($te-white, 50%)
+$highlight-dark              = $$translucent($te-white, 50%)
