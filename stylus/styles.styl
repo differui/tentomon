@@ -50,8 +50,6 @@
 // Skin related variable
 // Skin variables: `skins/[skin name]/[skin name]-variables`
 @import "skins/" + $ui-name + "/" + $ui-name + "-variables"
-@import "skins/" + $ui-name + "/" + $ui-name + "-class"
-@import "skins/" + $ui-name + "/" + $ui-name + "-templates"
 
 // Color Plate
 //
@@ -310,3 +308,10 @@ if $kss is true
 @import "module/form/form-core"
 @import "module/form/form-ui"
 @import "module/form/form-state"
+
+// Caret
+//
+// Styleguide 5.26
+@import "module/caret/caret-core"
+@import "module/caret/caret-ui"
+@import "module/caret/caret-state"
