@@ -25,21 +25,37 @@
   height 0
   width 0
   display inline-block
+  vertical-align middle
 
   &.pygmy
-    border-width round($ht-pygmy * 0.25)
+    border-width round($ht-pygmy * .15)
+    padding-bottom round(($te - @border-width) / 2)
 
   &.mini
-    border-width round($ht-mini * 0.25)
+    border-width round($ht-mini * .15)
+    padding-bottom round(($te - @border-width) / 2)
 
   &.normal
-    border-width round($ht-normal * 0.25)
+    border-width round($ht-normal * .15)
+    padding-bottom round(($te - @border-width) / 2)
 
   &.huge
-    border-width round($ht-huge * 0.25)
+    border-width round($ht-huge * .15)
+    padding-bottom round(($te - @border-width) / 2)
 
   &.massive
-    border-width round($ht-massive * 0.25)
+    border-width round($ht-massive * .15)
+    padding-bottom round(($te - @border-width) / 2)
+
+  &.amid-45
+  &.amid-90
+  &.amid-135
+  &.amid-180
+  &.amid-225
+  &.amid-270
+  &.amid-315
+  &.amid-360
+    padding-bottom 0
 
   &.amid-45
     @extend $l-amid-45
