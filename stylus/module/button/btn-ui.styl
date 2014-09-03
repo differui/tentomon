@@ -12,8 +12,15 @@
 //
 // **Stylize:**
 //
-// + `.ui-text` Button as ordinary text.
-// + `.ui-link` Button as link.
+// + `.ui-text`     Button as ordinary text.
+// + `.ui-link`     Button as link.
+// + `.ui-sketch` Button border and text only.
+//
+//
+// **Shape:**
+//
+// + `.ui-square`
+// + `.ui-pill`
 //
 // Styleguide 5.1.2
 .btn
@@ -31,7 +38,7 @@
   &.ui-info
   &.ui-warn
   &.ui-link
-    border-radius $bd-radius
+    border-radius $rad-round
 
   &.ui-black
     @extend $ui-black-static
@@ -53,10 +60,40 @@
 
   &.ui-text
   &.ui-link
-    border-color transparent
+  &.ui-sketch
     background-color transparent
     background-image none
 
+  &.ui-text
   &.ui-link
-    color $te-safe
+    border-color transparent
+
+  &.ui-link
+    color $link-static
     text-decoration underline
+
+  &.ui-sketch
+    &.ui-black
+      color $bd-black
+
+    &.ui-basis
+      color $bd-basis
+
+    &.ui-info
+      color $bd-info
+
+    &.ui-safe
+      color $bd-safe
+
+    &.ui-danger
+      color $bd-danger
+
+    &.ui-warn
+      color $bd-warn
+
+  // Shape
+  &.ui-pill
+    border-radius $rad-pill
+
+  &.ui-square
+    border-radius $rad-square

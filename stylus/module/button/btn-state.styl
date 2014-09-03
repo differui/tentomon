@@ -5,19 +5,12 @@
 // + `:active`
 // + `:disabled`
 //
-//
-// **State:**
-//
-// + `active`
-// + `disabled`
-//
 // Markup:
 // <button class="btn normal ui-basis" data-state="">按钮 - 过长的内容不会被换行</button>
 //
 // Styleguide 5.1.3
 .btn
   &:active
-  &[data-state~='active']
     &.ui-basis
       @extend $ui-basis-active
 
@@ -46,9 +39,28 @@
     &.ui-warn
       $$top-inner-shadow()
 
-  &:disabled
-  &[data-state~='disabled']
+    &.ui-sketch
+      $$top-inner-shadow(0, 0, transparent)
 
+      &.ui-black
+        background-color $grey-light
+
+      &.ui-basis
+        background-color $bg-basis
+
+      &.ui-info
+        background-color $bg-info
+
+      &.ui-safe
+        background-color $bg-safe
+
+      &.ui-danger
+        background-color $bg-danger
+
+      &.ui-warn
+        background-color $bg-warn
+
+  &:disabled
     &.ui-basis
     &.ui-info
     &.ui-safe
@@ -79,4 +91,5 @@
       opacity 1
 
     &.ui-link
+      color $link-disabled
       text-decoration underline
