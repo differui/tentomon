@@ -10,5 +10,9 @@ a
   &
   &:visited
   &:active
-  &.is-active
-    color inherit
+  &[data-state='active']
+    color $link-static
+
+  &disabled
+  &[data-state='disabled']
+    color $link-disabled
