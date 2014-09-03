@@ -2,11 +2,12 @@
 //
 // **State:**
 //
+// + `half`
 // + `done`
 // + `waiting`
 //
 // Markup:
-// <div class="progress normal" data-state="waiting">
+// <div class="progress normal" data-state="half waiting">
 //   <span class="progress-indicator">
 //     <span class="progress-text-reverse">提示 - 过长的内容会被省略，就像现在这个样子。</span>
 //   </span>
@@ -15,6 +16,10 @@
 //
 // Styleguide 5.8.3
 .progress
+  &[data-state~='half']
+    .progress-indicator
+      width 50%
+
   &[data-state~='done']
     .progress-indicator
       width 100%
