@@ -35,7 +35,7 @@ module.exports = (grunt) ->
     copy:
 
       # rename tentomon-kss-debug.css override style.css in styleguide/public
-     tentomon_style:
+      tentomon_style:
         expand: true
         cwd: '<%= dirs.styleguide %>public/'
         src: 'tentomon-kss-debug.css'
@@ -67,7 +67,7 @@ module.exports = (grunt) ->
         src: 'normalize.styl'
         dest: '<%= dirs.stylus %>foundation/'
         rename: (path, name) ->
-          name = '_reset.css'
+          name = '_reset.styl'
 
           return path + '/' + name
 
@@ -76,7 +76,7 @@ module.exports = (grunt) ->
         expand: true
         cwd: '<%= dirs.bower %>elastic-grid.css/stylus/'
         src: '**/*.styl'
-        dest: '<%= dirs.stylus %>plugins/elastic/'
+        dest: '<%= dirs.stylus %>vender/elastic/'
 
     replace:
 
