@@ -84,22 +84,22 @@ outer-glow($color, $length = 4)
 
   box-shadow 0 0 unit($length, 'px') $color
 
-// text-highlight($color)
+// text-c-highlight($color)
 //
-// + `$color` `rgba`(`$highlight-light`) Highlight color.
+// + `$color` `rgba`(`$c-highlight-light`) Highlight color.
 //
 // Styleguide 1.2.3
-text-highlight($color = $highlight-light)
+text-highlight($color = $c-highlight-light)
   text-shadow 0 1px 0 $color
 
 // text-shadow($color)
 //
 // Emboss text effect by `text-shadow`.
 //
-// + `$color` `rgba`(`$shadow-light`) Shadow color.
+// + `$color` `rgba`(`$c-shadow-light`) Shadow color.
 //
 // Styleguide 1.2.4
-text-shadow($color = $shadow-light)
+text-shadow($color = $c-shadow-light)
   text-shadow 0 -1px 0 $color
 
 // vinner-shadow($deep, $length, $color)
@@ -108,10 +108,10 @@ text-shadow($color = $shadow-light)
 //
 // + `$deep` `unit`(2) Shadow deep.
 // + `$length` `unit`(4) Length of shadow spread.
-// + `$color` `rgba`(`$shadow-light`) Shadow color.
+// + `$color` `rgba`(`$c-shadow-light`) Shadow color.
 //
 // Styleguide 1.2.5
-vinner-shadow($deep = 2, $length = 4, $color = $shadow-light)
+vinner-shadow($deep = 2, $length = 4, $color = $c-shadow-light)
   box-shadow inset 0 unit($deep, 'px') unit($length, 'px') $color
 
 // vouter-shadow($deep, $length, $color)
@@ -120,10 +120,10 @@ vinner-shadow($deep = 2, $length = 4, $color = $shadow-light)
 //
 // + `$deep` `unit`(2) Shadow deep.
 // + `$length` `unit`(4) Length of shadow spread.
-// + `$color` `rgba`(`$shadow-light`) Shadow color.
+// + `$color` `rgba`(`$c-shadow-light`) Shadow color.
 //
 // Styleguide 1.2.6
-vouter-shadow($deep = 2, $length = 4, $color = $shadow-light)
+vouter-shadow($deep = 2, $length = 4, $color = $c-shadow-light)
   box-shadow 0 unit($deep, 'px') unit($length, 'px') $color
 
 // hinner-shadow($deep, $length, $color)
@@ -132,10 +132,10 @@ vouter-shadow($deep = 2, $length = 4, $color = $shadow-light)
 //
 // + `$deep` `unit`(2) Shadow deep.
 // + `$length` `unit`(4) Length of shadow spread.
-// + `$color` `rgba`(`$shadow-light`) Shadow color.
+// + `$color` `rgba`(`$c-shadow-light`) Shadow color.
 //
 // Styleguide 1.2.7
-hinner-shadow($deep = 2, $length = 4, $color = $shadow-light)
+hinner-shadow($deep = 2, $length = 4, $color = $c-shadow-light)
   box-shadow inset unit($deep, 'px') 0 unit($length, 'px') $color
 
 // houter-shadow($deep, $length, $color)
@@ -144,10 +144,10 @@ hinner-shadow($deep = 2, $length = 4, $color = $shadow-light)
 //
 // + `$deep` `unit`(2) Shadow deep.
 // + `$length` `unit`(4) Length of shadow spread.
-// + `$color` `rgba`(`$shadow-light`) Shadow color.
+// + `$color` `rgba`(`$c-shadow-light`) Shadow color.
 //
 // Styleguide 1.2.8
-houter-shadow($deep = 2, $length = 4, $color = $shadow-light)
+houter-shadow($deep = 2, $length = 4, $color = $c-shadow-light)
   box-shadow unit($deep, 'px') 0 unit($length, 'px') $color
 
 // vgradient($start, $end)
@@ -194,51 +194,6 @@ reset-appearance()
 // Extends
 //
 // Styleguide 1.4
-
-// ----- Static UI ----- //
-
-.ui-white-static
-.ui-black-static
-.ui-basis-static
-.ui-info-static
-.ui-safe-static
-.ui-danger-static
-.ui-warn-static
-  color $te-white
-
-.ui-white-static
-  border-color $te-white
-  background-color $te-white
-
-.ui-black-static
-  border-color $te-black
-  background-color $te-black
-
-.ui-basis-static
-  color $te-black
-  border-color $bd-basis
-  background-color $bg-basis
-  linear-gradient($te-basis, $end-basis)
-
-.ui-info-static
-  border-color $bd-info
-  background-color $bg-info
-  linear-gradient($te-info, $end-info)
-
-.ui-safe-static
-  border-color $bd-safe
-  background-color $bg-safe
-  linear-gradient($te-safe, $end-safe)
-
-.ui-danger-static
-  border-color $bd-danger
-  background-color $bg-danger
-  linear-gradient($te-danger, $end-danger)
-
-.ui-warn-static
-  border-color $bd-warn
-  background-color $bg-warn
-  linear-gradient($te-warn, $end-warn)
 
 // ----- Text ----- //
 .nowrap

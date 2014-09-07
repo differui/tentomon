@@ -8,16 +8,37 @@
 // + `.btn-l`
 // + `.btn-xl`
 //
+// Theme:
+//
+// + `.btn--white`
+// + `.btn--black`
+// + `.btn--basis`
+// + `.btn--safe`
+// + `.btn--danger`
+// + `.btn--info`
+// + `.btn--warn`
+// + `.btn--text`
+// + `.btn--link`
+// + `.btn--outline`
+// + `.btn--pill`
+// + `.btn--square`
+//
 // Markup:
-// <button class="btn btn-l btn-basis">按钮</button>
+// <button class="btn btn--m btn--basis">按钮</button>
 //
 // Styleguide 2.1
 .btn
   @extend .nowrap
 
+  reset-gap()
+  reset-appearance()
+
   width    100%
+  outline  0
   display  inline-block
+  border   $b-bd
   position relative
+  padding  $b-vgap $b-hgap
 
 // -------------------------------------
 //   Modifiers
@@ -25,89 +46,175 @@
 
 // ----- Size ----- //
 
-.btn-xs
+.btn--xs
   font-size $b-fs-xs
 
-.btn-s
+.btn--s
   font-size $b-fs-s
 
-.btn-m
+.btn--m
   font-size $b-fs-m
 
-.btn-l
+.btn--l
   font-size $b-fs-l
 
-.btn-xl
+.btn--xl
   font-size $b-fs-xl
 
 // ----- Theme ----- //
 
-.btn-black
-.btn-basis
-.btn-safe
-.btn-danger
-.btn-info
-.btn-warn
-.btn-link
-  border-radius $rad-round
+.btn--white
+.btn--black
+.btn--basis
+.btn--info
+.btn--safe
+.btn--danger
+.btn--warn
+.btn--link
+  border-radius $b-rad-round
 
-.btn-black
-  @extend .ui-black-static
+.btn--white
+.btn--black
+.btn--basis
+.btn--info
+.btn--safe
+.btn--danger
+.btn--warn
+  color white
 
-.btn-basis
-  @extend .ui-basis-static
+.btn--white
+  color $c-black
+  border-color $c-bd-white
+  background-color $c-bg-white
 
-.btn-info
-  @extend .ui-info-static
+.btn--black
+  border-color $c-bd-black
+  background-color $c-bg-black
 
-.btn-safe
-  @extend .ui-safe-static
+.btn--basis
+  color $c-black
+  border-color $c-bd-basis
+  background-color $c-bg-basis
+  vgradient($c-basis, $c-end-basis)
 
-.btn-danger
-  @extend .ui-danger-static
+.btn--info
+  border-color $c-bd-info
+  background-color $c-bg-info
+  vgradient($c-info, $c-end-info)
 
-.btn-warn
-  @extend .ui-warn-static
+.btn--safe
+  border-color $c-bd-safe
+  background-color $c-bg-safe
+  vgradient($c-safe, $c-end-safe)
 
-.btn-text
-.btn-link
-.btn-sketch
+.btn--danger
+  border-color $c-bd-danger
+  background-color $c-bg-danger
+  vgradient($c-danger, $c-end-danger)
+
+.btn--warn
+  border-color $c-bd-warn
+  background-color $c-bg-warn
+  vgradient($c-warn, $c-end-warn)
+
+.btn--text
+.btn--link
+.btn--outline
   background-color transparent
   background-image none
 
-.btn-text
-.btn-link
+.btn--text
+.btn--link
   border-color transparent
 
-.btn-link
-  color $link-static
+.btn--link
+  color $c-link-static
   text-decoration underline
 
-.btn-sketch
-  .btn-black
-    color $bd-black
+.btn--outline
+  &.btn--white
+    color        $c-white
+    border-color @color
 
-  .btn-basis
-    color $bd-basis
+  &.btn--black
+    color        $c-black
+    border-color @color
 
-  .btn-info
-    color $bd-info
+  &.btn--basis
+    color        $c-bd-basis
+    border-color @color
 
-  .btn-safe
-    color $bd-safe
+  &.btn--info
+    color        $c-bd-info
+    border-color @color
 
-  .btn-danger
-    color $bd-danger
+  &.btn--safe
+    color        $c-bd-safe
+    border-color @color
 
-  .btn-warn
-    color $bd-warn
+  &.btn--danger
+    color        $c-bd-danger
+    border-color @color
 
-// Shape
-.btn-pill
-  border-radius $rad-pill
+  &.btn--warn
+    color        $c-bd-warn
+    border-color @color
 
-.btn-square
-  border-radius $rad-square
+.btn--pill
+  border-radius $b-rad-pill
+
+.btn--square
+  border-radius $b-rad-square
+
+// -------------------------------------
+//   States
+// -------------------------------------
+.btn:active
+  &.btn--basis
+  &.btn--info
+  &.btn--safe
+  &.btn--danger
+  &.btn--warn
+    vinner-shadow()
+
+  &.btn--text
+  &.btn--outline
+    vinner-shadow(0, 0, transparent)
+
+  &.btn--link
+    text-decoration none
+
+  &.btn--text
+    opacity .5
+
+.btn:disabled
+  &.btn--basis
+  &.btn--info
+  &.btn--safe
+  &.btn--danger
+  &.btn--warn
+    background-image none
+    vinner-shadow(0, 0, transparent)
+
+  &.btn--basis
+    background-color $c-dis-basis
+
+  &.btn--info
+    background-color $c-dis-info
+
+  &.btn--safe
+    background-color $c-dis-safe
+
+  &.btn--danger
+    background-color $c-dis-danger
+
+  &.btn--warn
+    background-color $c-dis-warn
+
+  &.btn--link
+  &.btn--text
+    color $c-grey-light
+
 
 // -------------------------------------
 //   Scaffolding
