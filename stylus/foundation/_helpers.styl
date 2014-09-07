@@ -30,6 +30,8 @@ translucent($color, $alpha) {
 
 // be-even($unit)
 //
+// If `$unit` is a odd integer than minus one.
+//
 // + `$unit` `unit`
 //
 // Styleguide 1.1.2
@@ -42,6 +44,8 @@ be-even($unit)
     return $rounded
 
 // be-odd($unit)
+//
+// If `$unit` is a even integer than plus one.
 //
 // + `$unit` `unit`
 //
@@ -56,23 +60,7 @@ be-odd($unit)
 
 // Mixins
 //
-// Styleguide 1.1
-
-// font-face($name, $path, $weight, $style)
-//
-// + `$name` `str` Font name
-// + `$path` `str` Font asset path
-// + `$weight` Font weight
-// + `$style`  Font style
-//
-// Styleguide 1.1.1
-font-face($name, $path, $weight = normal, $style = normal)
-  @font-face
-    font-family $name
-    src url($path + '.eot')
-    src url($path + '.eot?#iconic-sm') format('embedded-opentype'), url($path + '.woff') format('woff'), url($path + '.ttf') format('truetype'), url($path + '.otf') format('opentype'), url($path + '.svg#iconic-sm') format('svg')
-    font-weight $weight
-    font-style $style
+// Styleguide 1.2
 
 // inner-glow($color, $length)
 //
@@ -114,7 +102,7 @@ text-highlight($color = $highlight-light)
 text-shadow($color = $shadow-light)
   text-shadow 0 -1px 0 $color
 
-// top-inner-shadow($deep, $length, $color)
+// vinner-shadow($deep, $length, $color)
 //
 // Vertical component inner shadow.
 //
@@ -123,10 +111,10 @@ text-shadow($color = $shadow-light)
 // + `$color` `rgba`(`$shadow-light`) Shadow color.
 //
 // Styleguide 1.2.5
-top-inner-shadow($deep = 2, $length = 4, $color = $shadow-light)
+vinner-shadow($deep = 2, $length = 4, $color = $shadow-light)
   box-shadow inset 0 unit($deep, 'px') unit($length, 'px') $color
 
-// top-outer-shadow($deep, $length, $color)
+// vouter-shadow($deep, $length, $color)
 //
 // Vertical component outer shadow.
 //
@@ -135,10 +123,10 @@ top-inner-shadow($deep = 2, $length = 4, $color = $shadow-light)
 // + `$color` `rgba`(`$shadow-light`) Shadow color.
 //
 // Styleguide 1.2.6
-top-outer-shadow($deep = 2, $length = 4, $color = $shadow-light)
+vouter-shadow($deep = 2, $length = 4, $color = $shadow-light)
   box-shadow 0 unit($deep, 'px') unit($length, 'px') $color
 
-// left-inner-shadow($deep, $length, $color)
+// hinner-shadow($deep, $length, $color)
 //
 // Horizontal component inner shadow.
 //
@@ -147,10 +135,10 @@ top-outer-shadow($deep = 2, $length = 4, $color = $shadow-light)
 // + `$color` `rgba`(`$shadow-light`) Shadow color.
 //
 // Styleguide 1.2.7
-left-inner-shadow($deep = 2, $length = 4, $color = $shadow-light)
+hinner-shadow($deep = 2, $length = 4, $color = $shadow-light)
   box-shadow inset unit($deep, 'px') 0 unit($length, 'px') $color
 
-// left-outer-shadow($deep, $length, $color)
+// houter-shadow($deep, $length, $color)
 //
 // Horizontal component outer shadow.
 //
@@ -159,10 +147,10 @@ left-inner-shadow($deep = 2, $length = 4, $color = $shadow-light)
 // + `$color` `rgba`(`$shadow-light`) Shadow color.
 //
 // Styleguide 1.2.8
-left-outer-shadow($deep = 2, $length = 4, $color = $shadow-light)
+houter-shadow($deep = 2, $length = 4, $color = $shadow-light)
   box-shadow unit($deep, 'px') 0 unit($length, 'px') $color
 
-// linear-gradient($start, $end)
+// vgradient($start, $end)
 //
 // Vertical two color stop gradient.
 // If one of color stop not given gradient will be override into empty.
@@ -171,11 +159,27 @@ left-outer-shadow($deep = 2, $length = 4, $color = $shadow-light)
 // + `$end` `rgba` End color stop.
 //
 // Styleguide 1.2.9
-linear-gradient($start, $end)
+vgradient($start, $end)
   if $start and $end
     background-image linear-gradient($start, $end)
   else
     background-image none
+
+// font-face($name, $path, $weight, $style)
+//
+// + `$name` `str` Font name
+// + `$path` `str` Font asset path
+// + `$weight` Font weight
+// + `$style`  Font style
+//
+// Styleguide 1.2.10
+font-face($name, $path, $weight = normal, $style = normal)
+  @font-face
+    font-family $name
+    src url($path + '.eot')
+    src url($path + '.eot?#iconic-sm') format('embedded-opentype'), url($path + '.woff') format('woff'), url($path + '.ttf') format('truetype'), url($path + '.otf') format('opentype'), url($path + '.svg#iconic-sm') format('svg')
+    font-weight $weight
+    font-style $style
 
 // Extends
 //
