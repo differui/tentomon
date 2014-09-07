@@ -1,0 +1,114 @@
+// Btn
+//
+// Size:
+//
+// + `.btn-xs`
+// + `.btn-s`
+// + `.btn-m`
+// + `.btn-l`
+// + `.btn-xl`
+//
+// Markup:
+// <button class="btn btn-l btn-basis">按钮</button>
+//
+// Styleguide 2.1
+.btn
+  @extend .nowrap
+
+  width    100%
+  display  inline-block
+  position relative
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// ----- Size ----- //
+
+.btn-xs
+  font-size $b-fs-xs
+
+.btn-s
+  font-size $b-fs-s
+
+.btn-m
+  font-size $b-fs-m
+
+.btn-l
+  font-size $b-fs-l
+
+.btn-xl
+  font-size $b-fs-xl
+
+// ----- Theme ----- //
+
+.btn-black
+.btn-basis
+.btn-safe
+.btn-danger
+.btn-info
+.btn-warn
+.btn-link
+  border-radius $rad-round
+
+.btn-black
+  @extend .ui-black-static
+
+.btn-basis
+  @extend .ui-basis-static
+
+.btn-info
+  @extend .ui-info-static
+
+.btn-safe
+  @extend .ui-safe-static
+
+.btn-danger
+  @extend .ui-danger-static
+
+.btn-warn
+  @extend .ui-warn-static
+
+.btn-text
+.btn-link
+.btn-sketch
+  background-color transparent
+  background-image none
+
+.btn-text
+.btn-link
+  border-color transparent
+
+.btn-link
+  color $link-static
+  text-decoration underline
+
+.btn-sketch
+  .btn-black
+    color $bd-black
+
+  .btn-basis
+    color $bd-basis
+
+  .btn-info
+    color $bd-info
+
+  .btn-safe
+    color $bd-safe
+
+  .btn-danger
+    color $bd-danger
+
+  .btn-warn
+    color $bd-warn
+
+// Shape
+.btn-pill
+  border-radius $rad-pill
+
+.btn-square
+  border-radius $rad-square
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------

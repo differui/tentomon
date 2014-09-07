@@ -1,0 +1,95 @@
+// State
+//
+// **Pseudo Class:**
+//
+// + `:active`
+// + `:disabled`
+//
+// Markup:
+// <button class="btn normal ui-basis" data-state="">按钮 - 过长的内容不会被换行</button>
+//
+// Styleguide 5.1.3
+.btn
+  &:active
+    &.ui-basis
+      @extend $ui-basis-active
+
+    &.ui-info
+      @extend $ui-info-active
+
+    &.ui-safe
+      @extend $ui-safe-active
+
+    &.ui-danger
+      @extend $ui-danger-active
+
+    &.ui-warn
+      @extend $ui-warn-active
+
+    &.ui-text
+      opacity .5
+
+    &.ui-link
+      text-decoration none
+
+    &.ui-basis
+    &.ui-info
+    &.ui-safe
+    &.ui-danger
+    &.ui-warn
+      top-inner-shadow()
+
+    &.ui-sketch
+      top-inner-shadow(0, 0, transparent)
+
+      &.ui-black
+        background-color $grey-light
+
+      &.ui-basis
+        background-color $bg-basis
+
+      &.ui-info
+        background-color $bg-info
+
+      &.ui-safe
+        background-color $bg-safe
+
+      &.ui-danger
+        background-color $bg-danger
+
+      &.ui-warn
+        background-color $bg-warn
+
+  &:disabled
+    &.ui-basis
+    &.ui-info
+    &.ui-safe
+    &.ui-danger
+    &.ui-warn
+      top-inner-shadow(0, 0, transparent)
+
+    &.ui-basis
+      @extend $ui-basis-disabled
+
+    &.ui-info
+      @extend $ui-info-disabled
+
+    &.ui-safe
+      @extend $ui-safe-disabled
+
+    &.ui-danger
+      @extend $ui-danger-disabled
+
+    &.ui-warn
+      @extend $ui-warn-disabled
+
+    &.ui-text
+    &.ui-link
+      color $grey-dark
+
+    &.ui-text
+      opacity 1
+
+    &.ui-link
+      color $link-disabled
+      text-decoration underline
