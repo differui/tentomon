@@ -65,7 +65,11 @@ module.exports = (grunt) ->
         expand: true
         cwd: '<%= dirs.bower %>normalize.styl/'
         src: 'normalize.styl'
-        dest: '<%= dirs.stylus %>plugins/'
+        dest: '<%= dirs.stylus %>foundation/'
+        rename: (path, name) ->
+          name = '_reset.css'
+
+          return path + '/' + name
 
       # copy elastic-grid.styl to stylus plugins directory
       elastic:
