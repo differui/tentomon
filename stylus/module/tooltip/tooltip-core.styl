@@ -25,7 +25,7 @@
   &:before
     content ""
     border-style solid
-    border-width $$be_even($ht-normal * 0.2)
+    border-width be-even($ht-normal * 0.2)
 
   &:after
     content attr(data-tooltip)
@@ -70,14 +70,14 @@
       @extend $l-around-360
 
     &:after
-      top $$be_even($ht-normal * 0.2) * -2
+      top be-even($ht-normal * 0.2) * -2
 
   &.around-90
     &:before
       @extend $l-around-90
 
     &:after
-      right $$be_even($ht-normal * 0.2) * -2
+      right be-even($ht-normal * 0.2) * -2
 
   // &.around-150
   // &.around-210
@@ -86,11 +86,11 @@
       @extend $l-around-180
 
     &:after
-      bottom $$be_even($ht-normal * 0.2) * -2
+      bottom be-even($ht-normal * 0.2) * -2
 
   &.around-270
     &:before
       @extend $l-around-270
 
     &:after
-      left $$be_even($ht-normal * 0.2) * -2
+      left be-even($ht-normal * 0.2) * -2
