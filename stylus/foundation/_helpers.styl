@@ -5,9 +5,9 @@
 //
 // *************************************
 
-// -------------------------------------
-//   Utils
-// -------------------------------------
+// Utils
+//
+// Styleguide 1.1
 
 // translucent($color, $alpha)
 //
@@ -21,9 +21,9 @@
 translucent($color, $alpha) {
   ensure($color, "rgba")
 
-  $red = red($color)
+  $red   = red($color)
   $green = green($color)
-  $blue = blue($color)
+  $blue  = blue($color)
 
   return rgba($red, $green, $blue, unit($alpha, "%"))
 }
@@ -32,7 +32,7 @@ translucent($color, $alpha) {
 //
 // + `$unit` `unit`
 //
-// Styleguide 1.3.1
+// Styleguide 1.1.2
 be-even($unit)
   $rounded = round($unit)
 
@@ -45,7 +45,7 @@ be-even($unit)
 //
 // + `$unit` `unit`
 //
-// Styleguide 1.3.2
+// Styleguide 1.1.3
 be-odd($unit)
   $rounded = round($unit)
 
@@ -54,11 +54,29 @@ be-odd($unit)
   else
     return $rounded
 
+// Mixins
+//
+// Styleguide 1.1
+
+// font-face($name, $path, $weight, $style)
+//
+// + `$name` `str` Font name
+// + `$path` `str` Font asset path
+// + `$weight` Font weight
+// + `$style`  Font style
+//
+// Styleguide 1.1.1
+font-face($name, $path, $weight = normal, $style = normal)
+  font-family $name
+  src url($path + '.eot')
+  src url($path + '.eot?#iconic-sm') format('embedded-opentype'), url($path + '.woff') format('woff'), url($path + '.ttf') format('truetype'), url($path + '.otf') format('opentype'), url($path + '.svg#iconic-sm') format('svg')
+  font-weight $weight
+  font-style $style
 
 // inner-glow($color, $length)
 //
 // + `$color` `rgba`
-// + `$length` `unit` `4` Glow spread length.
+// + `$length` `unit`(4) Glow spread length.
 //
 // Styleguide 1.2.1
 inner-glow($color, $length = 4)
@@ -69,7 +87,7 @@ inner-glow($color, $length = 4)
 // outer-glow($color, $length)
 //
 // + `$color` `rgba`
-// + `$length` `unit` `4` Glow spread length.
+// + `$length` `unit`(4) Glow spread length.
 //
 // Styleguide 1.2.2
 outer-glow($color, $length = 4)
@@ -79,7 +97,7 @@ outer-glow($color, $length = 4)
 
 // text-highlight($color)
 //
-// + `$color` `rgba` `$highlight-light` Highlight color.
+// + `$color` `rgba`(`$highlight-light`) Highlight color.
 //
 // Styleguide 1.2.3
 text-highlight($color = $highlight-light)
@@ -89,7 +107,7 @@ text-highlight($color = $highlight-light)
 //
 // Emboss text effect by `text-shadow`.
 //
-// + `$color` `rgba` `$shadow-light` Shadow color.
+// + `$color` `rgba`(`$shadow-light`) Shadow color.
 //
 // Styleguide 1.2.4
 text-shadow($color = $shadow-light)
@@ -99,9 +117,9 @@ text-shadow($color = $shadow-light)
 //
 // Vertical component inner shadow.
 //
-// + `$deep` `unit` `2` Shadow deep.
-// + `$length` 'unit' `4` Length of shadow spread.
-// + `$color` `rgba` `$shadow-light` Shadow color.
+// + `$deep` `unit`(2) Shadow deep.
+// + `$length` `unit`(4) Length of shadow spread.
+// + `$color` `rgba`(`$shadow-light`) Shadow color.
 //
 // Styleguide 1.2.5
 top-inner-shadow($deep = 2, $length = 4, $color = $shadow-light)
@@ -111,9 +129,9 @@ top-inner-shadow($deep = 2, $length = 4, $color = $shadow-light)
 //
 // Vertical component outer shadow.
 //
-// + `$deep` `unit` `2` Shadow deep.
-// + `$length` 'unit' `4` Length of shadow spread.
-// + `$color` `rgba` `$shadow-light` Shadow color.
+// + `$deep` `unit`(2) Shadow deep.
+// + `$length` `unit`(4) Length of shadow spread.
+// + `$color` `rgba`(`$shadow-light`) Shadow color.
 //
 // Styleguide 1.2.6
 top-outer-shadow($deep = 2, $length = 4, $color = $shadow-light)
@@ -123,9 +141,9 @@ top-outer-shadow($deep = 2, $length = 4, $color = $shadow-light)
 //
 // Horizontal component inner shadow.
 //
-// + `$deep` `unit` `2` Shadow deep.
-// + `$length` 'unit' `4` Length of shadow spread.
-// + `$color` `rgba` `$shadow-light` Shadow color.
+// + `$deep` `unit`(2) Shadow deep.
+// + `$length` `unit`(4) Length of shadow spread.
+// + `$color` `rgba`(`$shadow-light`) Shadow color.
 //
 // Styleguide 1.2.7
 left-inner-shadow($deep = 2, $length = 4, $color = $shadow-light)
@@ -135,9 +153,9 @@ left-inner-shadow($deep = 2, $length = 4, $color = $shadow-light)
 //
 // Horizontal component outer shadow.
 //
-// + `$deep` `unit` `2` Shadow deep.
-// + `$length` 'unit' `4` Length of shadow spread.
-// + `$color` `rgba` `$shadow-light` Shadow color.
+// + `$deep` `unit`(2) Shadow deep.
+// + `$length` `unit`(4) Length of shadow spread.
+// + `$color` `rgba`(`$shadow-light`) Shadow color.
 //
 // Styleguide 1.2.8
 left-outer-shadow($deep = 2, $length = 4, $color = $shadow-light)
@@ -158,21 +176,9 @@ linear-gradient($start, $end)
   else
     background-image none
 
-
-// -------------------------------------
-//   Mixins
-// -------------------------------------
-
-font-face($name, $path, $weight = normal, $style = normal)
-  font-family $name
-  src url($path + '.eot')
-  src url($path + '.eot?#iconic-sm') format('embedded-opentype'), url($path + '.woff') format('woff'), url($path + '.ttf') format('truetype'), url($path + '.otf') format('opentype'), url($path + '.svg#iconic-sm') format('svg')
-  font-weight $weight
-  font-style $style
-
-// -------------------------------------
-//   Extends
-// -------------------------------------
+// Extends
+//
+// Styleguide 1.3
 
 // ----- Clearfix ----- //
 
