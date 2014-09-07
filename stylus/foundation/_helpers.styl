@@ -67,11 +67,12 @@ be-odd($unit)
 //
 // Styleguide 1.1.1
 font-face($name, $path, $weight = normal, $style = normal)
-  font-family $name
-  src url($path + '.eot')
-  src url($path + '.eot?#iconic-sm') format('embedded-opentype'), url($path + '.woff') format('woff'), url($path + '.ttf') format('truetype'), url($path + '.otf') format('opentype'), url($path + '.svg#iconic-sm') format('svg')
-  font-weight $weight
-  font-style $style
+  @font-face
+    font-family $name
+    src url($path + '.eot')
+    src url($path + '.eot?#iconic-sm') format('embedded-opentype'), url($path + '.woff') format('woff'), url($path + '.ttf') format('truetype'), url($path + '.otf') format('opentype'), url($path + '.svg#iconic-sm') format('svg')
+    font-weight $weight
+    font-style $style
 
 // inner-glow($color, $length)
 //

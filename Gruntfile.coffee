@@ -225,7 +225,7 @@ module.exports = (grunt) ->
         options:
           name: '<%= pkg.name %>'
         files:
-          '<%= dirs.styleguide %>': 'stylus/kss.styl'
+          '<%= dirs.styleguide %>': 'stylus/styles.styl'
 
     git_log:
 
