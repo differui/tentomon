@@ -1,0 +1,74 @@
+// *************************************
+//
+//   Base
+//   -> Tag-level settings
+//
+// *************************************
+
+*
+*:before
+*:after
+  box-sizing                 border-box
+
+html
+body
+  width                      100%
+  height                     100%
+
+html
+  background-color           $c-bg-white
+  color                      $c-black
+  font-family                $b-ff
+  font-size                  $b-fs
+  line-height                $b-lh
+ -webkit-tap-highlight-color rgba(0, 0, 0, 0)
+
+body
+  font-size 100%
+
+[hidden]
+  display none
+
+// -------------------------------------
+//   Block Content
+// -------------------------------------
+
+ul
+p
+  margin-bottom              $b-vgap-double
+  margin-top                 0
+
+dd
+  margin-left 0
+
+// -------------------------------------
+//   Inline Content
+// -------------------------------------
+
+// ----- Links ----- //
+
+a
+  &
+  &:active
+  &:visited
+    color                    $c-link-static
+
+  &:disabled
+    color                    $c-link-disabled
+
+// ----- Images ----- //
+
+img
+  height                     auto
+  max-width                  100%
+
+// ----- Form ----- //
+input
+button
+select
+optgroup
+textarea
+  font-family                inherit
+  font-size                  inherit
+  margin                     0
+  line-height                $b-ln

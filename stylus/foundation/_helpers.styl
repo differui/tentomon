@@ -1,3 +1,33 @@
+// *************************************
+//
+//   Helpers
+//   -> Utils, Mixins, Extends, Animations
+//
+// *************************************
+
+// -------------------------------------
+//   Utils
+// -------------------------------------
+
+// translucent($color, $alpha)
+//
+// Add alpha channel into rgb color.
+// The origin alpha channel will be override by new value.
+//
+// + `$color` `rgba`
+// + `$alpha` `unit` The new value for alpha channel.
+//
+// Styleguide 1.1.1
+translucent($color, $alpha) {
+  ensure($color, "rgba")
+
+  $red = red($color)
+  $green = green($color)
+  $blue = blue($color)
+
+  return rgba($red, $green, $blue, unit($alpha, "%"))
+}
+
 // inner-glow($color, $length)
 //
 // + `$color` `rgba`
@@ -100,3 +130,38 @@ linear-gradient($start, $end)
     background-image linear-gradient($start, $end)
   else
     background-image none
+
+
+// -------------------------------------
+//   Mixins
+// -------------------------------------
+
+
+// -------------------------------------
+//   Extends
+// -------------------------------------
+
+// ----- Clearfix ----- //
+
+.group::after
+  clear   both
+  content ""
+  display table
+
+// ----- Debug ----- //
+
+.debug
+  background-color pink !important
+
+// ----- Ellipsis ----- //
+
+.ellipsis
+  overflow      hidden
+  text-overflow ellipsis
+  white-space   nowrap
+
+// -------------------------------------
+//   Animations
+// -------------------------------------
+
+// ...
