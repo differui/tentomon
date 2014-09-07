@@ -6,6 +6,8 @@
 /readme
 /styleguide
 /tentomon-*
+/stylus/vender
+/stylus/foundation/_reset.styl
 *.swp
 *.log
 *.sublime-project
