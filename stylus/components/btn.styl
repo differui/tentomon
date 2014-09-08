@@ -2,11 +2,11 @@
 //
 // Size:
 //
-// + `.btn-xs`
-// + `.btn-s`
-// + `.btn-m`
-// + `.btn-l`
-// + `.btn-xl`
+// + `.btn--xs`
+// + `.btn--s`
+// + `.btn--m`
+// + `.btn--l`
+// + `.btn--xl`
 //
 // Theme:
 //
@@ -24,7 +24,9 @@
 // + `.btn--square`
 //
 // Markup:
-// <button class="btn btn--m btn--basis">按钮</button>
+// <button class="btn btn--m btn--basis">
+//   <span class="btn-text">按钮</span>
+// </button>
 //
 // Styleguide 2.1
 .btn
@@ -83,37 +85,37 @@
   color white
 
 .btn--white
-  color $c-black
-  border-color $c-bd-white
+  color            $c-black
+  border-color     $c-bd-white
   background-color $c-bg-white
 
 .btn--black
-  border-color $c-bd-black
+  border-color     $c-bd-black
   background-color $c-bg-black
 
 .btn--basis
-  color $c-black
-  border-color $c-bd-basis
+  color            $c-black
+  border-color     $c-bd-basis
   background-color $c-bg-basis
   vgradient($c-basis, $c-end-basis)
 
 .btn--info
-  border-color $c-bd-info
+  border-color     $c-bd-info
   background-color $c-bg-info
   vgradient($c-info, $c-end-info)
 
 .btn--safe
-  border-color $c-bd-safe
+  border-color     $c-bd-safe
   background-color $c-bg-safe
   vgradient($c-safe, $c-end-safe)
 
 .btn--danger
-  border-color $c-bd-danger
+  border-color     $c-bd-danger
   background-color $c-bg-danger
   vgradient($c-danger, $c-end-danger)
 
 .btn--warn
-  border-color $c-bd-warn
+  border-color     $c-bd-warn
   background-color $c-bg-warn
   vgradient($c-warn, $c-end-warn)
 
@@ -128,7 +130,7 @@
   border-color transparent
 
 .btn--link
-  color $c-link-static
+  color           $c-link-static
   text-decoration underline
 
 .btn--outline
@@ -169,6 +171,9 @@
 // -------------------------------------
 //   States
 // -------------------------------------
+
+// ----- Active ----- //
+
 .btn:active
   &.btn--basis
   &.btn--info
@@ -178,6 +183,7 @@
     vinner-shadow()
 
   &.btn--text
+  &.btn--link
   &.btn--outline
     vinner-shadow(0, 0, transparent)
 
@@ -185,7 +191,10 @@
     text-decoration none
 
   &.btn--text
+  &.btn--outline
     opacity .5
+
+// ----- Disabled ----- //
 
 .btn:disabled
   &.btn--basis
@@ -213,9 +222,22 @@
 
   &.btn--link
   &.btn--text
-    color $c-grey-light
+    color $c-grey-dark
+
+  &.btn--link
+    text-decoration underline
 
 
 // -------------------------------------
 //   Scaffolding
 // -------------------------------------
+
+// ----- Text ----- //
+
+.btn--text
+  null
+
+// ----- Icon ----- //
+
+.btn--icon
+  null
