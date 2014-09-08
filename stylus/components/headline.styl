@@ -1,0 +1,66 @@
+// Headline
+//
+// Theme:
+//
+// + `.h--info`
+// + `.h--warn`
+// + `.h--error`
+//
+// Layout:
+//
+// + `.h--isolate`
+// + `.h--mixin`
+//
+// Markup:
+// <h1 class="h h--m">
+//   <span class="h-icon"></span>
+//   <span class="h-text">标题</span>
+// </h1>
+//
+// Styleguide 2.20
+.h
+  @extend .ellipsis
+
+  reset-gap()
+
+  padding-top $b-vgap
+  padding-bottom @padding-top
+
+  width 100%
+  display block
+  font-size $b-fs-m
+  font-weight bold
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// ----- Size ----- //
+
+.h--xs
+  font-size $b-fs-xs
+
+.h--s
+  font-size $b-fs-s
+
+.h--m
+  font-size $b-fs-m
+
+.h--l
+  font-size $b-fs-l
+
+.h--xl
+  font-size $b-fs-xl
+
+// ----- Typeset ----- //
+
+.h-break
+  @extend .break
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------

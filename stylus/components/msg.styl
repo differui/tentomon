@@ -1,0 +1,77 @@
+// Message
+//
+// Theme:
+//
+// + `.msg--info`
+// + `.msg--warn`
+// + `.msg--error`
+//
+// Layout:
+//
+// + `.msg--isolate`
+// + `.msg--mixin`
+//
+// Markup:
+// <div class="msg msg--info">
+//   <div class="row">
+//     <div class="col col--4of5 col--middle">
+//       <h2 class="msg-headline">一条信息标题</h2>
+//       <p class="msg-detail">在这里放置对此条信息的详细解释。对问题有一个简短的了解。</p>
+//     </div>
+//     <div class="col col--1of5 col--middle">
+//       <div class="msg-action">
+//         <button class="btn btn--m btn--info">关闭</button>
+//       </div>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 2.19
+.msg
+  padding $b-vgap-double $b-hgap
+  border-width $b-bd-width
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// ----- Theme ----- //
+
+.msg--isolate
+  border-style solid
+  border-radius $b-rad-round
+
+.msg--mixin
+  border-style solid none
+
+.msg--info
+  color $c-info
+  border-color $c-bd-info
+  background-color $c-bg-info
+
+.msg--warn
+  color $c-warn
+  border-color $c-bd-warn
+  background-color $c-bg-warn
+
+.msg--error
+  color $c-danger
+  border-color $c-bd-danger
+  background-color $c-bg-danger
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+.msg-headline
+  margin-top 0
+  margin-bottom 0
+
+  font-size $b-fs-m
+
+.msg-detail
+  font-size $b-fs-s
