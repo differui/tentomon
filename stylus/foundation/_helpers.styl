@@ -195,18 +195,198 @@ reset-appearance()
 //
 // Styleguide 1.4
 
-// ----- Text ----- //
+// ----- Typeset ----- //
+
 .nowrap
   white-space nowrap
 
 .wrap
   white-space normal
 
+.clip
 .ellipsis
-  overflow hidden
-  text-overflow ellipsis
-  white-space nowrap
+  @extend .nowrap
 
+  overflow hidden
+
+.ellipsis
+  text-overflow ellipsis
+
+.break
+  word-break break-all
+
+// ----- Center ----- //
+
+.center
+  position absolute
+  margin auto
+  top 0
+  right 0
+  bottom 0
+  left 0
+
+.center-top
+  @extend .center
+
+  bottom auto
+
+.center-right
+  @extend .center
+
+  left auto
+
+.center-bottom
+  @extend .center
+
+  top auto
+
+.center-left
+  @extend .center
+
+  right auto
+
+.center-top-left
+  @extend .center
+
+  right auto
+  bottom auto
+
+.center-bottom-left
+  @extend .center
+
+  right auto
+  top auto
+
+.center-top-right
+  @extend .center
+
+  left auto
+  bottom auto
+
+.center-bottom-right
+  @extend .center
+
+  left auto
+  top auto
+
+// ----- Amid ----- //
+
+.amid-45
+.amid-90
+.amid-135
+.amid-180
+.amid-225
+.amid-270
+.amid-315
+.amid-360
+  margin auto
+  position absolute
+
+.amid-45
+.amid-315
+.amid-360
+  top 0
+
+.amid-45
+.amid-90
+.amid-135
+  right 0
+
+.amid-135
+.amid-180
+.amid-225
+  bottom 0
+
+.amid-225
+.amid-270
+.amid-315
+  left 0
+
+// horizontal center
+.amid-180
+.amid-360
+  left 0
+  margin-left 50%
+  transform translateX(-50%)
+
+// vertical center
+// height statement is required
+.amid-90
+.amid-270
+  top 0
+  bottom 0
+
+// ----- Around ----- //
+
+.around-30
+.around-60
+.around-90
+.around-120
+.around-150
+.around-180
+.around-210
+.around-240
+.around-270
+.around-300
+.around-330
+.around-360
+  position absolute
+
+.around-30
+.around-330
+.around-360
+  transform translateY(-100%)
+
+.around-60
+.around-90
+.around-120
+  transform translateX(100%)
+
+.around-150
+.around-180
+.around-210
+  transform translateY(100%)
+
+.around-240
+.around-270
+.around-300
+  transform translateX(-100%)
+
+.around-30
+.around-150
+  right 0
+
+.around-60
+.around-300
+  top 0
+
+.around-90
+.around-270
+  top 50%
+
+.around-120
+.around-240
+  bottom 0
+
+.around-180
+.around-360
+  left 50%
+
+.around-210
+.around-330
+  left 0
+
+.around-90
+  transform translate(100%, -50%)
+
+.around-180
+  transform translate(-50%, 100%)
+
+.around-270
+  transform translate(-100%, -50%)
+
+.around-360
+  transform translate(-50%, -100%)
 
 // -------------------------------------
 //   Animations

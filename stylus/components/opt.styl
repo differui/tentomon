@@ -1,0 +1,141 @@
+// Option
+//
+// Size:
+//
+// + `.opt--xs`
+// + `.opt--s`
+// + `.opt--m`
+// + `.opt--l`
+// + `.opt--xl`
+//
+// State:
+//
+// + `checked`
+// + `disabled`
+//
+// Markup:
+// <div class="opt opt--m" data-state="checked disabled">
+//   <input class="opt-tag" type="checkbox" id="cb-demo">
+//   <span class="opt-bd opt-bd--round">
+//     <span class="opt-tip opt-tip--check"></span>
+//   </span>
+// </div>
+// <label class="label label--m" for="cb-demo">多选控件</label>
+// <div class="opt opt--m" data-state="checked disabled">
+//   <input class="opt-tag" type="radio" id="rad-demo">
+//   <span class="opt-bd opt-bd--circle">
+//     <span class="opt-tip opt-tip--dot"></span>
+//   </span>
+// </div>
+// <label class="label label--m" for="rad-demo">单选控件</label>
+//
+// Styleguide 2.4
+.opt
+  display        inline-block
+  position       relative
+  vertical-align middle
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// ----- Size ----- //
+
+.opt--xs
+  font-size $b-fs-xs
+
+.opt--s
+  font-size $b-fs-s
+
+.opt--m
+  font-size $b-fs-m
+
+.opt--l
+  font-size $b-fs-l
+
+.opt--xl
+  font-size $b-fs-xl
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+.opt[data-state~='checked']
+  .opt-tip
+    opacity 1
+
+.opt[data-state~='disabled']
+  .opt-bd
+    background-image none
+    background-color $c-dis-basis
+
+  .opt-tip--dot
+    background-color $c-dis-safe
+
+  .opt-tip--check
+    border-color $c-dis-safe
+
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+// ---- origin checkbox tag ----- //
+
+.opt-tag
+  opacity  0
+  outline  0
+  position absolute
+
+// ---- Body ----- //
+
+.opt-bd
+  width be-even($b-fs-m * 1.5)
+  height @width
+  display block
+  position relative
+  margin-top -1px
+
+  border $b-bd
+  border-color $c-bd-basis
+  background-color $c-bg-basis
+  vgradient($c-basis, $c-end-basis)
+
+// Theme
+
+.opt-bd--square
+  border-radius $b-rad-square
+
+.opt-bd--round
+  border-radius $b-rad-round
+
+.opt-bd--circle
+  border-radius $b-rad-circle
+
+// ---- Indicator ----- //
+
+.opt-tip
+  @extend .center
+
+  opacity 0
+  display block
+
+// Theme
+
+.opt-tip--dot
+  width $b-fs-s - 2
+  height @width
+
+  border-radius $b-rad-circle
+  border-style none
+  background-color $c-safe
+
+.opt-tip--check
+  width be-even($b-fs-s + 2)
+  height $b-fs-half - 1
+  top -2px
+  transform rotate(-45deg)
+
+  border-color $c-safe
+  border-width 2px
+  border-style none none solid solid
