@@ -1,0 +1,186 @@
+// Pointer
+//
+// Size:
+//
+// + `.pointer--xs`
+// + `.pointer--s`
+// + `.pointer--m`
+// + `.pointer--l`
+// + `.pointer--xl`
+//
+// Position:
+//
+// + `.pointer--30`
+// + `.pointer--60`
+// + `.pointer--90`
+// + `.pointer--120`
+// + `.pointer--150`
+// + `.pointer--180`
+// + `.pointer--210`
+// + `.pointer--240`
+// + `.pointer--270`
+// + `.pointer--300`
+// + `.pointer--330`
+// + `.pointer--360`
+//
+// Theme:
+//
+// + `.pointer--black`
+// + `.pointer--basis`
+// + `.pointer--info`
+// + `.pointer--safe`
+// + `.pointer--danger`
+// + `.pointer--warn`
+//
+// Markup:
+// <div class="pointer pinter--m pointer--basis pointer--180">
+//   <button class="btn btn--m btn--basis">按钮</button>
+// </div>
+//
+// Styleguide 2.12
+.pointer
+  position relative
+
+.pointer:after
+  content ""
+  border-style $b-bd-style
+  border-color transparent
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// ----- Theme ----- //
+
+.pointer--black:after
+  border-color $c-bd-black
+
+.pointer--basis:after
+  border-color $c-bd-basis
+
+.pointer--info:after
+  border-color $c-bd-info
+
+.pointer--safe:after
+  border-color $c-bd-safe
+
+.pointer--danger:after
+  border-color $c-bd-danger
+
+.pointer--warn:after
+  border-color $c-bd-warn
+
+// ----- Size ----- //
+
+.pinter--xs
+.pinter--s
+.pinter--m
+  &:after
+    border-width be-even($b-fs-s * .7)
+
+.pointer--l
+.pointer--xl
+  &:after
+    border-width be-even($b-fs-m * .7)
+
+// ----- Position ----- //
+
+.pointer--30:after
+  @extend .around-30
+
+.pointer--60:after
+  @extend .around-60
+
+.pointer--90:after
+  @extend .around-90
+
+.pointer--120:after
+  @extend .around-120
+
+.pointer--150:after
+  @extend .around-150
+
+.pointer--180:after
+  @extend .around-180
+
+.pointer--210:after
+  @extend .around-210
+
+.pointer--240:after
+  @extend .around-240
+
+.pointer--270:after
+  @extend .around-270
+
+.pointer--300:after
+  @extend .around-300
+
+.pointer--330:after
+  @extend .around-330
+
+.pointer--360:after
+  @extend .around-360
+
+.pointer--30
+.pointer--150
+  &:after
+    right $b-bd-width * 3
+
+.pointer--60
+.pointer--300
+  &:after
+    top $b-bd-width * 3
+
+.pointer--120
+.pointer--240
+  &:after
+    bottom $b-bd-width * 3
+
+.pointer--210
+.pointer--330
+  &:after
+    left $b-bd-width * 3
+
+.pointer--30
+.pointer--330
+.pointer--360
+  &:after
+    border-top-color transparent
+    border-left-color transparent
+    border-right-color transparent
+
+.pointer--60
+.pointer--90
+.pointer--120
+  &:after
+    border-top-color transparent
+    border-bottom-color transparent
+    border-right-color transparent
+
+.pointer--150
+.pointer--180
+.pointer--210
+  &:after
+    border-bottom-color transparent
+    border-left-color transparent
+    border-right-color transparent
+
+.pointer--240
+.pointer--270
+.pointer--300
+  &:after
+    border-top-color transparent
+    border-bottom-color transparent
+    border-left-color transparent
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+// -------------------------------------
+//   Context
+// -------------------------------------
