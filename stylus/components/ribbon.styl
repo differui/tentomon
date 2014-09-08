@@ -1,0 +1,227 @@
+// Ribbon
+//
+// Size:
+//
+// + `.ribbon--xs`
+// + `.ribbon--s`
+// + `.ribbon--m`
+// + `.ribbon--l`
+// + `.ribbon--xl`
+//
+// Theme:
+//
+// + `.ribbon--basis`
+// + `.ribbon--info`
+// + `.ribbon--safe`
+// + `.ribbon--danger`
+// + `.ribbon--warn`
+//
+// Context:
+//
+// + `.has-ribbon`
+//
+// Markup:
+// <dl class="form">
+//   <dd class="form-content has-ribbon">
+//     <input type="text" class="tf tf--m tf--basis">
+//     <label class="ribbon ribbon--m ribbon--basis ribbon--amid-45">
+//       <span class="ribbon-corner"></span>
+//       <span class="ribbon-text">中</span>
+//     </label>
+//   </dd>
+// </dl>
+//
+// Styleguide 2.9
+.ribbon
+  overflow hidden
+  text-align center
+  border-radius $b-rad-round
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// ----- Size ----- //
+
+.ribbon--xs
+  font-size $b-fs-xs
+  width be-even(@font-size * 2.3)
+  height @width
+
+  .ribbon-corner
+    border-width @height
+
+  .ribbon-text
+    height $b-fs-xs
+
+.ribbon--s
+  font-size $b-fs-s
+  width be-even(@font-size * 2.3)
+  height @width
+
+  .ribbon-corner
+    border-width @height
+
+  .ribbon-text
+    height $b-fs-s
+
+.ribbon--m
+  font-size $b-fs-m
+  width be-even(@font-size * 2.3)
+  height @width
+
+  .ribbon-corner
+    border-width @height
+
+  .ribbon-text
+    height $b-fs-m
+
+.ribbon--l
+  font-size $b-fs-l
+  width be-even(@font-size * 2.3)
+  height @width
+
+  .ribbon-corner
+    border-width @height
+
+  .ribbon-text
+    height $b-fs-l
+
+.ribbon--xl
+  font-size $b-fs-xl
+  width be-even(@font-size * 2.3)
+  height @width
+
+  .ribbon-corner
+    border-width @height
+
+  .ribbon-text
+    height $b-fs-xl
+
+// ----- Position ----- //
+
+.ribbon--amid-45
+  @extend .amid-45
+
+  .ribbon-corner
+    border-right-width 0
+    border-bottom-width 0
+
+  .ribbon-text
+    transform translate(25%, -25%)
+
+.ribbon--amid-135
+  @extend .amid-135
+
+  .ribbon-corner
+    border-top-width 0
+    border-right-width 0
+
+  .ribbon-text
+    transform translate(25%, 25%)
+
+.ribbon--amid-225
+  @extend .amid-225
+
+  .ribbon-corner
+    border-top-width 0
+    border-left-width 0
+
+  .ribbon-text
+    transform translate(-25%, 25%)
+
+.ribbon--amid-315
+  @extend .amid-315
+
+  .ribbon-corner
+    border-bottom-width 0
+    border-left-width 0
+
+  .ribbon-text
+    transform translate(-25%, -25%)
+
+// Theme
+
+.ribbon--basis
+  &.ribbon--amid-45
+  &.ribbon--amid-315
+    .ribbon-corner
+      border-top-color $c-bd-basis
+
+  &.ribbon--amid-135
+  &.ribbon--amid-225
+    .ribbon-corner
+      border-bottom-color $c-bd-basis
+
+.ribbon--info
+  &.ribbon--amid-45
+  &.ribbon--amid-315
+    .ribbon-corner
+      border-top-color $c-bd-info
+
+  &.ribbon--amid-135
+  &.ribbon--amid-225
+    .ribbon-corner
+      border-bottom-color $c-bd-info
+
+.ribbon--safe
+  &.ribbon--amid-45
+  &.ribbon--amid-315
+    .ribbon-corner
+      border-top-color $c-bd-safe
+
+  &.ribbon--amid-135
+  &.ribbon--amid-225
+    .ribbon-corner
+      border-bottom-color $c-bd-safe
+
+.ribbon--danger
+  &.ribbon--amid-45
+  &.ribbon--amid-315
+    .ribbon-corner
+      border-top-color $c-bd-danger
+
+  &.ribbon--amid-135
+  &.ribbon--amid-225
+    .ribbon-corner
+      border-bottom-color $c-bd-danger
+
+.ribbon--warn
+  &.ribbon--amid-45
+  &.ribbon--amid-315
+    .ribbon-corner
+      border-top-color $c-bd-warn
+
+  &.ribbon--amid-135
+  &.ribbon--amid-225
+    .ribbon-corner
+      border-bottom-color $c-bd-warn
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+.ribbon-corner
+  position absolute
+  top 0
+  left 0
+
+  border-style solid
+  border-color transparent
+
+.ribbon-text
+  @extend .center
+
+  line-height 1
+  color $c-white
+
+// -------------------------------------
+//   Context
+// -------------------------------------
+
+.has-ribbon
+  position relative
