@@ -1,0 +1,123 @@
+// Select
+//
+// Size:
+//
+// + `.select--xs`
+// + `.select--s`
+// + `.select--m`
+// + `.select--l`
+// + `.select--xl`
+//
+// Theme:
+//
+// + `.select--basis`
+// + `.select--safe`
+// + `.select--danger`
+// + `.select--info`
+// + `.select--warn`
+//
+// Markup:
+// <div class="select select--m select--basis" data-state="">
+//   <select class="select-tag">
+//     <option>这是第一条选项。</option>
+//     <option>这是第二条选项。</option>
+//     <option>这是第三条选项。</option>
+//   </select>
+//   <div class="select-bd">
+//     <div class="row">
+//       <div class="col col--4of5">
+//         <span class="select-text">选择框<span>
+//       </div>
+//       <div class="col col--1of5">
+//         <span class="select-indicator"></span>
+//       </div>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 2.7
+.select
+  position relative
+  padding $b-vgap $b-hgap
+
+  border-width $b-bd-width
+  border-style $b-bd-style
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// ----- Size ----- //
+
+.select--xs
+  font-size $b-fs-xs
+
+.select--s
+  font-size $b-fs-s
+
+.select--m
+  font-size $b-fs-m
+
+.select--l
+  font-size $b-fs-l
+
+.select--xl
+  font-size $b-fs-xl
+
+// ----- Theme ----- //
+
+.select--basis
+.select--info
+.select--safe
+.select--danger
+.select--warn
+  border-radius $b-rad-round
+
+.select--basis
+  @extend .ui-basis
+
+.select--info
+  @extend .ui-info
+
+.select--safe
+  @extend .ui-safe
+
+.select--danger
+  @extend .ui-danger
+
+.select--warn
+  @extend .ui-warn
+
+.select--pill
+  border-radius $b-rad-pill
+
+.select--square
+  border-radius $b-rad-square
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+.select-tag
+.select-bd
+  width 100%
+
+.select-tag
+  @extend .center
+
+  opacity 0
+  outline 0
+  height 100%
+  $reset-appearance$()
+
+.select-bd
+  pointer-events none
+
+.select-text
+  @extend .ellipsis
+
+  display block
