@@ -8,6 +8,13 @@
 // + `.ribbon--l`
 // + `.ribbon--xl`
 //
+// Position:
+//
+// + `.magnet--45`
+// + `.magnet--135`
+// + `.magnet--225`
+// + `.magnet--315`
+//
 // Theme:
 //
 // + `.ribbon--basis`
@@ -24,7 +31,7 @@
 // <dl class="form">
 //   <dd class="form-content has-ribbon">
 //     <input type="text" class="tf tf--m tf--basis">
-//     <label class="ribbon ribbon--m ribbon--basis ribbon--amid-45">
+//     <label class="ribbon ribbon--m ribbon--basis ribbon--45">
 //       <span class="ribbon-corner"></span>
 //       <span class="ribbon-text">中</span>
 //     </label>
@@ -100,7 +107,7 @@
 
 // ----- Position ----- //
 
-.ribbon--amid-45
+.ribbon--45
   @extend .amid-45
 
   .ribbon-corner
@@ -110,7 +117,7 @@
   .ribbon-text
     transform translate(25%, -25%)
 
-.ribbon--amid-135
+.ribbon--135
   @extend .amid-135
 
   .ribbon-corner
@@ -120,7 +127,7 @@
   .ribbon-text
     transform translate(25%, 25%)
 
-.ribbon--amid-225
+.ribbon--225
   @extend .amid-225
 
   .ribbon-corner
@@ -130,7 +137,7 @@
   .ribbon-text
     transform translate(-25%, 25%)
 
-.ribbon--amid-315
+.ribbon--315
   @extend .amid-315
 
   .ribbon-corner
@@ -140,60 +147,60 @@
   .ribbon-text
     transform translate(-25%, -25%)
 
-// Theme
+// ----- Theme ----- //
 
 .ribbon--basis
-  &.ribbon--amid-45
-  &.ribbon--amid-315
+  &.ribbon--45
+  &.ribbon--315
     .ribbon-corner
       border-top-color $c-bd-basis
 
-  &.ribbon--amid-135
-  &.ribbon--amid-225
+  &.ribbon--135
+  &.ribbon--225
     .ribbon-corner
       border-bottom-color $c-bd-basis
 
 .ribbon--info
-  &.ribbon--amid-45
-  &.ribbon--amid-315
+  &.ribbon--45
+  &.ribbon--315
     .ribbon-corner
       border-top-color $c-bd-info
 
-  &.ribbon--amid-135
-  &.ribbon--amid-225
+  &.ribbon--135
+  &.ribbon--225
     .ribbon-corner
       border-bottom-color $c-bd-info
 
 .ribbon--safe
-  &.ribbon--amid-45
-  &.ribbon--amid-315
+  &.ribbon--45
+  &.ribbon--315
     .ribbon-corner
       border-top-color $c-bd-safe
 
-  &.ribbon--amid-135
-  &.ribbon--amid-225
+  &.ribbon--135
+  &.ribbon--225
     .ribbon-corner
       border-bottom-color $c-bd-safe
 
 .ribbon--danger
-  &.ribbon--amid-45
-  &.ribbon--amid-315
+  &.ribbon--45
+  &.ribbon--315
     .ribbon-corner
       border-top-color $c-bd-danger
 
-  &.ribbon--amid-135
-  &.ribbon--amid-225
+  &.ribbon--135
+  &.ribbon--225
     .ribbon-corner
       border-bottom-color $c-bd-danger
 
 .ribbon--warn
-  &.ribbon--amid-45
-  &.ribbon--amid-315
+  &.ribbon--45
+  &.ribbon--315
     .ribbon-corner
       border-top-color $c-bd-warn
 
-  &.ribbon--amid-135
-  &.ribbon--amid-225
+  &.ribbon--135
+  &.ribbon--225
     .ribbon-corner
       border-bottom-color $c-bd-warn
 

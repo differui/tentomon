@@ -1,0 +1,154 @@
+// Magnet
+//
+// Size:
+//
+// + `.magnet--xs`
+// + `.magnet--s`
+// + `.magnet--m`
+// + `.magnet--l`
+// + `.magnet--xl`
+//
+// Position:
+//
+// + `.magnet--45`
+// + `.magnet--135`
+// + `.magnet--225`
+// + `.magnet--315`
+//
+// Theme:
+//
+// + `.magnet--basis`
+// + `.magnet--info`
+// + `.magnet--safe`
+// + `.magnet--danger`
+// + `.magnet--warn`
+//
+// Context:
+//
+// + `.has-magnet`
+//
+// Markup:
+// <dl class="form">
+//   <dd class="form-content has-magnet">
+//     <input type="text" class="tf tf--m tf--basis">
+//     <label class="magnet magnet--m magnet--basis magnet--315">
+//       <span class="magnet-text">用户名</span>
+//     </label>
+//   </dd>
+// </dl>
+//
+// Styleguide 2.10
+.magnet
+  padding-left $b-hgap
+  padding-right @padding-left
+
+  border-style $b-bd-style
+  border-width $b-bd-width
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// ----- Size ----- //
+
+.magnet--xs
+  font-size $b-fs-xs
+
+.magnet--s
+  font-size $b-fs-s
+
+.magnet--m
+  font-size $b-fs-m
+
+.magnet--l
+  font-size $b-fs-l
+
+.magnet--xl
+  font-size $b-fs-xl
+
+// ----- Position ----- //
+
+.magnet--45
+  @extend .amid-45
+
+  border-bottom-left-radius $b-rad-round
+  border-top-right-radius $b-rad-round
+
+.magnet--135
+  @extend .amid-135
+
+  border-top-left-radius $b-rad-round
+  border-bottom-right-radius $b-rad-round
+
+.magnet--225
+  @extend .amid-225
+
+  border-top-right-radius $b-rad-round
+  border-bottom-left-radius $b-rad-round
+
+.magnet--315
+  @extend .amid-315
+
+  border-bottom-right-radius $b-rad-round
+  border-top-left-radius $b-rad-round
+
+.magnet--45
+.magnet--315
+  &.magnet--xs
+  &.magnet--s
+    padding-bottom 0
+
+  &.magnet--m
+  &.magnet--l
+    padding-bottom $b-vgap
+
+  &.magnet--xl
+    padding-bottom $b-vgap-double
+
+.magnet--135
+.magnet--225
+  &.magnet--xs
+  &.magnet--s
+    padding-top 0
+
+  &.magnet--m
+  &.magnet--l
+    padding-top $b-vgap
+
+  &.magnet--xl
+    padding-top $b-vgap-double
+
+// ----- Theme ----- //
+
+.magnet--basis
+  @extend .ui-basis
+
+.magnet--safe
+  @extend .ui-safe
+
+.magnet--danger
+  @extend .ui-danger
+
+.magnet--info
+  @extend .ui-info
+
+.magnet--warn
+  @extend .ui-warn
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+.magnet-text
+  @extend .nowrap
+
+// -------------------------------------
+//   Context
+// -------------------------------------
+
+.has-magnet
+  position relative
