@@ -1,0 +1,130 @@
+// Caret
+//
+// Position:
+//
+// + `.caret-45`
+// + `.caret-90`
+// + `.caret-135`
+// + `.caret-180`
+// + `.caret-225`
+// + `.caret-270`
+// + `.caret-315`
+// + `.caret-360`
+//
+// Markup:
+// <button class="btn btn--m btn--basis">
+//   <span class="btn-text">下拉按钮 </span>
+//   <span class="caret caret--black caret--bottom" data-state=""></span>
+// </button>
+//
+// Styleguide 2.25
+.caret
+  height 0
+  width 0
+  display inline-block
+  vertical-align middle
+
+  border-width be-even($b-fs-s * .7)
+  margin-bottom round(($b-fs-m - @border-width) / 2)
+
+  border-style solid
+  border-color transparent
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// ----- Theme ----- //
+
+.caret--white
+  border-color $c-bd-white
+
+.caret--black
+  border-color $c-bd-black
+
+.caret--basis
+  border-color $c-bd-basis
+
+.caret--info
+  border-color $c-bd-info
+
+.caret--safe
+  border-color $c-bd-safe
+
+.caret--danger
+  border-color $c-bd-danger
+
+.caret--warn
+  border-color $c-bd-warn
+
+.caret--bottom
+  border-top-style solid
+  border-bottom-style none
+  border-right-color transparent
+  border-bottom-color transparent
+  border-left-color transparent
+
+.caret--left
+  border-right-style solid
+  border-left-style none
+  border-top-color transparent
+  border-bottom-color transparent
+  border-left-color transparent
+
+.caret--top
+  border-bottom-style solid
+  border-top-style none
+  border-top-color transparent
+  border-right-color transparent
+  border-left-color transparent
+
+.caret--right
+  border-left-style solid
+  border-right-style none
+  border-top-color transparent
+  border-right-color transparent
+  border-bottom-color transparent
+
+// ----- Position ----- //
+
+.caret--45
+.caret--90
+.caret--135
+.caret--180
+.caret--225
+.caret--270
+.caret--315
+.caret--360
+  margin-bottom 0
+
+.caret--45
+  @extend .amid-45
+
+.caret--90
+  @extend .amid-90
+
+.caret--135
+  @extend .amid-135
+
+.caret--180
+  @extend .amid-180
+
+.caret--225
+  @extend .amid-225
+
+.caret--270
+  @extend .amid-270
+
+.caret--315
+  @extend .amid-315
+
+.caret--360
+  @extend .amid-360
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------

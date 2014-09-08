@@ -1,0 +1,93 @@
+// Dot
+//
+// Size:
+//
+// + `.dot--xs`
+// + `.dot--s`
+// + `.dot--m`
+// + `.dot--l`
+// + `.dot--xl`
+//
+// State:
+//
+// + `active`
+//
+// Markup:
+// <div class="dot dot--m dot--safe" data-state="">
+//   <span class="dot-tip"></span>
+// </div>
+//
+// Styleguide 2.26
+.dot
+  display block
+  position relative
+
+  opacity .5
+  border-radius $b-rad-circle
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// ----- Theme ----- //
+
+.dot--white
+  background-color $c-bg-white
+
+.dot--black
+  background-color $c-bg-black
+
+.dot--basis
+  background-color $c-bg-basis
+
+.dot--info
+  background-color $c-bg-info
+
+.dot--safe
+  background-color $c-bg-safe
+
+.dot--danger
+  background-color $c-bg-danger
+
+.dot--warn
+  background-color $c-bg-warn
+
+// ----- Size ----- //
+
+.dot--xs
+  width be-even($b-fs-xs * .8)
+  height @width
+
+.dot--s
+  width be-even($b-fs-s * .8)
+  height @width
+
+.dot--m
+  width be-even($b-fs-m * .8)
+  height @width
+
+.dot--l
+  width be-even($b-fs-l * .8)
+  height @width
+
+.dot--xl
+  width be-even($b-fs-xl * .8)
+  height @width
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+.dot[data-state='active']
+  opacity 1
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+.dot-tip
+  @extend .center
+
+  width 100%
+  height 100%
+  visibility hidden
