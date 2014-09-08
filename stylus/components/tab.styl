@@ -1,0 +1,62 @@
+// Tab
+//
+// Layout:
+//
+// + `.tab--haed`
+// + `.tab--foot`
+//
+// Markup:
+// <div class="tab tab--head">
+//   <div class="row">
+//     <div class="col">
+//       <div class="tab-item first" data-state="active">
+//         <span class="btn btn--m btn--text">首页</span>
+//       </div>
+//     </div>
+//     <div class="col">
+//       <div class="tab-item">
+//         <span class="btn btn--m btn--text">朋友</span>
+//       </div>
+//     </div>
+//     <div class="col">
+//       <div class="tab-item last">
+//         <span class="btn btn--m btn--text">设置</span>
+//       </div>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 2.24
+.tab
+  reset-gap()
+  reset-list()
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// ----- Styluze ----- //
+
+.tab--head .tab-item
+  border-top-width $b-bd-width * 2
+  border-top-style solid
+
+.tab--foot .tab-item
+  border-bottom-width $b-bd-width * 2
+  border-bottom-style solid
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+.tab-item
+  border-color transparent
+
+.tab-item
+  &[data-state~='active']
+    color $c-safe
+    border-color $c-bd-safe

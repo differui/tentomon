@@ -1,0 +1,132 @@
+// Board
+//
+// Theme:
+//
+// + `.board--basis`
+// + `.board--safe`
+// + `.board--danger`
+// + `.board--info`
+// + `.board--warn`
+// + `.board--round`
+//
+// Layout:
+//
+// + `.board--isolate`
+// + `.board--mixin`
+//
+// Markup:
+// <div class="board board--basis board--round board--isolate">
+//   <div class="row">
+//     <div class="col">
+//       <div class="board-item first" data-state="active">
+//         <span class="btn btn--m btn--text">阅读</span>
+//       </div>
+//     </div>
+//     <div class="col">
+//       <div class="board-item" data-state="disabled">
+//         <span class="btn btn--m btn--text">下载</span>
+//       </div>
+//     </div>
+//     <div class="col">
+//       <div class="board-item">
+//         <span class="btn btn--m btn--text">删除</span>
+//       </div>
+//     </div>
+//     <div class="col">
+//       <div class="board-item last">
+//         <span class="btn btn--m btn--text">取消</span>
+//       </div>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 2.23
+.board
+  reset-gap()
+  reset-list()
+
+  border-style $b-bd-style
+  border-width $b-bd-width
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// ----- Layout ----- //
+
+.board-isolate
+  border-style solid
+
+.board-mixin
+  border-style solid none
+
+// ----- Theme ----- //
+
+.board--basis
+  @extend .ui-basis
+
+  .board-item
+    border-color $c-bd-basis
+
+.board--info
+  @extend .ui-info
+
+  .board-item
+    border-color $c-bd-info
+
+.board--safe
+  @extend .ui-safe
+
+  .board-item
+    border-color $c-bd-safe
+
+.board--danger
+  @extend .ui-danger
+
+  .board-item
+    border-color $c-bd-danger
+
+.board--warn
+  @extend .ui-warn
+
+  .board-item
+    border-color $c-bd-warn
+
+.board--round
+  border-radius $b-rad-round
+
+  &.first
+    border-top-left-radius $b-rad-round
+    border-bottom-left-radius $b-rad-round
+
+  &.last
+    border-top-right-radius $b-rad-round
+    border-bottom-right-radius $b-rad-round
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+.board-item
+  border-width $b-bd-width
+  border-right-style solid
+  box-shadow inset 1px 1px 0 $c-highlight-light
+
+  &.last
+    border-right-style none
+
+.board-item
+  &:active
+  &[data-state='active']
+    vinner-shadow()
+
+  &:disabled
+  &[data-state='disabled']
+    vinner-shadow(0, 0, transparent)
+    
+    .btn
+      opacity .7
