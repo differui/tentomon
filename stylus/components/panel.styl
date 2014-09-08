@@ -1,0 +1,120 @@
+// Panel
+//
+// Theme:
+//
+// + `.panel--basis`
+// + `.panel--safe`
+// + `.panel--danger`
+// + `.panel--info`
+// + `.panel--warn`
+//
+// Markup:
+// <div class="panel panel--basis panel--round">
+//   <div class="panel-header">
+//     <span class="h h--m">标题</span>
+//   </div>
+//   <div class="panel-content">
+//     <span>这是一段内容。</span>
+//   </div>
+//   <div class="panel-footer">
+//     <span class="panel-notice">以上信息仅供参考。</span>
+//   </div>
+// </div>
+//
+// Styleguide 2.25
+.panel
+  reset-gap()
+
+  border-style solid
+  border-width $b-bd-width
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// ----- Theme ----- //
+
+.panel--round
+  border-radius $b-rad-round
+
+  .panel-header
+    border-top-left-radius $b-rad-round - 1
+    border-top-right-radius $b-rad-round - 1
+
+  .panel-footer
+    border-bottom-left-radius $b-rad-round - 1
+    border-bottom-right-radius $b-rad-round - 1
+
+.panel--basis
+  border-color $c-bd-basis
+
+  .panel-header
+  .panel-footer
+    @extend .ui-basis
+
+  .panel-content
+    border-color $c-bd-basis
+
+.panel--safe
+  border-color $c-bd-safe
+
+  .panel-header
+  .panel-footer
+    @extend .ui-safe
+
+  .panel-content
+    border-color $c-bd-safe
+
+.panel--danger
+  border-color $c-bd-danger
+
+  .panel-header
+  .panel-footer
+    @extend .ui-danger
+
+  .panel-content
+    border-color $c-bd-danger
+
+.panel--info
+  border-color $c-bd-info
+
+  .panel-header
+  .panel-footer
+    @extend .ui-info
+
+  .panel-content
+    border-color $c-bd-info
+
+.panel--warn
+  border-color $c-bd-warn
+
+  .panel-header
+  .panel-footer
+    @extend .ui-warn
+
+  .panel-content
+    border-color $c-bd-warn
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+.panel-header
+.panel-footer
+  padding-left $b-hgap
+  padding-right @padding-left
+
+.panel-header
+  text-align center
+
+.panel-content
+  border-style solid none
+  border-width $b-bd-width
+
+.panel-footer
+  font-size $b-fs-s
+  text-align right

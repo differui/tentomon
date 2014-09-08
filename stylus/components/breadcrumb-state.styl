@@ -1,0 +1,22 @@
+// State
+//
+// Markup:
+// <div class="breadcrumb normal loose">
+//   <a class="breadcrumb-section link seamless">食物</a>
+//   <div class="breadcrumb-slash"> / </div>
+//   <a class="breadcrumb-section link seamless">水果</a>
+//   <div class="breadcrumb-slash"> / </div>
+//   <div class="breadcrumb-section link seamless">苹果</div>
+//   <div class="breadcrumb-slash"> / </div>
+//   <div class="breadcrumb-section link seamless" data-state="active">过长的内容也不会导致换行</div>
+// </div>
+//
+// Styleguide 5.16.3
+.breadcrumb
+  null
+
+.breadcrumb-section
+  &[data-state='active']
+    color $black
+    font-weight bold
+    text-decoration none
