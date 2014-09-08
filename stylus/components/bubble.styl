@@ -1,0 +1,198 @@
+// Bubble
+//
+// Size:
+//
+// + `.bubble--xs`
+// + `.bubble--s`
+// + `.bubble--m`
+// + `.bubble--l`
+// + `.bubble--xl`
+//
+// Position:
+//
+// + `.bubble--45`
+// + `.bubble--90`
+// + `.bubble--135`
+// + `.bubble--180`
+// + `.bubble--225`
+// + `.bubble--270`
+// + `.bubble--315`
+// + `.bubble--360`
+// + `.bubble--out`
+//
+// Theme:
+//
+// + `.bubble--basis`
+// + `.bubble--info`
+// + `.bubble--safe`
+// + `.bubble--danger`
+// + `.bubble--warn`
+// + `.bubble--round`
+// + `.bubble--circle`
+//
+// Context:
+//
+// + `.has-bubble`
+//
+// Markup:
+// <dl class="form">
+//   <dd class="form-content has-bubble">
+//     <input type="text" class="tf tf--m tf--basis">
+//     <label class="bubble bubble--m bubble--safe bubble--45 bubble--out">
+//       <span class="bubble-text">中</span>
+//     </label>
+//   </dd>
+// </dl>
+//
+// Styleguide 2.10
+.bubble
+  @extend .nowrap
+
+  display inline-block
+  vertical-align middle
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// ----- Size ----- //
+
+.bubble--xs
+  font-size $b-fs-xs
+
+  width be-even(@font-size * 2)
+  height @width
+
+  .bubble-text
+    height $b-fs-xs
+
+.bubble--s
+  font-size $b-fs-s
+
+  width be-even(@font-size * 2)
+  height @width
+
+  .bubble-text
+    height $b-fs-s
+
+.bubble--m
+  font-size $b-fs-m
+
+  width be-even(@font-size * 2)
+  height @width
+
+  .bubble-text
+    height $b-fs-m
+
+.bubble--l
+  font-size $b-fs-l
+
+  width be-even(@font-size * 2)
+  height @width
+
+  .bubble-text
+    height $b-fs-l
+
+.bubble--xl
+  font-size $b-fs-xl
+
+  width be-even(@font-size * 2)
+  height @width
+
+  .bubble-text
+    height $b-fs-xl
+
+// ----- Position ----- //
+
+.bubble--45
+  @extend .amid-45
+
+.bubble--90
+  @extend .amid-90
+
+.bubble--135
+  @extend .amid-135
+
+.bubble--180
+  @extend .amid-180
+
+.bubble--225
+  @extend .amid-225
+
+.bubble--270
+  @extend .amid-270
+
+.bubble--315
+  @extend .amid-315
+
+.bubble--360
+  @extend .amid-360
+
+.bubble--out
+  &.bubble--45
+    transform translate(50%, -50%)
+
+  &.bubble--90
+    transform translate(50%, 0)
+
+  &.bubble--135
+    transform translate(50%, 50%)
+
+  &.bubble--180
+    transform translate(0, 50%)
+
+  &.bubble--225
+    transform translate(-50%, 50%)
+
+  &.bubble--270
+    transform translate(-50%, 0)
+
+  &.bubble--315
+    transform translate(-50%, -50%)
+
+  &.bubble--360
+    transform translate(0, -50%)
+
+// ----- Theme ----- //
+
+.bubble--basis
+  @extend .ui-basis
+
+.bubble--safe
+  @extend .ui-safe
+
+.bubble--danger
+  @extend .ui-danger
+
+.bubble--info
+  @extend .ui-info
+
+.bubble--warn
+  @extend .ui-warn
+
+.bubble--round
+  border-radius $b-rad-round
+
+.bubble--circle
+  border-radius $b-rad-circle
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+.bubble-text
+  @extend .center
+
+  line-height 1
+  text-align center
+
+// -------------------------------------
+//   Context
+// -------------------------------------
+
+.has-bubble
+  position relative
