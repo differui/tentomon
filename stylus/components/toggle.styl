@@ -1,0 +1,78 @@
+// Toggle
+//
+// State:
+//
+// + `checked`
+//
+// Markup:
+// <div class="toggle" data-state="checked">
+//   <input class="toggle-tag" type="checkbox" id="tg-demo">
+//   <div class="toggle-bd">
+//     <span class="toggle-tip"></span>
+//   </div>
+// </div>
+// <label class="label label--m" for="tg-demo">开关</label>
+//
+// Styleguide 2.5
+.toggle
+  display        inline-block
+  vertical-align middle
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+.toggle[data-state~='checked']
+  .toggle-bd
+    @extend .ui-safe
+
+    border-width $b-bd-width
+    border-style $b-bd-style
+    background-image none
+    background-color $c-safe
+
+  .toggle-tip
+    left auto
+    right 0
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+// ----- Tag ----- //
+
+.toggle-tag
+  opacity 0
+  outline 0
+  position absolute
+
+// ----- Body ----- //
+
+.toggle-bd
+  @extend .ui-basis
+
+  width be-even($b-fs-l * 2.5)
+  height be-even($b-fs-l * 1.5 + 2)
+  position relative
+
+  border-width $b-bd-width
+  border-style $b-bd-style
+  border-radius $b-rad-pill
+  background-image none
+
+// ----- Tip ----- //
+
+.toggle-tip
+  @extend .center-left
+  @extend .ui-basis
+
+  width be-even($b-fs-l * 1.5)
+  height @width
+  display block
+
+  border-radius $b-rad-circle
+  outer-glow($c-shadow-light, 1)

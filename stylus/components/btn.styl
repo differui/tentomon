@@ -35,12 +35,13 @@
   reset-gap()
   reset-appearance()
 
-  width    100%
-  outline  0
-  display  inline-block
-  border   $b-bd
-  position relative
-  padding  $b-vgap $b-hgap
+  width        100%
+  outline      0
+  display      inline-block
+  border-width $b-bd-width
+  border-style $b-bd-style
+  position     relative
+  padding      $b-vgap $b-hgap
 
 // -------------------------------------
 //   Modifiers
@@ -76,48 +77,25 @@
   border-radius $b-rad-round
 
 .btn--white
-.btn--black
-.btn--basis
-.btn--info
-.btn--safe
-.btn--danger
-.btn--warn
-  color white
-
-.btn--white
-  color            $c-black
-  border-color     $c-bd-white
-  background-color $c-bg-white
+  @extend .ui-white
 
 .btn--black
-  border-color     $c-bd-black
-  background-color $c-bg-black
+  @extend .ui-black
 
 .btn--basis
-  color            $c-black
-  border-color     $c-bd-basis
-  background-color $c-bg-basis
-  vgradient($c-basis, $c-end-basis)
+  @extend .ui-basis
 
 .btn--info
-  border-color     $c-bd-info
-  background-color $c-bg-info
-  vgradient($c-info, $c-end-info)
+  @extend .ui-info
 
 .btn--safe
-  border-color     $c-bd-safe
-  background-color $c-bg-safe
-  vgradient($c-safe, $c-end-safe)
+  @extend .ui-safe
 
 .btn--danger
-  border-color     $c-bd-danger
-  background-color $c-bg-danger
-  vgradient($c-danger, $c-end-danger)
+  @extend .ui-danger
 
 .btn--warn
-  border-color     $c-bd-warn
-  background-color $c-bg-warn
-  vgradient($c-warn, $c-end-warn)
+  @extend .ui-warn
 
 .btn--text
 .btn--link

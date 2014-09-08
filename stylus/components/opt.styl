@@ -1,31 +1,23 @@
 // Option
 //
-// Size:
-//
-// + `.opt--xs`
-// + `.opt--s`
-// + `.opt--m`
-// + `.opt--l`
-// + `.opt--xl`
-//
 // State:
 //
 // + `checked`
 // + `disabled`
 //
 // Markup:
-// <div class="opt opt--m" data-state="checked disabled">
+// <div class="opt" data-state="checked disabled">
 //   <input class="opt-tag" type="checkbox" id="cb-demo">
-//   <span class="opt-bd opt-bd--round">
+//   <div class="opt-bd opt-bd--round">
 //     <span class="opt-tip opt-tip--check"></span>
-//   </span>
+//   </div>
 // </div>
 // <label class="label label--m" for="cb-demo">多选控件</label>
-// <div class="opt opt--m" data-state="checked disabled">
+// <div class="opt" data-state="checked disabled">
 //   <input class="opt-tag" type="radio" id="rad-demo">
-//   <span class="opt-bd opt-bd--circle">
+//   <div class="opt-bd opt-bd--circle">
 //     <span class="opt-tip opt-tip--dot"></span>
-//   </span>
+//   </div>
 // </div>
 // <label class="label label--m" for="rad-demo">单选控件</label>
 //
@@ -38,23 +30,6 @@
 // -------------------------------------
 //   Modifiers
 // -------------------------------------
-
-// ----- Size ----- //
-
-.opt--xs
-  font-size $b-fs-xs
-
-.opt--s
-  font-size $b-fs-s
-
-.opt--m
-  font-size $b-fs-m
-
-.opt--l
-  font-size $b-fs-l
-
-.opt--xl
-  font-size $b-fs-xl
 
 // -------------------------------------
 //   States
@@ -80,7 +55,7 @@
 //   Scaffolding
 // -------------------------------------
 
-// ---- origin checkbox tag ----- //
+// ---- Tag ----- //
 
 .opt-tag
   opacity  0
@@ -90,16 +65,15 @@
 // ---- Body ----- //
 
 .opt-bd
+  @extend .ui-basis
+
   width be-even($b-fs-m * 1.5)
   height @width
   display block
   position relative
-  margin-top -1px
 
-  border $b-bd
-  border-color $c-bd-basis
-  background-color $c-bg-basis
-  vgradient($c-basis, $c-end-basis)
+  border-width $b-bd-width
+  border-style $b-bd-style
 
 // Theme
 
