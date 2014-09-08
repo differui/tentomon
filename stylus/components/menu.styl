@@ -1,0 +1,205 @@
+// Menu
+//
+// Theme:
+//
+// + `.menu--dot`
+// + `.menu--disc`
+// + `.menu--circle`
+// + `.menu--decimal`
+// + `.menu--dashed`
+// + `.menu--dotted`
+// + `.menu--sunken`
+// + `.menu--basis`
+// + `.menu--safe`
+// + `.menu--danger`
+// + `.menu--info`
+// + `.menu--warn`
+//
+// Layout:
+//
+// + `.list--bfc`
+// + `.list--relative`
+//
+// Markup:
+// <ul class="menu row menu--basis menu--solid">
+//   <li class="first col">
+//     <button class="btn btn--m btn--text">香蕉</button>
+//   </li>
+//   <li class="col">
+//     <button class="btn btn--m btn--text">雪梨</button>
+//   </li>
+//   <li class="col">
+//     <button class="btn btn--m btn--text">苹果</button>
+//   </li>
+//   <li class="last col">
+//     <button class="btn btn--m btn--text">西瓜</button>
+//   </li>
+// </ul>
+//
+// Styleguide 2.15
+.menu
+  reset-gap()
+  reset-list()
+
+  > li
+    border-width $b-bd-width
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// ----- Theme ----- //
+
+.menu--dot
+.menu--sunken
+  > li
+    position relative
+
+.menu--disc
+.menu--circle
+.menu--decimal
+  > li
+    padding-left $b-hgap-half
+
+.menu--dot
+  > li
+    &:after
+      @extend .center-right
+
+      content "•"
+      height $b-fs-m
+      width $b-fs-m
+      line-height $b-fs-m
+      margin-right $b-fs-half * -1
+
+    &.last:after
+      content ""
+
+.menu--sunken
+  > li:after
+    @extend .center-right
+
+    content ""
+    width 1px
+    height 100%
+    display block
+
+  > li.last:after
+    display none
+
+.menu--basis
+  > li
+    border-color $c-bd-basis
+
+.menu--info
+  > li
+    border-color $c-bd-info
+
+.menu--safe
+  > li
+    border-color $c-bd-safe
+
+.menu--danger
+  > li
+    border-color $c-bd-danger
+
+.menu--warn
+  > li
+    border-color $c-bd-warn
+
+.menu--disc
+.menu--circle
+.menu--decimal
+  list-style-position inside
+
+.menu--disc
+  list-style-type disc
+
+.menu--circle
+  list-style-type circle
+
+.menu--decimal
+  list-style-type decimal
+
+.menu--solid
+.menu--notch
+.menu--dashed
+.menu--dotted
+  > li.last
+    border-right-style none
+
+.menu--solid
+.menu--notch
+  > li
+    border-right-style solid
+
+.menu--dashed
+  > li
+    border-right-style dashed
+
+.menu--dotted
+  > li
+    border-right-style dotted
+
+.menu--notch
+  > li
+    hinner-shadow(1, 0, $c-highlight-light)
+
+.menu--sunken
+  &.menu--basis > li:after
+    background-image radial-gradient(farthest-side at center top, $c-bd-basis, transparent)
+
+  &.menu--info > li:after
+    background-image radial-gradient(farthest-side at center top, $c-bd-info, transparent)
+
+  &.menu--safe > li:after
+    background-image radial-gradient(farthest-side at center top, $c-bd-safe, transparent)
+
+  &.menu--danger > li:after
+    background-image radial-gradient(farthest-side at center top, $c-bd-danger, transparent)
+
+  &.menu--warn > li:after
+    background-image radial-gradient(farthest-side at center top, $c-bd-warn, transparent)
+
+.menu--dot
+  > li:after
+    text-align center
+
+.menu--dot
+  &.menu--basis
+    > li:after
+      color $c-bd-basis
+
+  &.menu--info
+    > li:after
+      color $c-bd-info
+
+  &.menu--safe
+    > li:after
+      color $c-bd-safe
+
+  &.menu--danger
+    > li:after
+      color $c-bd-danger
+
+  &.menu--warn
+    > li:after
+      color $c-bd-danger
+
+// ----- Layout ----- //
+
+.menu--bfc
+  > li
+    overflow hidden
+
+.menu--relative
+  > li
+    position relative
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------

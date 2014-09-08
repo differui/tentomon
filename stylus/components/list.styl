@@ -1,0 +1,161 @@
+// List
+//
+// Layout:
+//
+// + `.list--bfc`
+// + `.list--relative`
+// + `.list--tight`
+// + `.list--loose`
+//
+// Theme:
+//
+// + `.list--disc`
+// + `.list--circle`
+// + `.list--decimal`
+// + `.list--sunken`
+// + `.list--basis`
+// + `.list--info`
+// + `.list--safe`
+// + `.list--danger`
+// + `.list--warn`
+//
+// Markup:
+// <ul class="list list--loose list--basis list--solid list--disc">
+//   <li class="first">香蕉</li>
+//   <li>苹果</li>
+//   <li>雪梨</li>
+//   <li>榴莲</li>
+//   <li class="last">西瓜</li>
+// </ul>
+//
+// Styleguide 2.14
+.list
+  reset-gap()
+  reset-list()
+
+  > li
+    border-width $b-bd-width
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// ----- Layout ----- //
+
+.list--bfc
+  > li
+    overflow hidden
+
+.list--relative
+  > li
+    position relative
+
+.list--tight
+  > li
+    padding-top $b-vgap-half
+    padding-bottom @padding-top
+
+.list--loose
+  > li
+    padding-top $b-vgap
+    padding-bottom @padding-top
+
+// ----- Theme ----- //
+
+.list--disc
+.list--circle
+.list--decimal
+  > li
+    padding-left $b-hgap
+
+.list--sunken
+  > li:after
+    content ""
+    width 100%
+    height 1px
+    display block
+
+  > li.last:after
+    display none
+
+.list--basis
+  > li
+    border-color $c-bd-basis
+
+.list--info
+  > li
+    border-color $c-bd-info
+
+.list--safe
+  > li
+    border-color $c-bd-safe
+
+.list--danger
+  > li
+    border-color $c-bd-danger
+
+.list--warn
+  > li
+    border-color $c-bd-warn
+
+.list--disc
+.list--circle
+.list--decimal
+  list-style-position inside
+
+.list--disc
+  list-style-type disc
+
+.list--circle
+  list-style-type circle
+
+.list--decimal
+  list-style-type decimal
+
+.list--solid
+.list--notch
+.list--dashed
+.list--dotted
+  > li.last
+    border-bottom-style none
+
+.list--solid
+.list--notch
+  > li
+    border-bottom-style solid
+
+.list--dashed
+  > li
+    border-bottom-style dashed
+
+.list--dotted
+  > li
+    border-bottom-style dotted
+
+.list--notch
+  > li
+    vinner-shadow(1, 0, $c-highlight-light)
+
+.list--sunken
+  &.list--basis > li:after
+    background-image radial-gradient(farthest-side at left center, $c-bd-basis, transparent)
+
+  &.list--info > li:after
+    background-image radial-gradient(farthest-side at left center, $c-bd-info, transparent)
+
+  &.list--safe > li:after
+    background-image radial-gradient(farthest-side at left center, $c-bd-safe, transparent)
+
+  &.list--danger > li:after
+    background-image radial-gradient(farthest-side at left center, $c-bd-danger, transparent)
+
+  &.list--warn > li:after
+    background-image radial-gradient(farthest-side at left center, $c-bd-warn, transparent)
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
