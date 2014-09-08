@@ -133,13 +133,13 @@ module.exports = (grunt) ->
         options:
           compress: false
         files:
-          '<%= dirs.build %>tentomon-debug.css': 'stylus/tentomon.styl'
+          '<%= dirs.build %>tentomon-debug.css': 'stylus/styles.styl'
 
       tentomon_min:
         options:
           compress: true
         files:
-          '<%= dirs.build %>tentomon-min.css': 'stylus/tentomon.styl'
+          '<%= dirs.build %>tentomon-min.css': 'stylus/styles.styl'
 
       ###
       tentomon_ui_debug:
@@ -186,7 +186,6 @@ module.exports = (grunt) ->
         src: '<%= dirs.build %>tentomon-min.css'
         dest: '<%= dirs.dist %>'
 
-      ###
       tentomon_ui_debug:
         expand: true
         flatten: true
@@ -198,7 +197,6 @@ module.exports = (grunt) ->
         flatten: true
         src: '<%= dirs.build %>tentomon-ui-min.css'
         dest: '<%= dirs.dist %>'
-      ###
 
       kss_debug:
         expand: true
