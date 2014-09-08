@@ -1,0 +1,86 @@
+// Pop
+//
+// Theme:
+//
+// + `.h--info`
+// + `.h--warn`
+// + `.h--error`
+//
+// Layout:
+//
+// + `.h--isolate`
+// + `.h--mixin`
+//
+// Markup:
+// <div class="pop pop--basis">
+//   <div class="row">
+//     <div class="col col--full">
+//       <div class="pop-h">
+//         <span>《这是一篇文章》</span>
+//       </div>
+//     </div>
+//   </div>
+//   <div class="row">
+//     <div class="col col--full">
+//       <div class="pop-content">
+//         <ul class="list list--loose">
+//           <li class="first">
+//             <button class="btn btn--m btn--basis">打开</button>
+//           </li>
+//           <li>
+//             <button class="btn btn--m btn--basis">编辑</button>
+//           </li>
+//           <li class="last">
+//             <button class="btn btn--m btn--basis">删除</button>
+//           </li>
+//         </ul>
+//       </div>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 2.21
+.pop
+  font-size $b-fs-m
+  border-style solid none none none
+  border-width $b-bd-width
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// ----- Theme ----- //
+
+.pop--basis
+  @extend .ui-basis
+
+.pop--info
+  @extend .ui-info
+
+.pop--safe
+  @extend .ui-safe
+
+.pop--danger
+  @extend .ui-danger
+
+.pop--warn
+  @extend .ui-warn
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+.pop-h
+  margin-top $b-vgap-triple
+  margin-bottom @margin-top
+
+  text-align center
+  font-size $b-fs-l
+  font-weight bold
+
+.pop-content
+  padding $b-vgap $b-hgap
