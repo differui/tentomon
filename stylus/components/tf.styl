@@ -1,0 +1,115 @@
+// Textfield
+//
+// Size:
+//
+// + `.tf--xs`
+// + `.tf--s`
+// + `.tf--m`
+// + `.tf--l`
+// + `.tf--xl`
+//
+// Theme:
+//
+// + `.tf--basis`
+// + `.tf--safe`
+// + `.tf--danger`
+// + `.tf--info`
+// + `.tf--warn`
+//
+// State:
+//
+// + `full`
+//
+// Markup:
+// <input type="text" class="tf tf--m tf--basis">
+// <textarea class="tf tf--m tf--basis" rows="5" data-state=""></textarea>
+//
+// Styleguide 2.2
+.tf
+  reset-gap()
+  reset-appearance()
+
+  width    100%
+  outline  0
+  // display  inline-block
+  border   $b-bd
+  padding  $b-vgap $b-hgap
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// ----- Size ----- //
+
+.tf--xs
+  font-size $b-fs-xs
+
+.tf--s
+  font-size $b-fs-s
+
+.tf--m
+  font-size $b-fs-m
+
+.tf--l
+  font-size $b-fs-l
+
+.tf--xl
+  font-size $b-fs-xl
+
+// ----- Theme ----- //
+
+.tf--basis
+.tf--info
+.tf--safe
+.tf--danger
+.tf--warn
+  color            $c-black
+  background-color $c-white
+  background-image none
+  border-radius    $b-rad-round
+  vinner-shadow()
+
+.tf--basis
+  border-color $c-bd-basis
+
+.tf--info
+  border-color $c-bd-info
+
+.tf--safe
+  border-color $c-bd-safe
+
+.tf--danger
+  border-color $c-bd-danger
+
+.tf--warn
+  border-color $c-bd-warn
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+// ----- Disabled ----- //
+
+.tf:disabled
+.tf[data-state~='full']
+  vinner-shadow(0, 0, transparent)
+
+.tf:disabled
+  &.btn--basis
+  &.btn--info
+  &.btn--safe
+  &.btn--danger
+  &.btn--warn
+    color            $grey-dark
+    background-color $bg-light
+
+.tf[data-state~='full']
+  height        100%
+  min-height    100%
+  border-radius 0
+  border-style  none
+
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
