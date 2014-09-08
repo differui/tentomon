@@ -1,0 +1,276 @@
+// Separator
+//
+// Markup:
+// <div class="spv sp--m sp--basis sp--solid" style="height: 100px;">
+//   <div class="sp-inner">
+//     <span class="sp-text">中</span>
+//   </div>
+// </div>
+// <div class="sph sp--m sp--basis sp--solid" style="height: 20px;">
+//   <div class="sp-inner">
+//     <span class="sp-text">中</span>
+//   </div>
+// </div>
+//
+// Styleguide 2.17
+.sph
+.spv
+  overflow hidden
+
+.sph > .sp-inner
+  width 100%
+
+  &:after
+  &:before
+    width 50%
+    height 0
+
+  &:after
+    left auto
+
+  &:before
+    right auto
+
+.spv > .sp-inner
+  height 100%
+
+  &:after
+  &:before
+    width 0
+    height 50%
+
+  &:after
+    top auto
+
+  &:before
+    bottom auto
+
+// separator size modifiers (different offset and separator width/height)
+// ============================================================================
+.sph
+  &.pygmy .sp-inner
+    padding-top $sp-offset-pygmy * -1
+    padding-bottom @padding-top
+
+    &:after
+      margin-right $sp-offset-pygmy
+
+    &:before
+      margin-left $sp-offset-pygmy
+
+  &.mini .sp-inner
+    padding-top $sp-offset-mini * -1
+    padding-bottom @padding-top
+
+    &:after
+      margin-right $sp-offset-mini
+
+    &:before
+      margin-left $sp-offset-mini
+
+  &.normal .sp-inner
+    padding-top $sp-offset-normal * -1
+    padding-bottom @padding-top
+
+    &:after
+      margin-right $sp-offset-normal
+
+    &:before
+      margin-left $sp-offset-normal
+
+  &.huge .sp-inner
+    padding-top $sp-offset-huge * -1
+    padding-bottom @padding-top
+
+    &:after
+      margin-right $sp-offset-huge
+
+    &:before
+      margin-left $sp-offset-huge
+
+  &.massive .sp-inner
+    padding-top $sp-offset-massive * -1
+    padding-bottom @padding-top
+
+    &:after
+      margin-right $sp-offset-massive
+
+    &:before
+      margin-left $sp-offset-massive
+
+.spv
+  &.pygmy .sp-inner
+    &:after
+      margin-bottom $sp-offset-pygmy
+
+    &:before
+      margin-top $sp-offset-pygmy
+
+  &.mini .sp-inner
+    &:after
+      margin-bottom $sp-offset-mini
+
+    &:before
+      margin-top $sp-offset-mini
+
+  &.normal .sp-inner
+    &:after
+      margin-bottom $sp-offset-normal
+
+    &:before
+      margin-top $sp-offset-normal
+
+  &.huge .sp-inner
+    &:after
+      margin-bottom $sp-offset-huge
+
+    &:before
+      margin-top $sp-offset-huge
+
+  &.massive .sp-inner
+    &:after
+      margin-bottom $sp-offset-massive
+
+    &:before
+      margin-top $sp-offset-massive
+
+.spv.join
+.sph.join
+  .sp-text
+    display none
+
+  .sp-inner
+    &:after
+      display none
+
+.spv.join
+  .sp-inner
+    &:before
+      height 100%
+      margin-top auto
+
+.sph.join
+  .sp-inner
+    &:before
+      width 100%
+      margin-left auto
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// ----- Theme ----- //
+
+.sp--basis > .sp-inner
+  color $c-bd-basis
+
+  &:before
+  &:after
+    border-color $c-bd-basis
+
+.sp--info > .sp-inner
+  color $c-bd-info
+
+  &:before
+  &:after
+    border-color $c-bd-info
+
+.sp--safe > .sp-inner
+  color $c-bd-safe
+
+  &:before
+  &:after
+    border-color $c-bd-safe
+
+.sp--danger > .sp-inner
+  color $c-bd-danger
+
+  &:before
+  &:after
+    border-color $c-bd-danger
+
+.sp--warn > .sp-inner
+  color $c-bd-warn
+
+  &:before
+  &:after
+    border-color $c-bd-warn
+
+.sp-inner
+  &:before
+  &:after
+    border-width $b-bd-width
+
+.sp-text
+  text-align center
+
+.spv
+  &.sp--solid > .sp-inner
+    &:before
+    &:after
+      border-left-style solid
+
+  &.sp--dashed > .sp-inner
+    &:before
+    &:after
+      border-left-style dashed
+
+  &.sp--dotted > .sp-inner
+    &:before
+    &:after
+      border-left-style dotted
+
+  &.sp--notch > .sp-inner
+    &:before
+    &:after
+      border-left-style solid
+      border-right-style solid
+      border-right-color $c-highlight-light
+
+.sph
+  &.sp--solid > .sp-inner
+    &:before
+    &:after
+      border-top-style solid
+
+  &.sp--dashed > .sp-inner
+    &:before
+    &:after
+      border-top-style dashed
+
+  &.sp--dotted > .sp-inner
+    &:before
+    &:after
+      border-top-style dotted
+
+  &.sp--notch > .sp-inner
+    &:before
+    &:after
+      border-top-style solid
+      border-bottom-style solid
+      border-bottom-color $c-highlight-light
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+.sp-text
+.sp-inner:after
+.sp-inner:before
+  @extend .center
+
+.sp-text
+  z-index $b-idx-top
+
+.sp-inner
+  margin-top 1px
+  margin-bottom 1px
+  position relative
+
+  &:before
+  &:after
+    content ""
