@@ -1,0 +1,125 @@
+// Tooltip
+//
+// Position:
+//
+// + `.tooltip--90`
+// + `.tooltip--180`
+// + `.tooltip--270`
+// + `.tooltip--360`
+//
+// Markup:
+// <div class="tooltip tooltip--m tooltip--180 por" data-tooltip="点击可加载更多内容。" data-state="show">
+//   <button class="btn btn--m btn--basis">加载更多</button>
+// </div>
+//
+// Styleguide 2.13
+.tooltip
+  &:before
+  &:after
+    visibility hidden
+    pointer-events none
+
+  &:before
+    content ""
+    border-style solid
+    border-color transparent
+    border-width be-even($b-fs-s * .7)
+
+  &:after
+    @extend .ui-black
+    @extend .nowrap
+
+    font-size $b-fs-s
+    text-align left
+    border-style solid
+    border-width $b-bd-width
+    border-radius $b-rad-round
+    content attr(data-tooltip)
+    padding $b-vgap $b-hgap-half
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// ----- Position ----- //
+
+// .tooltip--30:after
+//   @extend .around-30
+
+.tooltip--90:after
+  @extend .around-90
+
+// .tooltip--150:after
+//   @extend .around-150
+
+.tooltip--180:after
+  @extend .around-180
+
+// .tooltip--210:after
+//   @extend .around-210
+
+.tooltip--270:after
+  @extend .around-270
+
+// .tooltip--330:after
+//   @extend .around-330
+
+.tooltip--360:after
+  @extend .around-360
+
+// .tooltip--30
+// .tooltip--330
+.tooltip--360
+  &:before
+    @extend .around-360
+
+    border-top-color $c-black
+
+  &:after
+    top be-even($b-fs-s * .7) * -2
+
+.tooltip--90
+  &:before
+    @extend .around-90
+
+    border-right-color $c-black
+
+  &:after
+    right be-even($b-fs-s * .7) * -2
+
+// .tooltip--150
+// .tooltip--210
+.tooltip--180
+  &:before
+    @extend .around-180
+
+    border-bottom-color $c-black
+
+  &:after
+    bottom be-even($b-fs-s * .7) * -2
+
+.tooltip--270
+  &:before
+    @extend .around-270
+
+    border-left-color $c-black
+
+  &:after
+    left be-even($b-fs-s * .7) * -2
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+.tooltip[data-state~='show']
+  &:after
+  &:before
+    visibility visible
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+// -------------------------------------
+//   Context
+// -------------------------------------
