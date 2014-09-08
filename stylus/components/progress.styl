@@ -1,0 +1,141 @@
+// Progress
+//
+// Size:
+//
+// + `.progress--xs`
+// + `.progress--s`
+// + `.progress--m`
+// + `.progress--l`
+// + `.progress--xl`
+//
+// Theme:
+//
+// + `.progress--clean`
+// + `.progress--banding`
+//
+// State:
+//
+// + `half`
+// + `done`
+// + `waiting`
+//
+// Markup:
+// <div class="progress progress--m" data-state="half waiting">
+//   <span class="progress-tip">
+//     <span class="progress-text-reverse">50%</span>
+//   </span>
+//   <span class="progress-text">50%</span>
+// </div>
+//
+// Styleguide 2.8
+.progress
+  @extend .ui-basis
+
+  width 100%
+  position relative
+  border-radius $b-rad-round
+
+  padding-top $b-vgap
+  padding-bottom @padding-top
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// ----- Size ----- //
+
+.progress--xs
+  font-size $b-fs-xs
+
+  .progress-text-reverse
+    height $b-fs-xs
+
+.progress--s
+  font-size $b-fs-s
+
+  .progress-text-reverse
+    height $b-fs-s
+
+.progress--m
+  font-size $b-fs-m
+
+  .progress-text-reverse
+    height $b-fs-m
+
+.progress--l
+  font-size $b-fs-l
+
+  .progress-text-reverse
+    height $b-fs-l
+
+.progress--xl
+  font-size $b-fs-xl
+
+  .progress-text-reverse
+    height $b-fs-xl
+
+// ----- Theme ----- //
+.progress--clean
+  .progress-text
+  .progress-text-reverse
+    visibility hidden
+
+.progress--banding
+  border-radius $b-rad-square
+
+  .progress-tip
+    border-radius $b-rad-square
+
+  .progress-text
+  .progress-text-reverse
+    display none
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+.progress[data-state~='half']
+  .progress-tip
+    width 50%
+
+.progress[data-state~='done']
+  .progress-tip
+    width 100%
+
+.progress[data-state~='waiting']
+  @extend .stripes-diagonal
+
+  background-color $c-bd-dark
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+.progress-tip
+  @extend .center-left
+  @extend .ui-safe
+
+  z-index $b-idx-top
+  overflow hidden
+  border-radius $b-rad-round - 1
+
+.progress-text
+.progress-text-reverse
+  @extend .ellipsis
+
+  display block
+
+  text-align center
+
+.progress-text
+  width 100%
+  z-index $b-idx-bottom
+  position relative
+
+.progress-text-reverse
+  @extend .center
+
+  width 100%
+
+  color $c-white
+  line-height 1
