@@ -1,0 +1,49 @@
+// Section
+//
+// Markup:
+// <div class="por" style="height: 200px; width: 200px;">
+//   <div id="content" class="lay">
+//     <section class="header">
+//       <p>Header</p>
+//     </section>
+//     <section class="main">
+//       <p>Main</p>
+//     </section>
+//     <section class="footer">
+//       <p>Footer</p>
+//     </section>
+//   </div>
+// </div>
+//
+// Styleguide 2.28
+.header
+.main
+.footer
+  @extend .center
+
+.header
+.footer
+  z-index $b-idx-top
+
+.main
+  z-index $b-idx-middle
+  padding-top $b-bd-width
+  padding-bottom @padding-top
+
+.header
+  bottom auto
+
+.footer
+  top auto
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
