@@ -351,8 +351,8 @@
 //
 // `{* | * ∈ a, t, r, b, l, h, v}`
 //
-// + `.b*f` remove border
-// + `.b*t` set transparnet border
+// + `.b*f` flatten
+// + `.b*t` transparnet
 //
 // Styleguide 5.4
 
@@ -416,15 +416,10 @@
   border-top-color transparnet
   border-bottom-color @border-top-color
 
-
-// Positioning
+// Floating
 //
 // + `.fl`  float left
 // + `.fr`  float right
-// + `.poa` absolute
-// + `.pof` fixed
-// + `.por` relative
-// + `.pos` static
 //
 // Styleguide 5.5
 
@@ -433,6 +428,15 @@
 
 .fr
   float right
+
+// Positioning
+//
+// + `.poa` absolute
+// + `.pof` fixed
+// + `.por` relative
+// + `.pos` static
+//
+// Styleguide 5.6
 
 .poa
   position absolute
@@ -455,7 +459,7 @@
 // + `r*p` pill
 // + `r*s` square
 //
-// Styleguide 5.6
+// Styleguide 5.7
 
 // ----- All ----- //
 
@@ -587,7 +591,7 @@
 // + `.twn` weight normal
 // + `.twb` weight bold
 //
-// Styleguide 5.7
+// Styleguide 5.8
 
 // ----- Alignment ----- //
 
@@ -672,7 +676,7 @@
 // + `bgp` remove bg image & shadow
 // + `bgc` remove same stuff & addition bg color
 //
-// Styleguide 5.8
+// Styleguide 5.9
 .bgp
 .bgc
   background-image none
@@ -688,27 +692,27 @@
 // + `.bfh` overflow hidden
 // + `.bfib` display inline block
 //
-// Styleguide 5.9
-.bfc-hidden
+// Styleguide 5.10
+.bfo
   overflow hidden
 
-.bfc-display
+.bfi
   display inline-block
 
 // Index
 //
 // + `.top`
-// + `.middle` 
+// + `.middle`
 // + `.bottom`
 //
-// Styleguide 5.10
-.top
+// Styleguide 5.11
+.zit
   z-index $b-idx-top
 
-.middle
+.zim
   z-index $b-idx-middle
 
-.bottom
+.zib
   z-index $b-idx-bottom
 
 // Rotating
@@ -719,7 +723,7 @@
 //
 // + `.r*x`
 //
-// Styleguide 5.11
+// Styleguide 5.12
 .rl45
   transform rotate(45deg)
 
