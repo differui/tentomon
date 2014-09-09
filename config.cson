@@ -1,6 +1,6 @@
 # logging more stuff during building.
 debug: false
-version: '0.15.0'
+version: '0.16.0'
 
 # use short alias repace long mode name
 mode_alias:
