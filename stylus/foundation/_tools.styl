@@ -28,116 +28,101 @@
 
 // Margin
 //
-// `{* | * ∈ a, t, r, b, l, h}`
+// `{* | * ∈ a, t, r, b, l, h, v}`
 //
-// + `.m*f`  flatten
-// + `.m*xs` x-small
-// + `.m*s`  small
-// + `.m*m`  medium
-// + `.m*l`  large
-// + `.m*xl` x-large
+// + `.m*f` flatten
+// + `.m*`  normal
+// + `.m*h` half
+// + `.m*d` double
+// + `.m*t` triple
 //
 // Styleguide 5.2
 
 // ----- All ----- //
 
-.mal
+.maf
   margin 0
 
-.maxs
-  margin $b-fs-xs
+.ma
+  margin $b-vgap $b-hgap
 
-.mas
-  margin $b-fs-s
+.mah
+  margin $b-vgap-half $b-hgap-half
 
-.mam
-  margin $b-fs-m
+.mad
+  margin $b-vgap-double $b-hgap-double
 
-.mal
-  margin $b-fs-l
+.mat
+  margin $b-vgap-triple $b-hgap-triple
 
-.maxl
-  margin $b-fs-xl
 
 // ----- Top ----- //
 
 .mtf
   margin-top 0
 
-.mtxs
-  margin-top $b-fs-xs
+.mt
+  margin-top $b-vgap
 
-.mts
-  margin-top $b-fs-s
+.mth
+  margin-top $b-vgap-half
 
-.mtm
-  margin-top $b-fs-m
+.mtd
+  margin-top $b-vgap-double
 
-.mtl
-  margin-top $b-fs-l
-
-.mtxl
-  margin-top $b-fs-xl
+.mtt
+  margin-top $b-vgap-triple
 
 // ----- Right ----- //
 
 .mrf
   margin-right 0
 
-.mrxs
-  margin-right $b-fs-xs
+.mr
+  margin-right $b-hgap
 
-.mrs
-  margin-right $b-fs-s
+.mrh
+  margin-right $b-hgap-half
 
-.mrm
-  margin-right $b-fs-m
+.mrd
+  margin-right $b-hgap-double
 
-.mrl
-  margin-right $b-fs-l
-
-.mrxl
-  margin-right $b-fs-xl
+.mrt
+  margin-right $b-hgap-triple
 
 // ----- Bottom ----- //
 
 .mbf
   margin-bottom 0
 
-.mbxs
-  margin-bottom $b-fs-xs
+.mb
+  margin-bottom $b-vgap
 
-.mbs
-  margin-bottom $b-fs-s
+.mbh
+  margin-bottom $b-vgap-half
 
-.mbm
-  margin-bottom $b-fs-,
+.mbd
+  margin-bottom $b-vgap-double
 
-.mbl
-  margin-bottom $b-fs-l
-
-.mbxl
-  margin-bottom $b-fs-xl
+.mbt
+  margin-bottom $b-vgap-triple
 
 // ----- Left ----- //
 
 .mlf
   margin-left 0
 
-.mlxs
-  margin-left $b-fs-xs
+.ml
+  margin-left $b-hgap
 
-.mls
-  margin-left $b-fs-s
+.mlh
+  margin-left $b-hgap-half
 
-.mlm
-  margin-left $b-fs-m
+.mld
+  margin-left $b-hgap-double
 
-.mll
-  margin-left $b-fs-l
-
-.mlxl
-  margin-left $b-fs-xl
+.mlt
+  margin-left $b-hgap-triple
 
 // ----- Horizontal ----- //
 
@@ -145,25 +130,43 @@
   margin-left 0
   margin-right @margin-left
 
-.mhxs
-  margin-left $b-fs-xs
+.mh
+  margin-left $b-hgap
   margin-right @margin-left
 
-.mhs
-  margin-left $b-fs-s
+.mhh
+  margin-left $b-hgap-half
   margin-right @margin-left
 
-.mhm
-  margin-left $b-fs-m
+.mhd
+  margin-left $b-hgap-double
   margin-right @margin-left
 
-.mhl
-  margin-left $b-fs-l
+.mht
+  margin-left $b-hgap-triple
   margin-right @margin-left
 
-.mhxl
-  margin-left $b-fs-xl
-  margin-right @margin-left
+// ----- Vertical ----- //
+
+.mvf
+  margin-top 0
+  margin-bottom @margin-left
+
+.mv
+  margin-top $b-vgap
+  margin-bottom @margin-top
+
+.mvh
+  margin-top $b-vgap-half
+  margin-bottom @margin-top
+
+.mvd
+  margin-top $b-vgap-double
+  margin-bottom @margin-top
+
+.mvt
+  margin-top $b-vgap-triple
+  margin-bottom @margin-top
 
 // Padding
 //
@@ -176,6 +179,12 @@
 // + `.p*l`  large
 // + `.p*xl` x-large
 //
+// `{* | * ∈ l, r, h}`
+//
+// + `.p*c`  column
+// + `.p*cd` double column
+// + `.p*ct` triple column
+//
 // Styleguide 5.3
 
 // ----- All ----- //
@@ -183,100 +192,104 @@
 .paf
   padding 0
 
-.paxs
-  padding $b-fs-xs
+.pa
+  padding $b-vgap $b-hgap
 
-.pas
-  padding $b-fs-s
+.pah
+  padding $b-vgap-half $b-hgap-half
 
-.pam
-  padding $b-fs-m
+.pad
+  padding $b-vgap-double $b-hgap-double
 
-.pal
-  padding $b-fs-l
+.pat
+  padding $b-vgap-triple $b-hgap-triple
 
-.paxl
-  padding $b-fs-xl
 
 // ----- Top ----- //
 
 .ptf
   padding-top 0
 
-.ptxs
-  padding-top $b-fs-xs
+.pt
+  padding-top $b-vgap
 
-.pts
-  padding-top $b-fs-s
+.pth
+  padding-top $b-vgap-half
 
-.ptm
-  padding-top $b-fs-m
+.ptd
+  padding-top $b-vgap-double
 
-.ptl
-  padding-top $b-fs-l
-
-.ptxl
-  padding-top $b-fs-xl
+.ptt
+  padding-top $b-vgap-triple
 
 // ----- Right ----- //
 
 .prf
   padding-right 0
 
-.prxs
-  padding-right $b-fs-xs
+.pr
+  padding-right $b-hgap
 
-.prs
-  padding-right $b-fs-s
+.prh
+  padding-right $b-hgap-half
 
-.prm
-  padding-right $b-fs-m
+.prd
+  padding-right $b-hgap-double
 
-.prl
-  padding-right $b-fs-l
+.prt
+  padding-right $b-hgap-triple
 
-.prxl
-  padding-right $b-fs-xl
+.prc
+  padding-left $b-cgap
+
+.prcd
+  padding-left $b-cgap * 2
+
+.prct
+  padding-left $b-cgap * 3
 
 // ----- Bottom ----- //
 
 .pbf
   padding-bottom 0
 
-.pbxs
-  padding-bottom $b-fs-xs
+.pb
+  padding-bottom $b-vgap
 
-.pbs
-  padding-bottom $b-fs-s
+.pbh
+  padding-bottom $b-vgap-half
 
-.pbm
-  padding-bottom $b-fs-m
+.pbd
+  padding-bottom $b-vgap-double
 
-.pbl
-  padding-bottom $b-fs-l
-
-.pbxl
-  padding-bottom $b-fs-xl
+.pbt
+  padding-bottom $b-vgap-triple
 
 // ----- Left ----- //
 
 .plf
   padding-left 0
 
-.plxs
-  padding-left $b-fs-xs
+.pl
+  padding-left $b-hgap
 
-.pls
-  padding-left $b-fs-s
+.plh
+  padding-left $b-hgap-half
 
-.plm
-  padding-left $b-fs-m
+.pld
+  padding-left $b-hgap-double
 
-.pll
-  padding-left $b-fs-l
+.plt
+  padding-left $b-hgap-triple
 
-.pxl
-  padding-left $b-fs-xl
+.plc
+  padding-left $b-cgap
+
+.plcd
+  padding-left $b-cgap * 2
+
+.plct
+  padding-left $b-cgap * 3
 
 // ----- Horizontal ----- //
 
@@ -284,27 +297,57 @@
   padding-left 0
   padding-right @padding-left
 
-.phxs
-  padding-left $b-fs-xs
+.ph
+  padding-left $b-hgap
   padding-right @padding-left
 
-.phs
-  padding-left $b-fs-s
+.phh
+  padding-left $b-hgap-half
   padding-right @padding-left
 
-.phm
-  padding-left $b-fs-m
+.phd
+  padding-left $b-hgap-double
   padding-right @padding-left
 
-.phl
-  padding-left $b-fs-l
+.pht
+  padding-left $b-hgap-triple
   padding-right @padding-left
 
-.phxl
-  padding-left $b-fs-xl
+.phc
+  padding-left $b-cgap
   padding-right @padding-left
 
-// Border
+.phcd
+  padding-left $b-cgap * 2
+  padding-right @padding-left
+
+.phct
+  padding-left $b-cgap * 3
+  padding-right @padding-left
+
+// ----- Vertical ----- //
+
+.pvf
+  padding-top 0
+  padding-bottom @padding-top
+
+.pv
+  padding-top $b-vgap
+  padding-bottom @padding-top
+
+.pvh
+  padding-top $b-vgap-half
+  padding-bottom @padding-top
+
+.pvd
+  padding-top $b-vgap-double
+  padding-bottom @padding-top
+
+.pvt
+  padding-top $b-vgap-triple
+  padding-bottom @padding-top
+
+// Remove Border
 //
 // `{* | * ∈ a, t, r, b, l, h, v}`
 //
@@ -666,7 +709,7 @@
   z-index $b-idx-middle
 
 .bottom
-  z-index $b-ix-bottom
+  z-index $b-idx-bottom
 
 // Rotating
 //
