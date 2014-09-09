@@ -34,11 +34,11 @@ module.exports = (grunt) ->
 
     copy:
 
-      # rename tentomon-kss-debug.css override style.css in styleguide/public
+      # rename tentomon-debug.css override style.css in styleguide/public
       tentomon_style:
         expand: true
         cwd: '<%= dirs.styleguide %>public/'
-        src: 'tentomon-kss-debug.css'
+        src: 'tentomon-debug.css'
         dest: '<%= dirs.styleguide %>public'
         rename: (path, name) ->
           console.log path
@@ -60,18 +60,14 @@ module.exports = (grunt) ->
         src: 'github-markdown.css'
         dest: '<%= dirs.document %>styles/'
 
-      # copy normalize.styl to stylus plugins directory
+      # copy normalize.styl to stylus vender directory
       normalize:
         expand: true
         cwd: '<%= dirs.bower %>normalize.styl/'
         src: 'normalize.styl'
-        dest: '<%= dirs.stylus %>foundation/'
-        rename: (path, name) ->
-          name = '_reset.styl'
+        dest: '<%= dirs.stylus %>vender/normalize/'
 
-          return path + '/' + name
-
-      # copy elastic-grid.styl to stylus plugins directory
+      # copy elastic-grid.styl to stylus vender directory
       elastic:
         expand: true
         cwd: '<%= dirs.bower %>elastic-grid.css/stylus/'
@@ -103,14 +99,14 @@ module.exports = (grunt) ->
         '<%= dirs.build %>'
       ]
 
-      # clean plugins directory in stylus
-      plugins: [
-        '<%= dirs.stylus %>plugins'
-      ]
-
       # clean styleguide
       styleguide: [
         '<%= dirs.styleguide %>'
+      ]
+
+      # clean vender
+      vender: [
+        '<%= dirs.vender %>'
       ]
 
       # clean document directory
@@ -133,39 +129,13 @@ module.exports = (grunt) ->
         options:
           compress: false
         files:
-          '<%= dirs.build %>tentomon-debug.css': 'stylus/styles.styl'
+          '<%= dirs.build %>tentomon-debug.css': '<%= dirs.stylus %>application.styl'
 
       tentomon_min:
         options:
           compress: true
         files:
-          '<%= dirs.build %>tentomon-min.css': 'stylus/styles.styl'
-
-      ###
-      tentomon_ui_debug:
-        options:
-          compress: false
-        files:
-          '<%= dirs.build %>tentomon-ui-debug.css': 'stylus/ui.styl'
-
-      tentomon_ui_min:
-        options:
-          compress: true
-        files:
-          '<%= dirs.build %>tentomon-ui-min.css': 'stylus/ui.styl'
-      ###
-
-      kss_debug:
-        options:
-          compress: false
-        files:
-          '<%= dirs.build %>tentomon-kss-debug.css': 'stylus/kss.styl'
-
-      kss_min:
-        options:
-          compress: true
-        files:
-          '<%= dirs.build %>tentomon-kss-min.css': 'stylus/kss.styl'
+          '<%= dirs.build %>tentomon-min.css': '<%= dirs.stylus %>application.styl'
 
     autoprefixer:
       options:
@@ -186,30 +156,6 @@ module.exports = (grunt) ->
         src: '<%= dirs.build %>tentomon-min.css'
         dest: '<%= dirs.dist %>'
 
-      tentomon_ui_debug:
-        expand: true
-        flatten: true
-        src: '<%= dirs.build %>tentomon-ui-debug.css'
-        dest: '<%= dirs.dist %>'
-
-      tentomon_ui_min:
-        expand: true
-        flatten: true
-        src: '<%= dirs.build %>tentomon-ui-min.css'
-        dest: '<%= dirs.dist %>'
-
-      kss_debug:
-        expand: true
-        flatten: true
-        src: '<%= dirs.build %>tentomon-kss-debug.css'
-        dest: '<%= dirs.styleguide %>public/'
-
-      kss_min:
-        expand: true
-        flatten: true
-        src: '<%= dirs.build %>tentomon-kss-min.css'
-        dest: '<%= dirs.styleguide %>public/'
-
     styleguide:
 
       # default options
@@ -223,7 +169,7 @@ module.exports = (grunt) ->
         options:
           name: '<%= pkg.name %>'
         files:
-          '<%= dirs.styleguide %>': 'stylus/styles.styl'
+          '<%= dirs.styleguide %>': '<%= dirs.stylus %>application.styl'
 
     git_log:
 
@@ -319,45 +265,24 @@ module.exports = (grunt) ->
   # ---------------------------------------------------------------------------
 
   # copy plugins to stylus plugins directory
-  grunt.registerTask 'copy_style_plugins', [
+  grunt.registerTask 'copy:vender', [
     'copy:normalize'
     'copy:elastic'
   ]
 
-
-  # compile ui
-  grunt.registerTask 'ui', [
-    'copy_style_plugins'
-    'stylus:tentomon_ui_debug'
-    'stylus:tentomon_ui_min'
-    'autoprefixer:tentomon_ui_debug'
-    'autoprefixer:tentomon_ui_min'
-  ]
-
   # compile project stylesheet
   grunt.registerTask 'css', [
-    'copy_style_plugins'
+    'copy:vender'
     'stylus:tentomon_debug'
     'stylus:tentomon_min'
     'autoprefixer:tentomon_debug'
     'autoprefixer:tentomon_min'
   ]
 
-  # compile styleguide stylesheet
-  grunt.registerTask 'css_kss', [
-    'copy_style_plugins'
-    'stylus:kss_debug'
-    'stylus:kss_min'
-    'autoprefixer:kss_debug'
-    'autoprefixer:kss_min'
-  ]
-
   grunt.registerTask 'generate_guide', [
+
     # copy guide template
     'copy:guide_template'
-
-    # copy style plugin before build styleguide
-    'copy_style_plugins'
 
     # render style guide
     'replace:guide_template'
@@ -365,7 +290,7 @@ module.exports = (grunt) ->
 
     # compile css for kss styleguide
     # and add vender prefix
-    'css_kss'
+    'css'
 
     # use stylesheet with vender prefix replace the old style.css
     'copy:tentomon_style'
