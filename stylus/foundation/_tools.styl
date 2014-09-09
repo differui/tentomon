@@ -5,9 +5,14 @@
 //
 // *************************************
 
-// -------------------------------------
-//   Display
-// -------------------------------------
+// Display
+//
+// + `.db`  block
+// + `.di`  inline
+// + `.dib` inline block
+// + `.dn`  none
+//
+// Styleguide 5.1
 
 .db
   display block
@@ -21,11 +26,23 @@
 .dn
   display none
 
-// -------------------------------------
-//   Margins
-// -------------------------------------
+// Margin
+//
+// `{* | * ∈ a, t, r, b, l, h}`
+//
+// + `.m*f`  flatten
+// + `.m*xs` x-small
+// + `.m*s`  small
+// + `.m*m`  medium
+// + `.m*l`  large
+// + `.m*xl` x-large
+//
+// Styleguide 5.2
 
 // ----- All ----- //
+
+.mal
+  margin 0
 
 .maxs
   margin $b-fs-xs
@@ -41,66 +58,6 @@
 
 .maxl
   margin $b-fs-xl
-
-// ----- Bottom ----- //
-
-.mbf
-  margin-bottom 0
-
-.mbxs
-  margin-bottom $b-fs-xs
-
-.mbs
-  margin-bottom $b-fs-s
-
-.mbm
-  margin-bottom $b-fs
-
-.mbl
-  margin-bottom $b-fs-l
-
-.mbxl
-  margin-bottom $b-fs-xl
-
-// ----- Horizontal ----- //
-
-.mhc
-  margin-left auto
-  margin-right auto
-
-// ----- Left ----- //
-
-.mlf
-  margin-left 0
-
-.mlxs
-  margin-left $b-fs-xs
-
-.mls
-  margin-left $b-fs-s
-
-.mlm
-  margin-left $b-fs
-
-.mll
-  margin-left $b-fs-l
-
-// ----- Right ----- //
-
-.mrf
-  margin-right 0
-
-.mrxs
-  margin-right $b-fs-xs
-
-.mrs
-  margin-right $b-fs-s
-
-.mrm
-  margin-right $b-fs
-
-.mrl
-  margin-right $b-fs-l
 
 // ----- Top ----- //
 
@@ -122,11 +79,109 @@
 .mtxl
   margin-top $b-fs-xl
 
-// -------------------------------------
-//   Padding
-// -------------------------------------
+// ----- Right ----- //
+
+.mrf
+  margin-right 0
+
+.mrxs
+  margin-right $b-fs-xs
+
+.mrs
+  margin-right $b-fs-s
+
+.mrm
+  margin-right $b-fs
+
+.mrl
+  margin-right $b-fs-l
+
+.mrxl
+  margin-right $b-fs-xl
+
+// ----- Bottom ----- //
+
+.mbf
+  margin-bottom 0
+
+.mbxs
+  margin-bottom $b-fs-xs
+
+.mbs
+  margin-bottom $b-fs-s
+
+.mbm
+  margin-bottom $b-fs
+
+.mbl
+  margin-bottom $b-fs-l
+
+.mbxl
+  margin-bottom $b-fs-xl
+
+// ----- Left ----- //
+
+.mlf
+  margin-left 0
+
+.mlxs
+  margin-left $b-fs-xs
+
+.mls
+  margin-left $b-fs-s
+
+.mlm
+  margin-left $b-fs
+
+.mll
+  margin-left $b-fs-l
+
+.mlxl
+  margin-left $b-fs-xl
+
+// ----- Horizontal ----- //
+
+.mhf
+  margin-left 0
+  margin-right @margin-left
+
+.mhxs
+  margin-left $b-fs-xs
+  margin-right @margin-left
+
+.mhs
+  margin-left $b-fs-s
+  margin-right @margin-left
+
+.mhm
+  margin-left $b-fs-m
+  margin-right @margin-left
+
+.mhl
+  margin-left $b-fs-l
+  margin-right @margin-left
+
+.mhxl
+  margin-left $b-fs-xl
+  margin-right @margin-left
+
+// Padding
+//
+// `{* | * ∈ a, t, r, b, l, h}`
+//
+// + `.p*f`  flatten
+// + `.p*xs` x-small
+// + `.p*s`  small
+// + `.p*m`  medium
+// + `.p*l`  large
+// + `.p*xl` x-large
+//
+// Styleguide 5.3
 
 // ----- All ----- //
+
+.paf
+  padding 0
 
 .paxs
   padding $b-fs-xs
@@ -142,64 +197,6 @@
 
 .paxl
   padding $b-fs-xl
-
-
-// ----- Bottom ----- //
-
-.pbf
-  padding-bottom 0
-
-.pbxs
-  padding-bottom $b-fs-xs
-
-.pbs
-  padding-bottom $b-fs-s
-
-.pbm
-  padding-bottom $b-fs
-
-.pbl
-  padding-bottom $b-fs-l
-
-.pbxl
-  padding-bottom $b-fs-xl
-
-
-// ----- Left ----- //
-
-.plf
-  padding-left 0
-
-.plxs
-  padding-left $b-fs-xs
-
-.pls
-  padding-left $b-fs-s
-
-.plm
-  padding-left $b-fs
-
-.pll
-  padding-left $b-fs-l
-
-
-// ----- Right ----- //
-
-.prf
-  padding-right 0
-
-.prxs
-  padding-right $b-fs-xs
-
-.prs
-  padding-right $b-fs-s
-
-.prm
-  padding-right $b-fs
-
-.prl
-  padding-right $b-fs-l
-
 
 // ----- Top ----- //
 
@@ -221,10 +218,172 @@
 .ptxl
   padding-top $b-fs-xl
 
+// ----- Right ----- //
 
-// -------------------------------------
-//   Positioning
-// -------------------------------------
+.prf
+  padding-right 0
+
+.prxs
+  padding-right $b-fs-xs
+
+.prs
+  padding-right $b-fs-s
+
+.prm
+  padding-right $b-fs
+
+.prl
+  padding-right $b-fs-l
+
+.prxl
+  padding-right $b-fs-xl
+
+// ----- Bottom ----- //
+
+.pbf
+  padding-bottom 0
+
+.pbxs
+  padding-bottom $b-fs-xs
+
+.pbs
+  padding-bottom $b-fs-s
+
+.pbm
+  padding-bottom $b-fs
+
+.pbl
+  padding-bottom $b-fs-l
+
+.pbxl
+  padding-bottom $b-fs-xl
+
+// ----- Left ----- //
+
+.plf
+  padding-left 0
+
+.plxs
+  padding-left $b-fs-xs
+
+.pls
+  padding-left $b-fs-s
+
+.plm
+  padding-left $b-fs
+
+.pll
+  padding-left $b-fs-l
+
+.pxl
+  padding-left $b-fs-xl
+
+// ----- Horizontal ----- //
+
+.phf
+  padding-left 0
+  padding-right @padding-left
+
+.phxs
+  padding-left $b-fs-xs
+  padding-right @padding-left
+
+.phs
+  padding-left $b-fs-s
+  padding-right @padding-left
+
+.phm
+  padding-left $b-fs-m
+  padding-right @padding-left
+
+.phl
+  padding-left $b-fs-l
+  padding-right @padding-left
+
+.phxl
+  padding-left $b-fs-xl
+  padding-right @padding-left
+
+// Border
+//
+// `{* | * ∈ a, t, r, b, l, h, v}`
+//
+// + `.b*f` remove border
+// + `.b*t` set transparnet border
+//
+// Styleguide 5.4
+
+// ----- All ----- //
+
+.baf
+  border-style none
+
+.bat
+  border-color transparnet
+
+// ----- Top ----- //
+
+.btf
+  border-top-style none
+
+.btt
+  border-top-color transparnet
+
+// ----- Right ----- //
+
+.brf
+  border-right-style none
+
+.brt
+  border-right-color transparnet
+
+// ----- Bottom ----- //
+
+.brf
+  border-bottom-style none
+
+.brt
+  border-bottom-color transparnet
+
+// ----- Left ----- //
+
+.blf
+  border-left-style none
+
+.blt
+  border-left-color transparnet
+
+// ----- Horizontal ----- //
+
+.bhf
+  border-left-style none
+  border-right-style @border-left-style
+
+.bht
+  border-left-color transparnet
+  border-right-color @border-left-color
+
+// ----- Vertical ----- //
+
+.bvf
+  border-top-style none
+  border-bottom-style @border-top-style
+
+.bvt
+  border-top-color transparnet
+  border-bottom-color @border-top-color
+
+
+// Positioning
+//
+// + `.fl`  float left
+// + `.fr`  float right
+// + `.poa` absolute
+// + `.pof` fixed
+// + `.por` relative
+// + `.pos` static
+//
+// Styleguide 5.5
 
 .fl
   float left
@@ -244,9 +403,18 @@
 .pos
   position static
 
-// -------------------------------------
-//   Rounding
-// -------------------------------------
+// Rounding
+//
+// `{* | * ∈ a, t, r, b, l}`
+//
+// + `r*c` circle
+// + `r*r` round
+// + `r*p` pill
+// + `r*s` square
+//
+// Styleguide 5.6
+
+// ----- All ----- //
 
 .rac
   border-radius $b-rad-circle
@@ -260,9 +428,123 @@
 .ras
   border-radius $b-rad-square
 
-// -------------------------------------
-//   Text
-// -------------------------------------
+// ----- Top ----- //
+
+.rtc
+  border-top-left-radius $b-rad-circle
+  border-top-right-radius @border-top-left-radius
+
+.rtr
+  border-top-left-radius $b-rad-round
+  border-top-right-radius @border-top-left-radius
+
+.rtp
+  border-top-left-radius $b-rad-pill
+  border-top-right-radius @border-top-left-radius
+
+.rts
+  border-top-left-radius $b-rad-square
+  border-top-right-radius @border-top-left-radius
+
+// ----- Right ----- //
+
+.rrc
+  border-top-right-radius $b-rad-circle
+  border-bottom-right-radius @border-bottom-right-radius
+
+.rrr
+  border-top-right-radius $b-rad-circle
+  border-bottom-right-radius @border-bottom-right-radius
+
+.rrp
+  border-top-right-radius $b-rad-circle
+  border-bottom-right-radius @border-bottom-right-radius
+
+.rrs
+  border-top-right-radius $b-rad-circle
+  border-bottom-right-radius @border-bottom-right-radius
+
+// ----- Bottom ----- //
+
+.rbc
+  border-bottom-left-radius $b-rad-circle
+  border-bottom-right-radius @border-bottom-left-radius
+
+.rbr
+  border-bottom-left-radius $b-rad-round
+  border-bottom-right-radius @border-bottom-left-radius
+
+.rbp
+  border-bottom-left-radius $b-rad-pill
+  border-bottom-right-radius @border-bottom-left-radius
+
+.rbs
+  border-bottom-left-radius $b-rad-square
+  border-bottom-right-radius @border-bottom-left-radius
+
+// ----- Left ----- //
+
+.rlc
+  border-top-left-radius $b-rad-circle
+  border-bottom-left-radius @border-bottom-left-radius
+
+.rlr
+  border-top-left-radius $b-rad-circle
+  border-bottom-left-radius @border-bottom-left-radius
+
+.rlp
+  border-top-left-radius $b-rad-circle
+  border-bottom-left-radius @border-bottom-left-radius
+
+.rls
+  border-top-left-radius $b-rad-circle
+  border-bottom-left-radius @border-bottom-left-radius
+
+
+// Typeset
+//
+// Alignment:
+//
+// + `.tac` center
+// + `.tal` left
+// + `.tar` right
+// + `.taj` justify
+//
+// Color:
+//
+// + `.tcgl` grey light
+// + `.tcgd` grey dark
+// + `.tcb`  basis
+// + `.tci`  info
+// + `.tcs`  safe
+// + `.tcd`  danger
+// + `.tcw`  warn
+//
+// Size:
+//
+// + `.tsxs` x-small
+// + `.tss`  small
+// + `.tsm`  medium
+// + `.tsl`  large
+// + `.tsxl` x-large
+//
+// Style:
+//
+// + `.tsn` normal
+// + `.tsi` italic
+//
+// Transform:
+//
+// + `.ttu` uppercase
+// + `.ttl` lowercase
+// + `.ttc` capitalize
+//
+// Weight:
+//
+// + `.twn` weight normal
+// + `.twb` weight bold
+//
+// Styleguide 5.7
 
 // ----- Alignment ----- //
 
@@ -275,7 +557,16 @@
 .tar
   text-align right
 
+.taj
+  text-align justify
+
 // ----- Color ----- //
+
+.tcgl
+  color $c-grey-light
+
+.tcgd
+  color $c-grey-dark
 
 .tcb
   color $c-basis
@@ -332,3 +623,80 @@
 
 .twb
   font-weight bold
+
+// Background
+//
+// + `bgp` remove bg image & shadow
+// + `bgc` remove same stuff & addition bg color
+//
+// Styleguide 5.8
+.bgp
+.bgc
+  background-image none
+  box-shadow 0 0 0 transparent
+
+.bgc
+  background-color transparent
+
+// BFC
+//
+// Create bfc(black formatting context).
+//
+// + `.bfh` overflow hidden
+// + `.bfib` display inline block
+//
+// Styleguide 5.9
+.bfc-hidden
+  overflow hidden
+
+.bfc-display
+  display inline-block
+
+// Index
+//
+// + `.top`
+// + `.middle` 
+// + `.bottom`
+//
+// Styleguide 5.10
+.top
+  z-index $b-idx-top
+
+.middle
+  z-index $b-idx-middle
+
+.bottom
+  z-index $b-ix-bottom
+
+// Rotating
+//
+// `{* | * ∈ l, r}`
+//
+// `{x | x ∈ 45, 90, 135, 180}`
+//
+// + `.r*x`
+//
+// Styleguide 5.11
+.rl45
+  transform rotate(45deg)
+
+.rl90
+  transform rotate(90deg)
+
+.rl135
+  transform rotate(130deg)
+
+.rl180
+  transform rotate(180deg)
+
+.rr45
+  transform rotate(-45deg)
+
+.rr90
+  transform rotate(-90deg)
+
+.rr130
+  transform rotate(-130deg)
+
+.rr180
+  transform rotate(-180deg)
