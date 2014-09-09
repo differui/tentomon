@@ -313,3 +313,8 @@ module.exports = (grunt) ->
     'generate_doc'
     'watch:doc'
   ]
+
+  # update version
+  grunt.registerTask 'v', [
+    'version'
+  ]
