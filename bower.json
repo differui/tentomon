@@ -20,7 +20,6 @@
   ],
   "dependencies": {
     "kss-node-template": "https://github.com/htanjo/kss-node-template.git#~0.1.5",
-    "open-iconic": "https://github.com/iconic/open-iconic.git#~1.1.0",
     "normalize.styl": "https://github.com/bymathias/normalize.styl.git#~3.0.0",
     "elastic-grid.css": "https://github.com/differui/elastic-grid.css.git"
   },
