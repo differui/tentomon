@@ -17,7 +17,6 @@
     "grunt-styleguide": "^0.2.15",
     "grunt-text-replace": "^0.3.12",
     "grunt-version": "^0.3.0",
-    "grunt-webfont": "^0.4.7",
     "lodash": "^2.4.1",
     "node-htmlencode": "0.0.1"
   },
