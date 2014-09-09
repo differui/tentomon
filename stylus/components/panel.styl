@@ -13,7 +13,7 @@
 //   <div class="panel-header">
 //     <span class="h h--m">标题</span>
 //   </div>
-//   <div class="panel-content">
+//   <div class="panel-bd">
 //     <span>这是一段内容。</span>
 //   </div>
 //   <div class="panel-footer">
@@ -52,7 +52,6 @@
   .panel-footer
     @extend .ui-basis
 
-  .panel-content
     border-color $c-bd-basis
 
 .panel--safe
@@ -62,7 +61,6 @@
   .panel-footer
     @extend .ui-safe
 
-  .panel-content
     border-color $c-bd-safe
 
 .panel--danger
@@ -72,7 +70,6 @@
   .panel-footer
     @extend .ui-danger
 
-  .panel-content
     border-color $c-bd-danger
 
 .panel--info
@@ -82,7 +79,6 @@
   .panel-footer
     @extend .ui-info
 
-  .panel-content
     border-color $c-bd-info
 
 .panel--warn
@@ -92,7 +88,6 @@
   .panel-footer
     @extend .ui-warn
 
-  .panel-content
     border-color $c-bd-warn
 
 // -------------------------------------
@@ -110,11 +105,11 @@
 
 .panel-header
   text-align center
-
-.panel-content
-  border-style solid none
-  border-width $b-bd-width
+  border-bottom-style $b-bd-style
+  border-bottom-width $b-bd-width
 
 .panel-footer
   font-size $b-fs-s
   text-align right
+  border-top-style $b-bd-style
+  border-top-width $b-bd-width
