@@ -1,159 +1,20 @@
 // Rule
 //
 // Markup:
-// <div class="vrule rule--m rule--basis rule--solid" style="height: 100px;">
+// <div class="rule rule--v rule--m rule--basis rule--solid" style="height: 100px;">
 //   <div class="rule-inner">
 //     <span class="rule-text">中</span>
 //   </div>
 // </div>
-// <div class="hrule rule--m rule--basis rule--solid" style="height: 20px;">
+// <div class="rule rule--h rule--m rule--basis rule--solid">
 //   <div class="rule-inner">
 //     <span class="rule-text">中</span>
 //   </div>
 // </div>
 //
 // Styleguide 2.17
-.hrule
-.vrule
+.rule
   overflow hidden
-
-.hrule > .rule-inner
-  width 100%
-
-  &:after
-  &:before
-    width 50%
-    height 0
-
-  &:after
-    left auto
-
-  &:before
-    right auto
-
-.vrule > .rule-inner
-  height 100%
-
-  &:after
-  &:before
-    width 0
-    height 50%
-
-  &:after
-    top auto
-
-  &:before
-    bottom auto
-
-// separator size modifiers (different offset and separator width/height)
-// ============================================================================
-.hrule
-  &.pygmy .rule-inner
-    padding-top $rule-offset-xs * -1
-    padding-bottom @padding-top
-
-    &:after
-      margin-right $rule-offset-xs
-
-    &:before
-      margin-left $rule-offset-xs
-
-  &.mini .rule-inner
-    padding-top $rule-offset-s * -1
-    padding-bottom @padding-top
-
-    &:after
-      margin-right $rule-offset-s
-
-    &:before
-      margin-left $rule-offset-s
-
-  &.normal .rule-inner
-    padding-top $rule-offset-m * -1
-    padding-bottom @padding-top
-
-    &:after
-      margin-right $rule-offset-m
-
-    &:before
-      margin-left $rule-offset-m
-
-  &.huge .rule-inner
-    padding-top $rule-offset-l * -1
-    padding-bottom @padding-top
-
-    &:after
-      margin-right $rule-offset-l
-
-    &:before
-      margin-left $rule-offset-l
-
-  &.massive .rule-inner
-    padding-top $rule-offset-xl * -1
-    padding-bottom @padding-top
-
-    &:after
-      margin-right $rule-offset-xl
-
-    &:before
-      margin-left $rule-offset-xl
-
-.vrule
-  &.pygmy .rule-inner
-    &:after
-      margin-bottom $rule-offset-xs
-
-    &:before
-      margin-top $rule-offset-xs
-
-  &.mini .rule-inner
-    &:after
-      margin-bottom $rule-offset-s
-
-    &:before
-      margin-top $rule-offset-s
-
-  &.normal .rule-inner
-    &:after
-      margin-bottom $rule-offset-m
-
-    &:before
-      margin-top $rule-offset-m
-
-  &.huge .rule-inner
-    &:after
-      margin-bottom $rule-offset-l
-
-    &:before
-      margin-top $rule-offset-l
-
-  &.massive .rule-inner
-    &:after
-      margin-bottom $rule-offset-xl
-
-    &:before
-      margin-top $rule-offset-xl
-
-.vrule.join
-.hrule.join
-  .rule-text
-    dirulelay none
-
-  .rule-inner
-    &:after
-      dirulelay none
-
-.vrule.join
-  .rule-inner
-    &:before
-      height 100%
-      margin-top auto
-
-.hrule.join
-  .rule-inner
-    &:before
-      width 100%
-      margin-left auto
 
 // -------------------------------------
 //   Modifiers
@@ -196,15 +57,143 @@
   &:after
     border-color $c-bd-warn
 
-.rule-inner
-  &:before
+// ----- Size ----- //
+
+.rule--xs .rule-text
+  height $b-fs-xs
+
+.rule--s .rule-text
+  height $b-fs-s
+
+.rule--m .rule-text
+  height $b-fs-m
+
+.rule--l .rule-text
+  height $b-fs-l
+
+.rule--xl .rule-text
+  height $b-fs-xl
+
+.rule--h
+  &.rule--xs .rule-inner
+    padding-top $rule-offset-xs * -1
+    padding-bottom @padding-top
+
+    &:after
+      margin-right $rule-offset-xs
+
+    &:before
+      margin-left $rule-offset-xs
+
+  &.rule--s .rule-inner
+    padding-top $rule-offset-s * -1
+    padding-bottom @padding-top
+
+    &:after
+      margin-right $rule-offset-s
+
+    &:before
+      margin-left $rule-offset-s
+
+  &.rule--m .rule-inner
+    padding-top $rule-offset-m * -1
+    padding-bottom @padding-top
+
+    &:after
+      margin-right $rule-offset-m
+
+    &:before
+      margin-left $rule-offset-m
+
+  &.rule--l .rule-inner
+    padding-top $rule-offset-l * -1
+    padding-bottom @padding-top
+
+    &:after
+      margin-right $rule-offset-l
+
+    &:before
+      margin-left $rule-offset-l
+
+  &.rule--xl .rule-inner
+    padding-top $rule-offset-xl * -1
+    padding-bottom @padding-top
+
+    &:after
+      margin-right $rule-offset-xl
+
+    &:before
+      margin-left $rule-offset-xl
+
+.rule--v
+  &.rule--xs .rule-inner
+    &:after
+      margin-bottom $rule-offset-xs
+
+    &:before
+      margin-top $rule-offset-xs
+
+  &.rule--s .rule-inner
+    &:after
+      margin-bottom $rule-offset-s
+
+    &:before
+      margin-top $rule-offset-s
+
+  &.rule--m .rule-inner
+    &:after
+      margin-bottom $rule-offset-m
+
+    &:before
+      margin-top $rule-offset-m
+
+  &.rule--l .rule-inner
+    &:after
+      margin-bottom $rule-offset-l
+
+    &:before
+      margin-top $rule-offset-l
+
+  &.rule--xl .rule-inner
+    &:after
+      margin-bottom $rule-offset-xl
+
+    &:before
+      margin-top $rule-offset-xl
+
+// ----- Direction ----- //
+
+.rule--h > .rule-inner
+  width 100%
+
   &:after
-    border-width $b-bd-width
+  &:before
+    width 50%
+    height 0
 
-.rule-text
-  text-align center
+  &:after
+    left auto
 
-.vrule
+  &:before
+    right auto
+
+.rule--v > .rule-inner
+  height 100%
+
+  &:after
+  &:before
+    width 0
+    height 50%
+
+  &:after
+    top auto
+
+  &:before
+    bottom auto
+
+// ----- Style ----- //
+
+.rule--v
   &.rule--solid > .rule-inner
     &:before
     &:after
@@ -227,7 +216,7 @@
       border-right-style solid
       border-right-color $c-highlight-light
 
-.hrule
+.rule--h
   &.rule--solid > .rule-inner
     &:before
     &:after
@@ -250,6 +239,26 @@
       border-bottom-style solid
       border-bottom-color $c-highlight-light
 
+.rule--join
+  .rule-text
+    display none
+
+  .rule-inner
+    &:after
+      display none
+
+.rule--v.rule--join
+  .rule-inner
+    &:before
+      height 100%
+      margin-top auto
+
+.rule--h.rule--join
+  .rule-inner
+    &:before
+      width 100%
+      margin-left auto
+
 // -------------------------------------
 //   States
 // -------------------------------------
@@ -265,6 +274,8 @@
 
 .rule-text
   z-index $b-idx-top
+  text-align center
+  line-height 1
 
 .rule-inner
   margin-top 1px
@@ -274,3 +285,4 @@
   &:before
   &:after
     content ""
+    border-width $b-bd-width
