@@ -34,7 +34,7 @@
 //
 // Markup:
 // <div class="pointer pointer--m pointer--basis pointer--180">
-//   <button class="btn btn--m btn--basis">按钮</button>
+//   <button class="btn btn--basis">按钮</button>
 // </div>
 //
 // Styleguide 2.12
@@ -72,16 +72,20 @@
 
 // ----- Size ----- //
 
-.pointer--xs
-.pointer--s
-.pointer--m
-  &:after
-    border-width be-even($b-fs-s * .7)
+.pointer--xs:after
+  border-width $caret-size-xs
 
-.pointer--l
-.pointer--xl
-  &:after
-    border-width be-even($b-fs-m * .7)
+.pointer--s:after
+  border-width  $caret-size-s
+
+.pointer--m:after
+  border-width $caret-size-m
+
+.pointer--l:after
+  border-width $caret-size-l
+
+.pointer--xl:after
+  border-width  $caret-size-xl
 
 // ----- Position ----- //
 

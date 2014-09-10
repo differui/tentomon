@@ -1,13 +1,5 @@
 // Textfield
 //
-// Size:
-//
-// + `.textfield--xs`
-// + `.textfield--s`
-// + `.textfield--m`
-// + `.textfield--l`
-// + `.textfield--xl`
-//
 // Theme:
 //
 // + `.textfield--basis`
@@ -19,42 +11,26 @@
 // State:
 //
 // + `full`
+// + `:disabled`
 //
 // Markup:
-// <input type="text" class="textfield textfield--m textfield--basis">
-// <textarea class="textfield textfield--m textfield--basis" rows="5" data-state=""></textarea>
+// <input type="text" class="textfield textfield--basis">
+// <textarea class="textfield textfield--basis" rows="5" data-state=""></textarea>
 //
 // Styleguide 2.2
 .textfield
   reset-gap()
   reset-appearance()
 
-  width    100%
-  outline  0
-  // display  inline-block
-  border   $b-bd
-  padding  $b-vgap $b-hgap
+  width        100%
+  outline      0
+  border-width $b-bd-width
+  border-style $b-bd-style
+  padding      $b-vgap $b-hgap
 
 // -------------------------------------
 //   Modifiers
 // -------------------------------------
-
-// ----- Size ----- //
-
-.textfield--xs
-  font-size $b-fs-xs
-
-.textfield--s
-  font-size $b-fs-s
-
-.textfield--m
-  font-size $b-fs-m
-
-.textfield--l
-  font-size $b-fs-l
-
-.textfield--xl
-  font-size $b-fs-xl
 
 // ----- Theme ----- //
 
@@ -96,13 +72,10 @@
   mix-vinner-shadow(0, 0, transparent)
 
 .textfield:disabled
-  &.textfield--basis
-  &.textfield--info
-  &.textfield--safe
-  &.textfield--danger
-  &.textfield--warn
-    color            $c-grey-dark
-    background-color $c-bg-light
+  color            $c-grey-dark
+  background-color $c-bg-light
+
+// ----- Full Size ----- //
 
 .textfield[data-state~='full']
   height        100%

@@ -1,13 +1,5 @@
 // Magnet
 //
-// Size:
-//
-// + `.magnet--xs`
-// + `.magnet--s`
-// + `.magnet--m`
-// + `.magnet--l`
-// + `.magnet--xl`
-//
 // Position:
 //
 // + `.magnet--45`
@@ -29,9 +21,9 @@
 //
 // Markup:
 // <dl class="form">
-//   <dd class="form-content has-magnet">
-//     <input type="text" class="textfield textfield--m textfield--basis">
-//     <label class="magnet magnet--m magnet--basis magnet--315">
+//   <dd class="form-bd has-magnet">
+//     <input type="text" class="textfield textfield--basis">
+//     <label class="magnet magnet--basis magnet--315">
 //       <span class="magnet-text">用户名</span>
 //     </label>
 //   </dd>
@@ -39,8 +31,7 @@
 //
 // Styleguide 2.10
 .magnet
-  padding-left $b-hgap
-  padding-right @padding-left
+  padding $b-vgap $b-hgap
 
   border-style $b-bd-style
   border-width $b-bd-width
@@ -48,23 +39,6 @@
 // -------------------------------------
 //   Modifiers
 // -------------------------------------
-
-// ----- Size ----- //
-
-.magnet--xs
-  font-size $b-fs-xs
-
-.magnet--s
-  font-size $b-fs-s
-
-.magnet--m
-  font-size $b-fs-m
-
-.magnet--l
-  font-size $b-fs-l
-
-.magnet--xl
-  font-size $b-fs-xl
 
 // ----- Position ----- //
 
@@ -94,29 +68,11 @@
 
 .magnet--45
 .magnet--315
-  &.magnet--xs
-  &.magnet--s
-    padding-bottom 0
-
-  &.magnet--m
-  &.magnet--l
-    padding-bottom $b-vgap
-
-  &.magnet--xl
-    padding-bottom $b-vgap-double
+  padding-bottom 0
 
 .magnet--135
 .magnet--225
-  &.magnet--xs
-  &.magnet--s
-    padding-top 0
-
-  &.magnet--m
-  &.magnet--l
-    padding-top $b-vgap
-
-  &.magnet--xl
-    padding-top $b-vgap-double
+  padding-top 0
 
 // ----- Theme ----- //
 

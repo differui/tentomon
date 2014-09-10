@@ -1,14 +1,6 @@
 // Button
 //
-// Size:
-//
-// + `.btn--xs`
-// + `.btn--s`
-// + `.btn--m`
-// + `.btn--l`
-// + `.btn--xl`
-//
-// Primary Theme:
+// Theme:
 //
 // + `.btn--white`
 // + `.btn--black`
@@ -18,19 +10,19 @@
 // + `.btn--danger`
 // + `.btn--warn`
 //
-// Secondary Theme:
+// Stylize:
 //
 // + `.btn--text`
 // + `.btn--link`
 // + `.btn--outline`
 //
-// Shape:
+// State:
 //
-// + `.btn--pill`
-// + `.btn--square`
+// + `:active`
+// + `:disabled`
 //
 // Markup:
-// <button class="btn btn--m btn--basis">
+// <button class="btn btn--basis">
 //   <span class="btn-text">按钮</span>
 // </button>
 //
@@ -47,32 +39,15 @@
   padding      $b-vgap $b-hgap
 
   outline      0
+  text-align   center
   border-width $b-bd-width
   border-style $b-bd-style
-  text-align   center
 
 // -------------------------------------
 //   Modifiers
 // -------------------------------------
 
-// ----- Size ----- //
-
-.btn--xs
-  font-size $b-fs-xs
-
-.btn--s
-  font-size $b-fs-s
-
-.btn--m
-  font-size $b-fs-m
-
-.btn--l
-  font-size $b-fs-l
-
-.btn--xl
-  font-size $b-fs-xl
-
-// ----- Primary Theme ----- //
+// ----- Theme ----- //
 
 .btn--white
 .btn--black
@@ -105,7 +80,7 @@
 .btn--warn
   @extend .ui-warn
 
-// ----- Secondary Theme ----- //
+// ----- Stylize ----- //
 
 .btn--text
 .btn--link
@@ -149,14 +124,6 @@
   &.btn--warn
     color        $c-bd-warn
     border-color @color
-
-// ----- Sharp ----- //
-
-.btn--pill
-  border-radius $b-rad-pill
-
-.btn--square
-  border-radius $b-rad-square
 
 // -------------------------------------
 //   States

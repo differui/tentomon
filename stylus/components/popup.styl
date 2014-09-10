@@ -1,15 +1,12 @@
-// Pop
+// Popup
 //
 // Theme:
 //
-// + `.h--info`
-// + `.h--warn`
-// + `.h--error`
-//
-// Layout:
-//
-// + `.h--isolate`
-// + `.h--mixin`
+// + `.pop--basis`
+// + `.pop--info`
+// + `.pop--safe`
+// + `.pop--danger`
+// + `.pop--warn`
 //
 // Markup:
 // <div class="pop pop--basis">
@@ -25,13 +22,13 @@
 //       <div class="pop-bd">
 //         <ul class="vlist vlist--loose">
 //           <li class="first">
-//             <button class="btn btn--m btn--basis">打开</button>
+//             <button class="btn btn--basis">打开</button>
 //           </li>
 //           <li>
-//             <button class="btn btn--m btn--basis">编辑</button>
+//             <button class="btn btn--basis">编辑</button>
 //           </li>
 //           <li class="last">
-//             <button class="btn btn--m btn--basis">删除</button>
+//             <button class="btn btn--basis">删除</button>
 //           </li>
 //         </ul>
 //       </div>
@@ -75,8 +72,10 @@
 // -------------------------------------
 
 .pop-h
-  margin-top $b-vgap-triple
+  margin-top $b-vgap-double
   margin-bottom @margin-top
+  padding-left $b-hgap
+  padding-right @padding-left
 
   text-align center
   font-size $b-fs-l

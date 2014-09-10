@@ -29,8 +29,8 @@
 //
 // Markup:
 // <dl class="form">
-//   <dd class="form-content has-ribbon">
-//     <input type="text" class="textfield textfield--m textfield--basis">
+//   <dd class="form-bd has-ribbon">
+//     <input type="text" class="textfield textfield--basis">
 //     <label class="ribbon ribbon--m ribbon--basis ribbon--45">
 //       <span class="ribbon-corner"></span>
 //       <span class="ribbon-text">中</span>
@@ -51,59 +51,44 @@
 // ----- Size ----- //
 
 .ribbon--xs
-  font-size $b-fs-xs
-  width $ribbon-size-xs
-  height @width
+  width $ribbon-height-xs * $ribbon-width-radio
+  height $ribbon-height-xs
+  line-height @height
 
   .ribbon-corner
     border-width @width
-
-  .ribbon-text
-    height @font-size
 
 .ribbon--s
-  font-size $b-fs-s
-  width $ribbon-size-s
-  height @width
+  width $ribbon-height-s * $ribbon-width-radio
+  height $ribbon-height-s
+  line-height @height
 
   .ribbon-corner
     border-width @width
-
-  .ribbon-text
-    height @font-size
 
 .ribbon--m
-  font-size $b-fs-m
-  width $ribbon-size-m
-  height @width
+  width $ribbon-height-m * $ribbon-width-radio
+  height $ribbon-height-m
+  line-height @height
 
   .ribbon-corner
     border-width @width
-
-  .ribbon-text
-    height @font-size
 
 .ribbon--l
-  font-size $b-fs-l
-  width $ribbon-size-l
-  height @width
+  width $ribbon-height-l * $ribbon-width-radio
+  height $ribbon-height-l
+  line-height @height
 
   .ribbon-corner
     border-width @width
-
-  .ribbon-text
-    height @font-size
 
 .ribbon--xl
-  font-size $b-fs-xl
-  width $ribbon-size-xl
-  height @width
+  width $ribbon-height-xl * $ribbon-width-radio
+  height $ribbon-height-xl
+  line-height @height
 
   .ribbon-corner
     border-width @width
-
-  .ribbon-text
-    height @font-size
 
 // ----- Theme ----- //
 
@@ -171,18 +156,12 @@
     border-right-width 0
     border-bottom-width 0
 
-  .ribbon-text
-    transform translate(25%, -25%)
-
 .ribbon--135
   @extend .amid-135
 
   .ribbon-corner
     border-top-width 0
     border-right-width 0
-
-  .ribbon-text
-    transform translate(25%, 25%)
 
 .ribbon--225
   @extend .amid-225
@@ -191,9 +170,6 @@
     border-top-width 0
     border-left-width 0
 
-  .ribbon-text
-    transform translate(-25%, 25%)
-
 .ribbon--315
   @extend .amid-315
 
@@ -201,8 +177,16 @@
     border-bottom-width 0
     border-left-width 0
 
+.ribbon--45
+.ribbon--135
   .ribbon-text
-    transform translate(-25%, -25%)
+    transform translateX(20%)
+  
+.ribbon--225
+.ribbon--315
+  .ribbon-text
+    transform translateX(-20%)
+
 
 // -------------------------------------
 //   States
@@ -221,14 +205,16 @@
   border-color transparent
 
 .ribbon-text
-  @extend .center
-
-  line-height 1
+  display block
   color $c-white
+  z-index $b-idx-top
+  position relative
 
 // -------------------------------------
 //   Context
 // -------------------------------------
 
 .has-ribbon
+  overflow hidden
+  border-radius $b-rad-round
   position relative

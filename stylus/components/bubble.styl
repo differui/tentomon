@@ -27,6 +27,9 @@
 // + `.bubble--safe`
 // + `.bubble--danger`
 // + `.bubble--warn`
+//
+// Shape:
+//
 // + `.bubble--round`
 // + `.bubble--circle`
 //
@@ -36,8 +39,8 @@
 //
 // Markup:
 // <dl class="form">
-//   <dd class="form-content has-bubble">
-//     <input type="text" class="textfield textfield--m textfield--basis">
+//   <dd class="form-bd has-bubble">
+//     <input type="text" class="textfield textfield--basis">
 //     <label class="bubble bubble--m bubble--safe bubble--45 bubble--out">
 //       <span class="bubble-text">中</span>
 //     </label>
@@ -50,6 +53,7 @@
 
   display inline-block
   vertical-align middle
+  text-align center
 
 // -------------------------------------
 //   Modifiers
@@ -83,49 +87,29 @@
 // ----- Size ----- //
 
 .bubble--xs
-  font-size $b-fs-xs
-
   width $bubble-size-xs
   height @width
-
-  .bubble-text
-    height @font-size
+  line-height @width
 
 .bubble--s
-  font-size $b-fs-s
-
   width $bubble-size-s
   height @width
-
-  .bubble-text
-    height @font-size
+  line-height @width
 
 .bubble--m
-  font-size $b-fs-m
-
   width $bubble-size-m
   height @width
-
-  .bubble-text
-    height @font-size
+  line-height @width
 
 .bubble--l
-  font-size $b-fs-l
-
   width $bubble-size-l
   height @width
-
-  .bubble-text
-    height @font-size
+  line-height @width
 
 .bubble--xl
-  font-size $b-fs-xl
-
   width $bubble-size-xl
   height @width
-
-  .bubble-text
-    height @font-size
+  line-height @width
 
 // ----- Position ----- //
 
@@ -186,15 +170,10 @@
 //   Scaffolding
 // -------------------------------------
 
-.bubble-text
-  @extend .center
-
-  line-height 1
-  text-align center
-
 // -------------------------------------
 //   Context
 // -------------------------------------
 
 .has-bubble
+  overflow visible
   position relative

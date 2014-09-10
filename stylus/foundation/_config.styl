@@ -117,12 +117,15 @@ $c-highlight-dark  = translucent($c-white, 50%)
 //   Base
 // -------------------------------------
 
-// ----- Radius & Borders ----- //
+// ----- Radius ----- //
 
 $b-rad-square      = 0
 $b-rad-round       = 3px
 $b-rad-circle      = 50%
 $b-rad-pill        = 500px
+
+// ----- Borders ----- //
+
 $b-bd-style        = solid
 $b-bd-width        = 1px
 $b-bd-width-bold   = $b-bd-width * 2
@@ -150,7 +153,7 @@ $b-lh-xl           = round($b-fs-xl * $b-lh)
 
 // ----- Gap ----- //
 
-$b-vgap            = $b-fs-quarter
+$b-vgap            = $b-fs-half
 $b-hgap            = $b-fs-s
 $b-cgap            = 20%
 
@@ -186,54 +189,48 @@ $rule-offset-xl    = round($b-fs-xl * -1)
 
 // ----- Ribbon ----- //
 
-$ribbon-size-xs    = be-even($b-fs-xs * 2.3)
-$ribbon-size-s     = be-even($b-fs-s  * 2.3)
-$ribbon-size-m     = be-even($b-fs-m  * 2.3)
-$ribbon-size-l     = be-even($b-fs-l  * 2.3)
-$ribbon-size-xl    = be-even($b-fs-xl * 2.3)
+$ribbon-width-radio = 2
+
+$ribbon-height-xs   = ($b-vgap + $b-bd-width) * 2 + $b-lh-xs - 1
+$ribbon-height-s    = ($b-vgap + $b-bd-width) * 2 + $b-lh-s  - 1
+$ribbon-height-m    = ($b-vgap + $b-bd-width) * 2 + $b-lh-m  - 1
+$ribbon-height-l    = ($b-vgap + $b-bd-width) * 2 + $b-lh-l  - 1
+$ribbon-height-xl   = ($b-vgap + $b-bd-width) * 2 + $b-lh-xl - 1
 
 // ----- Bubble ----- //
 
-$bubble-size-xs    = be-even($b-fs-xs * 2)
-$bubble-size-s     = be-even($b-fs-s  * 2)
-$bubble-size-m     = be-even($b-fs-m  * 2)
-$bubble-size-l     = be-even($b-fs-l  * 2)
-$bubble-size-xl    = be-even($b-fs-xl * 2)
-
-// ----- Slider ----- //
-
-$slider-gap-xs     = round($b-vgap + ($b-lh-m - $b-fs-xs / 2) / 2)
-$slider-gap-s      = round($b-vgap + ($b-lh-m - $b-fs-s  / 2) / 2)
-$slider-gap-m      = round($b-vgap + ($b-lh-m - $b-fs-m  / 2) / 2)
-$slider-gap-l      = round($b-vgap + ($b-lh-m - $b-fs-l  / 2) / 2)
-$slider-gap-xl     = round($b-vgap + ($b-lh-m - $b-fs-xl / 2) / 2)
+$bubble-size-xs    = round($b-fs-xs * 2)
+$bubble-size-s     = round($b-fs-s  * 2)
+$bubble-size-m     = round($b-fs-m  * 2)
+$bubble-size-l     = round($b-fs-l  * 2)
+$bubble-size-xl    = round($b-fs-xl * 2)
 
 // ----- Caret ----- //
 
-$caret-size-xs     = be-even($b-fs-xs * .6)
-$caret-size-s      = be-even($b-fs-s  * .6)
-$caret-size-m      = be-even($b-fs-m  * .6)
-$caret-size-l      = be-even($b-fs-l  * .6)
-$caret-size-xl     = be-even($b-fs-xl * .6)
+$caret-size-xs     = round($b-fs-xs * .6)
+$caret-size-s      = round($b-fs-s  * .6)
+$caret-size-m      = round($b-fs-m  * .6)
+$caret-size-l      = round($b-fs-l  * .6)
+$caret-size-xl     = round($b-fs-xl * .6)
 
-$caret-offset-xs   = be-even(($b-fs-xs - $b-fs-xs * .6) / 2)
-$caret-offset-s    = be-even(($b-fs-s  - $b-fs-s  * .6) / 2)
-$caret-offset-m    = be-even(($b-fs-m  - $b-fs-m  * .6) / 2)
-$caret-offset-l    = be-even(($b-fs-l  - $b-fs-l  * .6) / 2)
-$caret-offset-xl   = be-even(($b-fs-xl - $b-fs-xl * .6) / 2)
+$caret-offset-xs   = round(($b-fs-xs - $caret-size-xs) / 2)
+$caret-offset-s    = round(($b-fs-s  - $caret-size-s ) / 2)
+$caret-offset-m    = round(($b-fs-m  - $caret-size-m ) / 2)
+$caret-offset-l    = round(($b-fs-l  - $caret-size-l ) / 2)
+$caret-offset-xl   = round(($b-fs-xl - $caret-size-xl) / 2)
 
 // ----- Tooltip ----- //
 
-$tooltip-caret-widt= be-even($b-fs-s  * .6)
-$tooltip-bd-offset = be-even($b-fs-s  * .6 * -2)
+$tooltip-caret-width = $caret-size-s
+$tooltip-bd-offset = round($b-fs-s  * .6) * -2
 
 // ----- Dot ----- //
 
-$dot-size-xs       = be-even($b-fs-xs * .8)
-$dot-size-s        = be-even($b-fs-s  * .8)
-$dot-size-m        = be-even($b-fs-m  * .8)
-$dot-size-l        = be-even($b-fs-l  * .8)
-$dot-size-xl       = be-even($b-fs-xl * .8)
+$dot-size-xs       = round($b-fs-xs * .8)
+$dot-size-s        = round($b-fs-s  * .8)
+$dot-size-m        = round($b-fs-m  * .8)
+$dot-size-l        = round($b-fs-l  * .8)
+$dot-size-xl       = round($b-fs-xl * .8)
 
 // ----- Section ----- //
 
