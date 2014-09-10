@@ -172,12 +172,11 @@
 //
 // `{* | * ∈ a, t, r, b, l, h}`
 //
-// + `.p*f`  flatten
-// + `.p*xs` x-small
-// + `.p*s`  small
-// + `.p*m`  medium
-// + `.p*l`  large
-// + `.p*xl` x-large
+// + `.p*f` flatten
+// + `.p*`  normal
+// + `.p*h` half
+// + `.p*d` double
+// + `.p*t` triple
 //
 // `{* | * ∈ l, r, h}`
 //
@@ -352,7 +351,10 @@
 // `{* | * ∈ a, t, r, b, l, h, v}`
 //
 // + `.b*f` flatten
-// + `.b*t` transparnet
+// + `.b*t` transparent
+//
+// Markup:
+// <button class="btn btn--m btn--basis baf">按钮</button>
 //
 // Styleguide 5.4
 
@@ -362,7 +364,7 @@
   border-style none
 
 .bat
-  border-color transparnet
+  border-color transparent
 
 // ----- Top ----- //
 
@@ -370,7 +372,7 @@
   border-top-style none
 
 .btt
-  border-top-color transparnet
+  border-top-color transparent
 
 // ----- Right ----- //
 
@@ -378,7 +380,7 @@
   border-right-style none
 
 .brt
-  border-right-color transparnet
+  border-right-color transparent
 
 // ----- Bottom ----- //
 
@@ -386,7 +388,7 @@
   border-bottom-style none
 
 .brt
-  border-bottom-color transparnet
+  border-bottom-color transparent
 
 // ----- Left ----- //
 
@@ -394,7 +396,7 @@
   border-left-style none
 
 .blt
-  border-left-color transparnet
+  border-left-color transparent
 
 // ----- Horizontal ----- //
 
@@ -403,7 +405,7 @@
   border-right-style @border-left-style
 
 .bht
-  border-left-color transparnet
+  border-left-color transparent
   border-right-color @border-left-color
 
 // ----- Vertical ----- //
@@ -413,13 +415,13 @@
   border-bottom-style @border-top-style
 
 .bvt
-  border-top-color transparnet
+  border-top-color transparent
   border-bottom-color @border-top-color
 
 // Floating
 //
-// + `.fl`  float left
-// + `.fr`  float right
+// + `.fl` float left
+// + `.fr` float right
 //
 // Styleguide 5.5
 
@@ -458,6 +460,9 @@
 // + `r*r` round
 // + `r*p` pill
 // + `r*s` square
+//
+// Markup:
+// <button class="btn btn--m btn--basis rrs">按钮</button>
 //
 // Styleguide 5.7
 
@@ -500,15 +505,15 @@
   border-bottom-right-radius @border-top-right-radius
 
 .rrr
-  border-top-right-radius $b-rad-circle
+  border-top-right-radius $b-rad-round
   border-bottom-right-radius @border-top-right-radius
 
 .rrp
-  border-top-right-radius $b-rad-circle
+  border-top-right-radius $b-rad-pill
   border-bottom-right-radius @border-top-right-radius
 
 .rrs
-  border-top-right-radius $b-rad-circle
+  border-top-right-radius $b-rad-square
   border-bottom-right-radius @border-top-right-radius
 
 // ----- Bottom ----- //
@@ -536,15 +541,15 @@
   border-bottom-left-radius @border-top-left-radius
 
 .rlr
-  border-top-left-radius $b-rad-circle
+  border-top-left-radius $b-rad-round
   border-bottom-left-radius @border-top-left-radius
 
 .rlp
-  border-top-left-radius $b-rad-circle
+  border-top-left-radius $b-rad-pill
   border-bottom-left-radius @border-top-left-radius
 
 .rls
-  border-top-left-radius $b-rad-circle
+  border-top-left-radius $b-rad-square
   border-bottom-left-radius @border-top-left-radius
 
 
@@ -552,6 +557,9 @@
 //
 // + `.wh` half
 // + `.wf` full
+//
+// Markup:
+// <button class="btn btn--m btn--basis wh">按钮</button>
 //
 // Styleguide 5.8
 
@@ -702,6 +710,9 @@
 // + `bgp` remove bg image & shadow
 // + `bgc` remove same stuff & addition bg color
 //
+// Markup:
+// <button class="btn btn--m btn--basis bgc">按钮</button>
+//
 // Styleguide 5.11
 .bgp
 .bgc
@@ -748,6 +759,9 @@
 // `{x | x ∈ 45, 90, 135, 180}`
 //
 // + `.r*x`
+//
+// Markup:
+// <button class="btn btn--m btn--basis rl180">按钮</button>
 //
 // Styleguide 5.14
 .rl45
