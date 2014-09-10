@@ -8,12 +8,22 @@
 // + `.dot--l`
 // + `.dot--xl`
 //
+// Theme:
+//
+// + `.dot--white`
+// + `.dot--black`
+// + `.dot--basis`
+// + `.dot--info`
+// + `.dot--safe`
+// + `.dot--danger`
+// + `.dot--warn`
+//
 // State:
 //
 // + `active`
 //
 // Markup:
-// <div class="dot dot--m dot--safe" data-state="">
+// <div class="dot dot--m dot--danger" data-state="">
 //   <span class="dot-tip"></span>
 // </div>
 //
@@ -55,23 +65,23 @@
 // ----- Size ----- //
 
 .dot--xs
-  width be-even($b-fs-xs * .8)
+  width $dot-size-xs
   height @width
 
 .dot--s
-  width be-even($b-fs-s * .8)
+  width $dot-size-s
   height @width
 
 .dot--m
-  width be-even($b-fs-m * .8)
+  width $dot-size-m
   height @width
 
 .dot--l
-  width be-even($b-fs-l * .8)
+  width $dot-size-l
   height @width
 
 .dot--xl
-  width be-even($b-fs-xl * .8)
+  width $dot-size-xl
   height @width
 
 // -------------------------------------

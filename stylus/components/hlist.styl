@@ -1,27 +1,34 @@
-// Menu
+// Horizontal List
 //
-// Theme:
+// Primary Theme:
 //
-// + `.menu--dot`
-// + `.menu--disc`
-// + `.menu--circle`
-// + `.menu--decimal`
-// + `.menu--dashed`
-// + `.menu--dotted`
-// + `.menu--sunken`
-// + `.menu--basis`
-// + `.menu--safe`
-// + `.menu--danger`
-// + `.menu--info`
-// + `.menu--warn`
+// + `.hlist--basis`
+// + `.hlist--safe`
+// + `.hlist--danger`
+// + `.hlist--info`
+// + `.hlist--warn`
+//
+// Prefix Theme:
+//
+// + `.hlist--disc`
+// + `.hlist--circle`
+// + `.hlist--decimal`
+//
+// Separator Theme:
+//
+// + `.hlist--notch`
+// + `.hlist--sunken`
+// + `.hlist--solid`
+// + `.hlist--dashed`
+// + `.hlist--dotted`
 //
 // Layout:
 //
-// + `.list--bfc`
-// + `.list--relative`
+// + `.hlist--bfc`
+// + `.hlist--relative`
 //
 // Markup:
-// <ul class="menu row menu--basis menu--solid">
+// <ul class="hlist row hlist--basis hlist--solid">
 //   <li class="first col">
 //     <button class="btn btn--m btn--text">香蕉</button>
 //   </li>
@@ -37,7 +44,7 @@
 // </ul>
 //
 // Styleguide 2.15
-.menu
+.hlist
   reset-gap()
   reset-list()
 
@@ -50,18 +57,18 @@
 
 // ----- Theme ----- //
 
-.menu--dot
-.menu--sunken
+.hlist--dot
+.hlist--sunken
   > li
     position relative
 
-.menu--disc
-.menu--circle
-.menu--decimal
+.hlist--disc
+.hlist--circle
+.hlist--decimal
   > li
     padding-left $b-hgap-half
 
-.menu--dot
+.hlist--dot
   > li
     &:after
       @extend .center-right
@@ -75,7 +82,7 @@
     &.last:after
       content ""
 
-.menu--sunken
+.hlist--sunken
   > li:after
     @extend .center-right
 
@@ -87,112 +94,112 @@
   > li.last:after
     display none
 
-.menu--basis
+.hlist--basis
   > li
     border-color $c-bd-basis
 
-.menu--info
+.hlist--info
   > li
     border-color $c-bd-info
 
-.menu--safe
+.hlist--safe
   > li
     border-color $c-bd-safe
 
-.menu--danger
+.hlist--danger
   > li
     border-color $c-bd-danger
 
-.menu--warn
+.hlist--warn
   > li
     border-color $c-bd-warn
 
-.menu--disc
-.menu--circle
-.menu--decimal
+.hlist--disc
+.hlist--circle
+.hlist--decimal
   list-style-position inside
 
-.menu--disc
+.hlist--disc
   list-style-type disc
 
-.menu--circle
+.hlist--circle
   list-style-type circle
 
-.menu--decimal
+.hlist--decimal
   list-style-type decimal
 
-.menu--solid
-.menu--notch
-.menu--dashed
-.menu--dotted
+.hlist--solid
+.hlist--notch
+.hlist--dashed
+.hlist--dotted
   > li.last
     border-right-style none
 
-.menu--solid
-.menu--notch
+.hlist--solid
+.hlist--notch
   > li
     border-right-style solid
 
-.menu--dashed
+.hlist--dashed
   > li
     border-right-style dashed
 
-.menu--dotted
+.hlist--dotted
   > li
     border-right-style dotted
 
-.menu--notch
+.hlist--notch
   > li
-    hinner-shadow(1, 0, $c-highlight-light)
+    mix-hinner-shadow(1, 0, $c-highlight-light)
 
-.menu--sunken
-  &.menu--basis > li:after
+.hlist--sunken
+  &.hlist--basis > li:after
     background-image radial-gradient(farthest-side at center top, $c-bd-basis, transparent)
 
-  &.menu--info > li:after
+  &.hlist--info > li:after
     background-image radial-gradient(farthest-side at center top, $c-bd-info, transparent)
 
-  &.menu--safe > li:after
+  &.hlist--safe > li:after
     background-image radial-gradient(farthest-side at center top, $c-bd-safe, transparent)
 
-  &.menu--danger > li:after
+  &.hlist--danger > li:after
     background-image radial-gradient(farthest-side at center top, $c-bd-danger, transparent)
 
-  &.menu--warn > li:after
+  &.hlist--warn > li:after
     background-image radial-gradient(farthest-side at center top, $c-bd-warn, transparent)
 
-.menu--dot
+.hlist--dot
   > li:after
     text-align center
 
-.menu--dot
-  &.menu--basis
+.hlist--dot
+  &.hlist--basis
     > li:after
       color $c-bd-basis
 
-  &.menu--info
+  &.hlist--info
     > li:after
       color $c-bd-info
 
-  &.menu--safe
+  &.hlist--safe
     > li:after
       color $c-bd-safe
 
-  &.menu--danger
+  &.hlist--danger
     > li:after
       color $c-bd-danger
 
-  &.menu--warn
+  &.hlist--warn
     > li:after
       color $c-bd-danger
 
 // ----- Layout ----- //
 
-.menu--bfc
+.hlist--bfc
   > li
     overflow hidden
 
-.menu--relative
+.hlist--relative
   > li
     position relative
 

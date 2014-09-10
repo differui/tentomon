@@ -1,23 +1,23 @@
-// Separator
+// Rule
 //
 // Markup:
-// <div class="spv sp--m sp--basis sp--solid" style="height: 100px;">
-//   <div class="sp-inner">
-//     <span class="sp-text">中</span>
+// <div class="vrule rule--m rule--basis rule--solid" style="height: 100px;">
+//   <div class="rule-inner">
+//     <span class="rule-text">中</span>
 //   </div>
 // </div>
-// <div class="sph sp--m sp--basis sp--solid" style="height: 20px;">
-//   <div class="sp-inner">
-//     <span class="sp-text">中</span>
+// <div class="hrule rule--m rule--basis rule--solid" style="height: 20px;">
+//   <div class="rule-inner">
+//     <span class="rule-text">中</span>
 //   </div>
 // </div>
 //
 // Styleguide 2.17
-.sph
-.spv
+.hrule
+.vrule
   overflow hidden
 
-.sph > .sp-inner
+.hrule > .rule-inner
   width 100%
 
   &:after
@@ -31,7 +31,7 @@
   &:before
     right auto
 
-.spv > .sp-inner
+.vrule > .rule-inner
   height 100%
 
   &:after
@@ -47,110 +47,110 @@
 
 // separator size modifiers (different offset and separator width/height)
 // ============================================================================
-.sph
-  &.pygmy .sp-inner
-    padding-top $sp-offset-pygmy * -1
+.hrule
+  &.pygmy .rule-inner
+    padding-top $rule-offset-xs * -1
     padding-bottom @padding-top
 
     &:after
-      margin-right $sp-offset-pygmy
+      margin-right $rule-offset-xs
 
     &:before
-      margin-left $sp-offset-pygmy
+      margin-left $rule-offset-xs
 
-  &.mini .sp-inner
-    padding-top $sp-offset-mini * -1
+  &.mini .rule-inner
+    padding-top $rule-offset-s * -1
     padding-bottom @padding-top
 
     &:after
-      margin-right $sp-offset-mini
+      margin-right $rule-offset-s
 
     &:before
-      margin-left $sp-offset-mini
+      margin-left $rule-offset-s
 
-  &.normal .sp-inner
-    padding-top $sp-offset-normal * -1
+  &.normal .rule-inner
+    padding-top $rule-offset-m * -1
     padding-bottom @padding-top
 
     &:after
-      margin-right $sp-offset-normal
+      margin-right $rule-offset-m
 
     &:before
-      margin-left $sp-offset-normal
+      margin-left $rule-offset-m
 
-  &.huge .sp-inner
-    padding-top $sp-offset-huge * -1
+  &.huge .rule-inner
+    padding-top $rule-offset-l * -1
     padding-bottom @padding-top
 
     &:after
-      margin-right $sp-offset-huge
+      margin-right $rule-offset-l
 
     &:before
-      margin-left $sp-offset-huge
+      margin-left $rule-offset-l
 
-  &.massive .sp-inner
-    padding-top $sp-offset-massive * -1
+  &.massive .rule-inner
+    padding-top $rule-offset-xl * -1
     padding-bottom @padding-top
 
     &:after
-      margin-right $sp-offset-massive
+      margin-right $rule-offset-xl
 
     &:before
-      margin-left $sp-offset-massive
+      margin-left $rule-offset-xl
 
-.spv
-  &.pygmy .sp-inner
+.vrule
+  &.pygmy .rule-inner
     &:after
-      margin-bottom $sp-offset-pygmy
+      margin-bottom $rule-offset-xs
 
     &:before
-      margin-top $sp-offset-pygmy
+      margin-top $rule-offset-xs
 
-  &.mini .sp-inner
+  &.mini .rule-inner
     &:after
-      margin-bottom $sp-offset-mini
+      margin-bottom $rule-offset-s
 
     &:before
-      margin-top $sp-offset-mini
+      margin-top $rule-offset-s
 
-  &.normal .sp-inner
+  &.normal .rule-inner
     &:after
-      margin-bottom $sp-offset-normal
+      margin-bottom $rule-offset-m
 
     &:before
-      margin-top $sp-offset-normal
+      margin-top $rule-offset-m
 
-  &.huge .sp-inner
+  &.huge .rule-inner
     &:after
-      margin-bottom $sp-offset-huge
+      margin-bottom $rule-offset-l
 
     &:before
-      margin-top $sp-offset-huge
+      margin-top $rule-offset-l
 
-  &.massive .sp-inner
+  &.massive .rule-inner
     &:after
-      margin-bottom $sp-offset-massive
+      margin-bottom $rule-offset-xl
 
     &:before
-      margin-top $sp-offset-massive
+      margin-top $rule-offset-xl
 
-.spv.join
-.sph.join
-  .sp-text
-    display none
+.vrule.join
+.hrule.join
+  .rule-text
+    dirulelay none
 
-  .sp-inner
+  .rule-inner
     &:after
-      display none
+      dirulelay none
 
-.spv.join
-  .sp-inner
+.vrule.join
+  .rule-inner
     &:before
       height 100%
       margin-top auto
 
-.sph.join
-  .sp-inner
+.hrule.join
+  .rule-inner
     &:before
       width 100%
       margin-left auto
@@ -161,89 +161,89 @@
 
 // ----- Theme ----- //
 
-.sp--basis > .sp-inner
+.rule--basis > .rule-inner
   color $c-bd-basis
 
   &:before
   &:after
     border-color $c-bd-basis
 
-.sp--info > .sp-inner
+.rule--info > .rule-inner
   color $c-bd-info
 
   &:before
   &:after
     border-color $c-bd-info
 
-.sp--safe > .sp-inner
+.rule--safe > .rule-inner
   color $c-bd-safe
 
   &:before
   &:after
     border-color $c-bd-safe
 
-.sp--danger > .sp-inner
+.rule--danger > .rule-inner
   color $c-bd-danger
 
   &:before
   &:after
     border-color $c-bd-danger
 
-.sp--warn > .sp-inner
+.rule--warn > .rule-inner
   color $c-bd-warn
 
   &:before
   &:after
     border-color $c-bd-warn
 
-.sp-inner
+.rule-inner
   &:before
   &:after
     border-width $b-bd-width
 
-.sp-text
+.rule-text
   text-align center
 
-.spv
-  &.sp--solid > .sp-inner
+.vrule
+  &.rule--solid > .rule-inner
     &:before
     &:after
       border-left-style solid
 
-  &.sp--dashed > .sp-inner
+  &.rule--dashed > .rule-inner
     &:before
     &:after
       border-left-style dashed
 
-  &.sp--dotted > .sp-inner
+  &.rule--dotted > .rule-inner
     &:before
     &:after
       border-left-style dotted
 
-  &.sp--notch > .sp-inner
+  &.rule--notch > .rule-inner
     &:before
     &:after
       border-left-style solid
       border-right-style solid
       border-right-color $c-highlight-light
 
-.sph
-  &.sp--solid > .sp-inner
+.hrule
+  &.rule--solid > .rule-inner
     &:before
     &:after
       border-top-style solid
 
-  &.sp--dashed > .sp-inner
+  &.rule--dashed > .rule-inner
     &:before
     &:after
       border-top-style dashed
 
-  &.sp--dotted > .sp-inner
+  &.rule--dotted > .rule-inner
     &:before
     &:after
       border-top-style dotted
 
-  &.sp--notch > .sp-inner
+  &.rule--notch > .rule-inner
     &:before
     &:after
       border-top-style solid
@@ -258,15 +258,15 @@
 //   Scaffolding
 // -------------------------------------
 
-.sp-text
-.sp-inner:after
-.sp-inner:before
+.rule-text
+.rule-inner:after
+.rule-inner:before
   @extend .center
 
-.sp-text
+.rule-text
   z-index $b-idx-top
 
-.sp-inner
+.rule-inner
   margin-top 1px
   margin-bottom 1px
   position relative

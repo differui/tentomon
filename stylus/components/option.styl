@@ -2,18 +2,18 @@
 //
 // State:
 //
-// + `checked`
-// + `disabled`
+// + `on`
+// + `off`
 //
 // Markup:
-// <div class="opt" data-state="checked disabled">
+// <div class="opt" data-state="on off">
 //   <input class="opt-tag" type="checkbox" id="cb-demo">
 //   <div class="opt-bd opt-bd--round">
 //     <span class="opt-tip opt-tip--check"></span>
 //   </div>
 // </div>
 // <label class="label label--m" for="cb-demo">多选控件</label>
-// <div class="opt" data-state="checked disabled">
+// <div class="opt" data-state="on off">
 //   <input class="opt-tag" type="radio" id="rad-demo">
 //   <div class="opt-bd opt-bd--circle">
 //     <span class="opt-tip opt-tip--dot"></span>
@@ -35,11 +35,11 @@
 //   States
 // -------------------------------------
 
-.opt[data-state~='checked']
+.opt[data-state~='on']
   .opt-tip
     opacity 1
 
-.opt[data-state~='disabled']
+.opt[data-state~='off']
   .opt-bd
     background-image none
     background-color $c-dis-basis
@@ -75,7 +75,7 @@
   border-width $b-bd-width
   border-style $b-bd-style
 
-// Theme
+// Shape
 
 .opt-bd--square
   border-radius $b-rad-square
@@ -86,7 +86,7 @@
 .opt-bd--circle
   border-radius $b-rad-circle
 
-// ---- Indicator ----- //
+// ---- Tip ----- //
 
 .opt-tip
   @extend .center

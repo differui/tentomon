@@ -8,18 +8,24 @@
 // + `.btn--l`
 // + `.btn--xl`
 //
-// Theme:
+// Primary Theme:
 //
 // + `.btn--white`
 // + `.btn--black`
 // + `.btn--basis`
+// + `.btn--info`
 // + `.btn--safe`
 // + `.btn--danger`
-// + `.btn--info`
 // + `.btn--warn`
+//
+// Secondary Theme:
+//
 // + `.btn--text`
 // + `.btn--link`
 // + `.btn--outline`
+//
+// Shape:
+//
 // + `.btn--pill`
 // + `.btn--square`
 //
@@ -66,7 +72,7 @@
 .btn--xl
   font-size $b-fs-xl
 
-// ----- Theme ----- //
+// ----- Primary Theme ----- //
 
 .btn--white
 .btn--black
@@ -98,6 +104,8 @@
 
 .btn--warn
   @extend .ui-warn
+
+// ----- Secondary Theme ----- //
 
 .btn--text
 .btn--link
@@ -142,6 +150,8 @@
     color        $c-bd-warn
     border-color @color
 
+// ----- Sharp ----- //
+
 .btn--pill
   border-radius $b-rad-pill
 
@@ -160,12 +170,12 @@
   &.btn--safe
   &.btn--danger
   &.btn--warn
-    vinner-shadow()
+    mix-vinner-shadow()
 
   &.btn--text
   &.btn--link
   &.btn--outline
-    vinner-shadow(0, 0, transparent)
+    mix-vinner-shadow(0, 0, transparent)
 
   &.btn--link
     text-decoration none
@@ -183,7 +193,7 @@
   &.btn--danger
   &.btn--warn
     background-image none
-    vinner-shadow(0, 0, transparent)
+    mix-vinner-shadow(0, 0, transparent)
 
   &.btn--basis
     background-color $c-dis-basis
@@ -214,10 +224,10 @@
 
 // ----- Text ----- //
 
-.btn--text
+.btn-text
   null
 
 // ----- Icon ----- //
 
-.btn--icon
+.btn-icon
   null

@@ -2,25 +2,25 @@
 //
 // Layout:
 //
-// + `.bc--tight`
-// + `.bc--loose`
+// + `.breadcrumb--tight`
+// + `.breadcrumb--loose`
 //
 // Markup:
-// <div class="bc bc--m bc--loose">
-//   <a class="bc-section">食物</a>
-//   <div class="bc-slash"> / </div>
-//   <a class="bc-section">水果</a>
-//   <div class="bc-slash"> / </div>
-//   <a class="bc-section">苹果</a>
-//   <div class="bc-slash"> / </div>
-//   <div class="bc-section" data-state="active">红富士</div>
+// <div class="breadcrumb breadcrumb--m breadcrumb--loose">
+//   <a class="breadcrumb-section">食物</a>
+//   <div class="breadcrumb-slash"> / </div>
+//   <a class="breadcrumb-section">水果</a>
+//   <div class="breadcrumb-slash"> / </div>
+//   <a class="breadcrumb-section">苹果</a>
+//   <div class="breadcrumb-slash"> / </div>
+//   <div class="breadcrumb-section">红富士</div>
 // </div>
 //
 // Styleguide 2.16
-.bc
+.breadcrumb
   @extend .nowrap
 
-  padding-top $b-vgap
+  padding-top $b-vgap + $b-bd-width
   padding-bottom @padding-top
 
 // -------------------------------------
@@ -29,30 +29,30 @@
 
 // ----- Size ----- //
 
-.bc--xs
+.breadcrumb--xs
   font-size $b-fs-xs
 
-.bc--s
+.breadcrumb--s
   font-size $b-fs-s
 
-.bc--m
+.breadcrumb--m
   font-size $b-fs-m
 
-.bc--l
+.breadcrumb--l
   font-size $b-fs-l
 
-.bc--xl
+.breadcrumb--xl
   font-size $b-fs-xl
 
 // ----- Layout ----- //
 
-.bc--tight
-  .bc-section
+.breadcrumb--tight
+  .breadcrumb-section
     padding-left 0
     padding-right @padding-left
 
-.bc--loose
-  .bc-section
+.breadcrumb--loose
+  .breadcrumb-section
     padding-left $b-hgap
     padding-right @padding-left
 
@@ -64,24 +64,22 @@
 //   Scaffolding
 // -------------------------------------
 
-.bc-section
-.bc-slash
+.breadcrumb-section
+.breadcrumb-slash
   display inline-block
 
 // ----- Section ----- //
 
-.bc-section
+.breadcrumb-section
   padding-left $b-hgap-half
   padding-right @padding-left
 
-// State
-
-.bc-section[data-state='active']
-  color $c-black
-  font-weight bold
-  text-decoration none
+  &:last-child
+    color $c-black
+    font-weight bold
+    text-decoration none
 
 // ----- Slash ----- //
 
-.bc-slash
+.breadcrumb-slash
   color $c-grey-dark

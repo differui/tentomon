@@ -55,10 +55,10 @@
 // ----- Layout ----- //
 
 .board-isolate
-  border-style solid
+  border-style $b-bd-style
 
 .board-mixin
-  border-style solid none
+  border-style $b-bd-style none
 
 // ----- Theme ----- //
 
@@ -113,7 +113,7 @@
 
 .board-item
   border-width $b-bd-width
-  border-right-style solid
+  border-right-style $b-bd-style
   box-shadow inset 1px 1px 0 $c-highlight-light
 
   &.last
@@ -122,11 +122,11 @@
 .board-item
   &:active
   &[data-state='active']
-    vinner-shadow()
+    mix-vinner-shadow()
 
   &:disabled
   &[data-state='disabled']
-    vinner-shadow(0, 0, transparent)
+    mix-vinner-shadow(0, 0, transparent)
 
     .btn
       opacity .7

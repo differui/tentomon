@@ -5,13 +5,6 @@
 //
 // *************************************
 
-// -------------------------------------
-//   @font-face
-// -------------------------------------
-
-// ----- Open Iconic ----- //
-
-font-face('Icons', '../fonts/open-iconic')
 
 // -------------------------------------
 //   Colors
@@ -49,8 +42,8 @@ $c-black                     = #323232
 $c-grey                      = $grey
 $c-grey-light                = lighten($c-grey, 10%)
 $c-grey-lighter              = lighten($c-grey, 15%)
-$c-grey-dark                 = darken($c-grey, 10%)
-$c-grey-darker               = darken($c-grey, 15%)
+$c-grey-dark                 = darken($c-grey,  10%)
+$c-grey-darker               = darken($c-grey,  15%)
 
 // Link Colors
 
@@ -60,18 +53,18 @@ $c-link-disabled             = $c-grey-light
 // Gradient End Colors
 
 $c-end-basis                 = darken($c-basis, $deg-dark)
-$c-end-info                  = darken($c-info, $deg-darker * 1.5)
-$c-end-safe                  = darken($c-safe, $deg-darker * 1.5)
+$c-end-info                  = darken($c-info, $deg-darker   * 1.5)
+$c-end-safe                  = darken($c-safe, $deg-darker   * 1.5)
 $c-end-danger                = darken($c-danger, $deg-darker * 1.5)
-$c-end-warn                  = darken($c-warn, $deg-darker * 1.5)
+$c-end-warn                  = darken($c-warn, $deg-darker   * 1.5)
 
 // Disabled Colors
 
 $c-dis-basis                 = $c-basis
-$c-dis-info                  = lighten($c-info, $deg-lighter * 2)
-$c-dis-safe                  = lighten($c-safe, $deg-lighter * 2)
+$c-dis-info                  = lighten($c-info, $deg-lighter   * 2)
+$c-dis-safe                  = lighten($c-safe, $deg-lighter   * 2)
 $c-dis-danger                = lighten($c-danger, $deg-lighter * 2)
-$c-dis-warn                  = lighten($c-warn, $deg-lighter * 2)
+$c-dis-warn                  = lighten($c-warn, $deg-lighter   * 2)
 
 // Border Colors
 
@@ -80,22 +73,22 @@ $c-bd-black                  = $c-black
 $c-bd-light                  = $c-grey-light
 $c-bd-dark                   = $c-grey-dark
 $c-bd-basis                  = $c-bd-dark
-$c-bd-info                   = darken($c-info, $deg-dark)
-$c-bd-safe                   = darken($c-safe, $deg-dark)
+$c-bd-info                   = darken($c-info,   $deg-dark)
+$c-bd-safe                   = darken($c-safe,   $deg-dark)
 $c-bd-danger                 = darken($c-danger, $deg-dark)
-$c-bd-warn                   = darken($c-warn, $deg-dark)
+$c-bd-warn                   = darken($c-warn,   $deg-dark)
 
 // Background Colors
 
 $c-bg-white                  = $c-white
 $c-bg-black                  = $c-black
 $c-bg-light                  = lighten($c-grey-light, 80%)
-$c-bg-dark                   = lighten($c-grey-dark, 50%)
-$c-bg-basis                  = darken($c-basis, 3%)
-$c-bg-info                   = translucent($c-info, 10%)
-$c-bg-safe                   = translucent($c-safe, 10%)
+$c-bg-dark                   = lighten($c-grey-dark,  50%)
+$c-bg-basis                  = darken($c-basis,       3%)
+$c-bg-info                   = translucent($c-info,   10%)
+$c-bg-safe                   = translucent($c-safe,   10%)
 $c-bg-danger                 = translucent($c-danger, 10%)
-$c-bg-warn                   = translucent($c-warn, 10%)
+$c-bg-warn                   = translucent($c-warn,   10%)
 
 // Translucent Colors
 
@@ -135,18 +128,25 @@ $b-bd-width                  = 1px
 $b-bd-width-bold             = $b-bd-width * 2
 $b-bd                        = $b-bd-style $b-bd-width
 
-// ----- Typography ----- //
+// ----- Font Size ----- //
 
 $b-ff                        = sans-serif
 $b-fs-m                      = 14px
-$b-fs-xs                     = round($b-fs-m * 0.857)
-$b-fs-s                      = round($b-fs-m * 0.714)
+$b-fs-xs                     = round($b-fs-m * 0.714)
+$b-fs-s                      = round($b-fs-m * 0.857)
 $b-fs-l                      = round($b-fs-m * 1.1)
 $b-fs-xl                     = round($b-fs-m * 1.29)
 $b-fs-half                   = round($b-fs-m * 0.5)
 $b-fs-quarter                = round($b-fs-m * 0.25)
+
+// ----- Line Height ----- //
+
 $b-lh                        = 1.714
-$b-lh-computed               = round($b-fs-m * $b-lh)
+$b-lh-xs                     = round($b-fs-xs * $b-lh)
+$b-lh-s                      = round($b-fs-s  * $b-lh)
+$b-lh-m                      = round($b-fs-m  * $b-lh)
+$b-lh-l                      = round($b-fs-l  * $b-lh)
+$b-lh-xl                     = round($b-fs-xl * $b-lh)
 
 // ----- Gap ----- //
 
@@ -162,6 +162,10 @@ $b-vgap-half                 = round($b-vgap / 2)
 $b-vgap-double               = round($b-vgap * 2)
 $b-vgap-triple               = round($b-vgap * 3)
 
+$b-cgap-half                 = round($b-cgap / 2)
+$b-cgap-double               = round($b-cgap * 2)
+$b-cgap-triple               = round($b-cgap * 3)
+
 // ----- Index ----- //
 
 $b-idx-top                   = 3000
@@ -174,11 +178,66 @@ $b-idx-bottom                = 1000
 
 // ----- Separator ----- //
 
-$sp-offset-pygmy             = round($b-fs-xs / 2 * -1)
-$sp-offset-mini              = round($b-fs-s  / 2 * -1)
-$sp-offset-normal            = round($b-fs-m  / 2 * -1)
-$sp-offset-huge              = round($b-fs-l  / 2 * -1)
-$sp-offset-massive           = round($b-fs-xl / 2 * -1)
+$rule-offset-xs              = round($b-fs-xs / 2 * -1)
+$rule-offset-s               = round($b-fs-s  / 2 * -1)
+$rule-offset-m               = round($b-fs-m  / 2 * -1)
+$rule-offset-l               = round($b-fs-l  / 2 * -1)
+$rule-offset-xl              = round($b-fs-xl / 2 * -1)
+
+// ----- Ribbon ----- //
+
+$ribbon-size-xs              = be-even($b-fs-xs * 2.3)
+$ribbon-size-s               = be-even($b-fs-s  * 2.3)
+$ribbon-size-m               = be-even($b-fs-m  * 2.3)
+$ribbon-size-l               = be-even($b-fs-l  * 2.3)
+$ribbon-size-xl              = be-even($b-fs-xl * 2.3)
+
+// ----- Bubble ----- //
+
+$bubble-size-xs              = be-even($b-fs-xs * 2)
+$bubble-size-s               = be-even($b-fs-s  * 2)
+$bubble-size-m               = be-even($b-fs-m  * 2)
+$bubble-size-l               = be-even($b-fs-l  * 2)
+$bubble-size-xl              = be-even($b-fs-xl * 2)
+
+// ----- Slider ----- //
+
+$slider-gap-xs          = round($b-vgap + ($b-lh-m - $b-fs-xs / 2) / 2)
+$slider-gap-s           = round($b-vgap + ($b-lh-m - $b-fs-s  / 2) / 2)
+$slider-gap-m           = round($b-vgap + ($b-lh-m - $b-fs-m  / 2) / 2)
+$slider-gap-l           = round($b-vgap + ($b-lh-m - $b-fs-l  / 2) / 2)
+$slider-gap-xl          = round($b-vgap + ($b-lh-m - $b-fs-xl / 2) / 2)
+
+// ----- Caret ----- //
+
+$caret-size-xs               = be-even($b-fs-xs * .6)
+$caret-size-s                = be-even($b-fs-s  * .6)
+$caret-size-m                = be-even($b-fs-m  * .6)
+$caret-size-l                = be-even($b-fs-l  * .6)
+$caret-size-xl               = be-even($b-fs-xl * .6)
+
+$caret-offset-xs             = be-even(($b-fs-xs - $b-fs-xs * .6) / 2)
+$caret-offset-s              = be-even(($b-fs-s  - $b-fs-s  * .6) / 2)
+$caret-offset-m              = be-even(($b-fs-m  - $b-fs-m  * .6) / 2)
+$caret-offset-l              = be-even(($b-fs-l  - $b-fs-l  * .6) / 2)
+$caret-offset-xl             = be-even(($b-fs-xl - $b-fs-xl * .6) / 2)
+
+// ----- Tooltip ----- //
+
+$tooltip-caret-width         = be-even($b-fs-s  * .6)
+$tooltip-bd-offset           = be-even($b-fs-s  * .6 * -2)
+
+// ----- Dot ----- //
+
+$dot-size-xs                 = be-even($b-fs-xs * .8)
+$dot-size-s                  = be-even($b-fs-s  * .8)
+$dot-size-m                  = be-even($b-fs-m  * .8)
+$dot-size-l                  = be-even($b-fs-l  * .8)
+$dot-size-xl                 = be-even($b-fs-xl * .8)
+
+// ----- Section ----- //
+
+$section-gap                 = 5px
 
 // -------------------------------------
 //   Structures

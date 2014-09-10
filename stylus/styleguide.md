@@ -53,7 +53,7 @@ describe component skin:
 + border-*
 + border-radius
 + box-shadow
-+ text-shadow
++ mix-text-shadow
 + text-decoration
 
 We only use CSS properties in above list for UI.In order to ensure UIs

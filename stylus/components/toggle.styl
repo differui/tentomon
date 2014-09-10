@@ -2,10 +2,11 @@
 //
 // State:
 //
-// + `checked`
+// + `on`
+// + `off`
 //
 // Markup:
-// <div class="toggle" data-state="checked">
+// <div class="toggle" data-state="on">
 //   <input class="toggle-tag" type="checkbox" id="tg-demo">
 //   <div class="toggle-bd">
 //     <span class="toggle-tip"></span>
@@ -26,7 +27,7 @@
 //   States
 // -------------------------------------
 
-.toggle[data-state~='checked']
+.toggle[data-state~='on']
   .toggle-bd
     @extend .ui-safe
 
@@ -38,6 +39,16 @@
   .toggle-tip
     left auto
     right 0
+
+.toggle[data-state~='off']
+  .toggle-bd
+    @extend .ui-basis
+
+    background-image none
+
+  .toggle-tip
+    left 0
+    right auto
 
 // -------------------------------------
 //   Scaffolding
@@ -53,8 +64,6 @@
 // ----- Body ----- //
 
 .toggle-bd
-  @extend .ui-basis
-
   width be-even($b-fs-l * 2.5)
   height be-even($b-fs-l * 1.5 + 2)
   position relative
@@ -62,17 +71,17 @@
   border-width $b-bd-width
   border-style $b-bd-style
   border-radius $b-rad-pill
-  background-image none
 
 // ----- Tip ----- //
 
 .toggle-tip
-  @extend .center-left
+  @extend .center
   @extend .ui-basis
+
+  mix-outer-glow($c-shadow-light, 1)
 
   width be-even($b-fs-l * 1.5)
   height @width
   display block
 
   border-radius $b-rad-circle
-  outer-glow($c-shadow-light, 1)

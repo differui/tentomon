@@ -23,12 +23,11 @@
 
   reset-gap()
 
-  padding-top $b-vgap
+  padding-top $b-vgap + $b-bd-width
   padding-bottom @padding-top
 
   width 100%
   display block
-  font-size $b-fs-m
   font-weight bold
 
 // -------------------------------------
@@ -56,6 +55,9 @@
 
 .h-break
   @extend .break
+
+.h-wrap
+  @extend .wrap
 
 // -------------------------------------
 //   States

@@ -10,10 +10,10 @@
 //
 // Position:
 //
-// + `.magnet--45`
-// + `.magnet--135`
-// + `.magnet--225`
-// + `.magnet--315`
+// + `.ribbon--45`
+// + `.ribbon--135`
+// + `.ribbon--225`
+// + `.ribbon--315`
 //
 // Theme:
 //
@@ -30,7 +30,7 @@
 // Markup:
 // <dl class="form">
 //   <dd class="form-content has-ribbon">
-//     <input type="text" class="tf tf--m tf--basis">
+//     <input type="text" class="textfield textfield--m textfield--basis">
 //     <label class="ribbon ribbon--m ribbon--basis ribbon--45">
 //       <span class="ribbon-corner"></span>
 //       <span class="ribbon-text">中</span>
@@ -52,100 +52,58 @@
 
 .ribbon--xs
   font-size $b-fs-xs
-  width be-even(@font-size * 2.3)
+  width $ribbon-size-xs
   height @width
 
   .ribbon-corner
-    border-width @height
+    border-width @width
 
   .ribbon-text
-    height $b-fs-xs
+    height @font-size
 
 .ribbon--s
   font-size $b-fs-s
-  width be-even(@font-size * 2.3)
+  width $ribbon-size-s
   height @width
 
   .ribbon-corner
-    border-width @height
+    border-width @width
 
   .ribbon-text
-    height $b-fs-s
+    height @font-size
 
 .ribbon--m
   font-size $b-fs-m
-  width be-even(@font-size * 2.3)
+  width $ribbon-size-m
   height @width
 
   .ribbon-corner
-    border-width @height
+    border-width @width
 
   .ribbon-text
-    height $b-fs-m
+    height @font-size
 
 .ribbon--l
   font-size $b-fs-l
-  width be-even(@font-size * 2.3)
+  width $ribbon-size-l
   height @width
 
   .ribbon-corner
-    border-width @height
+    border-width @width
 
   .ribbon-text
-    height $b-fs-l
+    height @font-size
 
 .ribbon--xl
   font-size $b-fs-xl
-  width be-even(@font-size * 2.3)
+  width $ribbon-size-xl
   height @width
 
   .ribbon-corner
-    border-width @height
+    border-width @width
 
   .ribbon-text
-    height $b-fs-xl
-
-// ----- Position ----- //
-
-.ribbon--45
-  @extend .amid-45
-
-  .ribbon-corner
-    border-right-width 0
-    border-bottom-width 0
-
-  .ribbon-text
-    transform translate(25%, -25%)
-
-.ribbon--135
-  @extend .amid-135
-
-  .ribbon-corner
-    border-top-width 0
-    border-right-width 0
-
-  .ribbon-text
-    transform translate(25%, 25%)
-
-.ribbon--225
-  @extend .amid-225
-
-  .ribbon-corner
-    border-top-width 0
-    border-left-width 0
-
-  .ribbon-text
-    transform translate(-25%, 25%)
-
-.ribbon--315
-  @extend .amid-315
-
-  .ribbon-corner
-    border-bottom-width 0
-    border-left-width 0
-
-  .ribbon-text
-    transform translate(-25%, -25%)
+    height @font-size
 
 // ----- Theme ----- //
 
@@ -204,6 +162,48 @@
     .ribbon-corner
       border-bottom-color $c-bd-warn
 
+// ----- Position ----- //
+
+.ribbon--45
+  @extend .amid-45
+
+  .ribbon-corner
+    border-right-width 0
+    border-bottom-width 0
+
+  .ribbon-text
+    transform translate(25%, -25%)
+
+.ribbon--135
+  @extend .amid-135
+
+  .ribbon-corner
+    border-top-width 0
+    border-right-width 0
+
+  .ribbon-text
+    transform translate(25%, 25%)
+
+.ribbon--225
+  @extend .amid-225
+
+  .ribbon-corner
+    border-top-width 0
+    border-left-width 0
+
+  .ribbon-text
+    transform translate(-25%, 25%)
+
+.ribbon--315
+  @extend .amid-315
+
+  .ribbon-corner
+    border-bottom-width 0
+    border-left-width 0
+
+  .ribbon-text
+    transform translate(-25%, -25%)
+
 // -------------------------------------
 //   States
 // -------------------------------------
@@ -217,7 +217,7 @@
   top 0
   left 0
 
-  border-style solid
+  border-style $b-bd-style
   border-color transparent
 
 .ribbon-text

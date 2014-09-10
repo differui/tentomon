@@ -18,6 +18,33 @@
 //   Modifiers
 // -------------------------------------
 
+// ----- Size ------ //
+
+.slider--s
+  .slider-pole
+    margin-top $slider-gap-xs
+    margin-bottom @margin-top  
+
+.slider--xs
+  .slider-pole
+    margin-top $slider-gap-s
+    margin-bottom @margin-top
+
+.slider--m
+  .slider-pole
+    margin-top $slider-gap-m
+    margin-bottom @margin-top
+
+.slider--l
+  .slider-pole
+    margin-top $slider-gap-l
+    margin-bottom @margin-top
+
+.slider--xl
+  .slider-pole
+    margin-top $slider-gap-xl
+    margin-bottom @margin-top
+
 // -------------------------------------
 //   States
 // -------------------------------------
@@ -51,4 +78,4 @@
   -webkit-user-drag element
 
   border-radius $b-rad-circle
-  outer-glow($c-shadow-dark, 1)
+  mix-outer-glow($c-shadow-dark, 1)

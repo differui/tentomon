@@ -21,9 +21,9 @@
 
   &:before
     content ""
-    border-style solid
+    border-style $b-bd-style
     border-color transparent
-    border-width be-even($b-fs-s * .7)
+    border-width $tooltip-caret-width
 
   &:after
     @extend .ui-black
@@ -31,7 +31,7 @@
 
     font-size $b-fs-s
     text-align left
-    border-style solid
+    border-style $b-bd-style
     border-width $b-bd-width
     border-radius $b-rad-round
     content attr(data-tooltip)
@@ -43,40 +43,17 @@
 
 // ----- Position ----- //
 
-// .tooltip--30:after
-//   @extend .around-30
-
 .tooltip--90:after
   @extend .around-90
-
-// .tooltip--150:after
-//   @extend .around-150
 
 .tooltip--180:after
   @extend .around-180
 
-// .tooltip--210:after
-//   @extend .around-210
-
 .tooltip--270:after
   @extend .around-270
 
-// .tooltip--330:after
-//   @extend .around-330
-
 .tooltip--360:after
   @extend .around-360
-
-// .tooltip--30
-// .tooltip--330
-.tooltip--360
-  &:before
-    @extend .around-360
-
-    border-top-color $c-black
-
-  &:after
-    top be-even($b-fs-s * .7) * -2
 
 .tooltip--90
   &:before
@@ -85,10 +62,8 @@
     border-right-color $c-black
 
   &:after
-    right be-even($b-fs-s * .7) * -2
+    right $tooltip-bd-offset
 
-// .tooltip--150
-// .tooltip--210
 .tooltip--180
   &:before
     @extend .around-180
@@ -96,7 +71,7 @@
     border-bottom-color $c-black
 
   &:after
-    bottom be-even($b-fs-s * .7) * -2
+    bottom $tooltip-bd-offset
 
 .tooltip--270
   &:before
@@ -105,7 +80,16 @@
     border-left-color $c-black
 
   &:after
-    left be-even($b-fs-s * .7) * -2
+    left $tooltip-bd-offset
+
+.tooltip--360
+  &:before
+    @extend .around-360
+
+    border-top-color $c-black
+
+  &:after
+    top $tooltip-bd-offset
 
 // -------------------------------------
 //   States

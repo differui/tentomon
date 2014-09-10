@@ -1,5 +1,30 @@
 // Caret
 //
+// Size:
+//
+// + `.caret--xs`
+// + `.caret--s`
+// + `.caret--m`
+// + `.caret--l`
+// + `.caret--xl`
+//
+// Theme:
+//
+// + `.caret--white`
+// + `.caret--black`
+// + `.caret--basis`
+// + `.caret--info`
+// + `.caret--safe`
+// + `.caret--danger`
+// + `.caret--warn`
+//
+// Direction:
+//
+// + `.caret--top`
+// + `.caret--right`
+// + `.caret--bottom`
+// + `.caret--left`
+//
 // Position:
 //
 // + `.caret-45`
@@ -14,7 +39,7 @@
 // Markup:
 // <button class="btn btn--m btn--basis">
 //   <span class="btn-text">下拉按钮 </span>
-//   <span class="caret caret--black caret--bottom" data-state=""></span>
+//   <span class="caret caret--s caret--black caret--bottom" data-state=""></span>
 // </button>
 //
 // Styleguide 2.25
@@ -24,15 +49,34 @@
   display inline-block
   vertical-align middle
 
-  border-width be-even($b-fs-s * .7)
-  margin-bottom round(($b-fs-m - @border-width) / 2)
-
-  border-style solid
+  border-style $b-bd-style
   border-color transparent
 
 // -------------------------------------
 //   Modifiers
 // -------------------------------------
+
+// ----- Size ----- //
+
+.caret--xs
+  border-width $caret-size-xs
+  margin-bottom $caret-offset-xs
+
+.caret--s
+  border-width $caret-size-s
+  margin-bottom $caret-offset-s
+
+.caret--m
+  border-width $caret-size-m
+  margin-bottom $caret-offset-m
+
+.caret--l
+  border-width $caret-size-l
+  margin-bottom $caret-offset-l
+
+.caret--xl
+  border-width $caret-size-xl
+  margin-bottom $caret-offset-xl
 
 // ----- Theme ----- //
 
@@ -57,33 +101,35 @@
 .caret--warn
   border-color $c-bd-warn
 
-.caret--bottom
-  border-top-style solid
-  border-bottom-style none
-  border-right-color transparent
-  border-bottom-color transparent
-  border-left-color transparent
-
-.caret--left
-  border-right-style solid
-  border-left-style none
-  border-top-color transparent
-  border-bottom-color transparent
-  border-left-color transparent
+// ----- Direction ----- //
 
 .caret--top
-  border-bottom-style solid
+  border-bottom-style $b-bd-style
   border-top-style none
   border-top-color transparent
   border-right-color transparent
   border-left-color transparent
 
 .caret--right
-  border-left-style solid
+  border-left-style $b-bd-style
   border-right-style none
   border-top-color transparent
   border-right-color transparent
   border-bottom-color transparent
+
+.caret--bottom
+  border-top-style $b-bd-style
+  border-bottom-style none
+  border-right-color transparent
+  border-bottom-color transparent
+  border-left-color transparent
+
+.caret--left
+  border-right-style $b-bd-style
+  border-left-style none
+  border-top-color transparent
+  border-bottom-color transparent
+  border-left-color transparent
 
 // ----- Position ----- //
 

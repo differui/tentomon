@@ -3,14 +3,14 @@
 // Markup:
 // <div class="por" style="height: 200px; width: 200px;">
 //   <div id="content" class="lay">
-//     <section class="header">
-//       <p>Header</p>
+//     <section class="header tac">
+//       <h1 class="h h--xl">标题</h1>
 //     </section>
-//     <section class="main">
+//     <section class="main main--xl">
 //       <p>Main</p>
 //     </section>
-//     <section class="footer">
-//       <p>Footer</p>
+//     <section class="footer tac">
+//       <p class="h h--xl">底部</p>
 //     </section>
 //   </div>
 // </div>
@@ -24,11 +24,11 @@
 .header
 .footer
   z-index $b-idx-top
+  padding-top $section-gap
+  padding-bottom @padding-top
 
 .main
   z-index $b-idx-middle
-  padding-top $b-bd-width
-  padding-bottom @padding-top
 
 .header
   bottom auto
@@ -40,6 +40,39 @@
 //   Modifiers
 // -------------------------------------
 
+// ----- Gap ----- //
+
+.main--xs
+  margin-top ($section-gap + $b-bd-width + $b-vgap) * 2 + $b-lh-s  - 1
+  margin-bottom @margin-top
+
+.main--s
+  margin-top ($section-gap + $b-bd-width + $b-vgap) * 2 + $b-lh-s  - 1
+  margin-bottom @margin-top
+
+.main--m
+  margin-top ($section-gap + $b-bd-width + $b-vgap) * 2 + $b-lh-m  - 1
+  margin-bottom @margin-top
+
+.main--l
+  margin-top ($section-gap + $b-bd-width + $b-vgap) * 2 + $b-lh-l  - 1
+  margin-bottom @margin-top
+
+.main--xl
+  margin-top ($section-gap + $b-bd-width + $b-vgap) * 2 + $b-lh-xl - 1
+  margin-bottom @margin-top
+
+// ----- Flatten ----- //
+
+.main--f
+  margin-top 0
+  margin-bottom @margin-top
+
+.main--ft
+  margin-top 0
+
+.main--fb
+  margin-bottom 0
 // -------------------------------------
 //   States
 // -------------------------------------

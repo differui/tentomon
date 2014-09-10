@@ -1,0 +1,170 @@
+// Vertical List
+//
+// Primary Theme:
+//
+// + `.vlist--basis`
+// + `.vlist--info`
+// + `.vlist--safe`
+// + `.vlist--danger`
+// + `.vlist--warn`
+//
+// List Theme:
+//
+// + `.vlist--disc`
+// + `.vlist--circle`
+// + `.vlist--decimal`
+//
+// Separator Theme:
+//
+// + `.vlist--notch`
+// + `.vlist--sunken`
+// + `.vlist--solid`
+// + `.vlist--dashed`
+// + `.vlist--dotted`
+//
+// Layout:
+//
+// + `.vlist--bfc`
+// + `.vlist--relative`
+// + `.vlist--tight`
+// + `.vlist--loose`
+//
+// Markup:
+// <ul class="vlist vlist--loose vlist--basis vlist--solid vlist--disc">
+//   <li class="first">香蕉</li>
+//   <li>苹果</li>
+//   <li>雪梨</li>
+//   <li>榴莲</li>
+//   <li class="last">西瓜</li>
+// </ul>
+//
+// Styleguide 2.14
+.vlist
+  reset-gap()
+  reset-list()
+
+  > li
+    border-width $b-bd-width
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// ----- Primary Theme ----- //
+
+.vlist--basis
+  > li
+    border-color $c-bd-basis
+
+.vlist--info
+  > li
+    border-color $c-bd-info
+
+.vlist--safe
+  > li
+    border-color $c-bd-safe
+
+.vlist--danger
+  > li
+    border-color $c-bd-danger
+
+.vlist--warn
+  > li
+    border-color $c-bd-warn
+
+// ----- List Theme ----- //
+
+.vlist--disc
+.vlist--circle
+.vlist--decimal
+  list-style-position inside
+
+  > li
+    padding-left $b-hgap
+
+.vlist--sunken
+  > li:after
+    content ""
+    width 100%
+    height 1px
+    display block
+
+  > li.last:after
+    display none
+
+.vlist--disc
+  list-style-type disc
+
+.vlist--circle
+  list-style-type circle
+
+.vlist--decimal
+  list-style-type decimal
+
+.vlist--solid
+.vlist--notch
+.vlist--dashed
+.vlist--dotted
+  > li.last
+    border-bottom-style none
+
+.vlist--solid
+.vlist--notch
+  > li
+    border-bottom-style solid
+
+.vlist--dashed
+  > li
+    border-bottom-style dashed
+
+.vlist--dotted
+  > li
+    border-bottom-style dotted
+
+.vlist--notch
+  > li
+    mix-vinner-shadow(1, 0, $c-highlight-light)
+
+.vlist--sunken
+  &.vlist--basis > li:after
+    background-image radial-gradient(farthest-side at left center, $c-bd-basis, transparent)
+
+  &.vlist--info > li:after
+    background-image radial-gradient(farthest-side at left center, $c-bd-info, transparent)
+
+  &.vlist--safe > li:after
+    background-image radial-gradient(farthest-side at left center, $c-bd-safe, transparent)
+
+  &.vlist--danger > li:after
+    background-image radial-gradient(farthest-side at left center, $c-bd-danger, transparent)
+
+  &.vlist--warn > li:after
+    background-image radial-gradient(farthest-side at left center, $c-bd-warn, transparent)
+
+// ----- Layout ----- //
+
+.vlist--bfc
+  > li
+    overflow hidden
+
+.vlist--relative
+  > li
+    position relative
+
+.vlist--tight
+  > li
+    padding-top $b-vgap-half
+    padding-bottom @padding-top
+
+.vlist--loose
+  > li
+    padding-top $b-vgap
+    padding-bottom @padding-top
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------

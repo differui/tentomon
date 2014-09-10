@@ -37,7 +37,7 @@
 // Markup:
 // <dl class="form">
 //   <dd class="form-content has-bubble">
-//     <input type="text" class="tf tf--m tf--basis">
+//     <input type="text" class="textfield textfield--m textfield--basis">
 //     <label class="bubble bubble--m bubble--safe bubble--45 bubble--out">
 //       <span class="bubble-text">中</span>
 //     </label>
@@ -55,52 +55,77 @@
 //   Modifiers
 // -------------------------------------
 
+// ----- Theme ----- //
+
+.bubble--basis
+  @extend .ui-basis
+
+.bubble--safe
+  @extend .ui-safe
+
+.bubble--danger
+  @extend .ui-danger
+
+.bubble--info
+  @extend .ui-info
+
+.bubble--warn
+  @extend .ui-warn
+
+// ----- Shape ----- //
+
+.bubble--round
+  border-radius $b-rad-round
+
+.bubble--circle
+  border-radius $b-rad-circle
+
 // ----- Size ----- //
 
 .bubble--xs
   font-size $b-fs-xs
 
-  width be-even(@font-size * 2)
+  width $bubble-size-xs
   height @width
 
   .bubble-text
-    height $b-fs-xs
+    height @font-size
 
 .bubble--s
   font-size $b-fs-s
 
-  width be-even(@font-size * 2)
+  width $bubble-size-s
   height @width
 
   .bubble-text
-    height $b-fs-s
+    height @font-size
 
 .bubble--m
   font-size $b-fs-m
 
-  width be-even(@font-size * 2)
+  width $bubble-size-m
   height @width
 
   .bubble-text
-    height $b-fs-m
+    height @font-size
 
 .bubble--l
   font-size $b-fs-l
 
-  width be-even(@font-size * 2)
+  width $bubble-size-l
   height @width
 
   .bubble-text
-    height $b-fs-l
+    height @font-size
 
 .bubble--xl
   font-size $b-fs-xl
 
-  width be-even(@font-size * 2)
+  width $bubble-size-xl
   height @width
 
   .bubble-text
-    height $b-fs-xl
+    height @font-size
 
 // ----- Position ----- //
 
@@ -152,29 +177,6 @@
 
   &.bubble--360
     transform translate(0, -50%)
-
-// ----- Theme ----- //
-
-.bubble--basis
-  @extend .ui-basis
-
-.bubble--safe
-  @extend .ui-safe
-
-.bubble--danger
-  @extend .ui-danger
-
-.bubble--info
-  @extend .ui-info
-
-.bubble--warn
-  @extend .ui-warn
-
-.bubble--round
-  border-radius $b-rad-round
-
-.bubble--circle
-  border-radius $b-rad-circle
 
 // -------------------------------------
 //   States
