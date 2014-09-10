@@ -15,7 +15,7 @@
 // + `.board--mixin`
 //
 // Markup:
-// <div class="board board--basis board--round board--isolate">
+// <div class="board board--basis board--isolate">
 //   <div class="row">
 //     <div class="col">
 //       <div class="board-item first" data-state="active">
@@ -52,14 +52,6 @@
 //   Modifiers
 // -------------------------------------
 
-// ----- Layout ----- //
-
-.board-isolate
-  border-style $b-bd-style
-
-.board-mixin
-  border-style $b-bd-style none
-
 // ----- Theme ----- //
 
 .board--basis
@@ -92,16 +84,22 @@
   .board-item
     border-color $c-bd-warn
 
-.board--round
+// ----- Layout ----- //
+
+.board--isolate
+  border-style $b-bd-style
   border-radius $b-rad-round
 
   &.first
-    border-top-left-radius $b-rad-round
-    border-bottom-left-radius $b-rad-round
+    border-top-left-radius $b-rad-round-inner
+    border-bottom-left-radius $b-rad-round-inner
 
   &.last
-    border-top-right-radius $b-rad-round
-    border-bottom-right-radius $b-rad-round
+    border-top-right-radius $b-rad-round-inner
+    border-bottom-right-radius $b-rad-round-inner
+
+.board--mixin
+  border-style $b-bd-style none
 
 // -------------------------------------
 //   States

@@ -9,10 +9,12 @@
 //
 // Styleguide 1.1
 
-// translucent($color, $alpha)
+// translucent
 //
 // Add alpha channel into rgb color.
 // The origin alpha channel will be override by new value.
+//
+// `translucent($color, $alpha)`
 //
 // + `$color` `rgba`
 // + `$alpha` `unit` The new value for alpha channel.
@@ -28,9 +30,11 @@ translucent($color, $alpha) {
   return rgba($red, $green, $blue, unit($alpha, "%"))
 }
 
-// be-even($unit)
+// be-evne
 //
 // If `$unit` is a odd integer than minus one.
+//
+// `be-even($unit)`
 //
 // + `$unit` `unit`
 //
@@ -43,9 +47,11 @@ be-even($unit)
   else
     return $rounded
 
-// be-odd($unit)
+// be-odd
 //
 // If `$unit` is a even integer than plus one.
+//
+// `be-odd($unit)`
 //
 // + `$unit` `unit`
 //
@@ -62,7 +68,9 @@ be-odd($unit)
 //
 // Styleguide 1.2
 
-// mix-inner-glow($color, $length)
+// mix-inner-glow
+//
+// `mix-inner-glow($color, $length)`
 //
 // + `$color` `rgba`
 // + `$length` `unit`(4) Glow spread length.
@@ -73,7 +81,9 @@ mix-inner-glow($color, $length = 4)
 
   box-shadow 0 0 unit($length * -1, 'px') $color
 
-// mix-outer-glow($color, $length)
+// mix-outer-glow
+//
+// `mix-outer-glow($color, $length)`
 //
 // + `$color` `rgba`
 // + `$length` `unit`(4) Glow spread length.
@@ -84,7 +94,9 @@ mix-outer-glow($color, $length = 4)
 
   box-shadow 0 0 unit($length, 'px') $color
 
-// text-c-highlight($color)
+// mix-text-highlight
+//
+// `mix-text-highlight($color)`
 //
 // + `$color` `rgba`(`$c-highlight-light`) Highlight color.
 //
@@ -92,9 +104,11 @@ mix-outer-glow($color, $length = 4)
 mix-text-highlight($color = $c-highlight-light)
   mix-text-shadow 0 1px 0 $color
 
-// mix-text-shadow($color)
+// mix-text-shadow
 //
 // Emboss text effect by `mix-text-shadow`.
+//
+// `mix-text-shadow($color)`
 //
 // + `$color` `rgba`(`$c-shadow-light`) Shadow color.
 //
@@ -102,9 +116,11 @@ mix-text-highlight($color = $c-highlight-light)
 mix-text-shadow($color = $c-shadow-light)
   mix-text-shadow 0 -1px 0 $color
 
-// mix-vinner-shadow($deep, $length, $color)
+// mix-vinner-shadow
 //
 // Vertical component inner shadow.
+//
+// `mix-vinner-shadow($deep, $length, $color)`
 //
 // + `$deep` `unit`(2) Shadow deep.
 // + `$length` `unit`(4) Length of shadow spread.
@@ -114,9 +130,11 @@ mix-text-shadow($color = $c-shadow-light)
 mix-vinner-shadow($deep = 2, $length = 4, $color = $c-shadow-light)
   box-shadow inset 0 unit($deep, 'px') unit($length, 'px') $color
 
-// mix-vouter-shadow($deep, $length, $color)
+// mix-vouter-shadow
 //
 // Vertical component outer shadow.
+//
+// `mix-vinner-shadow($deep, $length, $color)`
 //
 // + `$deep` `unit`(2) Shadow deep.
 // + `$length` `unit`(4) Length of shadow spread.
@@ -126,9 +144,11 @@ mix-vinner-shadow($deep = 2, $length = 4, $color = $c-shadow-light)
 mix-vouter-shadow($deep = 2, $length = 4, $color = $c-shadow-light)
   box-shadow 0 unit($deep, 'px') unit($length, 'px') $color
 
-// mix-hinner-shadow($deep, $length, $color)
+// mix-hinner-shadow
 //
 // Horizontal component inner shadow.
+//
+// `mix-vinner-shadow($deep, $length, $color)`
 //
 // + `$deep` `unit`(2) Shadow deep.
 // + `$length` `unit`(4) Length of shadow spread.
@@ -138,9 +158,11 @@ mix-vouter-shadow($deep = 2, $length = 4, $color = $c-shadow-light)
 mix-hinner-shadow($deep = 2, $length = 4, $color = $c-shadow-light)
   box-shadow inset unit($deep, 'px') 0 unit($length, 'px') $color
 
-// mix-houter-shadow($deep, $length, $color)
+// mix-houter-shadow
 //
 // Horizontal component outer shadow.
+//
+// `mix-vinner-shadow($deep, $length, $color)`
 //
 // + `$deep` `unit`(2) Shadow deep.
 // + `$length` `unit`(4) Length of shadow spread.
@@ -150,10 +172,12 @@ mix-hinner-shadow($deep = 2, $length = 4, $color = $c-shadow-light)
 mix-houter-shadow($deep = 2, $length = 4, $color = $c-shadow-light)
   box-shadow unit($deep, 'px') 0 unit($length, 'px') $color
 
-// mix-vgradient($start, $end)
+// mix-vgradient
 //
 // Vertical two color stop gradient.
 // If one of color stop not given gradient will be override into empty.
+//
+// `mix-vgradient($start, $end)`
 //
 // + `$start` `rgba` Start color stop.
 // + `$end` `rgba` End color stop.
@@ -165,7 +189,9 @@ mix-vgradient($start, $end)
   else
     background-image none
 
-// mix-font-face($name, $path, $weight, $style)
+// mix-font-face
+//
+// `mix-font-face($name, $path, $weight, $style)`
 //
 // + `$name` `str` Font name
 // + `$path` `str` Font asset path
@@ -184,13 +210,31 @@ mix-font-face($name, $path, $weight = normal, $style = normal)
 // Templates
 //
 // Styleguide 1.3
+
+
+// reset-gap
+//
+// Remove default margin & padding.
+//
+// Styleguide 1.3.1
+
 reset-gap()
   margin 0
   padding 0
 
+// reset-list
+//
+// Remove default list type.
+//
+// Styleguide 1.3.2
 reset-list()
   list-style-type none
 
+// reset-appearance
+//
+// Set `-webkit-appearance: none`.
+//
+// Styleguide 1.3.3
 reset-appearance()
   -webkit-appearance none
 
@@ -199,6 +243,14 @@ reset-appearance()
 // Styleguide 1.4
 
 // ----- User Interface ----- //
+
+// User Interface
+//
+// `ui-*`
+//
+// `{* | * ∈ black, white, basis, info, safe, danger, warn}`
+//
+// Styleguide 1.4.1
 
 .ui-black
 .ui-info
@@ -249,12 +301,27 @@ reset-appearance()
 
 // ----- Typeset ----- //
 
+// nowrap
+//
+// Long string would not wrap.
+//
+// Styleguide 1.4.2
 .nowrap
   white-space nowrap
 
+// wrap
+//
+// Long string would wrap.
+//
+// Styleguide 1.4.3
 .wrap
   white-space normal
 
+// clip & ellipsis
+//
+// Clip or draw ellipsis for over string.
+//
+// Styleguide 1.4.4
 .clip
 .ellipsis
   @extend .nowrap
@@ -264,11 +331,25 @@ reset-appearance()
 .ellipsis
   text-overflow ellipsis
 
+// bread
+//
+// Fore to break all string into a new line(even with number).
+//
+// Styleguide 1.4.5
 .break
   word-break break-all
 
 // ----- Center ----- //
 
+// Center
+//
+// Position component according to parent container.
+//
+// `center-*`
+//
+// `{* | * ∈ top, right, bottom, left, top-left, top-right, bottom-left, bottom-right}`
+//
+// Styleguide 1.4.6
 .center
   position absolute
   margin auto
@@ -323,6 +404,15 @@ reset-appearance()
 
 // ----- Amid ----- //
 
+// Amid
+//
+// Position components amid parent container.
+//
+// `amid-*`
+//
+// `{* | * ∈ 45 * n, n ∈ N, n <= 8}`
+//
+// Styleguide 1.4.7
 .amid-45
 .amid-90
 .amid-135
@@ -370,6 +460,15 @@ reset-appearance()
 
 // ----- Around ----- //
 
+// Around
+//
+// Position components around parent container.
+//
+// `around-*`
+//
+// `{* | * ∈ 30 * n, n ∈ N, n <= 12}`
+//
+// Styleguide 1.4.8
 .around-30
 .around-60
 .around-90
@@ -454,6 +553,13 @@ reset-appearance()
 
 // ----- Pattern ------ //
 
+// Stripe
+//
+// `stripes-*`
+//
+// `{* | * ∈ diagonal, h, v}`
+//
+// Styleguide 1.4.9
 .stripes-diagonal
 .stripes-h
 .stripes-v
