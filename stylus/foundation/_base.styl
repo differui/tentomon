@@ -32,8 +32,8 @@ body
 
 ul
 p
-  margin-bottom              $b-vgap-double
-  margin-top                 0
+  margin-bottom $b-vgap-double
+  margin-top    0
 
 dd
   margin-left 0
@@ -48,16 +48,17 @@ a
   &
   &:active
   &:visited
-    color                    $c-link-static
+    color           $c-link-static
+    text-decoration none
 
   &:disabled
-    color                    $c-link-disabled
+    color $c-link-disabled
 
 // ----- Images ----- //
 
 img
-  height                     auto
-  max-width                  100%
+  height    auto
+  max-width 100%
 
 // ----- Form ----- //
 input
