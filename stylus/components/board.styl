@@ -26,7 +26,7 @@
 // + `.board--flat`
 //
 // Markup:
-// <div class="board board--basis board--isolate">
+// <div class="board board--basis board--isolate board--notch board--physical">
 //   <div class="g g--row">
 //     <div class="c">
 //       <div class="board-item first" data-state="active">
@@ -130,6 +130,9 @@
 .board--mixin
   border-style $b-bd-style none
 
+.board--flat
+  background-image none
+
 // -------------------------------------
 //   States
 // -------------------------------------
@@ -139,6 +142,9 @@
     &:active
     &[data-state='active']
       mix-vinner-shadow()
+
+    &[data-state='active']
+      color $c-safe
 
     &:disabled
     &[data-state='disabled']
