@@ -14,6 +14,11 @@
 // + `.board--isolate`
 // + `.board--mixin`
 //
+// Interactive:
+//
+// + `.board--physical`
+// + `.board--flat`
+//
 // Markup:
 // <div class="board board--basis board--isolate">
 //   <div class="g g--row">
@@ -105,6 +110,28 @@
 //   States
 // -------------------------------------
 
+.board--physical
+  .board-item
+    &:active
+    &[data-state='active']
+      mix-vinner-shadow()
+
+    &:disabled
+    &[data-state='disabled']
+      mix-vinner-shadow(0, 0, transparent)
+
+      color $c-grey-dark
+
+.board--flat
+  .board-item
+    &:active
+    &[data-state='active']
+      color $c-safe
+
+    &:disabled
+    &[data-state='disabled']
+      color $c-grey-dark
+
 // -------------------------------------
 //   Scaffolding
 // -------------------------------------
@@ -116,15 +143,3 @@
 
   &.last
     border-right-style none
-
-.board-item
-  &:active
-  &[data-state='active']
-    mix-vinner-shadow()
-
-  &:disabled
-  &[data-state='disabled']
-    mix-vinner-shadow(0, 0, transparent)
-
-    .btn
-      opacity .7
