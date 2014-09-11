@@ -16,6 +16,7 @@ dirs:
   tasks: 'tasks/'
   assets: 'assets/'
   stylus: 'stylus/'
+  vender: 'stylus/vender/'
   document: 'document/'
   markdown: 'readme/'
   styleguide: 'styleguide/'

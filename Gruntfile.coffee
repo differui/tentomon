@@ -281,6 +281,9 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'generate_guide', [
 
+    # copy vender
+    'copy:vender'
+
     # copy guide template
     'copy:guide_template'
 
