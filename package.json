@@ -21,7 +21,7 @@
     "node-htmlencode": "0.0.1"
   },
   "name": "tentomon",
-  "version": "0.17.4",
+  "version": "0.17.5",
   "description": "Pure css framework for mobile.",
   "repository": {
     "type": "git",
