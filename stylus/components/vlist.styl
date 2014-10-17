@@ -31,11 +31,11 @@
 //
 // Markup:
 // <ul class="vlist vlist--loose vlist--basis vlist--solid vlist--disc">
-//   <li class="first">香蕉</li>
+//   <li>香蕉</li>
 //   <li>苹果</li>
 //   <li>雪梨</li>
 //   <li>榴莲</li>
-//   <li class="last">西瓜</li>
+//   <li>西瓜</li>
 // </ul>
 //
 // Styleguide 2.14
@@ -89,7 +89,7 @@
     height 1px
     display block
 
-  > li.last:after
+  > li:last-child:after
     display none
 
 .vlist--disc
@@ -105,7 +105,7 @@
 .vlist--notch
 .vlist--dashed
 .vlist--dotted
-  > li.last
+  > li:last-child
     border-bottom-style none
 
 .vlist--solid

@@ -2,11 +2,11 @@
 //
 // State:
 //
-// + `on`
-// + `off`
+// + `active`
+// + `disabled`
 //
 // Markup:
-// <div class="toggle" data-state="on">
+// <div class="toggle" data-state="active">
 //   <input class="toggle-tag" type="checkbox" id="tg-demo">
 //   <div class="toggle-bd">
 //     <span class="toggle-tip"></span>
@@ -27,7 +27,7 @@
 //   States
 // -------------------------------------
 
-.toggle[data-state~='on']
+.toggle[data-state~='active']
   .toggle-bd
     @extend .ui-safe
 
@@ -40,15 +40,10 @@
     left auto
     right 0
 
-.toggle[data-state~='off']
-  .toggle-bd
-    @extend .ui-basis
-
+.toggle[data-state~='disabled']
+  .toggle-tip
     background-image none
 
-  .toggle-tip
-    left 0
-    right auto
 
 // -------------------------------------
 //   Scaffolding
@@ -64,6 +59,8 @@
 // ----- Body ----- //
 
 .toggle-bd
+  @extend .ui-basis
+
   width be-even($b-fs-l * 2.5)
   height be-even($b-fs-l * 1.5 + 2)
   position relative
@@ -71,6 +68,7 @@
   border-width $b-bd-width
   border-style $b-bd-style
   border-radius $b-rad-pill
+  background-image none
 
 // ----- Tip ----- //
 
@@ -80,6 +78,8 @@
 
   mix-outer-glow($c-shadow-light, 1)
 
+  left 0
+  right auto
   width be-even($b-fs-l * 1.5)
   height @width
   display block

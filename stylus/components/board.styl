@@ -29,7 +29,7 @@
 // <div class="board board--basis board--isolate board--notch board--physical">
 //   <div class="g g--row">
 //     <div class="c">
-//       <div class="board-item first" data-state="active">
+//       <div class="board-item board-item--first" data-state="active">
 //         <span class="btn btn--text">阅读</span>
 //       </div>
 //     </div>
@@ -44,7 +44,7 @@
 //       </div>
 //     </div>
 //     <div class="c">
-//       <div class="board-item last">
+//       <div class="board-item board-item--last">
 //         <span class="btn btn--text">取消</span>
 //       </div>
 //     </div>
@@ -112,18 +112,17 @@
 .board--dashed .board-item
   border-right-style dashed
 
-
 // ----- Layout ----- //
 
 .board--isolate
   border-style $b-bd-style
   border-radius $b-rad-round
 
-  &.first
+  &.board-item--first
     border-top-left-radius $b-rad-round-inner
     border-bottom-left-radius $b-rad-round-inner
 
-  &.last
+  &.board-item--last
     border-top-right-radius $b-rad-round-inner
     border-bottom-right-radius $b-rad-round-inner
 
@@ -168,5 +167,5 @@
 .board-item
   border-width $b-bd-width
 
-  &.last
+  &.board-item--last
     border-right-style none

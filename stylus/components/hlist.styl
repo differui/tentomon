@@ -29,7 +29,7 @@
 //
 // Markup:
 // <ul class="hlist hlist--basis hlist--solid g g--row">
-//   <li class="first c">
+//   <li class="c">
 //     <button class="btn btn--text">香蕉</button>
 //   </li>
 //   <li class="c">
@@ -38,7 +38,7 @@
 //   <li class="c">
 //     <button class="btn btn--text">苹果</button>
 //   </li>
-//   <li class="last c">
+//   <li class="c">
 //     <button class="btn btn--text">西瓜</button>
 //   </li>
 // </ul>
@@ -79,7 +79,7 @@
       line-height $b-fs-m
       margin-right $b-fs-half * -1
 
-    &.last:after
+    &:last-child:after
       content ""
 
 .hlist--sunken
@@ -91,7 +91,7 @@
     height 100%
     display block
 
-  > li.last:after
+  > li:last-child:after
     display none
 
 .hlist--basis
@@ -132,7 +132,7 @@
 .hlist--notch
 .hlist--dashed
 .hlist--dotted
-  > li.last
+  > li:last-child
     border-right-style none
 
 .hlist--solid
