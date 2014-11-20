@@ -1,12 +1,18 @@
 // Tab
 //
+// + `.tab--basis`
+// + `.tab--info`
+// + `.tab--safe`
+// + `.tab--danger`
+// + `.tab--warn`
+//
 // Layout:
 //
 // + `.tab--head`
 // + `.tab--foot`
 //
 // Markup:
-// <div class="tab tab--head">
+// <div class="tab tab--head tab--basis">
 //   <div class="g g--row">
 //     <div class="c">
 //       <div class="tab-item" data-state="active">
@@ -37,6 +43,30 @@
 
 // ----- Theme ----- //
 
+.tab--basis
+  @extend .ui-basis
+
+.tab--info
+  @extend .ui-info
+
+.tab--safe
+  @extend .ui-safe
+
+.tab--danger
+  @extend .ui-danger
+
+.tab--warn
+  @extend .ui-warn
+  
+.tab--basis
+.tab--info
+.tab--safe
+.tab--danger
+.tab--warn
+  background-image none
+
+// ----- Layout ----- //
+
 .tab--head .tab-item
   border-top-width $b-bd-width * 2
   border-top-style $b-bd-style
@@ -54,7 +84,7 @@
 // -------------------------------------
 
 .tab-item
-  border-color transparent
+  border-color $c-bd-dark
 
 .tab-item
   &[data-state~='active']
