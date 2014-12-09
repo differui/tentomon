@@ -14,6 +14,7 @@
 // + `.board--notch`
 // + `.board--dotted`
 // + `.board--dashed`
+// + `.board--outline`
 //
 // Layout:
 //
@@ -111,6 +112,30 @@
 
 .board--dashed .board-item
   border-right-style dashed
+  
+.board--outline
+  background-image none
+  background-color transparent
+  
+  &.board--basis
+    color $c-grey-lighter
+    border-color $c-bd-basis
+
+  &.board--info
+    color $c-info
+    border-color $c-bd-info
+
+  &.board--safe
+    color $c-safe
+    border-color $c-bd-safe
+
+  &.board--danger
+    color $c-danger
+    border-color $c-bd-danger
+
+  &.board--warn
+    color $c-warn
+    border-color $c-bd-warn
 
 // ----- Layout ----- //
 
