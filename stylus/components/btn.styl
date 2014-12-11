@@ -10,11 +10,23 @@
 // + `.btn--danger`
 // + `.btn--warn`
 //
+// Size:
+//
+// + `.btn--xs`
+// + `.btn--s`
+// + `.btn--m`
+// + `.btn--l`
+// + `.btn--xl`
+//
 // Stylize:
 //
 // + `.btn--text`
 // + `.btn--link`
 // + `.btn--outline`
+//
+// Layout:
+//
+// + `.btn--auto`
 //
 // State:
 //
@@ -80,6 +92,24 @@
 .btn--warn
   @extend .ui-warn
 
+// ----- Size ----- //
+
+.btn--xs
+  font-size $b-fs-s
+
+.btn--xl
+  font-size $b-fs-l
+  
+.btn--xs
+.btn--s
+  padding-top $b-vgap-half
+  padding-bottom @padding-top
+  
+.btn--l
+.btn--xl
+  padding-top $b-vgap-double
+  padding-bottom @padding-top
+
 // ----- Stylize ----- //
 
 .btn--text
@@ -124,6 +154,11 @@
   &.btn--warn
     color        $c-bd-warn
     border-color @color
+    
+// ----- Layout ----- //
+
+.btn--auto
+  width auto
 
 // -------------------------------------
 //   States
