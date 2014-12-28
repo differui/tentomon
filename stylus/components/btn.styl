@@ -34,7 +34,7 @@
 // + `:disabled`
 //
 // Markup:
-// <button class="btn btn--basis">
+// <button class="btn btn--basis btn--outline">
 //   <span class="btn-text">按钮</span>
 // </button>
 //
@@ -167,7 +167,6 @@
 // ----- Active ----- //
 
 .btn:active
-.btn[data-state~='active']
   &.btn--basis
   &.btn--info
   &.btn--safe
@@ -189,7 +188,6 @@
 // ----- Disabled ----- //
 
 .btn:disabled
-.btn[data-state~='disabled']
   &.btn--basis
   &.btn--info
   &.btn--safe
@@ -219,7 +217,6 @@
 
   &.btn--link
     text-decoration underline
-
 
 // -------------------------------------
 //   Scaffolding
