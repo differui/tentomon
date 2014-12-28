@@ -34,7 +34,7 @@
 // + `:disabled`
 //
 // Markup:
-// <button class="btn btn--basis btn--outline">
+// <button class="btn btn--basis">
 //   <span class="btn-text">按钮</span>
 // </button>
 //
@@ -183,7 +183,39 @@
     text-decoration none
 
   &.btn--outline
-    opacity .5
+    &.btn--white
+      color        $c-black
+      border-color $c-white
+      background-color @border-color
+
+    &.btn--black
+      color        $c-white
+      border-color $c-black
+      background-color @border-color
+
+    &.btn--basis
+      color        $c-white
+      border-color $c-bd-basis
+
+    &.btn--info
+      color        $c-white
+      border-color $c-bd-info
+      background-color @border-color
+
+    &.btn--safe
+      color        $c-white
+      border-color $c-bd-safe
+      background-color @border-color
+
+    &.btn--danger
+      color        $c-white
+      border-color $c-bd-danger
+      background-color @border-color
+
+    &.btn--warn
+      color        $c-white
+      border-color $c-bd-warn
+      background-color @border-color
 
 // ----- Disabled ----- //
 
