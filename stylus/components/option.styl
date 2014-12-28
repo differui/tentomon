@@ -8,15 +8,15 @@
 // Markup:
 // <div class="opt opt--checkbox" data-state="active">
 //   <input class="opt-tag" type="checkbox" id="cb-demo">
-//   <div class="opt-bd opt-bd--round">
-//     <span class="opt-tip opt-tip--check"></span>
+//   <div class="opt-bd">
+//     <span class="opt-indicator"></span>
 //   </div>
 // </div>
 // <label class="label" for="cb-demo">多选控件</label>
 // <div class="opt opt--radio" data-state="active">
 //   <input class="opt-tag" type="radio" id="rad-demo">
-//   <div class="opt-bd opt-bd--circle">
-//     <span class="opt-tip opt-tip--dot"></span>
+//   <div class="opt-bd">
+//     <span class="opt-indicator"></span>
 //   </div>
 // </div>
 // <label class="label" for="rad-demo">单选控件</label>
@@ -35,7 +35,7 @@
   .opt-bd
     border-radius $b-rad-round
 
-  .opt-tip
+  .opt-indicator
     width be-even($b-fs-s + 2)
     height $b-fs-half - 1
     top -2px
@@ -49,7 +49,7 @@
   .opt-bd
     border-radius $b-rad-circle
 
-  .opt-tip
+  .opt-indicator
     width $b-fs-s - 2
     height @width
 
@@ -62,19 +62,13 @@
 // -------------------------------------
 
 .opt[data-state~='active']
-  .opt-tip
+  .opt-indicator
     opacity 1
 
 .opt[data-state~='disabled']
   .opt-bd
     background-image none
     background-color $c-dis-basis
-
-  .opt-tip--dot
-    background-color $c-dis-safe
-
-  .opt-tip--check
-    border-color $c-dis-safe
 
 // -------------------------------------
 //   Scaffolding
@@ -102,7 +96,7 @@
 
 // ---- Tip ----- //
 
-.opt-tip
+.opt-indicator
   @extend .center
 
   opacity 0
