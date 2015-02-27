@@ -53,13 +53,6 @@ module.exports = (grunt) ->
         src: 'template/**/*'
         dest: '<%= dirs.build %>'
 
-      # copy markdown style to document directory
-      markdown_style:
-        expand: true
-        cwd: '<%= dirs.bower %>github-markdown-css/'
-        src: 'github-markdown.css'
-        dest: '<%= dirs.document %>styles/'
-
       # copy normalize.styl to stylus vender directory
       normalize:
         expand: true
@@ -171,65 +164,11 @@ module.exports = (grunt) ->
         files:
           '<%= dirs.styleguide %>': '<%= dirs.stylus %>application.styl'
 
-    git_log:
-
-      # default options
-      options:
-        branch: 'dev'
-        arguments:
-          '--pretty': '%h %cd - %s'
-
-      # get versioning form master branch
-      build:
-        processor: (result) ->
-          result = String result
-
-          # public result data
-          grunt.config 'git_log.versioning', htmlencode.htmlEncode result
-
-    markdown:
-      options:
-        template: '<%= dirs.markdown %>template.jst'
-        templateContext:
-          doc_name: '<%= pkg.name %>'
-          versioning: ''
-          render_date: '<%= grunt.template.today("yyyy年mm月dd日 hh:MM:ss") %>'
-
-        # add build time stamp
-        preCompile: (src, context) ->
-          match_doc_name = /^(.+)[\r|\n]+\={3}/igm
-          result = match_doc_name.exec src
-
-          context.doc_name = result[1]
-          context.versioning = grunt.config 'git_log.versioning'
-
-          return src
-
-        markdownOptions:
-          gfm: true
-          highlight: 'auto'
-
-      document:
-        expand: true
-        cwd: '<%= dirs.markdown %>'
-        src: '*.md'
-        dest: '<%= dirs.document %>'
-        ext: '.html'
-
     watch:
 
       # default options
       options:
         debounceDelay: 500
-
-      doc:
-        files: [
-          '<%= dirs.markdown %>*.md'
-        ]
-
-        tasks: [
-          'generate_doc'
-        ]
 
       # auto re-generate styleguide
       guide:
@@ -241,14 +180,9 @@ module.exports = (grunt) ->
           'generate_guide'
         ]
 
-  # check out grunt config
-  # console.log grunt.config 'markdown.document'
-
-
   # load npm tasks
   # ---------------------------------------------------------------------------
   grunt.loadNpmTasks 'grunt-version'
-  grunt.loadNpmTasks 'grunt-markdown'
   grunt.loadNpmTasks 'grunt-styleguide'
   grunt.loadNpmTasks 'grunt-text-replace'
   grunt.loadNpmTasks 'grunt-autoprefixer'
@@ -299,22 +233,10 @@ module.exports = (grunt) ->
     'copy:tentomon_style'
   ]
 
-  grunt.registerTask 'generate_doc', [
-    'git_log:build'
-    'markdown:document'
-    'copy:markdown_style'
-  ]
-
   # generate style guide
   grunt.registerTask 'guide', [
     'generate_guide'
     'watch:guide'
-  ]
-
-  # generate html document
-  grunt.registerTask 'doc', [
-    'generate_doc'
-    'watch:doc'
   ]
 
   # update version

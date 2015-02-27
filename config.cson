@@ -2,11 +2,6 @@
 debug: false
 version: '0.17.13'
 
-# use short alias repace long mode name
-mode_alias:
-  test: 't'
-  release: 'rc'
-
 dirs:
   dist: '<%= pkg.name %>-<%= pkg.version %>/'
   build: 'build/'
@@ -17,6 +12,4 @@ dirs:
   assets: 'assets/'
   stylus: 'stylus/'
   vender: 'stylus/vender/'
-  document: 'document/'
-  markdown: 'readme/'
   styleguide: 'styleguide/'
