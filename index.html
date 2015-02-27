@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>tentomon</title>
+    <meta name="description" content="" />
+    <meta name="generator" content="kss-node" />
+    <link rel="stylesheet" href="public/kss.css" />
+    <link rel="stylesheet" href="public/style.css" />
+    <!--[if lt IE 9]>
+    <script src="public/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body id="kss-node">
+    <div class="kss-wrapper">
+      <div class="kss-sidebar">
+        <div class="kss-sidebar-inner">
+          <header class="kss-header">
+            <h1 class="kss-doc-title"><a href="./">tentomon</a></h1>
+          </header>
+          <nav class="kss-nav">
+            <ul class="kss-menu" data-kss-ref="0">
+              <li class="kss-menu-item"><a href="./"><span class="kss-ref">0</span><span class="kss-name">Overview</span></a></li>
+              
+              <li class="kss-menu-item"><a href="section-1.html"><span class="kss-ref">1</span><span class="kss-name">Foundation</span></a></li>
+              
+              <li class="kss-menu-item"><a href="section-2.html"><span class="kss-ref">2</span><span class="kss-name">Components</span></a></li>
+              
+              <li class="kss-menu-item"><a href="section-3.html"><span class="kss-ref">3</span><span class="kss-name">Structures</span></a></li>
+              
+              <li class="kss-menu-item"><a href="section-4.html"><span class="kss-ref">4</span><span class="kss-name">Vender</span></a></li>
+              
+              <li class="kss-menu-item"><a href="section-5.html"><span class="kss-ref">5</span><span class="kss-name">Tools</span></a></li>
+              
+              <li class="kss-menu-item"><a href="section-6.html"><span class="kss-ref">6</span><span class="kss-name">Inbox</span></a></li>
+              
+            </ul>
+            
+            
+          </nav>
+        </div>
+      </div>
+      <div class="kss-content">
+        <article class="kss-article">
+          
+          <section id="section-0" class="kss-section kss-overview">
+            <h1>The quick guide</h1>
+<h2>UI</h2>
+<h3>Types</h3>
+<p>UI is a suit of component skin style.I category components UI in five main type:
+
+</p>
+<ul>
+<li><strong>Basis</strong> - Ordinary component.</li>
+<li><strong>Information</strong> - Expressing helpful information.</li>
+<li><strong>Safety</strong> - UI is safety or expressing good information.</li>
+<li><strong>Danger</strong> - UI is dangerous and side-effect or expressing bad information.</li>
+<li><strong>Warning</strong> - Warning user important information.</li>
+</ul>
+<h3>States</h3>
+<p>Normal components is multi-state since UI may contains various persona under different states.There are four main states for each UI:
+
+</p>
+<ul>
+<li><strong>Normal</strong> - Normal state.</li>
+<li><strong>Focused</strong> - Component is foucsed.</li>
+<li><strong>Activated</strong> - Component is activated or selected.</li>
+<li><strong>Disabled</strong> - Component is disabled.</li>
+</ul>
+<h3>Nomenclature</h3>
+<p>I name a UI in this manner:
+
+</p>
+<pre><code>.type-state</code></pre>
+<p>The first portion describe UI type and the second one describe UI state modifier name.
+
+</p>
+<p>If you omit state name.It means that you want UI with all states style with it.
+
+</p>
+<pre><code>&lt;!-- Get a button style with basis UI and all states style under it. --&gt;
+&lt;button class=&quot;btn basis&quot;&gt;Simple Button&lt;/button&gt;
+
+&lt;!-- Get a button style with basis UI in normal state. --&gt;
+&lt;button class=&quot;btn basis-static&quot;&gt;Simple Button&lt;/button&gt;
+
+&lt;!-- Get a button style with basis Ui in disabled state. --&gt;
+&lt;button class=&quot;btn basis-disabeld&quot;&gt;Simple Button&lt;/button&gt;</code></pre>
+<h3>Reusable</h3>
+<p>The most important thing is that skin style is reusable.It is different with
+  layout style the after one can not reuse.There are many CSS properties
+describe component skin:
+
+</p>
+<ul>
+<li>color</li>
+<li>font-*</li>
+<li>background-*</li>
+<li>border-*</li>
+<li>border-radius</li>
+<li>box-shadow</li>
+<li>mix-text-shadow</li>
+<li>text-decoration</li>
+</ul>
+<p>We only use CSS properties in above list for UI.In order to ensure UIs
+can reuse across the project.
+
+</p>
+<h3>Override</h3>
+<p>When we creating a new component.CSS properties in above list can use to
+override the default UI style.
+
+</p>
+<pre><code>.basis
+  color grey
+
+.btn
+  color red
+
+&lt;button class=&quot;btn basis&quot;&gt;Button&lt;/button&gt;</code></pre>
+<p>The <code>.btn</code> component used the <code>color</code> property.This will override default UI
+style <code>color</code>.That means all <code>.btn</code> components with red color whatever UI hooks on them.The basis UI with <code>grey</code> color not workable.
+
+</p>
+<h2>Modifiers</h2>
+<p>Modifiers make component varied and graceful.Here is a list of typical
+modifiers:
+
+</p>
+<h3>State Modifiers</h3>
+<p>Describe components with various skin under different states.
+
+</p>
+<pre><code>.btn:active
+.btn:focus
+.btn.is-active
+.btn.is-disabled</code></pre>
+<h3>Override Modifiers</h3>
+<p>Force override specified style.
+
+</p>
+<pre><code>.btn.no-border
+.btn.round</code></pre>
+<h3>Style Modifiers</h3>
+<p>This is the key to make components various and graceful.You can change one or more default feature of component and name it.Extend component in this manner is very simple.
+
+</p>
+<pre><code>.btn.naked
+.btn.mini
+.link.feel</code></pre>
+<h2>Override Modifiers</h2>
+<p>Override is global modifiers and force to override specified style.I name override in this manner:
+
+</p>
+<pre><code>.type-modifier</code></pre>
+<p>There are several rules apply to override:
+
+</p>
+<p>RULE NO.1: <strong>Override can not override each other in different type</strong>.
+
+</p>
+<p>I divide override in different types.Every override which in different types can not confilict with each other.Every one must unique and no common features.That means you can not use same CSS property in two override which under different type.
+
+</p>
+<p>But override in same type can use same CSS property because that they would not present in same HTML tag.
+
+</p>
+<pre><code>.round
+    border-radius 3px
+
+// different override types confilicted
+.box-round
+    border-radius 5px
+
+// it is does not matter with same type
+.circle
+    border-radius 50%</code></pre>
+<p>RULE NO.2: <strong>Override can use <code>important</code> keyword</strong>.
+
+</p>
+<pre><code>.round
+    border-radius 3px !important
+
+.circle
+    border-radius 50% !important</code></pre>
+<h2>Global Modifiers</h2>
+<p>Global modifier just like override but not override component default
+style. It supply default style.For example:
+
+</p>
+<pre><code>.flex-width
+    width 100%
+    height auto
+
+&lt;img alt=&quot;alt-text&quot; class=&quot;flex-width&quot;&gt;</code></pre>
+<p>Those rules supply basis flexible style for image.The image can
+expand/compress width with parent element.But they are repeating override.
+
+</p>
+<p>So common global modifiers it not recommended.It is better molding
+them as template.
+
+</p>
+<h2>Template</h2>
+<p>Template is several CSS rules and may used many times.If there are several CSS rules you
+use again and again.It is a good sign to molding them as a template.Here is a
+template example:
+
+</p>
+<pre><code>// reset component outer and inner gap
+$reset-gaped$()
+    margin 0
+    padding 0</code></pre>
+<h2>Components vs Collections</h2>
+<p>Component is atom of collection.A component is self-contains and only consider
+itself.For example <code>.btn</code> is a component.It is
+unnecessary set <code>margin</code> for <code>.btn</code> to deal relation with other <code>.btn</code>.
+
+</p>
+<p>Collection is a group of components.It care for relation between two different
+components.For example <code>.board</code> is a collection.It care for child <code>.btn</code> inside
+it.The <code>margin</code> or sibling <code>border</code> style between <code>.btn</code>.
+
+</p>
+<h2>Component Size</h2>
+<ul>
+<li><strong>Normal Size</strong></li>
+</ul>
+<p>The height of component with normal size equal to <code>$component-outer-height</code>.
+
+</p>
+<ul>
+<li><strong>Mini Size</strong></li>
+</ul>
+<p>The height of component with mini size equal to <strong>Normal Size</strong> height <em>minus</em> top and bottom <code>$vgap</code>.
+
+</p>
+<ul>
+<li><strong>Pygmy Size</strong></li>
+</ul>
+<p>The height of component with extra small size equal to <strong>Mini Size</strong> height <em>minus</em> top and bottom <code>$vgap</code>.
+
+</p>
+<ul>
+<li><strong>Huge Size</strong></li>
+<li><strong>massive Size</strong></li>
+</ul>
+<h2>Component Factory</h2>
+<h3>$CONTROL</h3>
+<h3>$BTN</h3>
+<h3>$LABEL</h3>
+<h3>$LIST</h3>
+<h3>$LIST-ITEM</h3>
+
+          </section>
+          
+        </article>
+        <footer class="kss-footer">
+          <div>Created using <a href="https://github.com/hughsk/kss-node">kss-node</a> and <a href="https://github.com/htanjo/kss-node-template">kss-node-template</a>.</div>
+        </footer>
+      </div>
+    </div>
+    <script src="public/kss.js"></script>
+    <script src="public/jquery-1.9.1.min.js"></script>
+    <!--[if gt IE 8]><!-->
+    <script src="public/rainbow.min.js"></script>
+    <!--<![endif]-->
+    <script src="public/main.js"></script>
+  </body>
+</html>
