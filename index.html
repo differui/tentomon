@@ -45,213 +45,49 @@
         <article class="kss-article">
           
           <section id="section-0" class="kss-section kss-overview">
-            <h1>The quick guide</h1>
-<h2>UI</h2>
-<h3>Types</h3>
-<p>UI is a suit of component skin style.I category components UI in five main type:
+            <h1>快速指南</h1>
+<h2>命名规范 <code>Naming Conventions</code></h2>
+<p>一般在 HTML 标签的 <code>class</code> 属性中定义控件的名字。控件的名字一般遵循<strong>仅使用一个英文单词描述的原则</strong>。比如：
 
 </p>
 <ul>
-<li><strong>Basis</strong> - Ordinary component.</li>
-<li><strong>Information</strong> - Expressing helpful information.</li>
-<li><strong>Safety</strong> - UI is safety or expressing good information.</li>
-<li><strong>Danger</strong> - UI is dangerous and side-effect or expressing bad information.</li>
-<li><strong>Warning</strong> - Warning user important information.</li>
+<li><code>btn</code></li>
+<li><code>textfield</code></li>
+<li><code>vlist</code></li>
 </ul>
-<h3>States</h3>
-<p>Normal components is multi-state since UI may contains various persona under different states.There are four main states for each UI:
+<p>修饰器的名字紧随在部件名字之后，同样遵循<strong>仅使用一个英文单词描述的原则</strong>，使用 <code>--</code> 同部件名字分隔：
 
 </p>
 <ul>
-<li><strong>Normal</strong> - Normal state.</li>
-<li><strong>Focused</strong> - Component is foucsed.</li>
-<li><strong>Activated</strong> - Component is activated or selected.</li>
-<li><strong>Disabled</strong> - Component is disabled.</li>
+<li><code>btn--basis</code></li>
+<li><code>btn--outline</code></li>
 </ul>
-<h3>Nomenclature</h3>
-<p>I name a UI in this manner:
-
-</p>
-<pre><code>.type-state</code></pre>
-<p>The first portion describe UI type and the second one describe UI state modifier name.
-
-</p>
-<p>If you omit state name.It means that you want UI with all states style with it.
-
-</p>
-<pre><code>&lt;!-- Get a button style with basis UI and all states style under it. --&gt;
-&lt;button class=&quot;btn basis&quot;&gt;Simple Button&lt;/button&gt;
-
-&lt;!-- Get a button style with basis UI in normal state. --&gt;
-&lt;button class=&quot;btn basis-static&quot;&gt;Simple Button&lt;/button&gt;
-
-&lt;!-- Get a button style with basis Ui in disabled state. --&gt;
-&lt;button class=&quot;btn basis-disabeld&quot;&gt;Simple Button&lt;/button&gt;</code></pre>
-<h3>Reusable</h3>
-<p>The most important thing is that skin style is reusable.It is different with
-  layout style the after one can not reuse.There are many CSS properties
-describe component skin:
+<h2>修饰器 <code>Modifiers</code></h2>
+<h3>皮肤 <code>Theme</code></h3>
+<p>tentomon.css 的控件基本支持五中皮肤设置：
 
 </p>
 <ul>
-<li>color</li>
-<li>font-*</li>
-<li>background-*</li>
-<li>border-*</li>
-<li>border-radius</li>
-<li>box-shadow</li>
-<li>mix-text-shadow</li>
-<li>text-decoration</li>
+<li><code>*--basis</code></li>
+<li><code>*--info</code></li>
+<li><code>*--safe</code></li>
+<li><code>*--danger</code></li>
+<li><code>*--warn</code></li>
 </ul>
-<p>We only use CSS properties in above list for UI.In order to ensure UIs
-can reuse across the project.
-
-</p>
-<h3>Override</h3>
-<p>When we creating a new component.CSS properties in above list can use to
-override the default UI style.
-
-</p>
-<pre><code>.basis
-  color grey
-
-.btn
-  color red
-
-&lt;button class=&quot;btn basis&quot;&gt;Button&lt;/button&gt;</code></pre>
-<p>The <code>.btn</code> component used the <code>color</code> property.This will override default UI
-style <code>color</code>.That means all <code>.btn</code> components with red color whatever UI hooks on them.The basis UI with <code>grey</code> color not workable.
-
-</p>
-<h2>Modifiers</h2>
-<p>Modifiers make component varied and graceful.Here is a list of typical
-modifiers:
-
-</p>
-<h3>State Modifiers</h3>
-<p>Describe components with various skin under different states.
-
-</p>
-<pre><code>.btn:active
-.btn:focus
-.btn.is-active
-.btn.is-disabled</code></pre>
-<h3>Override Modifiers</h3>
-<p>Force override specified style.
-
-</p>
-<pre><code>.btn.no-border
-.btn.round</code></pre>
-<h3>Style Modifiers</h3>
-<p>This is the key to make components various and graceful.You can change one or more default feature of component and name it.Extend component in this manner is very simple.
-
-</p>
-<pre><code>.btn.naked
-.btn.mini
-.link.feel</code></pre>
-<h2>Override Modifiers</h2>
-<p>Override is global modifiers and force to override specified style.I name override in this manner:
-
-</p>
-<pre><code>.type-modifier</code></pre>
-<p>There are several rules apply to override:
-
-</p>
-<p>RULE NO.1: <strong>Override can not override each other in different type</strong>.
-
-</p>
-<p>I divide override in different types.Every override which in different types can not confilict with each other.Every one must unique and no common features.That means you can not use same CSS property in two override which under different type.
-
-</p>
-<p>But override in same type can use same CSS property because that they would not present in same HTML tag.
-
-</p>
-<pre><code>.round
-    border-radius 3px
-
-// different override types confilicted
-.box-round
-    border-radius 5px
-
-// it is does not matter with same type
-.circle
-    border-radius 50%</code></pre>
-<p>RULE NO.2: <strong>Override can use <code>important</code> keyword</strong>.
-
-</p>
-<pre><code>.round
-    border-radius 3px !important
-
-.circle
-    border-radius 50% !important</code></pre>
-<h2>Global Modifiers</h2>
-<p>Global modifier just like override but not override component default
-style. It supply default style.For example:
-
-</p>
-<pre><code>.flex-width
-    width 100%
-    height auto
-
-&lt;img alt=&quot;alt-text&quot; class=&quot;flex-width&quot;&gt;</code></pre>
-<p>Those rules supply basis flexible style for image.The image can
-expand/compress width with parent element.But they are repeating override.
-
-</p>
-<p>So common global modifiers it not recommended.It is better molding
-them as template.
-
-</p>
-<h2>Template</h2>
-<p>Template is several CSS rules and may used many times.If there are several CSS rules you
-use again and again.It is a good sign to molding them as a template.Here is a
-template example:
-
-</p>
-<pre><code>// reset component outer and inner gap
-$reset-gaped$()
-    margin 0
-    padding 0</code></pre>
-<h2>Components vs Collections</h2>
-<p>Component is atom of collection.A component is self-contains and only consider
-itself.For example <code>.btn</code> is a component.It is
-unnecessary set <code>margin</code> for <code>.btn</code> to deal relation with other <code>.btn</code>.
-
-</p>
-<p>Collection is a group of components.It care for relation between two different
-components.For example <code>.board</code> is a collection.It care for child <code>.btn</code> inside
-it.The <code>margin</code> or sibling <code>border</code> style between <code>.btn</code>.
-
-</p>
-<h2>Component Size</h2>
-<ul>
-<li><strong>Normal Size</strong></li>
-</ul>
-<p>The height of component with normal size equal to <code>$component-outer-height</code>.
+<h3>大小 <code>Size</code></h3>
+<p>tentomon.css 的控件基本支持五种大小设置：
 
 </p>
 <ul>
-<li><strong>Mini Size</strong></li>
+<li><code>*--xs</code></li>
+<li><code>*--s</code></li>
+<li><code>*--m</code></li>
+<li><code>*--l</code></li>
+<li><code>*--xl</code></li>
 </ul>
-<p>The height of component with mini size equal to <strong>Normal Size</strong> height <em>minus</em> top and bottom <code>$vgap</code>.
-
+<h2>状态 <code>State</code></h2>
+<p>同 MVCSS 推荐的做法不同，tentomon.css 的状态修饰器在控件的 <code>data-state</code> 属性中定义。样式指南中带 <code>:</code> 前缀的状态名表示伪类。
 </p>
-<ul>
-<li><strong>Pygmy Size</strong></li>
-</ul>
-<p>The height of component with extra small size equal to <strong>Mini Size</strong> height <em>minus</em> top and bottom <code>$vgap</code>.
-
-</p>
-<ul>
-<li><strong>Huge Size</strong></li>
-<li><strong>massive Size</strong></li>
-</ul>
-<h2>Component Factory</h2>
-<h3>$CONTROL</h3>
-<h3>$BTN</h3>
-<h3>$LABEL</h3>
-<h3>$LIST</h3>
-<h3>$LIST-ITEM</h3>
 
           </section>
           
