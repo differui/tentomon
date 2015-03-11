@@ -32,6 +32,7 @@
 //
 // + `:active`
 // + `:disabled`
+// + `disabled`
 //
 // Markup:
 // <button class="btn btn--basis">
@@ -99,12 +100,12 @@
 
 .btn--xl
   font-size $b-fs-l
-  
+
 .btn--xs
 .btn--s
   padding-top $b-vgap-half
   padding-bottom @padding-top
-  
+
 .btn--l
 .btn--xl
   padding-top $b-vgap-double
@@ -154,7 +155,7 @@
   &.btn--warn
     color        $c-bd-warn
     border-color @color
-    
+
 // ----- Layout ----- //
 
 .btn--auto
@@ -220,6 +221,7 @@
 // ----- Disabled ----- //
 
 .btn:disabled
+.btn[data-state~='disabled']
   &.btn--basis
   &.btn--info
   &.btn--safe

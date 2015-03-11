@@ -1,6 +1,6 @@
 # logging more stuff during building.
 debug: false
-version: '0.17.13'
+version: '0.17.14'
 
 dirs:
   dist: '<%= pkg.name %>-<%= pkg.version %>/'
