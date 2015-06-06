@@ -3,13 +3,12 @@
 # =============================================================================
 
 # dependiences
-cson         = require 'cson'
-lodash       = require 'lodash'
-htmlencode   = require 'node-htmlencode'
+lodash     = require 'lodash'
+htmlencode = require 'node-htmlencode'
 
 # package and configuration data
 pkg          = require './package.json'
-build_config = cson.parseFileSync('./config.cson')
+build_config = require './config.json'
 
 module.exports = (grunt) ->
   'use strict';
@@ -190,10 +189,6 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-copy'
   grunt.loadNpmTasks 'grunt-contrib-clean'
   grunt.loadNpmTasks 'grunt-contrib-watch'
-
-  # load custom tasks
-  # ---------------------------------------------------------------------------
-  grunt.loadTasks build_config.dirs.tasks
 
   # register tasks
   # ---------------------------------------------------------------------------
